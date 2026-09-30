@@ -1,0 +1,6 @@
+{
+  "name": "Hostxeon - Cloud Hosting, Domains, VPS & Business Email",
+  "description": "High-performance NVMe Web Hosting, WordPress Hosting, Cloud Infrastructure, Domain Registration, KVM VPS Servers, and Professional Business Email.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

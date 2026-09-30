@@ -273,18 +273,6 @@ export default function App() {
         onToggle={() => setIsChatOpen(!isChatOpen)}
         isCartOpen={isCartOpen}
       />
-
-      {/* Floating Quick Jump to 15 Hero Samples */}
-      {currentView !== 'hero-samples' && (
-        <button
-          type="button"
-          onClick={() => navigateTo('hero-samples')}
-          className="fixed bottom-6 left-6 z-40 bg-slate-900 text-white hover:bg-black px-4 py-2.5 rounded-full shadow-2xl border border-slate-700 flex items-center gap-2 text-xs font-bold transition-all hover:scale-105 cursor-pointer"
-        >
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-          <span>✨ View 15 Hero Samples</span>
-        </button>
-      )}
     </div>
   );
 }

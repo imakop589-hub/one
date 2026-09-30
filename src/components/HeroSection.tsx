@@ -142,8 +142,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="space-y-3 sm:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
                 Build your dream.{' '}
-                <span className="text-[#008a45] block sm:inline">Sell everywhere.</span>{' '}
-                Grow your business.
+                <span className="text-[#008a45]">Grow your business.</span>
               </h1>
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium max-w-2xl">
                 Whether you're opening a local bakery, launching an online clothing boutique, or scaling freelance consultancy, Hostxeon gives you ultra-fast NVMe hosting, free domain, branded email, and easy tools to get paid and get noticed.

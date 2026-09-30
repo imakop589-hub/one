@@ -14,7 +14,8 @@ import {
   User, 
   ChevronRight, 
   ShoppingBag, 
-  Zap 
+  Zap,
+  AlertCircle 
 } from 'lucide-react';
 import { CartItem } from '../types';
 import { AppView } from './Navbar';
@@ -77,6 +78,10 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
   const [promoCode, setPromoCode] = useState('');
   const [discountPercent, setDiscountPercent] = useState(0);
   const [promoMessage, setPromoMessage] = useState<string | null>(null);
+
+  // Inline Validation states (replacing alert())
+  const [step2Error, setStep2Error] = useState<string | null>(null);
+  const [paymentError, setPaymentError] = useState<string | null>(null);
 
   // Add-ons selected
   const [selectedAddons, setSelectedAddons] = useState<{ [key: string]: boolean }>({
@@ -146,9 +151,10 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
   const handleCompletePayment = (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreeTerms) {
-      alert('Please agree to the Terms of Service and Money-Back policy to proceed.');
+      setPaymentError('Please agree to the Terms of Service and 30-Day Money-Back policy to proceed.');
       return;
     }
+    setPaymentError(null);
     setIsProcessing(true);
 
     setTimeout(() => {
@@ -182,7 +188,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 Secure Order Checkout
               </Heading>
               <span className="text-xs font-bold bg-[#e6f4ea] text-[#008a45] px-3 py-1 rounded-full border border-emerald-200">
-                15-Day Money-Back Guarantee
+                30-Day Money-Back Guarantee
               </span>
             </div>
           </div>
@@ -654,6 +660,13 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                   </FormField>
                 </FormGroup>
 
+                {step2Error && (
+                  <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold flex items-center gap-2.5 animate-in fade-in">
+                    <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                    <span>{step2Error}</span>
+                  </div>
+                )}
+
                 {/* Step 2 Actions */}
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-100">
                   <button
@@ -673,6 +686,15 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     variant="accent"
                     size="md"
                     onClick={() => {
+                      if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim()) {
+                        setStep2Error('Please enter your First Name, Last Name, and Email Address to proceed.');
+                        return;
+                      }
+                      if (customerType === 'company' && !formData.companyName.trim()) {
+                        setStep2Error('Please enter your Company Name to proceed.');
+                        return;
+                      }
+                      setStep2Error(null);
                       setStep(3);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
@@ -841,10 +863,13 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 <div className="space-y-3 pt-2">
                   <Checkbox
                     checked={agreeTerms}
-                    onChange={e => setAgreeTerms(e.target.checked)}
+                    onChange={e => {
+                      setAgreeTerms(e.target.checked);
+                      if (e.target.checked) setPaymentError(null);
+                    }}
                     label={
                       <span>
-                        I accept the Hostxeon Terms of Service and Privacy Policy, and I understand my <strong>15-day money-back guarantee</strong> applies from today.
+                        I accept the Hostxeon Terms of Service and Privacy Policy, and I understand my <strong>30-day money-back guarantee</strong> applies from today.
                       </span>
                     }
                   />
@@ -859,6 +884,13 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     }
                   />
                 </div>
+
+                {paymentError && (
+                  <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold flex items-center gap-2.5 animate-in fade-in">
+                    <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                    <span>{paymentError}</span>
+                  </div>
+                )}
 
                 {/* Step 3 Actions */}
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-100">

@@ -241,7 +241,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             business
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
-            Clear pricing and no surprises — with 15-day money-back guarantee and instant activation.
+            Clear pricing and no surprises — with 30-day money-back guarantee and instant activation.
           </p>
         </div>
 
@@ -859,7 +859,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
               <div>
                 <div className="text-sm font-bold text-slate-900">Try Hostxeon completely risk-free</div>
-                <div className="text-xs text-gray-500">Every plan is backed by our unconditional 15-day money-back guarantee.</div>
+                <div className="text-xs text-gray-500">Every plan is backed by our unconditional 30-day money-back guarantee.</div>
               </div>
             </div>
             <button

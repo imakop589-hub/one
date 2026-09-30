@@ -6,11 +6,14 @@ import { Button } from './ui/Button';
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onOpenBuilder?: () => void;
 }
 
-export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
+export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenBuilder }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [mode, setMode] = useState<'login' | 'forgot'>('login');
+  const [resetSent, setResetSent] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
 
   if (!isOpen) return null;
@@ -22,6 +25,15 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
       onClose();
       setLoggedIn(false);
     }, 1200);
+  };
+
+  const handleResetPassword = (e: React.FormEvent) => {
+    e.preventDefault();
+    setResetSent(true);
+    setTimeout(() => {
+      setResetSent(false);
+      setMode('login');
+    }, 2800);
   };
 
   return (
@@ -48,10 +60,12 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           <h3 className="font-['Baloo_2',cursive,sans-serif] text-2xl font-black text-white">
-            Log in to Control Panel
+            {mode === 'forgot' ? 'Reset Password' : 'Log in to Control Panel'}
           </h3>
           <p className="text-xs text-emerald-200/80 mt-1">
-            Access your websites, Aida AI builder, mailboxes and domain management.
+            {mode === 'forgot' 
+              ? 'Enter your verified account email to receive instant reset instructions.'
+              : 'Access your websites, Aida AI builder, mailboxes and domain management.'}
           </p>
         </div>
 
@@ -67,6 +81,63 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               </h4>
               <p className="text-xs text-gray-500">Redirecting to your Control Panel...</p>
             </div>
+          ) : mode === 'forgot' ? (
+            resetSent ? (
+              <div className="py-6 text-center space-y-3">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 text-[#008a45] flex items-center justify-center mx-auto text-xl font-bold">
+                  ✓
+                </div>
+                <h4 className="font-bold text-gray-900 text-lg">
+                  Reset link dispatched!
+                </h4>
+                <p className="text-xs text-gray-500">
+                  We've sent password reset instructions to <strong>{email}</strong>.
+                </p>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setMode('login')}
+                  className="mt-2"
+                >
+                  Back to Log in
+                </Button>
+              </div>
+            ) : (
+              <form onSubmit={handleResetPassword} className="space-y-4">
+                <FormField label="Registered Email" required htmlFor="forgot-email-input">
+                  <Input
+                    id="forgot-email-input"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@yourdomain.com"
+                    leftIcon={<Mail className="w-4 h-4" />}
+                  />
+                </FormField>
+
+                <Button
+                  type="submit"
+                  variant="accent"
+                  fullWidth
+                  rightIcon={<ArrowRight className="w-4 h-4" />}
+                  id="forgot-submit-btn"
+                >
+                  Send Reset Link
+                </Button>
+
+                <div className="text-center pt-2">
+                  <button
+                    type="button"
+                    onClick={() => setMode('login')}
+                    className="text-xs text-[#008a45] font-bold hover:underline cursor-pointer"
+                  >
+                    ← Back to Log in
+                  </button>
+                </div>
+              </form>
+            )
           ) : (
             <form onSubmit={handleLogin} className="space-y-4">
               <FormField label="Email address" required htmlFor="login-email-input">
@@ -86,9 +157,13 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                 required
                 htmlFor="login-password-input"
                 action={
-                  <a href="#forgot" className="text-xs text-[#008a45] font-semibold hover:underline">
+                  <button
+                    type="button"
+                    onClick={() => setMode('forgot')}
+                    className="text-xs text-[#008a45] font-semibold hover:underline cursor-pointer"
+                  >
                     Forgot password?
-                  </a>
+                  </button>
                 }
               >
                 <Input
@@ -114,12 +189,21 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
             </form>
           )}
 
-          <div className="pt-2 text-center text-xs text-gray-500">
-            Don't have an account yet?{' '}
-            <a href="#builder" onClick={onClose} className="text-[#008a45] font-bold hover:underline">
-              Start building for free
-            </a>
-          </div>
+          {mode === 'login' && !loggedIn && (
+            <div className="pt-2 text-center text-xs text-gray-500">
+              Don't have an account yet?{' '}
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onOpenBuilder?.();
+                }}
+                className="text-[#008a45] font-bold hover:underline cursor-pointer"
+              >
+                Start building for free
+              </button>
+            </div>
+          )}
         </div>
 
       </div>

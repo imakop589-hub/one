@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, AppView } from './components/Navbar';
 import { HomePage } from './components/HomePage';
 import { WordPressHostingPage } from './components/WordPressHostingPage';
@@ -10,7 +10,6 @@ import { EmailHostingPage } from './components/EmailHostingPage';
 import { Footer } from './components/Footer';
 
 import { AidaGeneratorModal } from './components/AidaGeneratorModal';
-import { DomainResultsModal } from './components/DomainResultsModal';
 import { LoginModal } from './components/LoginModal';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutPage } from './components/CheckoutPage';
@@ -19,15 +18,27 @@ import { HeroSamplesPage } from './components/HeroSamplesPage';
 
 import { CartItem, PortfolioWebsite } from './types';
 
+const VALID_VIEWS: AppView[] = ['home', 'domains', 'webhosting', 'wordpress', 'cloud', 'vps', 'email', 'checkout', 'hero-samples'];
+
 export default function App() {
-  // Page view state: default to 'home'
-  const [currentView, setCurrentView] = useState<AppView>('home');
+  // Read initial view from URL hash to support direct link & refresh
+  const getInitialView = (): AppView => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.replace(/^#\/?/, '') as AppView;
+      if (VALID_VIEWS.includes(hash)) {
+        return hash;
+      }
+    }
+    return 'home';
+  };
+
+  // Page view state: defaults to URL hash or 'home'
+  const [currentView, setCurrentView] = useState<AppView>(getInitialView);
 
   // Modal states
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [isDomainModalOpen, setIsDomainModalOpen] = useState(false);
   const [domainSearchQuery, setDomainSearchQuery] = useState('');
   const [domainTab, setDomainTab] = useState<'register' | 'transfer' | 'whois'>('register');
   const [emailCategory, setEmailCategory] = useState<'webmail' | 'm365' | 'security'>('webmail');
@@ -41,17 +52,25 @@ export default function App() {
     mode: 'example',
   });
 
-  // Cart state
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      id: 'default-starter',
-      type: 'hosting',
-      title: 'Starter Web Hosting Plan',
-      subtitle: '100 GB NVMe Storage + Free Domain Voucher + SSL',
-      price: 1.99,
-      period: '12 months prepaid',
-    },
-  ]);
+  // Cart state: starts clean and empty for new visitors
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+  // Synchronize route changes with browser Back/Forward navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace(/^#\/?/, '') as AppView;
+      if (VALID_VIEWS.includes(hash)) {
+        setCurrentView(hash);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/') {
+        setCurrentView('home');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const handleAddToCart = (item: CartItem) => {
     setCartItems(prev => {
@@ -86,18 +105,16 @@ export default function App() {
     setIsAidaModalOpen(true);
   };
 
-  const handleSelectPortfolio = (site: PortfolioWebsite) => {
-    setAidaPrompt({
-      career: site.category,
-      company: site.title,
-      city: 'London',
-      mode: 'example',
-    });
-    setIsAidaModalOpen(true);
-  };
-
   const navigateTo = (view: AppView) => {
     setCurrentView(view);
+    const targetHash = view === 'home' ? '' : `#${view}`;
+    if (window.location.hash !== targetHash) {
+      if (window.history.pushState) {
+        window.history.pushState(null, '', targetHash || window.location.pathname);
+      } else {
+        window.location.hash = targetHash;
+      }
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -236,21 +253,10 @@ export default function App() {
         onAddToCart={handleAddToCart}
       />
 
-      <DomainResultsModal
-        isOpen={isDomainModalOpen}
-        onClose={() => setIsDomainModalOpen(false)}
-        searchQuery={domainSearchQuery}
-        onAddToCart={handleAddToCart}
-        onNavigateToDomains={(q) => {
-          setDomainSearchQuery(q);
-          setDomainTab('register');
-          navigateTo('domains');
-        }}
-      />
-
       <LoginModal
         isOpen={isLoginOpen}
         onClose={() => setIsLoginOpen(false)}
+        onOpenBuilder={() => setIsAidaModalOpen(true)}
       />
 
       {/* Cart Drawer: Right-side popup */}

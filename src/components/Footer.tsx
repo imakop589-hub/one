@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({
       <footer className="bg-slate-950 text-white border-t border-slate-800" id="footer">
         {/* VAT Compliance Banner */}
         <div className="bg-slate-900 py-2.5 px-4 text-center text-xs text-slate-400 border-b border-slate-800">
-          All prices include 20% VAT. 15-day money-back guarantee on all hosting and cloud packages with instant activation.
+          All prices include 20% VAT. 30-day money-back guarantee on all hosting and cloud packages with instant activation.
         </div>
 
         {/* Main Footer Links - Matching Header Services Exactly */}

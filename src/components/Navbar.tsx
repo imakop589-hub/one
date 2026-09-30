@@ -231,9 +231,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="text-gray-200 truncate">
               Aida 2.5 Multi-Language & Auto-Stripe Shop Generation is live.
             </span>
-            <a href="#builder" className="text-[#fed000] font-bold hover:underline inline-flex items-center gap-1 shrink-0 ml-1">
+            <button
+              type="button"
+              onClick={() => onOpenBuilder?.()}
+              className="text-[#fed000] font-bold hover:underline inline-flex items-center gap-1 shrink-0 ml-1 cursor-pointer"
+            >
               Try 14 Days Free <ArrowRight className="w-3 h-3" />
-            </a>
+            </button>
           </div>
 
           {/* Dismiss / Close Button */}

@@ -278,15 +278,15 @@ For more information on Whois status codes, please visit https://icann.org/epp
           <div className="max-w-5xl mx-auto text-center space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-[#fed000] text-xs font-black uppercase tracking-wider border border-emerald-500/30">
             <Search className="w-3.5 h-3.5" />
-            <span>OFFICIAL ICANN WHOIS & RDAP LOOKUP</span>
+            <span>LIVE DNS & DOMAIN REGISTRY INSPECTOR</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-            WHOIS Domain Lookup
+            WHOIS & DNS Domain Lookup
           </h1>
 
           <p className="text-sm sm:text-base text-emerald-100/85 max-w-2xl mx-auto leading-relaxed">
-            Search ICANN domain registration data, current registrar, live nameservers, expiry dates, and WHOIS privacy protection status in seconds.
+            Inspect live DNS zone records, authoritative nameservers, Anycast IPs, and domain registration status in real time.
           </p>
 
           {/* Search Box */}
@@ -350,6 +350,14 @@ For more information on Whois status codes, please visit https://icann.org/epp
         {whoisData ? (
           <div className="space-y-6">
             
+            {/* Informational Transparency Badge */}
+            <div className="bg-emerald-50/90 border border-emerald-200/80 rounded-2xl px-4 py-3 flex items-center gap-3 text-xs text-emerald-900">
+              <Info className="w-4 h-4 text-[#008a45] shrink-0" />
+              <span>
+                <strong>Live DNS Record Inspection:</strong> Nameservers, Anycast routing, and zone availability verified live via DNS-over-HTTPS. For certified ICANN RDAP registrar audits, configure external registrar credentials in environment variables.
+              </span>
+            </div>
+
             {/* Status Header Banner */}
             <div className={`p-6 sm:p-7 rounded-3xl border shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all ${
               whoisData.isRegistered

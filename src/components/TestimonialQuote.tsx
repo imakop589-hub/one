@@ -33,8 +33,8 @@ export const TestimonialQuote: React.FC<TestimonialQuoteProps> = ({ onStartTrial
               </button>
 
               <a
-                href="#features"
-                className="border border-gray-300 hover:border-gray-900 text-gray-800 hover:text-black px-6 py-3 rounded-full text-sm sm:text-base font-semibold transition-all"
+                href="#why-choose-us"
+                className="border border-gray-300 hover:border-gray-900 text-gray-800 hover:text-black px-6 py-3 rounded-full text-sm sm:text-base font-semibold transition-all cursor-pointer"
               >
                 See features
               </a>

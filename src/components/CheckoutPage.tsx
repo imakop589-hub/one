@@ -148,6 +148,8 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
     }
   };
 
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   const handleCompletePayment = (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreeTerms) {
@@ -661,7 +663,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 </FormGroup>
 
                 {step2Error && (
-                  <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold flex items-center gap-2.5 animate-in fade-in">
+                  <div role="alert" className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold flex items-center gap-2.5 animate-in fade-in">
                     <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
                     <span>{step2Error}</span>
                   </div>
@@ -686,14 +688,43 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     variant="accent"
                     size="md"
                     onClick={() => {
-                      if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim()) {
-                        setStep2Error('Please enter your First Name, Last Name, and Email Address to proceed.');
+                      if (!formData.firstName.trim()) {
+                        setStep2Error('Please enter your first name.');
+                        return;
+                      }
+                      if (!formData.lastName.trim()) {
+                        setStep2Error('Please enter your last name.');
+                        return;
+                      }
+                      if (!formData.email.trim() || !emailRegex.test(formData.email.trim())) {
+                        setStep2Error('Please enter a valid email address.');
+                        return;
+                      }
+                      if (!formData.phone.trim()) {
+                        setStep2Error('Please enter your mobile phone number.');
                         return;
                       }
                       if (customerType === 'company' && !formData.companyName.trim()) {
-                        setStep2Error('Please enter your Company Name to proceed.');
+                        setStep2Error('Please enter your company name.');
                         return;
                       }
+                      if (!formData.address.trim()) {
+                        setStep2Error('Please enter your billing address.');
+                        return;
+                      }
+                      if (!formData.city.trim()) {
+                        setStep2Error('Please enter your city.');
+                        return;
+                      }
+                      if (!formData.postalCode.trim()) {
+                        setStep2Error('Please enter your postal code.');
+                        return;
+                      }
+                      if (!formData.country.trim()) {
+                        setStep2Error('Please select your country.');
+                        return;
+                      }
+
                       setStep2Error(null);
                       setStep(3);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -886,7 +917,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 </div>
 
                 {paymentError && (
-                  <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold flex items-center gap-2.5 animate-in fade-in">
+                  <div role="alert" className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold flex items-center gap-2.5 animate-in fade-in">
                     <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
                     <span>{paymentError}</span>
                   </div>
@@ -929,38 +960,38 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
 
                 <div>
                   <span className="text-xs font-black uppercase tracking-widest text-[#008a45] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
-                    Payment Succeeded
+                    Demo Order Completed
                   </span>
                   <Heading level={2} className="text-3xl sm:text-4xl mt-3">
-                    Welcome to Hostxeon!
+                    Demo Order Confirmed
                   </Heading>
                   <p className="text-xs sm:text-sm text-gray-600 mt-2 max-w-md mx-auto">
-                    Your order <strong className="text-slate-900 font-black">#{orderNumber}</strong> is confirmed and your server instance is now being deployed in Europe.
+                    Your simulated demo order <strong className="text-slate-900 font-black">#{orderNumber}</strong> has been successfully placed. (Frontend simulation: no live payment gateway charge or actual server provisioning occurred).
                   </p>
                 </div>
 
-                {/* Real-time Provisioning Status Box */}
+                {/* Simulated Provisioning Status Box */}
                 <div className="max-w-lg mx-auto p-5 rounded-xl bg-[#fafdfb] border border-emerald-200 text-left space-y-3 text-xs">
                   <div className="flex items-center justify-between text-emerald-800 font-bold">
                     <span className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-[#008a45]" />
-                      <span>Tier-3 NVMe Cloud Server Provisioned</span>
+                      <span>Simulated NVMe Cloud Server Setup</span>
                     </span>
-                    <span className="text-[10px] bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Done</span>
+                    <span className="text-[10px] bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Simulated</span>
                   </div>
                   <div className="flex items-center justify-between text-emerald-800 font-bold">
                     <span className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-[#008a45]" />
-                      <span>Free Wildcard SSL Certificate Generated</span>
+                      <span>Simulated SSL Certificate Generation</span>
                     </span>
-                    <span className="text-[10px] bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Active</span>
+                    <span className="text-[10px] bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Simulated</span>
                   </div>
                   <div className="flex items-center justify-between text-slate-700 font-semibold">
                     <span className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-[#008a45]" />
-                      <span>Control Panel login details dispatched to {formData.email || 'your email'}</span>
+                      <span>Simulated Control Panel credentials notice for {formData.email || 'your email'}</span>
                     </span>
-                    <span className="text-[10px] bg-gray-200 px-2.5 py-0.5 rounded-full text-slate-700">Sent</span>
+                    <span className="text-[10px] bg-gray-200 px-2.5 py-0.5 rounded-full text-slate-700">Simulated</span>
                   </div>
                 </div>
 

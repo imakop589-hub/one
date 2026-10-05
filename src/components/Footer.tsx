@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Check, Sparkles, MessageSquare, User, ShoppingCart, ShieldCheck, Headphones } from 'lucide-react';
+import { ChevronDown, Check, Sparkles, MessageSquare, User, ShoppingCart, ShieldCheck, Headphones, Settings } from 'lucide-react';
 import { AppView } from './Navbar';
 import { LegalModal, PolicyType } from './LegalModal';
 
@@ -169,6 +169,16 @@ export const Footer: React.FC<FooterProps> = ({
                   >
                     <ShoppingCart className="w-3.5 h-3.5 text-slate-400" />
                     <span>View Shopping Basket</span>
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => navigateTo('admin')} 
+                    className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                    id="footer-admin-cms-link"
+                  >
+                    <Settings className="w-3.5 h-3.5 text-emerald-500" />
+                    <span>Hostxeon CMS Admin</span>
                   </button>
                 </li>
                 <li>

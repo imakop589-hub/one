@@ -15,10 +15,11 @@ import { CartDrawer } from './components/CartDrawer';
 import { CheckoutPage } from './components/CheckoutPage';
 import { LiveChatWidget } from './components/LiveChatWidget';
 import { HeroSamplesPage } from './components/HeroSamplesPage';
+import { AdminRoot } from './components/admin/AdminRoot';
 
 import { CartItem, PortfolioWebsite } from './types';
 
-const VALID_VIEWS: AppView[] = ['home', 'domains', 'webhosting', 'wordpress', 'cloud', 'vps', 'email', 'checkout', 'hero-samples'];
+const VALID_VIEWS: AppView[] = ['home', 'domains', 'webhosting', 'wordpress', 'cloud', 'vps', 'email', 'checkout', 'hero-samples', 'admin'];
 
 export default function App() {
   // Read initial view from URL hash to support direct link & refresh
@@ -117,6 +118,15 @@ export default function App() {
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  if (currentView === 'admin') {
+    return (
+      <AdminRoot
+        onBackToPublicSite={() => navigateTo('home')}
+        onNavigatePublicPage={(slug) => navigateTo(slug as AppView)}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white flex flex-col font-['Plus_Jakarta_Sans',sans-serif] text-[#1a1a1a] relative">

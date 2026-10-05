@@ -23,7 +23,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-export type AppView = 'domains' | 'webhosting' | 'wordpress' | 'cloud' | 'vps' | 'email' | 'home' | 'checkout' | 'hero-samples';
+export type AppView = 'domains' | 'webhosting' | 'wordpress' | 'cloud' | 'vps' | 'email' | 'home' | 'checkout' | 'hero-samples' | 'admin';
 
 interface NavbarProps {
   onOpenLogin: () => void;

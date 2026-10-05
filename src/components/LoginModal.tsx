@@ -190,18 +190,33 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
           )}
 
           {mode === 'login' && !loggedIn && (
-            <div className="pt-2 text-center text-xs text-gray-500">
-              Don't have an account yet?{' '}
-              <button
-                type="button"
-                onClick={() => {
-                  onClose();
-                  onOpenBuilder?.();
-                }}
-                className="text-[#008a45] font-bold hover:underline cursor-pointer"
-              >
-                Start building for free
-              </button>
+            <div className="pt-3 border-t border-gray-100 space-y-2 text-center text-xs text-gray-500">
+              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-[11px] text-slate-600 text-left">
+                <span className="font-bold text-slate-800 block mb-0.5">WHMCS Portal Notice:</span>
+                Live customer billing, invoices, server control, and support tickets will be routed to your separate WHMCS installation.
+              </div>
+              <div className="flex items-center justify-between pt-1 text-[11px]">
+                <button
+                  type="button"
+                  onClick={() => {
+                    onClose();
+                    window.location.hash = '#admin';
+                  }}
+                  className="text-emerald-700 hover:text-emerald-900 font-semibold cursor-pointer"
+                >
+                  Hostxeon Staff? Open CMS Admin →
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    onClose();
+                    onOpenBuilder?.();
+                  }}
+                  className="text-[#008a45] font-bold hover:underline cursor-pointer"
+                >
+                  Start free trial
+                </button>
+              </div>
             </div>
           )}
         </div>

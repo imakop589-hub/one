@@ -25,9 +25,15 @@ export const AdminRoot: React.FC<AdminRootProps> = ({
   const [activeSection, setActiveSection] = useState<AdminSection>('dashboard');
   const [editingPageId, setEditingPageId] = useState<string | null>(null);
 
-  // Check auth on mount
+  // Check and verify auth session on mount
   useEffect(() => {
-    setIsAuthenticated(authService.isAuthenticated());
+    let isMounted = true;
+    authService.verifySession().then(valid => {
+      if (isMounted) setIsAuthenticated(valid);
+    });
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const handleLoginSuccess = () => {

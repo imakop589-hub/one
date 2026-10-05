@@ -14,6 +14,7 @@ import {
   Eye,
 } from 'lucide-react';
 import { cmsService } from '../../services/cmsService';
+import { authService } from '../../services/authService';
 import { CmsPage, CmsMenuItem, CmsMediaItem, CmsFaq, CmsWhmcsConfig } from '../../types/cms';
 import { AdminSection } from './AdminLayout';
 
@@ -383,17 +384,30 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
               <div className="flex justify-between py-1 border-b border-slate-900">
                 <span className="text-slate-400">CMS Data Store:</span>
-                <span className="text-emerald-400 font-mono">CMS Storage Layer</span>
+                <span className={`font-mono text-[11px] ${
+                  cmsService.getStorageMode() === 'production_api' ? 'text-emerald-400' : 'text-amber-400'
+                }`}>
+                  {cmsService.getStorageMode() === 'production_api' ? 'Production REST API' : 'Dev Fallback Store'}
+                </span>
               </div>
               <div className="flex justify-between py-1 border-b border-slate-900">
                 <span className="text-slate-400">Admin Auth:</span>
-                <span className="text-slate-200 font-mono">Session Token Guard</span>
+                <span className={`font-mono text-[11px] ${
+                  authService.getAuthMode() === 'production_api' ? 'text-emerald-400' : 'text-amber-400'
+                }`}>
+                  {authService.getAuthMode() === 'production_api' ? 'Server Auth API' : 'Dev Session Guard'}
+                </span>
               </div>
               <div className="flex justify-between py-1">
                 <span className="text-slate-400">Client Portal:</span>
                 <span className="text-amber-400 font-mono">WHMCS (Separated)</span>
               </div>
             </div>
+            {cmsService.getStorageMode() === 'development_fallback' && (
+              <p className="text-[10px] text-slate-500 pt-1 border-t border-slate-900 leading-normal">
+                Running in local development fallback. Connect a server database via <code className="text-slate-400">VITE_CMS_API_URL</code> for production persistence.
+              </p>
+            )}
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, Check, Sparkles, MessageSquare, User, ShoppingCart, ShieldCheck, Headphones, Settings } from 'lucide-react';
 import { AppView } from './Navbar';
 import { LegalModal, PolicyType } from './LegalModal';
+import { cmsService } from '../services/cmsService';
+import { CmsSiteSettings } from '../types/cms';
 
 interface FooterProps {
   onChangeView?: (view: AppView) => void;
@@ -25,6 +27,11 @@ export const Footer: React.FC<FooterProps> = ({
   const [language, setLanguage] = useState('English (United Kingdom)');
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [activePolicy, setActivePolicy] = useState<PolicyType>(null);
+  const [siteSettings, setSiteSettings] = useState<CmsSiteSettings | null>(null);
+
+  useEffect(() => {
+    cmsService.getSettings().then(setSiteSettings).catch(() => {});
+  }, []);
 
   const navigateTo = (view: AppView) => {
     if (onChangeView) {
@@ -233,7 +240,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Bottom Bar: Copyright & Verified Legal Modals */}
           <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>© 2026 Hostxeon Platform Inc. All rights reserved. Tier-3 European Cloud Infrastructure.</p>
+            <p>{siteSettings?.copyrightText || '© 2026 Hostxeon Ltd. All rights reserved. Registered in England & Wales.'}</p>
             <div className="flex flex-wrap items-center gap-4 text-xs">
               <button 
                 onClick={() => setActivePolicy('privacy')} 

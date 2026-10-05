@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Globe, 
   Search, 
@@ -22,8 +22,9 @@ import {
   HelpCircle,
   ExternalLink
 } from 'lucide-react';
+import { cmsService } from '../services/cmsService';
 
-export type AppView = 'domains' | 'webhosting' | 'wordpress' | 'cloud' | 'vps' | 'email' | 'home' | 'checkout' | 'hero-samples' | 'admin';
+export type AppView = 'domains' | 'webhosting' | 'wordpress' | 'cloud' | 'vps' | 'email' | 'home' | 'checkout' | 'hero-samples' | 'admin' | (string & {});
 
 interface NavbarProps {
   onOpenLogin: () => void;
@@ -55,6 +56,24 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [announcementText, setAnnouncementText] = useState('Aida 2.5 Multi-Language & Auto-Stripe Shop Generation is live.');
+
+  useEffect(() => {
+    let isMounted = true;
+    cmsService.getSettings().then(settings => {
+      if (isMounted && settings) {
+        if (settings.announcementText) {
+          setAnnouncementText(settings.announcementText);
+        }
+        if (typeof settings.announcementActive === 'boolean') {
+          setShowAnnouncement(settings.announcementActive);
+        }
+      }
+    }).catch(() => {});
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   interface NavItem {
     title: string;
@@ -229,7 +248,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               Spring 2026 Release
             </span>
             <span className="text-gray-200 truncate">
-              Aida 2.5 Multi-Language & Auto-Stripe Shop Generation is live.
+              {announcementText}
             </span>
             <button
               type="button"

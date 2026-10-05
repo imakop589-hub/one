@@ -16,6 +16,7 @@ import { CheckoutPage } from './components/CheckoutPage';
 import { LiveChatWidget } from './components/LiveChatWidget';
 import { HeroSamplesPage } from './components/HeroSamplesPage';
 import { AdminRoot } from './components/admin/AdminRoot';
+import { CmsPageResolver } from './components/CmsPageResolver';
 
 import { CartItem, PortfolioWebsite } from './types';
 
@@ -26,7 +27,7 @@ export default function App() {
   const getInitialView = (): AppView => {
     if (typeof window !== 'undefined') {
       const hash = window.location.hash.replace(/^#\/?/, '') as AppView;
-      if (VALID_VIEWS.includes(hash)) {
+      if (hash) {
         return hash;
       }
     }
@@ -60,10 +61,10 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace(/^#\/?/, '') as AppView;
-      if (VALID_VIEWS.includes(hash)) {
+      if (hash) {
         setCurrentView(hash);
         window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/') {
+      } else {
         setCurrentView('home');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
@@ -230,6 +231,14 @@ export default function App() {
             onNavigate={navigateTo}
             onOpenPricing={() => navigateTo('webhosting')}
             onSearchDomain={handleSearchDomain}
+          />
+        )}
+        {!['home', 'domains', 'webhosting', 'wordpress', 'cloud', 'vps', 'email', 'checkout', 'hero-samples'].includes(currentView) && (
+          <CmsPageResolver
+            slug={currentView}
+            onAddToCart={handleAddToCart}
+            onOpenLiveChat={() => setIsChatOpen(true)}
+            onNavigate={navigateTo}
           />
         )}
       </main>

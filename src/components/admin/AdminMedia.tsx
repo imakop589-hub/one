@@ -9,8 +9,9 @@ import {
   AlertCircle,
   CheckCircle2,
   FileCheck,
+  X,
 } from 'lucide-react';
-import { cmsService } from '../../services/cmsService';
+import { mediaService } from '../../services/mediaService';
 import { CmsMediaItem } from '../../types/cms';
 
 export const AdminMedia: React.FC = () => {
@@ -21,13 +22,14 @@ export const AdminMedia: React.FC = () => {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isUploading, setIsUploading] = useState(false);
+  const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const loadMedia = async () => {
     setIsLoading(true);
     try {
-      const items = await cmsService.getMediaItems();
+      const items = await mediaService.listMedia();
       setMediaItems(items);
     } catch (err) {
       console.error('Failed to load media:', err);
@@ -55,11 +57,11 @@ export const AdminMedia: React.FC = () => {
   };
 
   const handleDelete = async (id: string) => {
-    if (!window.confirm('Delete this media asset from library?')) return;
     try {
-      const ok = await cmsService.deleteMedia(id);
+      const ok = await mediaService.deleteMedia(id);
       if (ok) {
         setMediaItems(prev => prev.filter(m => m.id !== id));
+        setDeleteConfirmId(null);
         showToast('Media item deleted.');
       }
     } catch {
@@ -85,7 +87,7 @@ export const AdminMedia: React.FC = () => {
     const reader = new FileReader();
     reader.onload = async event => {
       const dataUrl = event.target?.result as string;
-      const res = await cmsService.uploadMedia({
+      const res = await mediaService.uploadMedia({
         filename: file.name,
         mimeType: file.type,
         dataUrl,
@@ -235,14 +237,34 @@ export const AdminMedia: React.FC = () => {
                     <span>{copiedId === item.id ? 'Copied' : 'Copy URL'}</span>
                   </button>
 
-                  <button
-                    type="button"
-                    onClick={() => handleDelete(item.id)}
-                    className="text-slate-500 hover:text-rose-400 p-1 rounded hover:bg-rose-950/30 transition-colors cursor-pointer"
-                    title="Delete asset"
-                  >
-                    <Trash2 className="w-3.5 h-3.5" />
-                  </button>
+                  {deleteConfirmId === item.id ? (
+                    <div className="flex items-center gap-1">
+                      <button
+                        type="button"
+                        onClick={() => handleDelete(item.id)}
+                        className="px-2 py-0.5 bg-rose-600 hover:bg-rose-500 text-white rounded text-[10px] font-bold cursor-pointer"
+                      >
+                        Confirm
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setDeleteConfirmId(null)}
+                        className="p-0.5 text-slate-400 hover:text-white rounded text-[10px] cursor-pointer"
+                        title="Cancel"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setDeleteConfirmId(item.id)}
+                      className="text-slate-500 hover:text-rose-400 p-1 rounded hover:bg-rose-950/30 transition-colors cursor-pointer"
+                      title="Delete asset"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ import {
   AlertCircle,
   Eye,
 } from 'lucide-react';
-import { cmsService } from '../../services/cmsService';
+import { pageService } from '../../services/pageService';
 import { CmsPage, ContentStatus } from '../../types/cms';
 
 interface AdminPageEditorProps {
@@ -62,7 +62,7 @@ export const AdminPageEditor: React.FC<AdminPageEditorProps> = ({
       }
 
       try {
-        const p = await cmsService.getPageById(pageId);
+        const p = await pageService.getPage(pageId);
         if (p) {
           setTitle(p.title);
           setSlug(p.slug);
@@ -108,7 +108,7 @@ export const AdminPageEditor: React.FC<AdminPageEditorProps> = ({
     setIsSubmitting(true);
     try {
       const finalStatus = overrideStatus || status;
-      const saved = await cmsService.savePage({
+      const saved = await pageService.createPage({
         id: pageId || undefined,
         title: title.trim(),
         slug: slug.trim().toLowerCase().replace(/[^a-z0-9_-]/g, '-'),

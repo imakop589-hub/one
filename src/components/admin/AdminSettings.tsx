@@ -11,7 +11,7 @@ import {
   AlertCircle,
   Bell,
 } from 'lucide-react';
-import { cmsService } from '../../services/cmsService';
+import { settingsService } from '../../services/settingsService';
 import { CmsSiteSettings } from '../../types/cms';
 
 export const AdminSettings: React.FC = () => {
@@ -24,7 +24,7 @@ export const AdminSettings: React.FC = () => {
     async function load() {
       setIsLoading(true);
       try {
-        const data = await cmsService.getSettings();
+        const data = await settingsService.getSiteSettings();
         setSettings(data);
       } catch (err) {
         console.error('Failed to load settings:', err);
@@ -46,7 +46,7 @@ export const AdminSettings: React.FC = () => {
 
     setIsSaving(true);
     try {
-      const updated = await cmsService.updateSettings(settings);
+      const updated = await settingsService.updateSiteSettings(settings);
       setSettings(updated);
       showToast('Site settings updated successfully.');
     } catch {

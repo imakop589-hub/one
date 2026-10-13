@@ -8,6 +8,12 @@ import {
 } from '../types/cms';
 
 import { resolveStorageAdapter, CmsStorageAdapter, StorageMode } from './storageAdapter';
+import { pageService } from './pageService';
+import { menuService } from './menuService';
+import { faqService } from './faqService';
+import { settingsService } from './settingsService';
+import { mediaService } from './mediaService';
+import { whmcsService } from './whmcsService';
 
 // Resolve current adapter (Production REST API vs Isolated Local Development Fallback)
 const adapter: CmsStorageAdapter = resolveStorageAdapter();
@@ -19,58 +25,58 @@ export const cmsService = {
 
   // ================= PAGES =================
   async getPages(): Promise<CmsPage[]> {
-    return adapter.getPages();
+    return pageService.listPages();
   },
 
   async getPageById(id: string): Promise<CmsPage | null> {
-    return adapter.getPageById(id);
+    return pageService.getPage(id);
   },
 
   async getPageBySlug(slug: string): Promise<CmsPage | null> {
-    return adapter.getPageBySlug(slug);
+    return pageService.getPageBySlug(slug);
   },
 
   async savePage(pageData: Partial<CmsPage> & { title: string; slug: string }): Promise<CmsPage> {
-    return adapter.savePage(pageData);
+    return pageService.createPage(pageData);
   },
 
   async togglePageStatus(id: string): Promise<CmsPage | null> {
-    return adapter.togglePageStatus(id);
+    return pageService.togglePageStatus(id);
   },
 
   async deletePage(id: string): Promise<boolean> {
-    return adapter.deletePage(id);
+    return pageService.deletePage(id);
   },
 
   // ================= SITE SETTINGS =================
   async getSettings(): Promise<CmsSiteSettings> {
-    return adapter.getSettings();
+    return settingsService.getSiteSettings();
   },
 
   async updateSettings(updates: Partial<CmsSiteSettings>): Promise<CmsSiteSettings> {
-    return adapter.updateSettings(updates);
+    return settingsService.updateSiteSettings(updates);
   },
 
   // ================= NAVIGATION MENUS =================
   async getMenuItems(location?: string): Promise<CmsMenuItem[]> {
-    return adapter.getMenuItems(location);
+    return menuService.getMenus(location);
   },
 
   async saveMenuItem(itemData: Partial<CmsMenuItem> & { label: string; url: string }): Promise<CmsMenuItem> {
-    return adapter.saveMenuItem(itemData);
+    return menuService.createMenuItem(itemData);
   },
 
   async deleteMenuItem(id: string): Promise<boolean> {
-    return adapter.deleteMenuItem(id);
+    return menuService.deleteMenuItem(id);
   },
 
   async reorderMenuItems(orderedItems: CmsMenuItem[]): Promise<void> {
-    return adapter.reorderMenuItems(orderedItems);
+    return menuService.reorderMenuItems(orderedItems);
   },
 
   // ================= MEDIA LIBRARY =================
   async getMediaItems(): Promise<CmsMediaItem[]> {
-    return adapter.getMedia();
+    return mediaService.listMedia();
   },
 
   async uploadMedia(payload: {
@@ -81,37 +87,37 @@ export const cmsService = {
     altText?: string;
     title?: string;
   }): Promise<{ success: boolean; item?: CmsMediaItem; error?: string }> {
-    return adapter.uploadMedia(payload);
+    return mediaService.uploadMedia(payload);
   },
 
   async updateMedia(id: string, updates: Partial<CmsMediaItem>): Promise<CmsMediaItem | null> {
-    return adapter.updateMedia(id, updates);
+    return mediaService.updateMedia(id, updates);
   },
 
   async deleteMedia(id: string): Promise<boolean> {
-    return adapter.deleteMedia(id);
+    return mediaService.deleteMedia(id);
   },
 
   // ================= FAQS =================
   async getFaqs(category?: string): Promise<CmsFaq[]> {
-    return adapter.getFaqs(category);
+    return faqService.listFAQs(category);
   },
 
   async saveFaq(faqData: Partial<CmsFaq> & { question: string; answer: string }): Promise<CmsFaq> {
-    return adapter.saveFaq(faqData);
+    return faqService.createFAQ(faqData);
   },
 
   async deleteFaq(id: string): Promise<boolean> {
-    return adapter.deleteFaq(id);
+    return faqService.deleteFAQ(id);
   },
 
   // ================= WHMCS CONFIGURATION =================
   async getWhmcsConfig(): Promise<CmsWhmcsConfig> {
-    return adapter.getWhmcs();
+    return whmcsService.getWhmcsConfig();
   },
 
   async updateWhmcsConfig(updates: Partial<CmsWhmcsConfig>): Promise<CmsWhmcsConfig> {
-    return adapter.updateWhmcs(updates);
+    return whmcsService.updateWhmcsConfig(updates);
   },
 
   // Factory reset for dev / testing
@@ -119,3 +125,11 @@ export const cmsService = {
     adapter.resetToDefaults();
   },
 };
+
+// Re-export modular services
+export { pageService } from './pageService';
+export { menuService } from './menuService';
+export { faqService } from './faqService';
+export { settingsService } from './settingsService';
+export { mediaService } from './mediaService';
+export { whmcsService } from './whmcsService';

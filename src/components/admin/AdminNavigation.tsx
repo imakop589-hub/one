@@ -11,8 +11,9 @@ import {
   ChevronRight,
   Eye,
   EyeOff,
+  X,
 } from 'lucide-react';
-import { cmsService } from '../../services/cmsService';
+import { menuService } from '../../services/menuService';
 import { CmsMenuItem } from '../../types/cms';
 
 export const AdminNavigation: React.FC = () => {
@@ -20,6 +21,7 @@ export const AdminNavigation: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>('header');
   const [isLoading, setIsLoading] = useState(true);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
 
   // Edit / Add modal state
   const [editingItem, setEditingItem] = useState<CmsMenuItem | null>(null);
@@ -39,7 +41,7 @@ export const AdminNavigation: React.FC = () => {
   const loadMenu = async () => {
     setIsLoading(true);
     try {
-      const items = await cmsService.getMenuItems();
+      const items = await menuService.getMenus();
       setMenuItems(items);
     } catch (err) {
       console.error('Failed to load menu items:', err);
@@ -90,7 +92,7 @@ export const AdminNavigation: React.FC = () => {
     if (!formLabel.trim() || !formUrl.trim()) return;
 
     try {
-      const saved = await cmsService.saveMenuItem({
+      const saved = await menuService.createMenuItem({
         id: editingItem?.id,
         label: formLabel.trim(),
         url: formUrl.trim(),
@@ -118,7 +120,7 @@ export const AdminNavigation: React.FC = () => {
 
   const handleToggleActive = async (item: CmsMenuItem) => {
     try {
-      const updated = await cmsService.saveMenuItem({
+      const updated = await menuService.createMenuItem({
         ...item,
         isActive: !item.isActive,
       });
@@ -130,11 +132,11 @@ export const AdminNavigation: React.FC = () => {
   };
 
   const handleDeleteItem = async (id: string) => {
-    if (!window.confirm('Delete this menu item?')) return;
     try {
-      const ok = await cmsService.deleteMenuItem(id);
+      const ok = await menuService.deleteMenuItem(id);
       if (ok) {
         setMenuItems(prev => prev.filter(i => i.id !== id));
+        setDeleteConfirmId(null);
         showToast('Menu item deleted.');
       }
     } catch {
@@ -267,14 +269,34 @@ export const AdminNavigation: React.FC = () => {
                     <Edit3 className="w-4 h-4" />
                   </button>
 
-                  <button
-                    type="button"
-                    onClick={() => handleDeleteItem(item.id)}
-                    className="p-1.5 text-slate-500 hover:text-rose-400 hover:bg-rose-950/30 rounded-lg transition-colors cursor-pointer"
-                    title="Delete item"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                  </button>
+                  {deleteConfirmId === item.id ? (
+                    <div className="flex items-center gap-1">
+                      <button
+                        type="button"
+                        onClick={() => handleDeleteItem(item.id)}
+                        className="px-2 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded text-[11px] font-bold cursor-pointer"
+                      >
+                        Confirm
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setDeleteConfirmId(null)}
+                        className="p-1 text-slate-400 hover:text-white rounded text-[11px] cursor-pointer"
+                        title="Cancel"
+                      >
+                        <X className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setDeleteConfirmId(item.id)}
+                      className="p-1.5 text-slate-500 hover:text-rose-400 hover:bg-rose-950/30 rounded-lg transition-colors cursor-pointer"
+                      title="Delete item"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
               </div>
             ))}

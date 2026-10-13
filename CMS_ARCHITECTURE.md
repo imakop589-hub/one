@@ -52,6 +52,7 @@ Hostxeon separates **Content Marketing & Brand Management** from **Customer Serv
 
 | Feature / Domain | Status | Architecture Classification |
 |---|---|---|
+| **Modular CMS Service Layer** | **IMPLEMENTED** | Typed services: `pageService`, `menuService`, `faqService`, `settingsService`, `mediaService`, `whmcsService`, `cmsService` |
 | **Admin UI & Dashboard** | **IMPLEMENTED** | Admin management screens active at `/#admin` |
 | **Pages CMS CRUD** | **IMPLEMENTED** | Create, Read, Update, Delete, publish toggle, and SEO fields |
 | **Public CMS Page Resolver** | **IMPLEMENTED** | Dynamically resolves and renders published CMS pages |
@@ -59,14 +60,14 @@ Hostxeon separates **Content Marketing & Brand Management** from **Customer Serv
 | **FAQs Management** | **IMPLEMENTED** | Category-based FAQ CRUD with public dynamic display |
 | **Site Settings** | **IMPLEMENTED** | Brand identity, phone, desk email, copyright, social links |
 | **WHMCS Link Bridge** | **IMPLEMENTED** | Configurable base URL, clientarea URL, cart URL, PIDs |
-| **Storage Layer: Dev Mode** | **DEVELOPMENT FALLBACK** | Local storage adapter for offline testing |
-| **Storage Layer: Prod API** | **REQUIRES DEPLOYMENT CONFIG** | `ApiStorageAdapter` ready via `VITE_CMS_API_URL` |
-| **Admin Auth: Dev Mode** | **DEVELOPMENT FALLBACK** | Local dev simulator using salted WebCrypto SHA-256 (no hardcoded passwords) |
-| **Admin Auth: Prod Mode** | **REQUIRES DEPLOYMENT CONFIG** | `ApiAuthAdapter` ready for HttpOnly cookie sessions |
-| **Media: Local Dev** | **DEVELOPMENT FALLBACK** | Local data URL simulator with 5MB validation |
-| **Media: S3 / Cloud Bucket** | **REQUIRES DEPLOYMENT CONFIG** | Presigned S3 adapter ready via `POST /api/media/upload` |
-| **Customer Accounts & Billing**| **WHMCS / EXTERNAL SYSTEM** | Separate WHMCS system (strictly out of scope for website) |
-| **Live Server Provisioning** | **WHMCS / EXTERNAL SYSTEM** | Handled via WHMCS server automation modules |
+| **Storage Layer: Dev Mode** | **DEVELOPMENT ONLY** | Local storage adapter for offline testing |
+| **Storage Layer: Prod API** | **REQUIRES DEPLOYMENT CONFIGURATION** | `ApiStorageAdapter` ready via `VITE_CMS_API_URL` |
+| **Admin Auth: Dev Mode** | **DEVELOPMENT ONLY** | Local dev simulator using salted WebCrypto SHA-256 (no hardcoded passwords) |
+| **Admin Auth: Prod Mode** | **REQUIRES DEPLOYMENT CONFIGURATION** | `ApiAuthAdapter` ready for HttpOnly cookie sessions |
+| **Media: Local Dev** | **DEVELOPMENT ONLY** | Local data URL simulator with 5MB validation |
+| **Media: S3 / Cloud Bucket** | **REQUIRES DEPLOYMENT CONFIGURATION** | Presigned S3 adapter ready via `POST /api/media/upload` |
+| **Customer Accounts & Billing**| **EXTERNAL WHMCS** | Separate WHMCS system (strictly out of scope for website) |
+| **Live Server Provisioning** | **EXTERNAL WHMCS** | Handled via WHMCS server automation modules |
 
 ---
 

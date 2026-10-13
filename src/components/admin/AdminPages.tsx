@@ -12,7 +12,7 @@ import {
   AlertCircle,
   Eye,
 } from 'lucide-react';
-import { cmsService } from '../../services/cmsService';
+import { pageService } from '../../services/pageService';
 import { CmsPage, ContentStatus } from '../../types/cms';
 
 interface AdminPagesProps {
@@ -37,7 +37,7 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
   const loadPages = async () => {
     setIsLoading(true);
     try {
-      const data = await cmsService.getPages();
+      const data = await pageService.listPages();
       setPages(data);
     } catch (err) {
       console.error('Error fetching pages:', err);
@@ -57,7 +57,7 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
 
   const handleToggleStatus = async (page: CmsPage) => {
     try {
-      const updated = await cmsService.togglePageStatus(page.id);
+      const updated = await pageService.togglePageStatus(page.id);
       if (updated) {
         setPages(prev => prev.map(p => (p.id === page.id ? updated : p)));
         showToast(`Page "${page.title}" changed to ${updated.status}.`);
@@ -69,7 +69,7 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
 
   const handleDeletePage = async (id: string) => {
     try {
-      const success = await cmsService.deletePage(id);
+      const success = await pageService.deletePage(id);
       if (success) {
         setPages(prev => prev.filter(p => p.id !== id));
         setDeleteConfirmId(null);

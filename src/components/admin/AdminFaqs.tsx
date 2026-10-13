@@ -8,8 +8,9 @@ import {
   Check,
   Eye,
   EyeOff,
+  X,
 } from 'lucide-react';
-import { cmsService } from '../../services/cmsService';
+import { faqService } from '../../services/faqService';
 import { CmsFaq } from '../../types/cms';
 
 export const AdminFaqs: React.FC = () => {
@@ -17,6 +18,7 @@ export const AdminFaqs: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(true);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
 
   // Edit / Add modal
   const [editingFaq, setEditingFaq] = useState<CmsFaq | null>(null);
@@ -29,7 +31,7 @@ export const AdminFaqs: React.FC = () => {
   const loadFaqs = async () => {
     setIsLoading(true);
     try {
-      const items = await cmsService.getFaqs();
+      const items = await faqService.listFAQs();
       setFaqs(items);
     } catch (err) {
       console.error('Failed to load FAQs:', err);
@@ -70,7 +72,7 @@ export const AdminFaqs: React.FC = () => {
     if (!formQuestion.trim() || !formAnswer.trim()) return;
 
     try {
-      const saved = await cmsService.saveFaq({
+      const saved = await faqService.createFAQ({
         id: editingFaq?.id,
         question: formQuestion.trim(),
         answer: formAnswer.trim(),
@@ -94,7 +96,7 @@ export const AdminFaqs: React.FC = () => {
 
   const handleTogglePublish = async (faq: CmsFaq) => {
     try {
-      const updated = await cmsService.saveFaq({
+      const updated = await faqService.createFAQ({
         ...faq,
         isPublished: !faq.isPublished,
       });
@@ -106,11 +108,11 @@ export const AdminFaqs: React.FC = () => {
   };
 
   const handleDelete = async (id: string) => {
-    if (!window.confirm('Delete this FAQ entry?')) return;
     try {
-      const ok = await cmsService.deleteFaq(id);
+      const ok = await faqService.deleteFAQ(id);
       if (ok) {
         setFaqs(prev => prev.filter(f => f.id !== id));
+        setDeleteConfirmId(null);
         showToast('FAQ deleted.');
       }
     } catch {
@@ -221,14 +223,34 @@ export const AdminFaqs: React.FC = () => {
                       <Edit3 className="w-4 h-4" />
                     </button>
 
-                    <button
-                      type="button"
-                      onClick={() => handleDelete(faq.id)}
-                      className="p-1.5 text-slate-500 hover:text-rose-400 hover:bg-rose-950/30 rounded-lg transition-colors cursor-pointer"
-                      title="Delete"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
+                    {deleteConfirmId === faq.id ? (
+                      <div className="flex items-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => handleDelete(faq.id)}
+                          className="px-2 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded text-[11px] font-bold cursor-pointer"
+                        >
+                          Confirm
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setDeleteConfirmId(null)}
+                          className="p-1 text-slate-400 hover:text-white rounded text-[11px] cursor-pointer"
+                          title="Cancel"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => setDeleteConfirmId(faq.id)}
+                        className="p-1.5 text-slate-500 hover:text-rose-400 hover:bg-rose-950/30 rounded-lg transition-colors cursor-pointer"
+                        title="Delete"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

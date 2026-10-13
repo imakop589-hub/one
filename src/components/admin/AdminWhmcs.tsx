@@ -8,7 +8,7 @@ import {
   Layers,
   HelpCircle,
 } from 'lucide-react';
-import { cmsService } from '../../services/cmsService';
+import { whmcsService } from '../../services/whmcsService';
 import { CmsWhmcsConfig } from '../../types/cms';
 
 export const AdminWhmcs: React.FC = () => {
@@ -21,7 +21,7 @@ export const AdminWhmcs: React.FC = () => {
     async function load() {
       setIsLoading(true);
       try {
-        const data = await cmsService.getWhmcsConfig();
+        const data = await whmcsService.getWhmcsConfig();
         setConfig(data);
       } catch (err) {
         console.error('Failed to load WHMCS config:', err);
@@ -43,7 +43,7 @@ export const AdminWhmcs: React.FC = () => {
 
     setIsSaving(true);
     try {
-      const updated = await cmsService.updateWhmcsConfig(config);
+      const updated = await whmcsService.updateWhmcsConfig(config);
       setConfig(updated);
       showToast('WHMCS bridge configuration saved.');
     } catch {

@@ -7,7 +7,6 @@ import {
   ChevronDown, 
   Menu, 
   X, 
-  Sparkles,
   Server,
   Mail,
   Shield,
@@ -15,11 +14,7 @@ import {
   ArrowRight,
   Headphones,
   Zap,
-  Check,
   Cpu,
-  Layout,
-  Store,
-  HelpCircle,
   ExternalLink
 } from 'lucide-react';
 import { cmsService } from '../services/cmsService';
@@ -56,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
-  const [announcementText, setAnnouncementText] = useState('Aida 2.5 Multi-Language & Auto-Stripe Shop Generation is live.');
+  const [announcementText, setAnnouncementText] = useState('High-performance NVMe cloud hosting infrastructure is active.');
 
   useEffect(() => {
     let isMounted = true;
@@ -110,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           view: 'domains',
           onAction: onOpenDomainSearch,
           badge: 'From £0.99',
-          badgeColor: 'bg-emerald-100 text-[#008a45]',
+          badgeColor: 'bg-emerald-50 text-[#008744] border border-emerald-200',
           icon: Globe,
         },
         {
@@ -119,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           view: 'domains',
           onAction: onOpenDomainTransfer,
           badge: 'Free Transfer',
-          badgeColor: 'bg-emerald-50 text-emerald-800',
+          badgeColor: 'bg-emerald-50 text-[#008744] border border-emerald-200',
           icon: ExternalLink,
         },
         {
@@ -128,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           view: 'domains',
           onAction: onOpenWhoisLookup,
           badge: 'Free Tool',
-          badgeColor: 'bg-amber-100 text-amber-900',
+          badgeColor: 'bg-amber-50 text-amber-800 border border-amber-200',
           icon: Search,
         },
       ],
@@ -143,7 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           desc: 'High-speed NVMe storage, 4 scalable plans, free domain & daily backups',
           view: 'webhosting',
           badge: '4 Plans',
-          badgeColor: 'bg-emerald-100 text-[#008a45]',
+          badgeColor: 'bg-emerald-50 text-[#008744] border border-emerald-200',
           icon: Globe,
         },
         {
@@ -151,7 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           desc: 'Managed WordPress, 1-click install, auto-updates & speed caching',
           view: 'wordpress',
           badge: 'Popular',
-          badgeColor: 'bg-[#fed000] text-slate-950',
+          badgeColor: 'bg-amber-50 text-amber-800 border border-amber-200',
           icon: Zap,
         },
         {
@@ -159,7 +154,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           desc: 'Isolated cloud containers, multi-region failover & 99.99% uptime guarantee',
           view: 'cloud',
           badge: 'Ultra-Fast',
-          badgeColor: 'bg-emerald-50 text-emerald-700',
+          badgeColor: 'bg-emerald-50 text-[#008744] border border-emerald-200',
           icon: Server,
         },
       ],
@@ -177,7 +172,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           desc: 'Dedicated vCPU & NVMe SSD storage with full root SSH administrator control',
           view: 'vps',
           badge: 'Root SSH',
-          badgeColor: 'bg-slate-100 text-slate-800',
+          badgeColor: 'bg-slate-100 text-slate-800 border border-slate-200',
           icon: Server,
         },
         {
@@ -185,7 +180,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           desc: 'Fully managed operating system, 24/7 server monitoring & automatic security patching',
           view: 'vps',
           badge: 'Managed',
-          badgeColor: 'bg-emerald-100 text-emerald-800',
+          badgeColor: 'bg-emerald-50 text-[#008744] border border-emerald-200',
           icon: Shield,
         },
         {
@@ -193,7 +188,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           desc: 'Scalable block storage up to 4 TB for high-load media, backups & databases',
           view: 'vps',
           badge: 'Up to 4TB',
-          badgeColor: 'bg-amber-100 text-amber-900',
+          badgeColor: 'bg-amber-50 text-amber-800 border border-amber-200',
           icon: Cpu,
         },
       ],
@@ -212,7 +207,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           view: 'email',
           onAction: () => onOpenEmailCategory?.('webmail'),
           badge: '25 GB Storage',
-          badgeColor: 'bg-emerald-100 text-[#008a45]',
+          badgeColor: 'bg-emerald-50 text-[#008744] border border-emerald-200',
           icon: Mail,
         },
         {
@@ -221,7 +216,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           view: 'email',
           onAction: () => onOpenEmailCategory?.('m365'),
           badge: 'Office Apps',
-          badgeColor: 'bg-blue-100 text-blue-800',
+          badgeColor: 'bg-blue-50 text-blue-800 border border-blue-200',
           icon: Layers,
         },
         {
@@ -230,7 +225,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           view: 'email',
           onAction: () => onOpenEmailCategory?.('security'),
           badge: 'SSL/TLS',
-          badgeColor: 'bg-slate-100 text-slate-800',
+          badgeColor: 'bg-slate-100 text-slate-800 border border-slate-200',
           icon: Shield,
         },
       ],
@@ -238,24 +233,24 @@ export const Navbar: React.FC<NavbarProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-2xs">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] shadow-2xs">
       
       {/* Top Notification Announcement Bar */}
       {showAnnouncement && (
-        <div className="bg-[#041d16] text-emerald-300 text-xs py-1.5 px-4 text-center font-medium border-b border-emerald-950 flex items-center justify-between gap-2 relative">
-          <div className="flex-1 flex items-center justify-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-none py-0.5">
-            <span className="bg-emerald-500/20 text-[#4ade80] text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider border border-emerald-500/30 shrink-0">
-              Spring 2026 Release
+        <div className="bg-[#061913] text-slate-300 text-xs py-2 px-4 text-center font-medium border-b border-[#061913] flex items-center justify-between gap-2 relative">
+          <div className="flex-1 flex items-center justify-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-none">
+            <span className="bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-emerald-500/30 shrink-0">
+              Infrastructure Update
             </span>
-            <span className="text-gray-200 truncate">
+            <span className="text-slate-200 truncate">
               {announcementText}
             </span>
             <button
               type="button"
               onClick={() => onOpenBuilder?.()}
-              className="text-[#fed000] font-bold hover:underline inline-flex items-center gap-1 shrink-0 ml-1 cursor-pointer"
+              className="text-[#F59E0B] font-semibold hover:underline inline-flex items-center gap-1 shrink-0 ml-1 cursor-pointer"
             >
-              Try 14 Days Free <ArrowRight className="w-3 h-3" />
+              Learn More <ArrowRight className="w-3 h-3" />
             </button>
           </div>
 
@@ -263,7 +258,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             type="button"
             onClick={() => setShowAnnouncement(false)}
-            className="text-emerald-400/80 hover:text-white hover:bg-emerald-900/50 p-1 rounded-md transition-colors cursor-pointer shrink-0 ml-2"
+            className="text-slate-400 hover:text-white hover:bg-white/10 p-1 rounded-md transition-colors cursor-pointer shrink-0 ml-2"
             title="Dismiss announcement"
             aria-label="Close notification"
             id="dismiss-announcement-bar"
@@ -273,35 +268,31 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       )}
 
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between h-16 md:h-18 gap-2">
-                    {/* Brand Logo */}
-          <div className="flex items-center gap-3 xl:gap-5 shrink-0">
+          {/* Brand Logo */}
+          <div className="flex items-center gap-4 xl:gap-6 shrink-0">
             <button 
               type="button" 
               onClick={() => {
                 onChangeView?.('home');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="flex items-center gap-2.5 focus:outline-hidden shrink-0 text-left cursor-pointer" 
+              className="flex items-center gap-2.5 focus:outline-hidden shrink-0 text-left cursor-pointer group" 
               id="nav-logo"
             >
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-[#008a45] to-[#041d16] flex items-center justify-center text-white font-black shadow-md relative shrink-0">
-                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#fed000]" />
-                <div className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></div>
+              <div className="w-9 h-9 rounded-lg bg-[#008744] flex items-center justify-center text-white shadow-xs shrink-0 group-hover:bg-[#006E37] transition-colors">
+                <Server className="w-5 h-5 text-white" />
               </div>
               <div className="flex items-center">
-                <span className="text-lg sm:text-xl font-black tracking-tight text-[#111827] whitespace-nowrap">
-                  Host<span className="text-[#008a45]">xeon</span>
-                </span>
-                <span className="ml-1 text-[9px] font-extrabold bg-emerald-100 text-[#008a45] px-1.5 py-0.5 rounded-md uppercase tracking-wider shrink-0">
-                  AI
+                <span className="text-xl font-bold tracking-tight text-[#0F172A] whitespace-nowrap">
+                  Host<span className="text-[#008744]">xeon</span>
                 </span>
               </div>
             </button>
 
             {/* Desktop Navigation (lg and above) */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5" aria-label="Main Navigation">
               {navLinks.map((link) => (
                 <div 
                   key={link.label}
@@ -318,27 +309,27 @@ export const Navbar: React.FC<NavbarProps> = ({
                         setActiveDropdown(activeDropdown === link.label ? null : link.label);
                       }
                     }}
-                    className={`flex items-center gap-1.5 px-3 py-2 text-[14px] rounded-xl transition-all focus:outline-hidden cursor-pointer whitespace-nowrap ${
+                    className={`flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#008744] cursor-pointer whitespace-nowrap ${
                       link.isActive
-                        ? 'text-[#008a45] font-bold bg-emerald-50/80 hover:bg-emerald-100/60'
-                        : 'text-gray-700 font-semibold hover:text-black hover:bg-gray-50'
+                        ? 'text-[#008744] font-semibold bg-emerald-50/80 hover:bg-emerald-100/60'
+                        : 'text-[#475569] font-medium hover:text-[#0F172A] hover:bg-slate-50'
                     }`}
                     id={`nav-link-${link.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                   >
                     <span>{link.label}</span>
                     {link.badge && (
-                      <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md uppercase shrink-0 ${
-                        link.isActive ? 'bg-[#008a45] text-white' : 'bg-emerald-100 text-[#008a45]'
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full uppercase shrink-0 ${
+                        link.isActive ? 'bg-[#008744] text-white' : 'bg-emerald-50 text-[#008744] border border-emerald-200'
                       }`}>
                         {link.badge}
                       </span>
                     )}
-                    <ChevronDown className="w-3.5 h-3.5 text-gray-400 group-hover:text-gray-900 transition-transform group-hover:rotate-180 shrink-0" />
+                    <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 transition-transform group-hover:rotate-180 shrink-0" />
                   </button>
 
                   {/* Dropdown Menu */}
                   {activeDropdown === link.label && link.items && (
-                    <div className="absolute top-full left-0 w-96 bg-white rounded-2xl shadow-xl border border-gray-100 p-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                    <div className="absolute top-full left-0 w-96 bg-white rounded-xl shadow-lg border border-[#E2E8F0] p-2.5 z-50 animate-in fade-in duration-150">
                       <div className="space-y-1">
                         {link.items.map((subItem) => {
                           const isItemActive = subItem.view && currentView === subItem.view;
@@ -361,41 +352,41 @@ export const Navbar: React.FC<NavbarProps> = ({
                                   setActiveDropdown(null);
                                 }
                               }}
-                              className={`block p-2.5 rounded-xl transition-colors group/item ${
+                              className={`block p-2.5 rounded-lg transition-colors group/item ${
                                 isItemActive 
                                   ? 'bg-emerald-50/90 border border-emerald-200/80 shadow-2xs' 
-                                  : 'hover:bg-emerald-50/60 border border-transparent'
+                                  : 'hover:bg-slate-50 border border-transparent'
                               }`}
                             >
                               <div className="flex items-start gap-2.5">
                                 {SubIcon && (
                                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
                                     isItemActive
-                                      ? 'bg-[#008a45] text-white'
-                                      : 'bg-emerald-100/60 text-[#008a45] group-hover/item:bg-[#008a45] group-hover/item:text-white'
+                                      ? 'bg-[#008744] text-white'
+                                      : 'bg-emerald-50 text-[#008744] group-hover/item:bg-[#008744] group-hover/item:text-white'
                                   }`}>
                                     <SubIcon className="w-4 h-4" />
                                   </div>
                                 )}
                                 <div className="flex-1 min-w-0">
-                                  <div className="text-xs sm:text-sm font-bold text-gray-900 group-hover/item:text-[#008a45] flex items-center justify-between">
+                                  <div className="text-sm font-semibold text-[#0F172A] group-hover/item:text-[#008744] flex items-center justify-between">
                                     <span className="flex items-center gap-1.5">
                                       <span>{subItem.title}</span>
                                       {subItem.badge && (
-                                        <span className={`text-[9px] font-extrabold px-1.5 py-0.2 rounded-full uppercase tracking-wider ${
-                                          subItem.badgeColor || 'bg-emerald-100 text-emerald-800'
+                                        <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider ${
+                                          subItem.badgeColor || 'bg-emerald-50 text-[#008744] border border-emerald-200'
                                         }`}>
                                           {subItem.badge}
                                         </span>
                                       )}
                                     </span>
                                     {isItemActive ? (
-                                      <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">Active</span>
+                                      <span className="text-xs font-semibold text-[#008744] bg-emerald-50 px-2 py-0.5 rounded">Active</span>
                                     ) : (
-                                      <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover/item:opacity-100 transition-opacity text-[#008a45] shrink-0" />
+                                      <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover/item:opacity-100 transition-opacity text-[#008744] shrink-0" />
                                     )}
                                   </div>
-                                  <div className="text-[11px] text-gray-500 mt-0.5 leading-snug">
+                                  <div className="text-xs text-[#475569] mt-0.5 leading-snug">
                                     {subItem.desc}
                                   </div>
                                 </div>
@@ -415,72 +406,69 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <button
               onClick={onOpenLiveChat}
-              className="hidden xl:flex items-center gap-1.5 text-xs xl:text-sm font-bold text-gray-700 hover:text-black px-2.5 xl:px-3 py-2 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+              className="hidden xl:flex items-center gap-1.5 text-sm font-medium text-[#475569] hover:text-[#0F172A] px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer whitespace-nowrap shrink-0"
               id="nav-247-support"
             >
-              <Headphones className="w-4 h-4 text-[#008a45] shrink-0" />
+              <Headphones className="w-4 h-4 text-[#008744] shrink-0" />
               <span>24/7 Expert Help</span>
             </button>
 
             {/* Login Button */}
             <button
               onClick={onOpenLogin}
-              className="flex items-center gap-1.5 border border-gray-200 hover:border-gray-900 text-gray-800 hover:text-black px-3.5 xl:px-4 py-2 rounded-xl text-xs xl:text-sm font-bold transition-all shadow-2xs hover:shadow-xs cursor-pointer whitespace-nowrap shrink-0"
+              className="flex items-center gap-1.5 border border-[#E2E8F0] hover:border-slate-400 text-[#0F172A] px-4 py-2 rounded-lg text-sm font-semibold transition-colors shadow-2xs hover:bg-slate-50 cursor-pointer whitespace-nowrap shrink-0"
               id="nav-login-btn"
             >
-              <User className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+              <User className="w-4 h-4 text-slate-500 shrink-0" />
               <span>Sign In</span>
             </button>
 
             {/* Cart Button */}
             <button
               onClick={onOpenCart}
-              className="relative p-2 sm:p-2.5 text-gray-700 hover:text-black hover:bg-gray-100 rounded-xl transition-colors focus:outline-hidden cursor-pointer shrink-0"
+              className="relative p-2 text-[#475569] hover:text-[#0F172A] hover:bg-slate-100 rounded-lg transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#008744] cursor-pointer shrink-0"
               id="nav-cart-btn"
               title="Shopping Cart"
               aria-label="Shopping Cart"
             >
               <ShoppingCart className="w-5 h-5 shrink-0" />
               {cartCount > 0 && (
-                <span className="absolute -top-0.5 right-0.5 min-w-[18px] h-[18px] bg-[#008a45] text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1 shadow-xs">
+                <span className="absolute -top-0.5 right-0.5 min-w-[18px] h-[18px] bg-[#008744] text-white text-xs font-bold rounded-full flex items-center justify-center px-1 shadow-xs">
                   {cartCount}
                 </span>
               )}
             </button>
           </div>
 
-          {/* Mobile & Tablet Action Bar (below lg: 0px to 1023px) */}
-          <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
-            {/* Quick Sign In button */}
+          {/* Mobile & Tablet Action Bar (below lg) */}
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
             <button
               onClick={onOpenLogin}
-              className="flex items-center gap-1 border border-gray-200 hover:border-gray-900 text-gray-800 hover:text-black px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer shrink-0"
+              className="flex items-center gap-1 border border-[#E2E8F0] hover:border-slate-400 text-[#0F172A] px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors shadow-2xs cursor-pointer shrink-0"
               id="mobile-nav-login-btn"
             >
-              <User className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+              <User className="w-3.5 h-3.5 text-slate-500 shrink-0" />
               <span className="hidden sm:inline">Sign In</span>
             </button>
 
-            {/* Cart Button */}
             <button
               onClick={onOpenCart}
-              className="relative p-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-xl transition-colors cursor-pointer shrink-0"
+              className="relative p-2 text-[#475569] hover:text-[#0F172A] hover:bg-slate-100 rounded-lg transition-colors cursor-pointer shrink-0"
               id="mobile-cart-btn"
               title="Shopping Cart"
               aria-label="Shopping Cart"
             >
               <ShoppingCart className="w-5 h-5 shrink-0" />
               {cartCount > 0 && (
-                <span className="absolute -top-0.5 right-0.5 min-w-4 h-4 bg-[#008a45] text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1 shadow-xs">
+                <span className="absolute -top-0.5 right-0.5 min-w-4 h-4 bg-[#008744] text-white text-xs font-bold rounded-full flex items-center justify-center px-1 shadow-xs">
                   {cartCount}
                 </span>
               )}
             </button>
 
-            {/* Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-xl focus:outline-hidden cursor-pointer shrink-0"
+              className="p-2 text-[#475569] hover:text-[#0F172A] hover:bg-slate-100 rounded-lg focus:outline-hidden cursor-pointer shrink-0"
               id="mobile-menu-toggle"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
@@ -492,87 +480,32 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile / Tablet Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-4 sm:px-6 pt-3 pb-6 space-y-4 max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-white border-b border-[#E2E8F0] px-4 sm:px-6 pt-3 pb-6 space-y-4 max-h-[80vh] overflow-y-auto">
           {onChangeView && (
-            <div className="grid grid-cols-3 gap-1 rounded-xl bg-gray-100 p-1 text-center">
-              <button
-                type="button"
-                onClick={() => {
-                  onChangeView('domains');
-                  setMobileMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className={`py-2 px-1 rounded-lg text-xs font-bold transition-all text-center cursor-pointer ${
-                  currentView === 'domains' ? 'bg-[#008a45] text-white shadow-xs' : 'text-gray-700'
-                }`}
-              >
-                Domains
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  onChangeView('webhosting');
-                  setMobileMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className={`py-2 px-1 rounded-lg text-xs font-bold transition-all text-center cursor-pointer ${
-                  currentView === 'webhosting' ? 'bg-[#008a45] text-white shadow-xs' : 'text-gray-700'
-                }`}
-              >
-                Web Hosting
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  onChangeView('wordpress');
-                  setMobileMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className={`py-2 px-1 rounded-lg text-xs font-bold transition-all text-center cursor-pointer ${
-                  currentView === 'wordpress' ? 'bg-[#008a45] text-white shadow-xs' : 'text-gray-700'
-                }`}
-              >
-                WordPress
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  onChangeView('cloud');
-                  setMobileMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className={`py-2 px-1 rounded-lg text-xs font-bold transition-all text-center cursor-pointer ${
-                  currentView === 'cloud' ? 'bg-[#008a45] text-white shadow-xs' : 'text-gray-700'
-                }`}
-              >
-                Cloud Hosting
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  onChangeView('vps');
-                  setMobileMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className={`py-2 px-1 rounded-lg text-xs font-bold transition-all text-center cursor-pointer ${
-                  currentView === 'vps' ? 'bg-[#008a45] text-white shadow-xs' : 'text-gray-700'
-                }`}
-              >
-                VPS Server
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  onChangeView('email');
-                  setMobileMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className={`py-2 px-1 rounded-lg text-xs font-bold transition-all text-center cursor-pointer ${
-                  currentView === 'email' ? 'bg-[#008a45] text-white shadow-xs' : 'text-gray-700'
-                }`}
-              >
-                Business Email
-              </button>
+            <div className="grid grid-cols-3 gap-1 rounded-lg bg-slate-100 p-1 text-center">
+              {[
+                { id: 'domains', label: 'Domains' },
+                { id: 'webhosting', label: 'Web Hosting' },
+                { id: 'wordpress', label: 'WordPress' },
+                { id: 'cloud', label: 'Cloud Hosting' },
+                { id: 'vps', label: 'VPS Server' },
+                { id: 'email', label: 'Business Email' },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => {
+                    onChangeView(item.id as AppView);
+                    setMobileMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className={`py-2 px-1 rounded-md text-xs font-semibold transition-colors text-center cursor-pointer ${
+                    currentView === item.id ? 'bg-[#008744] text-white shadow-xs' : 'text-[#475569] hover:text-[#0F172A]'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
           )}
 
@@ -582,9 +515,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setMobileMenuOpen(false);
                 onOpenLogin();
               }}
-              className="flex-1 flex items-center justify-center gap-2 py-2.5 border border-gray-300 rounded-xl font-bold text-sm whitespace-nowrap"
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 border border-[#E2E8F0] text-[#0F172A] rounded-lg font-semibold text-sm whitespace-nowrap hover:bg-slate-50 transition-colors"
             >
-              <User className="w-4 h-4" />
+              <User className="w-4 h-4 text-slate-500" />
               Sign In
             </button>
             <button
@@ -592,21 +525,21 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setMobileMenuOpen(false);
                 onOpenLiveChat();
               }}
-              className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-[#062c21] text-white rounded-xl font-bold text-sm whitespace-nowrap"
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-[#008744] hover:bg-[#006E37] text-white rounded-lg font-semibold text-sm whitespace-nowrap transition-colors"
             >
               <Headphones className="w-4 h-4" />
               24/7 Support
             </button>
           </div>
 
-          <div className="space-y-1 divide-y divide-gray-100">
+          <div className="space-y-1 divide-y divide-slate-100">
             {navLinks.map((link) => (
               <div key={link.label} className="pt-2">
-                <div className="text-xs font-bold uppercase tracking-wider text-gray-400 px-2 py-1 flex items-center justify-between">
+                <div className="text-xs font-semibold uppercase tracking-wider text-slate-400 px-2 py-1 flex items-center justify-between">
                   <span>{link.label}</span>
                   {link.badge && (
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
-                      link.isActive ? 'bg-[#008a45] text-white' : 'bg-emerald-100 text-[#008a45]'
+                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                      link.isActive ? 'bg-[#008744] text-white' : 'bg-emerald-50 text-[#008744] border border-emerald-200'
                     }`}>
                       {link.badge}
                     </span>
@@ -634,27 +567,27 @@ export const Navbar: React.FC<NavbarProps> = ({
                             setMobileMenuOpen(false);
                           }
                         }}
-                        className={`block px-3 py-2 text-sm rounded-xl transition-colors ${
-                          isItemActive ? 'bg-emerald-50 text-emerald-900 font-semibold' : 'text-gray-800 hover:bg-emerald-50/60'
+                        className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
+                          isItemActive ? 'bg-emerald-50 text-[#006E37] font-semibold' : 'text-[#0F172A] hover:bg-slate-50'
                         }`}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            {SubIcon && <SubIcon className="w-4 h-4 text-[#008a45]" />}
-                            <span className="font-bold text-gray-900">{item.title}</span>
+                            {SubIcon && <SubIcon className="w-4 h-4 text-[#008744]" />}
+                            <span className="font-semibold text-[#0F172A]">{item.title}</span>
                             {item.badge && (
-                              <span className={`text-[9px] font-extrabold px-1.5 py-0.2 rounded-full uppercase ${
-                                item.badgeColor || 'bg-emerald-100 text-emerald-800'
+                              <span className={`text-xs font-semibold px-2 py-0.5 rounded-full uppercase ${
+                                item.badgeColor || 'bg-emerald-50 text-[#008744] border border-emerald-200'
                               }`}>
                                 {item.badge}
                               </span>
                             )}
                           </div>
                           {isItemActive && (
-                            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">Active</span>
+                            <span className="text-xs font-semibold text-[#008744] bg-emerald-50 px-2 py-0.5 rounded">Active</span>
                           )}
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5 pl-6">{item.desc}</div>
+                        <div className="text-xs text-[#475569] mt-0.5 pl-6">{item.desc}</div>
                       </a>
                     );
                   })}
@@ -667,4 +600,3 @@ export const Navbar: React.FC<NavbarProps> = ({
     </header>
   );
 };
-

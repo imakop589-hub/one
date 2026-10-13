@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Check, Sparkles, MessageSquare, User, ShoppingCart, ShieldCheck, Headphones, Settings } from 'lucide-react';
+import { ChevronDown, Check, MessageSquare, User, ShoppingCart, ShieldCheck, Settings, Server } from 'lucide-react';
 import { AppView } from './Navbar';
 import { LegalModal, PolicyType } from './LegalModal';
 import { cmsService } from '../services/cmsService';
@@ -52,14 +52,14 @@ export const Footer: React.FC<FooterProps> = ({
 
   return (
     <>
-      <footer className="bg-slate-950 text-white border-t border-slate-800" id="footer">
-        {/* VAT Compliance Banner */}
-        <div className="bg-slate-900 py-2.5 px-4 text-center text-xs text-slate-400 border-b border-slate-800">
-          All prices include 20% VAT. 30-day money-back guarantee on all hosting and cloud packages with instant activation.
+      <footer className="bg-[#061913] text-white border-t border-[#133025]" id="footer">
+        {/* Compliance Banner */}
+        <div className="bg-[#04120e] py-2.5 px-4 text-center text-xs text-slate-400 border-b border-[#133025]">
+          All prices include 20% VAT where applicable. 30-day money-back guarantee on all hosting and cloud packages with instant activation.
         </div>
 
-        {/* Main Footer Links - Matching Header Services Exactly */}
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
+        {/* Main Footer Links */}
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             
             {/* Column 1: Logo & Brand Summary */}
@@ -67,19 +67,19 @@ export const Footer: React.FC<FooterProps> = ({
               <button 
                 type="button"
                 onClick={() => navigateTo('home')} 
-                className="flex items-center gap-2 focus:outline-hidden cursor-pointer text-left"
+                className="flex items-center gap-2.5 focus:outline-hidden cursor-pointer text-left group"
               >
-                <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-900 flex items-center justify-center text-white font-black shadow-md">
-                  <Sparkles className="w-4 h-4 text-[#fed000]" />
+                <div className="w-8 h-8 rounded-lg bg-[#008744] flex items-center justify-center text-white shadow-xs group-hover:bg-[#006E37] transition-colors">
+                  <Server className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-xl font-black tracking-tight text-white">
-                  Host<span className="text-emerald-400">xeon</span>
+                <span className="text-xl font-bold tracking-tight text-white">
+                  Host<span className="text-[#008744]">xeon</span>
                 </span>
               </button>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-400 leading-relaxed font-normal">
                 High-speed NVMe web hosting, managed WordPress, cloud instances, Linux VPS servers, domain registration & business email.
               </p>
-              <div className="flex items-center gap-2 pt-1 text-xs text-emerald-400 font-semibold">
+              <div className="flex items-center gap-2 pt-1 text-xs text-emerald-400 font-medium">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span>All Infrastructure Operational (99.99%)</span>
               </div>
@@ -90,17 +90,17 @@ export const Footer: React.FC<FooterProps> = ({
                   href="https://www.trustpilot.com/review/hostxeon.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 hover:border-slate-700 px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white transition-all group"
+                  className="inline-flex items-center gap-2 bg-[#0a231b] border border-[#173e30] hover:border-emerald-500/50 px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white transition-colors group"
                 >
-                  <span className="text-[#00b67a] font-black text-sm leading-none">★</span>
+                  <span className="text-[#00b67a] font-bold text-sm leading-none">★</span>
                   <span>Rated <strong>5.0</strong> on Trustpilot</span>
                 </a>
               </div>
             </div>
 
-            {/* Column 2: Domains (Header Service) */}
+            {/* Column 2: Domains */}
             <div>
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Domains</h4>
+              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-4">Domains</h4>
               <ul className="space-y-2 text-xs text-slate-400">
                 <li><button onClick={() => { onOpenDomainSearch?.(); navigateTo('domains'); }} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">Search & Register Domains</button></li>
                 <li><button onClick={() => { onOpenDomainTransfer?.(); navigateTo('domains'); }} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">Instant Domain Transfer</button></li>
@@ -110,9 +110,9 @@ export const Footer: React.FC<FooterProps> = ({
               </ul>
             </div>
 
-            {/* Column 3: Web Hosting (Header Service) */}
+            {/* Column 3: Web Hosting */}
             <div>
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Web Hosting</h4>
+              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-4">Web Hosting</h4>
               <ul className="space-y-2 text-xs text-slate-400">
                 <li><button onClick={() => navigateTo('webhosting')} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">Starter Plan (£1.99/mo)</button></li>
                 <li><button onClick={() => navigateTo('webhosting')} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">Professional Plan (£1.99/mo)</button></li>
@@ -122,9 +122,9 @@ export const Footer: React.FC<FooterProps> = ({
               </ul>
             </div>
 
-            {/* Column 4: WordPress & Cloud (Header Service) */}
+            {/* Column 4: WordPress & Cloud */}
             <div>
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">WordPress & Cloud</h4>
+              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-4">WordPress & Cloud</h4>
               <ul className="space-y-2 text-xs text-slate-400">
                 <li><button onClick={() => navigateTo('wordpress')} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">Managed WordPress Hosting</button></li>
                 <li><button onClick={() => navigateTo('wordpress')} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">1-Click WordPress Setup</button></li>
@@ -134,9 +134,9 @@ export const Footer: React.FC<FooterProps> = ({
               </ul>
             </div>
 
-            {/* Column 5: VPS & Business Email (Header Service) */}
+            {/* Column 5: VPS & Business Email */}
             <div>
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">VPS & Email</h4>
+              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-4">VPS & Email</h4>
               <ul className="space-y-2 text-xs text-slate-400">
                 <li><button onClick={() => navigateTo('vps')} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">Linux KVM VPS Server</button></li>
                 <li><button onClick={() => navigateTo('vps')} className="hover:text-emerald-400 transition-colors cursor-pointer text-left">Full Root SSH Administrator</button></li>
@@ -148,15 +148,15 @@ export const Footer: React.FC<FooterProps> = ({
 
             {/* Column 6: Support, Account & Region */}
             <div>
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Support & Account</h4>
+              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-4">Support & Account</h4>
               
               <ul className="space-y-2.5 text-xs text-slate-400 mb-6">
                 <li>
                   <button 
                     onClick={onOpenLiveChat} 
-                    className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer font-semibold text-left"
+                    className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer font-medium text-left"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 text-[#fed000]" />
+                    <MessageSquare className="w-3.5 h-3.5 text-[#F59E0B]" />
                     <span>24/7 Live Chat Support</span>
                   </button>
                 </li>
@@ -184,7 +184,7 @@ export const Footer: React.FC<FooterProps> = ({
                     className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors cursor-pointer text-left"
                     id="footer-admin-cms-link"
                   >
-                    <Settings className="w-3.5 h-3.5 text-emerald-500" />
+                    <Settings className="w-3.5 h-3.5 text-[#008744]" />
                     <span>Hostxeon CMS Admin</span>
                   </button>
                 </li>
@@ -203,7 +203,7 @@ export const Footer: React.FC<FooterProps> = ({
               <div className="relative">
                 <button
                   onClick={() => setLangMenuOpen(!langMenuOpen)}
-                  className="w-full bg-slate-900 border border-slate-700 hover:border-slate-500 rounded-xl px-3 py-2 text-xs text-white flex items-center justify-between transition-colors cursor-pointer"
+                  className="w-full bg-[#0a231b] border border-[#173e30] hover:border-emerald-500/50 rounded-lg px-3 py-2 text-xs text-white flex items-center justify-between transition-colors cursor-pointer"
                   id="footer-lang-btn"
                 >
                   <div className="flex items-center gap-1.5 truncate">
@@ -214,7 +214,7 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
 
                 {langMenuOpen && (
-                  <div className="absolute bottom-full left-0 w-64 bg-slate-900 border border-slate-700 rounded-xl p-1.5 shadow-2xl z-50 mb-2 space-y-0.5">
+                  <div className="absolute bottom-full left-0 w-64 bg-[#0a231b] border border-[#173e30] rounded-lg p-1.5 shadow-xl z-50 mb-2 space-y-0.5">
                     {languages.map((l) => (
                       <button
                         key={l.label}
@@ -222,7 +222,7 @@ export const Footer: React.FC<FooterProps> = ({
                           setLanguage(l.label);
                           setLangMenuOpen(false);
                         }}
-                        className="w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-slate-800 text-xs text-white flex items-center justify-between cursor-pointer"
+                        className="w-full text-left px-2.5 py-1.5 rounded-md hover:bg-white/10 text-xs text-white flex items-center justify-between cursor-pointer"
                       >
                         <div className="flex items-center gap-2">
                           <span>{l.flag}</span>
@@ -239,7 +239,7 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           {/* Bottom Bar: Copyright & Verified Legal Modals */}
-          <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div className="mt-16 pt-8 border-t border-[#133025] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
             <p>{siteSettings?.copyrightText || '© 2026 Hostxeon Ltd. All rights reserved. Registered in England & Wales.'}</p>
             <div className="flex flex-wrap items-center gap-4 text-xs">
               <button 

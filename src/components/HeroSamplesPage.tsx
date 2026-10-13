@@ -53,7 +53,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
   const [copiedSample, setCopiedSample] = useState<string | null>(null);
 
   const handleCopyFeedback = (sampleNum: number, sampleTitle: string) => {
-    const text = `Mujhe Sample ${sampleNum} (${sampleTitle}) pasand aya hai. Isko main hero bana do!`;
+    const text = `Selected Sample ${sampleNum} (${sampleTitle}) as the hero layout concept.`;
     navigator.clipboard?.writeText(text);
     setCopiedSample(`Sample ${sampleNum}`);
     setTimeout(() => setCopiedSample(null), 3000);
@@ -721,7 +721,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                     <Check className="w-4 h-4 text-[#008a45]" /> 99.99% Uptime SLA
                   </span>
                   <span className="flex items-center gap-1.5 text-slate-800 font-bold">
-                    <Check className="w-4 h-4 text-[#008a45]" /> 15-Day Money-Back Guarantee
+                    <Check className="w-4 h-4 text-[#008744]" /> 30-Day Money-Back Guarantee
                   </span>
                 </div>
 

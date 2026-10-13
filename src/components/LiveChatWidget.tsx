@@ -39,7 +39,7 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({
 
     // Dynamic instant response
     setTimeout(() => {
-      let reply = "Great question! Our Web Hosting includes free SSL hosting, domain name setup, custom email boxes, and 24/7 support with a 15-day money-back guarantee.";
+      let reply = "Great question! Our Web Hosting includes free SSL hosting, domain name setup, custom email boxes, and 24/7 support with a 30-day money-back guarantee.";
       if (userText.toLowerCase().includes('price') || userText.toLowerCase().includes('cost')) {
         reply = "Our Starter and Professional web hosting plans start at just £1.99/month with 1-year prepaid subscription! Domains start at just £0.99.";
       } else if (userText.toLowerCase().includes('wordpress') || userText.toLowerCase().includes('wp')) {

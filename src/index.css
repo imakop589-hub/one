@@ -1,49 +1,59 @@
 @import "tailwindcss";
 
 @theme {
-  --font-heading: 'Baloo 2', cursive, sans-serif;
-  --font-baloo: 'Baloo 2', cursive, sans-serif;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-primary: #008744;
+  --color-primary-hover: #006E37;
+  --color-dark-green: #006E37;
+  --color-text-main: #0F172A;
+  --color-text-secondary: #475569;
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-dark-section: #061913;
+  --color-gold: #F59E0B;
 }
 
 :root {
-  /* Layout Tokens - Hostxeon style balanced layout */
-  --container-max-width: 1380px;
+  /* Layout Tokens - Professional 1280px Grid */
+  --container-max-width: 1280px;
   --container-padding-desktop: 40px;
   --container-padding-tablet: 24px;
   --container-padding-mobile: 16px;
 
   /* Section Spacing Tokens */
-  --section-spacing: 80px;
+  --section-spacing-desktop: 80px;
+  --section-spacing-tablet: 64px;
   --section-spacing-mobile: 48px;
 
   /* Grid & Card Tokens */
   --grid-gap: 24px;
   --card-gap: 24px;
 
-  /* Component Dimensions */
-  --input-height: 50px;
-  --button-height: 50px;
-
   /* Radius Tokens */
+  --radius-button: 8px;
+  --radius-card: 16px;
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
-  --radius-2xl: 24px;
 
   /* Brand Colors */
-  --color-primary: #008a45;
-  --color-primary-hover: #007038;
-  --color-accent: #fed000;
-  --color-accent-hover: #ebbe00;
-  --color-dark: #041d16;
-  --color-slate-950: #020617;
+  --color-primary: #008744;
+  --color-primary-dark: #006E37;
+  --color-text-main: #0F172A;
+  --color-text-muted: #475569;
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-dark-section: #061913;
+  --color-gold: #F59E0B;
 }
 
 @layer base {
   html {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -51,22 +61,27 @@
   }
 
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #ffffff;
-    color: #111827;
-    overflow-x: hidden;
+    color: #0F172A;
   }
 
-  h1, h2, h3, h4, h5, h6, .font-heading, .font-baloo {
-    font-family: 'Baloo 2', cursive, sans-serif;
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     letter-spacing: -0.02em;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Tabular figures for pricing numbers */
+  .tabular-nums, .price-display {
+    font-variant-numeric: tabular-nums;
   }
 }
 
-/* Global Container Utility Classes - Hostxeon layout */
+/* Global Container Utility Classes - 1280px max width */
 .page-container {
   width: 100%;
-  max-width: 1380px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
@@ -82,21 +97,9 @@
 
 @media (min-width: 1024px) {
   .page-container {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
-}
-
-@media (min-width: 1280px) {
-  .page-container {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
-
-/* Standardized container max-width (1380px) leaving clean left & right margin space like Hostxeon */
-.max-w-screen-2xl {
-  max-width: 1380px !important;
 }
 
 /* Global Section Spacing Utility */
@@ -119,4 +122,8 @@
   }
 }
 
-
+/* Standardized max-width containers (1280px layout constraint) */
+.max-w-container,
+.max-w-screen-2xl {
+  max-width: 1280px !important;
+}

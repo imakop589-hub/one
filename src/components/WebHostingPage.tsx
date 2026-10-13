@@ -174,7 +174,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
     },
     {
       q: "Is there a money-back guarantee?",
-      a: "Yes! We offer a risk-free 15-day money-back guarantee so you can test our high-performance hosting with complete peace of mind."
+      a: "Yes! We offer a risk-free 30-day money-back guarantee so you can test our high-performance hosting with complete peace of mind."
     }
   ];
 
@@ -271,8 +271,8 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
               Web hosting
             </div>
 
-            {/* Main Headline (Baloo 2 font, 500 weight) */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.12]">
+            {/* Main Headline (Inter font, 600-700 weight) */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
               Fast and secure <br />
               <span className="text-white">hosting</span>
             </h1>
@@ -336,12 +336,12 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
         </div>
       </div>
 
-      {/* 3. PRICING SECTION (Starter & Professional with 15-day guarantee) */}
+      {/* 3. PRICING SECTION (Starter & Professional with 30-day guarantee) */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-screen-2xl mx-auto" id="web-pricing-section">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/70 text-[#008a45] text-xs font-bold tracking-wide mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/70 text-[#008744] text-xs font-bold tracking-wide mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Web Hosting Packages</span>
           </div>
@@ -350,7 +350,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             business
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
-            Clear pricing and no surprises - with 15-day money-back guarantee.
+            Clear pricing and no surprises - with 30-day money-back guarantee.
           </p>
         </div>
 

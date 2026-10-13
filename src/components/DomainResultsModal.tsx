@@ -91,7 +91,7 @@ export const DomainResultsModal: React.FC<DomainResultsModalProps> = ({
                   <span>•</span>
                   <span>DNSSEC Protection</span>
                   <span>•</span>
-                  <span>15-Day Money-Back</span>
+                  <span>30-Day Money-Back</span>
                 </div>
               </div>
 

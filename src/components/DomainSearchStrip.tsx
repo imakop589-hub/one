@@ -22,32 +22,32 @@ export const DomainSearchStrip: React.FC<DomainSearchStripProps> = ({
 
   // Pool of rotating TLD options for Card 1
   const slot1Tlds: TldItem[] = [
-    { tld: '.uk', price: '£ 0.99', period: '/1st yr', note: '*Free with Hosting' },
-    { tld: '.co.uk', price: '£ 1.49', period: '/1st yr', note: '*Free with Hosting' },
-    { tld: '.co', price: '£ 4.99', period: '/1st yr', note: '*Save 80%' },
-    { tld: '.io', price: '£ 19.99', period: '/1st yr', note: '*Tech Favorite' },
+    { tld: '.uk', price: '£0.99', period: '/1st yr', note: 'Free with Hosting' },
+    { tld: '.co.uk', price: '£1.49', period: '/1st yr', note: 'Free with Hosting' },
+    { tld: '.co', price: '£4.99', period: '/1st yr', note: 'Save 80%' },
+    { tld: '.io', price: '£19.99', period: '/1st yr', note: 'Tech Favorite' },
   ];
 
   // Pool of rotating TLD options for Card 2 (.com, .ai, .org, .store, .net)
   const slot2Tlds: TldItem[] = [
-    { tld: '.com', price: '£ 7.99', period: '/1st yr', note: '*Free with Hosting' },
-    { tld: '.ai', price: '£ 29.99', period: '/1st yr', note: '*Popular for AI' },
-    { tld: '.store', price: '£ 1.99', period: '/1st yr', note: '*Ecommerce' },
-    { tld: '.org', price: '£ 8.99', period: '/1st yr', note: '*Free with Hosting' },
-    { tld: '.net', price: '£ 9.99', period: '/1st yr', note: '*Global Reach' },
+    { tld: '.com', price: '£7.99', period: '/1st yr', note: 'Free with Hosting' },
+    { tld: '.ai', price: '£29.99', period: '/1st yr', note: 'Popular for AI' },
+    { tld: '.store', price: '£1.99', period: '/1st yr', note: 'Ecommerce' },
+    { tld: '.org', price: '£8.99', period: '/1st yr', note: 'Free with Hosting' },
+    { tld: '.net', price: '£9.99', period: '/1st yr', note: 'Global Reach' },
   ];
 
   const [slot1Index, setSlot1Index] = useState(0);
   const [slot2Index, setSlot2Index] = useState(0);
 
-  // Smooth timer to cycle TLDs
+  // Timer to cycle TLDs
   useEffect(() => {
     if (isPaused) return;
 
     const interval = setInterval(() => {
       setSlot1Index((prev) => (prev + 1) % slot1Tlds.length);
       setSlot2Index((prev) => (prev + 1) % slot2Tlds.length);
-    }, 3000);
+    }, 3200);
 
     return () => clearInterval(interval);
   }, [isPaused, slot1Tlds.length, slot2Tlds.length]);
@@ -69,22 +69,21 @@ export const DomainSearchStrip: React.FC<DomainSearchStripProps> = ({
     if (domainInput.trim()) {
       onSearchDomain(domainInput.trim());
     } else {
-      // Focus input if empty
-      const el = document.getElementById('main-domain-input');
+      const el = document.getElementById('strip-domain-input');
       if (el) el.focus();
     }
   };
 
   return (
-    <div className="bg-white border-b border-gray-200 py-3 shadow-xs" id="domain-search-strip">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+    <div className="bg-white border-b border-[#E2E8F0] py-3 shadow-2xs" id="domain-search-strip">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Unified Responsive Container */}
-        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5 sm:gap-3">
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
           
           {/* TLD Cards: 2 Columns on Mobile, Horizontal Fixed on Tablet/Desktop */}
           <div 
-            className="grid grid-cols-2 md:flex items-center gap-2 sm:gap-3 shrink-0"
+            className="grid grid-cols-2 md:flex items-center gap-2.5 shrink-0"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -92,27 +91,27 @@ export const DomainSearchStrip: React.FC<DomainSearchStripProps> = ({
             <button
               type="button"
               onClick={() => handleCardClick(currentSlot1.tld)}
-              className="h-[52px] sm:h-[56px] w-full md:w-[175px] lg:w-[190px] bg-white border border-gray-200 hover:border-gray-900 rounded-xl sm:rounded-2xl px-3 sm:px-3.5 py-2 flex items-center gap-2.5 transition-all cursor-pointer text-left shadow-2xs hover:shadow-xs overflow-hidden relative group"
+              className="h-12 w-full md:w-[180px] bg-white border border-[#E2E8F0] hover:border-slate-400 rounded-lg px-3 py-1.5 flex items-center gap-2.5 transition-colors cursor-pointer text-left shadow-2xs overflow-hidden relative group"
               id="tld-card-slot-1"
-              title={`Click to check domain with ${currentSlot1.tld}`}
+              title={`Check domain with ${currentSlot1.tld}`}
             >
-              <div className="text-xs sm:text-sm font-black text-slate-950 border-r border-gray-200 pr-2 min-w-[38px] sm:min-w-[42px] shrink-0">
+              <div className="text-sm font-bold text-[#0F172A] border-r border-[#E2E8F0] pr-2 min-w-[42px] shrink-0">
                 {currentSlot1.tld}
               </div>
-              <div className="flex-1 min-w-0 relative h-[36px] flex items-center">
+              <div className="flex-1 min-w-0 relative h-9 flex items-center">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentSlot1.tld + currentSlot1.price}
-                    initial={{ opacity: 0, y: 6 }}
+                    initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.22, ease: 'easeOut' }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.2 }}
                     className="absolute inset-0 flex flex-col justify-center"
                   >
-                    <div className="text-xs sm:text-[13px] font-extrabold text-slate-900 whitespace-nowrap leading-tight">
-                      {currentSlot1.price} <span className="font-normal text-[10px] text-slate-500">{currentSlot1.period}</span>
+                    <div className="text-xs font-bold text-[#0F172A] whitespace-nowrap leading-tight tabular-nums">
+                      {currentSlot1.price} <span className="font-normal text-slate-500">{currentSlot1.period}</span>
                     </div>
-                    <div className="text-[9px] sm:text-[10px] text-slate-500 font-medium whitespace-nowrap truncate leading-tight">
+                    <div className="text-[11px] text-[#475569] font-normal whitespace-nowrap truncate leading-tight">
                       {currentSlot1.note}
                     </div>
                   </motion.div>
@@ -124,27 +123,27 @@ export const DomainSearchStrip: React.FC<DomainSearchStripProps> = ({
             <button
               type="button"
               onClick={() => handleCardClick(currentSlot2.tld)}
-              className="h-[52px] sm:h-[56px] w-full md:w-[175px] lg:w-[190px] bg-white border border-gray-200 hover:border-gray-900 rounded-xl sm:rounded-2xl px-3 sm:px-3.5 py-2 flex items-center gap-2.5 transition-all cursor-pointer text-left shadow-2xs hover:shadow-xs overflow-hidden relative group"
+              className="h-12 w-full md:w-[180px] bg-white border border-[#E2E8F0] hover:border-slate-400 rounded-lg px-3 py-1.5 flex items-center gap-2.5 transition-colors cursor-pointer text-left shadow-2xs overflow-hidden relative group"
               id="tld-card-slot-2"
-              title={`Click to check domain with ${currentSlot2.tld}`}
+              title={`Check domain with ${currentSlot2.tld}`}
             >
-              <div className="text-xs sm:text-sm font-black text-slate-950 border-r border-gray-200 pr-2 min-w-[38px] sm:min-w-[42px] shrink-0">
+              <div className="text-sm font-bold text-[#0F172A] border-r border-[#E2E8F0] pr-2 min-w-[42px] shrink-0">
                 {currentSlot2.tld}
               </div>
-              <div className="flex-1 min-w-0 relative h-[36px] flex items-center">
+              <div className="flex-1 min-w-0 relative h-9 flex items-center">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentSlot2.tld + currentSlot2.price}
-                    initial={{ opacity: 0, y: 6 }}
+                    initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.22, ease: 'easeOut' }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.2 }}
                     className="absolute inset-0 flex flex-col justify-center"
                   >
-                    <div className="text-xs sm:text-[13px] font-extrabold text-slate-900 whitespace-nowrap leading-tight">
-                      {currentSlot2.price} <span className="font-normal text-[10px] text-slate-500">{currentSlot2.period}</span>
+                    <div className="text-xs font-bold text-[#0F172A] whitespace-nowrap leading-tight tabular-nums">
+                      {currentSlot2.price} <span className="font-normal text-slate-500">{currentSlot2.period}</span>
                     </div>
-                    <div className="text-[9px] sm:text-[10px] text-slate-500 font-medium whitespace-nowrap truncate leading-tight">
+                    <div className="text-[11px] text-[#475569] font-normal whitespace-nowrap truncate leading-tight">
                       {currentSlot2.note}
                     </div>
                   </motion.div>
@@ -153,26 +152,26 @@ export const DomainSearchStrip: React.FC<DomainSearchStripProps> = ({
             </button>
           </div>
 
-          {/* Main Domain Search Bar (Fills all remaining width on desktop) */}
+          {/* Main Domain Search Bar */}
           <form 
             onSubmit={handleSearch}
-            className="flex-1 flex items-center bg-white border-2 border-gray-200 hover:border-gray-300 rounded-xl sm:rounded-2xl p-1 sm:p-1.5 focus-within:border-[#008a45] focus-within:ring-4 focus-within:ring-emerald-500/15 transition-all shadow-xs h-[52px] sm:h-[56px] group"
+            className="flex-1 flex items-center bg-white border border-[#E2E8F0] hover:border-slate-400 rounded-lg p-1 focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-emerald-500/20 transition-colors shadow-2xs h-12"
           >
-            <div className="pl-3 sm:pl-4 pr-1 text-slate-400 group-focus-within:text-[#008a45] transition-colors shrink-0 flex items-center">
-              <Search className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
+            <div className="pl-3 pr-1 text-slate-400 shrink-0 flex items-center">
+              <Search className="w-4 h-4" />
             </div>
             <input
               type="text"
-              placeholder="Find your domain name..."
+              placeholder="Find your perfect domain name..."
               value={domainInput}
               onChange={(e) => setDomainInput(e.target.value)}
-              className="flex-1 min-w-0 px-2 sm:px-3 py-1.5 text-sm sm:text-base font-semibold text-slate-900 placeholder:text-slate-400 placeholder:font-normal bg-transparent focus:outline-hidden"
+              className="flex-1 min-w-0 px-2 py-1.5 text-sm font-medium text-[#0F172A] placeholder:text-slate-400 bg-transparent focus:outline-hidden"
               id="strip-domain-input"
               autoComplete="off"
             />
             <button
               type="submit"
-              className="h-full bg-[#fed000] hover:bg-[#eabf00] active:scale-[0.98] text-slate-950 font-black px-5 sm:px-8 rounded-lg sm:rounded-xl text-xs sm:text-sm tracking-tight flex items-center justify-center gap-1.5 sm:gap-2 transition-all cursor-pointer shrink-0 shadow-xs hover:shadow-sm"
+              className="h-full bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-5 sm:px-6 rounded-md text-xs sm:text-sm flex items-center justify-center gap-1.5 transition-colors cursor-pointer shrink-0 shadow-xs"
               id="strip-domain-search-btn"
             >
               <span>Search</span>

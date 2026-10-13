@@ -57,7 +57,7 @@ export const DashboardCard: React.FC<DashboardCardProps> = ({
         <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
           <div>
             {title && (
-              <h3 className="font-['Baloo_2',cursive,sans-serif] text-xl font-bold text-slate-950">
+              <h3 className="font-heading text-xl font-bold text-[#0F172A]">
                 {title}
               </h3>
             )}

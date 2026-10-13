@@ -306,17 +306,17 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                                 {billingCycle === '2yr' ? '2-Year Contract (Best Value)' : billingCycle === 'monthly' ? 'Monthly Flexible' : '1-Year Contract (Save 75%)'}
                               </span>
                               <span className="text-[11px] text-gray-400">• Free Setup</span>
-                              <span className="text-[11px] text-emerald-700 font-semibold">• 15-day refund</span>
+                              <span className="text-xs text-emerald-700 font-medium">• 30-day refund guarantee</span>
                             </div>
                           </div>
                         </div>
 
-                        <div className="flex items-center justify-between sm:justify-end gap-4 shrink-0 pt-3 sm:pt-0 border-t sm:border-t-0 border-gray-100">
+                        <div className="flex items-center justify-between sm:justify-end gap-4 shrink-0 pt-3 sm:pt-0 border-t sm:border-t-0 border-[#E2E8F0]">
                           <div className="text-right">
-                            <div className="font-['Baloo_2',cursive,sans-serif] text-2xl font-black text-slate-900">
+                            <div className="font-heading text-2xl font-bold text-[#0F172A] tabular-nums">
                               £{(item.price * cycleFactor).toFixed(2)}
                             </div>
-                            <div className="text-[10px] text-emerald-700 font-bold">Introductory Discount</div>
+                            <div className="text-xs text-[#008744] font-medium">Introductory Discount</div>
                           </div>
                           <button
                             onClick={() => onRemoveItem(item.id)}
@@ -746,7 +746,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     3. Select Payment Method
                   </Heading>
                   <Text variant="small" className="mt-1">
-                    All payment processing happens over 256-bit encrypted SSL. Backed by 15-day money-back guarantee.
+                    All payment processing happens over 256-bit encrypted SSL. Backed by 30-day money-back guarantee.
                   </Text>
                 </div>
 
@@ -1007,7 +1007,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                   </div>
                   <div className="flex justify-between text-gray-500">
                     <span>Risk-Free Guarantee:</span>
-                    <span className="text-emerald-700 font-semibold">15-Day Unconditional Money-Back</span>
+                    <span className="text-[#008744] font-semibold">30-Day Money-Back Guarantee</span>
                   </div>
                 </div>
 
@@ -1143,8 +1143,8 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
             {/* Trust highlights */}
             <div className="pt-4 border-t border-gray-100 space-y-2.5 text-xs text-gray-600">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#008a45] shrink-0" />
-                <span>15-Day Unconditional Money-Back</span>
+                <ShieldCheck className="w-4 h-4 text-[#008744] shrink-0" />
+                <span>30-Day Money-Back Guarantee</span>
               </div>
               <div className="flex items-center gap-2">
                 <Lock className="w-4 h-4 text-[#008a45] shrink-0" />

@@ -45,8 +45,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({ policyType, onClose }) =
           text: 'Hostxeon provides shared web hosting, managed WordPress, cloud infrastructure, VPS instances, and domain registration backed by our 99.9% uptime Service Level Agreement.',
         },
         {
-          heading: '2. 15-Day Money-Back Guarantee',
-          text: 'All shared hosting, cloud packages, and email plans come with an unconditional 15-day money-back guarantee. If you are not satisfied, you can cancel within 15 days for a full refund.',
+          heading: '2. 30-Day Money-Back Guarantee',
+          text: 'All shared hosting, cloud packages, and email plans come with an unconditional 30-day money-back guarantee. If you are not satisfied, you can cancel within 30 days for a full refund.',
         },
         {
           heading: '3. Transparent Billing & Renewal',

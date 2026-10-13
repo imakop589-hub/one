@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Sparkles, Lock, ArrowRight, Mail } from 'lucide-react';
+import { X, Lock, ArrowRight, Mail, Server } from 'lucide-react';
 import { FormField, Input } from './ui/Form';
 import { Button } from './ui/Button';
 
@@ -37,60 +37,61 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl border border-gray-100">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
+      <div className="bg-white rounded-xl w-full max-w-md overflow-hidden shadow-2xl border border-[#E2E8F0]">
         
         {/* Header */}
-        <div className="bg-[#041d16] text-white p-6 sm:p-7 relative border-b border-emerald-900">
+        <div className="bg-[#061913] text-white p-6 relative border-b border-[#133025]">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 text-gray-300 hover:text-white rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+            className="absolute top-4 right-4 p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
             id="close-login-modal"
+            aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
 
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#008a45] to-emerald-700 flex items-center justify-center text-white font-black text-xs shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-[#fed000]" />
+            <div className="w-7 h-7 rounded-lg bg-[#008744] flex items-center justify-center text-white font-bold text-xs shadow-xs">
+              <Server className="w-4 h-4 text-white" />
             </div>
-            <span className="font-black text-lg text-white">
-              Host<span className="text-emerald-400">xeon</span>
+            <span className="font-bold text-lg text-white">
+              Host<span className="text-[#008744]">xeon</span>
             </span>
           </div>
 
-          <h3 className="font-['Baloo_2',cursive,sans-serif] text-2xl font-black text-white">
-            {mode === 'forgot' ? 'Reset Password' : 'Log in to Control Panel'}
+          <h3 className="font-heading text-xl font-bold text-white">
+            {mode === 'forgot' ? 'Reset Password' : 'Sign in to Control Panel'}
           </h3>
-          <p className="text-xs text-emerald-200/80 mt-1">
+          <p className="text-xs text-slate-300 mt-1 font-normal">
             {mode === 'forgot' 
               ? 'Enter your verified account email to receive instant reset instructions.'
-              : 'Access your websites, Aida AI builder, mailboxes and domain management.'}
+              : 'Access your cloud hosting accounts, domains, and mailboxes.'}
           </p>
         </div>
 
         {/* Form Body */}
-        <div className="p-6 sm:p-7 space-y-5">
+        <div className="p-6 space-y-4">
           {loggedIn ? (
             <div className="py-8 text-center space-y-3">
-              <div className="w-12 h-12 rounded-full bg-emerald-100 text-[#008a45] flex items-center justify-center mx-auto text-xl font-bold">
+              <div className="w-12 h-12 rounded-full bg-emerald-50 text-[#008744] flex items-center justify-center mx-auto text-xl font-bold">
                 ✓
               </div>
-              <h4 className="font-['Baloo_2',cursive,sans-serif] font-bold text-gray-900 text-xl">
+              <h4 className="font-heading font-bold text-[#0F172A] text-lg">
                 Welcome back!
               </h4>
-              <p className="text-xs text-gray-500">Redirecting to your Control Panel...</p>
+              <p className="text-xs text-[#475569]">Redirecting to your Control Panel...</p>
             </div>
           ) : mode === 'forgot' ? (
             resetSent ? (
               <div className="py-6 text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-emerald-100 text-[#008a45] flex items-center justify-center mx-auto text-xl font-bold">
+                <div className="w-12 h-12 rounded-full bg-emerald-50 text-[#008744] flex items-center justify-center mx-auto text-xl font-bold">
                   ✓
                 </div>
-                <h4 className="font-bold text-gray-900 text-lg">
-                  Reset link dispatched!
+                <h4 className="font-heading font-bold text-[#0F172A] text-base">
+                  Reset link dispatched
                 </h4>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-[#475569]">
                   We've sent password reset instructions to <strong>{email}</strong>.
                 </p>
                 <Button
@@ -119,7 +120,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
 
                 <Button
                   type="submit"
-                  variant="accent"
+                  variant="primary"
                   fullWidth
                   rightIcon={<ArrowRight className="w-4 h-4" />}
                   id="forgot-submit-btn"
@@ -127,11 +128,11 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
                   Send Reset Link
                 </Button>
 
-                <div className="text-center pt-2">
+                <div className="text-center pt-1">
                   <button
                     type="button"
                     onClick={() => setMode('login')}
-                    className="text-xs text-[#008a45] font-bold hover:underline cursor-pointer"
+                    className="text-xs text-[#008744] font-semibold hover:underline cursor-pointer"
                   >
                     ← Back to Log in
                   </button>
@@ -160,7 +161,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
                   <button
                     type="button"
                     onClick={() => setMode('forgot')}
-                    className="text-xs text-[#008a45] font-semibold hover:underline cursor-pointer"
+                    className="text-xs text-[#008744] font-medium hover:underline cursor-pointer"
                   >
                     Forgot password?
                   </button>
@@ -179,32 +180,32 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
 
               <Button
                 type="submit"
-                variant="accent"
+                variant="primary"
                 fullWidth
                 rightIcon={<ArrowRight className="w-4 h-4" />}
                 id="login-submit-btn"
               >
-                Log in
+                Sign In
               </Button>
             </form>
           )}
 
           {mode === 'login' && !loggedIn && (
-            <div className="pt-3 border-t border-gray-100 space-y-2 text-center text-xs text-gray-500">
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-[11px] text-slate-600 text-left">
-                <span className="font-bold text-slate-800 block mb-0.5">WHMCS Portal Notice:</span>
-                Live customer billing, invoices, server control, and support tickets will be routed to your separate WHMCS installation.
+            <div className="pt-3 border-t border-[#E2E8F0] space-y-2 text-center text-xs text-[#475569]">
+              <div className="p-3 rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] text-xs text-[#475569] text-left">
+                <span className="font-semibold text-[#0F172A] block mb-0.5">WHMCS Client Portal Notice:</span>
+                Live customer billing, invoices, server control, and support tickets connect to your WHMCS instance.
               </div>
-              <div className="flex items-center justify-between pt-1 text-[11px]">
+              <div className="flex items-center justify-between pt-1 text-xs">
                 <button
                   type="button"
                   onClick={() => {
                     onClose();
                     window.location.hash = '#admin';
                   }}
-                  className="text-emerald-700 hover:text-emerald-900 font-semibold cursor-pointer"
+                  className="text-[#008744] hover:text-[#006E37] font-semibold cursor-pointer"
                 >
-                  Hostxeon Staff? Open CMS Admin →
+                  Staff? Open CMS Admin →
                 </button>
                 <button
                   type="button"
@@ -212,9 +213,9 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
                     onClose();
                     onOpenBuilder?.();
                   }}
-                  className="text-[#008a45] font-bold hover:underline cursor-pointer"
+                  className="text-[#475569] hover:text-[#0F172A] font-medium hover:underline cursor-pointer"
                 >
-                  Start free trial
+                  Create account
                 </button>
               </div>
             </div>
@@ -225,4 +226,3 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenB
     </div>
   );
 };
-

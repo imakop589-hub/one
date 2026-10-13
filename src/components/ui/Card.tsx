@@ -24,12 +24,12 @@ export const Card: React.FC<CardProps> = ({
   }[padding];
 
   const variantClasses = {
-    default: 'bg-white rounded-2xl border border-gray-100 shadow-sm',
-    flat: 'bg-gray-50/70 rounded-2xl border border-gray-200/70',
-    elevated: 'bg-white rounded-2xl border border-gray-100 shadow-xl',
-    featured: 'bg-white rounded-2xl border-2 border-[#008a45] shadow-xl relative',
+    default: 'bg-white rounded-xl border border-[#E2E8F0] shadow-xs',
+    flat: 'bg-[#F8FAFC] rounded-xl border border-[#E2E8F0]',
+    elevated: 'bg-white rounded-xl border border-[#E2E8F0] shadow-md',
+    featured: 'bg-white rounded-xl border-2 border-[#008744] shadow-md relative',
     interactive:
-      'bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#008a45] transition-all duration-200 cursor-pointer',
+      'bg-white rounded-xl border border-[#E2E8F0] shadow-xs hover:shadow-md hover:border-[#008744] transition-all duration-200 cursor-pointer',
   }[variant];
 
   return (
@@ -72,41 +72,41 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   return (
     <div
       id={id}
-      className={`bg-white rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 relative ${
+      className={`bg-white rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 relative ${
         isPopular
-          ? 'border-2 border-[#008a45] shadow-2xl ring-4 ring-emerald-50'
-          : 'border border-gray-200/80 shadow-md hover:shadow-xl hover:border-gray-300'
+          ? 'border-2 border-[#008744] shadow-lg ring-4 ring-emerald-50/70'
+          : 'border border-[#E2E8F0] shadow-xs hover:shadow-md hover:border-slate-300'
       } ${className}`}
     >
       {isPopular && (
-        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#008a45] text-white text-xs font-black uppercase tracking-wider py-1 px-4 rounded-full shadow-md">
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#008744] text-white text-xs font-semibold uppercase tracking-wider py-1 px-3.5 rounded-full shadow-xs">
           Most Popular
         </div>
       )}
 
       <div>
         <div className="flex items-center justify-between mb-2">
-          <h3 className="font-['Baloo_2',cursive,sans-serif] text-2xl font-black text-slate-950">
+          <h3 className="font-heading text-[20px] lg:text-[22px] font-bold text-[#0F172A]">
             {name}
           </h3>
           {badge && !isPopular && (
-            <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-[#008a45] border border-emerald-200">
+            <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-emerald-50 text-[#008744] border border-emerald-200">
               {badge}
             </span>
           )}
         </div>
 
-        <p className="text-xs text-gray-500 mb-5 min-h-[32px] leading-relaxed">{description}</p>
+        <p className="text-[13px] text-[#475569] mb-5 min-h-[32px] leading-relaxed font-normal">{description}</p>
 
-        <div className="mb-6 pb-6 border-b border-gray-100">
+        <div className="mb-6 pb-6 border-b border-[#E2E8F0]">
           <div className="flex items-baseline gap-1">
-            <span className="font-['Baloo_2',cursive,sans-serif] text-4xl sm:text-5xl font-black text-slate-950">
+            <span className="font-heading text-3xl sm:text-4xl font-bold text-[#0F172A] tabular-nums tracking-tight">
               {typeof price === 'number' ? `£${price.toFixed(2)}` : price}
             </span>
-            <span className="text-xs text-gray-500 font-medium">{period}</span>
+            <span className="text-xs text-[#475569] font-medium">{period}</span>
           </div>
           {regularPrice && (
-            <div className="text-xs text-gray-400 mt-1">
+            <div className="text-xs text-slate-500 mt-1">
               Renews at £{typeof regularPrice === 'number' ? regularPrice.toFixed(2) : regularPrice}
               /mo
             </div>
@@ -116,34 +116,30 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         <button
           type="button"
           onClick={onSelect}
-          className={`w-full h-[50px] rounded-lg font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs mb-6 ${
+          className={`w-full h-11 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-xs mb-6 ${
             isPopular
-              ? 'bg-[#008a45] hover:bg-[#007038] text-white shadow-md'
-              : 'bg-slate-900 hover:bg-slate-800 text-white'
+              ? 'bg-[#008744] hover:bg-[#006E37] text-white'
+              : 'bg-[#0F172A] hover:bg-slate-800 text-white'
           }`}
         >
           <span>{buttonText}</span>
         </button>
 
         <div className="space-y-3">
-          <div className="text-xs font-bold text-gray-900 uppercase tracking-wider">
+          <div className="text-xs font-semibold text-[#0F172A] uppercase tracking-wider">
             Key Features:
           </div>
-          <ul className="space-y-2.5 text-xs sm:text-sm text-gray-600">
+          <ul className="space-y-2.5 text-[13px] sm:text-sm text-[#475569]">
             {features.map((feat, idx) => (
               <li key={idx} className="flex items-start gap-2.5">
                 <span
-                  className={`mt-0.5 shrink-0 text-sm font-bold ${
-                    feat.included ? 'text-[#008a45]' : 'text-gray-300'
+                  className={`mt-0.5 shrink-0 text-sm font-semibold ${
+                    feat.included ? 'text-[#008744]' : 'text-slate-300'
                   }`}
                 >
                   {feat.included ? '✓' : '✕'}
                 </span>
-                <span
-                  className={`${
-                    feat.bold ? 'font-bold text-gray-900' : ''
-                  } ${!feat.included ? 'text-gray-400 line-through' : ''}`}
-                >
+                <span className={feat.included ? 'text-[#0F172A]' : 'text-slate-400 line-through'}>
                   {feat.text}
                 </span>
               </li>

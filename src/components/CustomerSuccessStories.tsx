@@ -1,29 +1,12 @@
 import React, { useState } from 'react';
 import { 
-  Star, 
-  CheckCircle2, 
-  Quote, 
-  ArrowRight, 
-  ExternalLink, 
-  ShieldCheck, 
-  TrendingUp, 
-  Zap, 
   Globe, 
-  Server, 
+  ChevronLeft, 
+  ChevronRight, 
+  ExternalLink, 
   MessageSquare, 
-  Sparkles,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Award,
-  Lock,
-  Building2,
-  Laptop,
-  ShoppingBag,
-  Users,
-  Check,
-  RefreshCw,
-  ThumbsUp
+  ArrowRight, 
+  Check 
 } from 'lucide-react';
 
 interface FeaturedStory {
@@ -41,7 +24,6 @@ interface FeaturedStory {
   fullDetails: string;
   metrics: { label: string; value: string; desc: string }[];
   planUsed: string;
-  videoLength?: string;
 }
 
 const FEATURED_ENTREPRENEURS: FeaturedStory[] = [
@@ -54,9 +36,9 @@ const FEATURED_ENTREPRENEURS: FeaturedStory[] = [
     industry: 'E-Commerce & Food Retail',
     location: 'Bristol, United Kingdom',
     image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=80',
-    tagline: 'FROM KITCHEN TO 10,000+ ORDERS',
-    headline: '“Hostxeon made launching my online shop so simple. My site loads in under half a second, even during holiday rushes.”',
-    storyQuote: 'I had zero technical background and was nervous about moving away from expensive marketplace fees. Hostxeon’s team helped me set up my domain, connected WooCommerce, and activated free SSL in one afternoon. Now my online bakery generates over 60% of our total revenue.',
+    tagline: 'SCALED TO 10,000+ ONLINE ORDERS',
+    headline: '“Hostxeon made launching our online shop so simple. Our site loads in under half a second, even during holiday peak traffic.”',
+    storyQuote: 'I had zero technical background and was nervous about moving away from expensive marketplace fees. Hostxeon’s team helped me set up my domain, connected WooCommerce, and activated free SSL in one afternoon. Now our online store runs flawlessly.',
     fullDetails: 'Sarah scaled her artisan bakery from a local stall to a nationwide delivery service on Hostxeon WordPress Hosting.',
     metrics: [
       { label: 'Page Load Speed', value: '0.24s', desc: 'LiteSpeed NVMe Cache' },
@@ -124,144 +106,135 @@ export const CustomerSuccessStories: React.FC<CustomerSuccessStoriesProps> = ({
 
   return (
     <section 
-      className="py-20 sm:py-24 bg-[#f8faf9] text-slate-900 border-t border-b border-gray-200/80 relative"
+      className="py-16 md:py-20 bg-[#F8FAFC] text-[#0F172A] border-t border-b border-[#E2E8F0]"
       id="customer-success-stories"
     >
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
 
-        {/* ========================================================================= */}
-        {/* 1. GODADDY-STYLE TOP HEADER & TRUSTPILOT BAR                              */}
-        {/* ========================================================================= */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
           
-          {/* Official Trustpilot Rating Banner */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-xs">
-            <div className="flex items-center gap-1">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] shadow-2xs">
+            <div className="flex items-center gap-0.5" aria-label="5 stars rating">
               {[1, 2, 3, 4, 5].map((s) => (
-                <div key={s} className="w-4 h-4 bg-[#00b67a] flex items-center justify-center text-white text-[11px] font-black rounded-xs">
+                <div key={s} className="w-3.5 h-3.5 bg-[#00b67a] flex items-center justify-center text-white text-xs font-bold rounded-xs">
                   ★
                 </div>
               ))}
             </div>
-            <span className="text-xs font-black text-slate-900">
-              Rated 4.9 / 5.0 on Trustpilot
+            <span className="text-xs font-semibold text-[#0F172A]">
+              Rated 5.0 on Trustpilot
             </span>
-            <span className="text-gray-300">•</span>
-            <span className="text-xs text-gray-500 font-medium hidden sm:inline">
-              12,400+ Websites Hosted
+            <span className="text-slate-300">·</span>
+            <span className="text-xs text-[#475569] font-medium hidden sm:inline">
+              Verified Hosting Reviews
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight">
-            See how real entrepreneurs <br className="hidden sm:inline" />
-            <span className="text-[#008a45]">grow and succeed</span> on Hostxeon
+          <h2 className="font-heading text-[26px] md:text-[30px] lg:text-[36px] font-bold text-[#0F172A] tracking-tight leading-[1.2]">
+            Trusted by Entrepreneurs and{' '}
+            <span className="text-[#008744]">Growing Businesses</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            From local makers launching their first online store to tech agencies scaling 25+ client portals — read how everyday business owners rely on Hostxeon.
+          <p className="text-sm md:text-base text-[#475569] max-w-2xl mx-auto leading-relaxed font-normal">
+            From local makers launching their first online shop to digital agencies managing high-traffic websites, discover why businesses trust Hostxeon.
           </p>
         </div>
 
-        {/* ========================================================================= */}
-        {/* 2. GODADDY SIGNATURE STORY CARD (LARGE CLEAN TWO-COLUMN SPOTLIGHT)        */}
-        {/* ========================================================================= */}
-        <div className="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden mb-16 transition-all">
+        {/* Story Card */}
+        <div className="bg-white rounded-xl border border-[#E2E8F0] shadow-sm overflow-hidden mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             
-            {/* Left Column: Entrepreneur In Real Context Photo */}
-            <div className="lg:col-span-6 relative bg-slate-950 min-h-[340px] sm:min-h-[440px] flex items-end overflow-hidden group">
+            {/* Left Column: Photo */}
+            <div className="lg:col-span-6 relative bg-slate-900 min-h-[300px] sm:min-h-[400px] flex items-end overflow-hidden">
               <img 
                 src={currentHero.image} 
                 alt={currentHero.name}
                 referrerPolicy="no-referrer"
-                className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-              {/* GoDaddy Signature Live Website Tag Overlay */}
-              <div className="absolute top-5 left-5 right-5 flex items-center justify-between gap-2 z-10">
-                <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-900 shadow-lg border border-white">
-                  <Globe className="w-3.5 h-3.5 text-[#008a45]" />
+              {/* Live Domain Overlay */}
+              <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 z-10">
+                <div className="inline-flex items-center gap-1.5 bg-white/95 px-3 py-1 rounded-full text-xs font-semibold text-[#0F172A] shadow-xs">
+                  <Globe className="w-3.5 h-3.5 text-[#008744]" />
                   <span>{currentHero.domain}</span>
                 </div>
 
-                <span className="bg-[#fed000] text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
-                  LIVE WEBSITE
+                <span className="bg-[#008744] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase">
+                  Active Client
                 </span>
               </div>
 
-              {/* Photo Caption / Author Pill */}
-              <div className="relative z-10 p-6 sm:p-8 text-white w-full">
-                <div className="text-xl sm:text-2xl font-black">{currentHero.name}</div>
-                <div className="text-xs sm:text-sm text-emerald-300 font-medium mt-0.5">
+              {/* Photo Caption */}
+              <div className="relative z-10 p-6 text-white w-full">
+                <div className="text-xl font-bold">{currentHero.name}</div>
+                <div className="text-xs text-emerald-300 font-medium mt-0.5">
                   {currentHero.role}, {currentHero.company}
                 </div>
-                <div className="text-xs text-gray-300 mt-1 flex items-center gap-1.5">
-                  <span>📍 {currentHero.location}</span>
-                  <span>•</span>
-                  <span className="text-[#00b67a] font-bold">Verified Customer</span>
+                <div className="text-xs text-slate-300 mt-1 flex items-center gap-1.5">
+                  <span>{currentHero.location}</span>
+                  <span>·</span>
+                  <span className="text-emerald-400 font-medium">Verified Customer</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: High-Impact Quote & Story Details */}
-            <div className="lg:col-span-6 p-6 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6">
+            {/* Right Column: Quote & Metrics */}
+            <div className="lg:col-span-6 p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-6">
               
               <div className="space-y-4">
-                {/* Industry Tag & 5 Green Stars */}
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                  <span className="text-xs font-black uppercase tracking-wider text-[#008a45] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#008744] bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                     {currentHero.tagline}
                   </span>
 
                   <div className="flex items-center gap-1">
                     {[1, 2, 3, 4, 5].map((s) => (
-                      <div key={s} className="w-4 h-4 bg-[#00b67a] flex items-center justify-center text-white text-[10px] font-black rounded-xs">
+                      <div key={s} className="w-3.5 h-3.5 bg-[#00b67a] flex items-center justify-center text-white text-xs font-bold rounded-xs">
                         ★
                       </div>
                     ))}
-                    <span className="text-xs font-bold text-slate-700 ml-1.5">5.0 Star Experience</span>
+                    <span className="text-xs font-medium text-[#475569] ml-1">5.0 Star Experience</span>
                   </div>
                 </div>
 
-                {/* Main Headline */}
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-950 leading-snug tracking-tight">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-[#0F172A] leading-snug">
                   {currentHero.headline}
                 </h3>
 
-                {/* Narrative Quote */}
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
                   "{currentHero.storyQuote}"
                 </p>
 
-                {/* Metrics Highlight Strip (GoDaddy Style 3-Box Bar) */}
-                <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200/80 mt-4">
+                {/* Metrics Highlight Strip */}
+                <div className="grid grid-cols-3 gap-3 p-3.5 rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] mt-4">
                   {currentHero.metrics.map((m, idx) => (
                     <div key={idx} className="text-center">
-                      <div className="text-lg sm:text-2xl font-black text-[#008a45]">{m.value}</div>
-                      <div className="text-xs font-bold text-slate-800 mt-0.5">{m.label}</div>
-                      <div className="text-[10px] text-gray-500 hidden sm:block">{m.desc}</div>
+                      <div className="text-lg sm:text-xl font-bold text-[#008744] tabular-nums">{m.value}</div>
+                      <div className="text-xs font-semibold text-[#0F172A] mt-0.5">{m.label}</div>
+                      <div className="text-xs text-[#475569] hidden sm:block">{m.desc}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Bottom Controller & Switcher */}
-              <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-xs text-gray-500 font-medium">
-                  Plan used: <strong className="text-slate-900">{currentHero.planUsed}</strong>
+              {/* Bottom Controls */}
+              <div className="pt-4 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="text-xs text-[#475569] font-normal">
+                  Plan used: <strong className="text-[#0F172A] font-semibold">{currentHero.planUsed}</strong>
                 </div>
 
-                {/* Story Navigation Controls */}
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-gray-400 mr-2">
+                  <span className="text-xs text-[#475569] mr-2">
                     Story {activeStoryIdx + 1} of {FEATURED_ENTREPRENEURS.length}
                   </span>
                   <button
                     type="button"
                     onClick={() => setActiveStoryIdx((prev) => (prev - 1 + FEATURED_ENTREPRENEURS.length) % FEATURED_ENTREPRENEURS.length)}
                     aria-label="Previous story"
-                    className="w-9 h-9 rounded-xl bg-gray-100 hover:bg-[#008a45] hover:text-white text-gray-700 flex items-center justify-center transition-colors cursor-pointer border border-gray-200"
+                    className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#008744] hover:text-white text-slate-700 flex items-center justify-center transition-colors cursor-pointer border border-[#E2E8F0]"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
@@ -269,7 +242,7 @@ export const CustomerSuccessStories: React.FC<CustomerSuccessStoriesProps> = ({
                     type="button"
                     onClick={() => setActiveStoryIdx((prev) => (prev + 1) % FEATURED_ENTREPRENEURS.length)}
                     aria-label="Next story"
-                    className="w-9 h-9 rounded-xl bg-gray-100 hover:bg-[#008a45] hover:text-white text-gray-700 flex items-center justify-center transition-colors cursor-pointer border border-gray-200"
+                    className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#008744] hover:text-white text-slate-700 flex items-center justify-center transition-colors cursor-pointer border border-[#E2E8F0]"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -281,37 +254,34 @@ export const CustomerSuccessStories: React.FC<CustomerSuccessStoriesProps> = ({
           </div>
         </div>
 
-        {/* ========================================================================= */}
-        {/* 3. GODADDY-STYLE CONVERSION & TRUST GUARANTEE BANNER                      */}
-        {/* ========================================================================= */}
-        <div className="mt-8 bg-gradient-to-r from-[#03241b] via-[#053d2d] to-[#03241b] text-white rounded-3xl p-8 sm:p-12 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8 text-left">
+        {/* Conversion & Trust Guarantee Banner */}
+        <div className="bg-[#061913] text-white rounded-xl p-6 sm:p-10 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 text-left border border-[#133025]">
           
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/20 text-[#fed000] text-xs font-black uppercase tracking-wider border border-emerald-500/30">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>JOIN 12,000+ HAPPY CUSTOMERS</span>
+            <div className="text-xs font-semibold uppercase tracking-wider text-emerald-400">
+              High Performance Hosting Guarantee
             </div>
 
-            <h3 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight">
-              Ready to write your own online success story?
+            <h3 className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
+              Ready to power your website on Hostxeon?
             </h3>
 
-            <p className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
-              Launch today with confidence. Every plan includes our 15-day money-back guarantee, free 0-downtime website migration, and 24/7 human technical support.
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+              Deploy your website today with confidence. Every plan includes our 30-day money-back guarantee, free 0-downtime website migration, and 24/7 human technical support.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2 text-xs font-semibold text-emerald-200">
-              <div className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#fed000] stroke-[3]" />
-                <span>15-Day Money-Back Guarantee</span>
+            <div className="flex flex-wrap items-center gap-4 pt-1 text-xs font-medium text-slate-300">
+              <div className="flex items-center gap-1.5 text-emerald-400">
+                <Check className="w-4 h-4 text-emerald-400" />
+                <span>30-Day Money-Back Guarantee</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#fed000] stroke-[3]" />
+                <Check className="w-4 h-4 text-emerald-400" />
                 <span>Free 0-Downtime Migration</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-[#fed000] stroke-[3]" />
-                <span>Free Lifetime WHOIS Privacy</span>
+                <Check className="w-4 h-4 text-emerald-400" />
+                <span>Free SSL & Daily Backups</span>
               </div>
             </div>
           </div>
@@ -320,19 +290,19 @@ export const CustomerSuccessStories: React.FC<CustomerSuccessStoriesProps> = ({
             <button
               type="button"
               onClick={onNavigateToHosting}
-              className="w-full sm:w-auto px-7 py-4 rounded-xl bg-[#fed000] hover:bg-[#ebbe00] text-slate-950 font-black text-xs sm:text-sm transition-all shadow-lg cursor-pointer flex items-center justify-center gap-2 hover:scale-[1.02]"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-[#008744] hover:bg-[#006E37] text-white font-semibold text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 shadow-xs"
             >
               <span>Explore Hosting Plans</span>
-              <ArrowRight className="w-4 h-4 stroke-[3]" />
+              <ArrowRight className="w-4 h-4" />
             </button>
 
             <button
               type="button"
               onClick={onOpenLiveChat}
-              className="w-full sm:w-auto px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-5 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 text-white font-medium text-sm border border-white/20 transition-colors cursor-pointer flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 text-emerald-300" />
-              <span>Chat with Support (24/7)</span>
+              <span>Chat with Support</span>
             </button>
           </div>
 
@@ -344,13 +314,13 @@ export const CustomerSuccessStories: React.FC<CustomerSuccessStoriesProps> = ({
             href="https://www.trustpilot.com/review/hostxeon.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-bold text-gray-500 hover:text-[#008a45] transition-colors py-2 px-4 rounded-xl hover:bg-gray-100 cursor-pointer"
+            className="inline-flex items-center gap-2 text-xs font-medium text-[#475569] hover:text-[#008744] transition-colors py-2 px-3 rounded-lg hover:bg-slate-100 cursor-pointer"
           >
-            <span>Read all authentic customer reviews on</span>
-            <span className="font-black text-slate-900 inline-flex items-center gap-1">
+            <span>Read authentic customer reviews on</span>
+            <span className="font-semibold text-[#0F172A] inline-flex items-center gap-1">
               <span className="text-[#00b67a]">★</span> Trustpilot
             </span>
-            <ExternalLink className="w-3.5 h-3.5 text-gray-400" />
+            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
           </a>
         </div>
 

@@ -10,13 +10,10 @@ import {
   Store, 
   Globe, 
   Sparkles, 
-  Clock, 
-  CreditCard, 
-  ExternalLink,
   ChevronRight,
   Headphones,
   Zap,
-  DollarSign
+  Server
 } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -36,57 +33,54 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const stories = {
     botanicals: {
       initials: 'MB',
-      gradient: 'from-amber-500 to-rose-500',
       title: "Maya's Artisan Botanicals",
       category: "Handcrafted Skincare & Organic Oils",
       domain: "mayabotanicals.com",
-      revenue: "$24,850",
+      revenue: "£24,850",
       orders: "1,420 orders/mo",
       uptime: "99.99%",
       rating: "4.9 / 5.0",
       recentOrder: {
         item: "Rosewater Radiance Serum (50ml)",
-        price: "$48.00",
-        buyer: "Sarah K. from Austin, TX",
+        price: "£48.00",
+        buyer: "Sarah K. from London, UK",
         time: "Just now"
       },
-      perks: ["Accepts Apple Pay, Visa & PayPal", "Automated DHL & FedEx Shipping", "Mobile-Optimized Checkout"]
+      perks: ["Accepts Apple Pay, Visa & PayPal", "Automated Royal Mail & DHL Shipping", "Mobile-Optimized Checkout"]
     },
     coffee: {
       initials: 'UR',
-      gradient: 'from-amber-700 to-yellow-600',
       title: "Urban Roast Roastery",
       category: "Specialty Coffee Beans & Subscriptions",
       domain: "urbanroastco.com",
-      revenue: "$38,400",
+      revenue: "£38,400",
       orders: "2,190 orders/mo",
       uptime: "100%",
       rating: "5.0 / 5.0",
       recentOrder: {
         item: "Ethiopian Yirgacheffe Whole Bean (1kg)",
-        price: "$34.50",
-        buyer: "Marcus L. from Seattle, WA",
-        time: "1 min ago"
+        price: "£34.50",
+        buyer: "Marcus L. from Manchester, UK",
+        time: "5 mins ago"
       },
-      perks: ["Recurring Monthly Subscriptions", "Same-Day Local Pickup Orders", "Zero Transaction Platform Fees"]
+      perks: ["Recurring Monthly Subscriptions", "Same-Day Local Roastery Orders", "Zero Platform Transaction Fees"]
     },
     agency: {
       initials: 'DP',
-      gradient: 'from-blue-600 to-teal-500',
       title: "DevPeak Creative Studio",
       category: "Brand Design & Web Consulting",
       domain: "devpeakstudio.com",
-      revenue: "$52,000",
+      revenue: "£52,000",
       orders: "18 retainers/mo",
       uptime: "99.99%",
       rating: "4.95 / 5.0",
       recentOrder: {
         item: "Enterprise Brand Identity Package",
-        price: "$4,500.00",
-        buyer: "Nordic Ventures AB, Stockholm",
-        time: "12 mins ago"
+        price: "£4,500.00",
+        buyer: "Apex Ventures Ltd, Edinburgh",
+        time: "15 mins ago"
       },
-      perks: ["Client Invoicing & Stripe Portal", "Private Staging Environments", "Unlimited Business Email Inboxes"]
+      perks: ["Client Invoicing & Payment Portal", "Isolated NVMe Staging Environments", "Unlimited Professional Email Inboxes"]
     }
   };
 
@@ -117,209 +111,205 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section 
-      className="relative overflow-hidden bg-gradient-to-br from-teal-50/50 via-white to-slate-50 py-12 sm:py-16 lg:py-20 xl:py-24 border-b border-slate-200"
+      className="bg-white py-12 md:py-16 lg:py-20 border-b border-[#E2E8F0]"
       id="hero-section"
     >
-      {/* Background ambient accents */}
-      <div className="absolute top-0 right-0 w-[520px] h-[520px] bg-gradient-to-bl from-emerald-100/40 via-teal-100/30 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-gradient-to-tr from-blue-50/60 via-slate-100/40 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
-
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-center">
           
-          {/* =========================================================================
-              LEFT COLUMN: HIGH-CONVERTING GODADDY SMALL BUSINESS MESSAGING (7 Cols)
-              ========================================================================= */}
+          {/* LEFT COLUMN: Clean High-Trust Hosting Messaging (7 Cols) */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Trust Pill */}
-            <div className="inline-flex items-center gap-2 bg-teal-100/90 text-teal-900 border border-teal-200/80 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-2xs">
-              <Briefcase className="w-4 h-4 text-teal-700 shrink-0" />
-              <span>Trusted by Over 21 Million Small Businesses Worldwide</span>
+            {/* Trust Kicker - Clean unboxed text */}
+            <div className="flex items-center gap-2 text-xs md:text-sm text-[#006E37] font-semibold">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80">
+                <Server className="w-3.5 h-3.5 text-[#008744]" />
+                Next-Gen NVMe Cloud Infrastructure
+              </span>
+              <span className="hidden sm:inline text-slate-300">·</span>
+              <span className="hidden sm:inline text-[#475569] font-medium">99.99% Uptime SLA</span>
             </div>
 
             {/* Main Headline */}
-            <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
-                Build your dream.{' '}
-                <span className="text-[#008a45]">Grow your business.</span>
+            <div className="space-y-4">
+              <h1 className="font-heading text-[32px] md:text-[40px] lg:text-[52px] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
+                High-Performance Web Hosting{' '}
+                <span className="text-[#008744]">Built for Real Growth.</span>
               </h1>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium max-w-2xl">
-                Whether you're opening a local bakery, launching an online clothing boutique, or scaling freelance consultancy, Hostxeon gives you ultra-fast NVMe hosting, free domain, branded email, and easy tools to get paid and get noticed.
+              <p className="text-base md:text-lg text-[#475569] leading-relaxed font-normal max-w-2xl">
+                Experience ultra-fast NVMe storage, free SSL certificates, daily backups, and free domain registration with dedicated 24/7 expert technical support.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
               <button
                 type="button"
                 onClick={handleScrollToPricing}
-                className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-7 sm:px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg shadow-emerald-700/20 hover:shadow-xl hover:shadow-emerald-700/30 flex items-center justify-center gap-2 group"
+                className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-6 py-3.5 rounded-lg text-base transition-colors cursor-pointer shadow-xs flex items-center justify-center gap-2 group"
                 id="hero-start-free-btn"
               >
-                <span>Start Your Store for $1.99/mo</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span>Start Web Hosting from £1.99/mo</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
 
               <button
                 type="button"
                 onClick={handleDomainClick}
-                className="bg-white border-2 border-slate-300 hover:border-slate-800 text-slate-900 font-bold px-6 py-4 rounded-xl text-sm transition-all cursor-pointer shadow-xs hover:bg-slate-50 flex items-center justify-center gap-2"
+                className="bg-white border border-[#E2E8F0] hover:border-slate-400 hover:bg-slate-50 text-[#0F172A] font-semibold px-6 py-3.5 rounded-lg text-sm transition-colors cursor-pointer shadow-2xs flex items-center justify-center gap-2"
                 id="hero-find-domain-btn"
               >
-                <Globe className="w-4 h-4 text-[#008a45]" />
-                <span>Find Your Brand Domain</span>
+                <Globe className="w-4 h-4 text-[#008744]" />
+                <span>Search Domains</span>
               </button>
             </div>
 
             {/* Value Proof Badges */}
-            <div className="pt-2 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-semibold text-slate-700">
+            <div className="pt-3 border-t border-[#E2E8F0] grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-medium text-[#475569]">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#008a45] shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>30-Day Money-Back Guarantee</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-[#008a45] shrink-0" />
+                <Zap className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>99.99% Guaranteed Uptime</span>
               </div>
               <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
-                <Headphones className="w-4 h-4 text-[#008a45] shrink-0" />
+                <Headphones className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>24/7 Human Phone & Chat Support</span>
               </div>
             </div>
 
-            {/* Entrepreneur Story Picker Tabs */}
+            {/* Entrepreneur Story Tabs */}
             <div className="pt-1">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
-                Explore real businesses powered by Hostxeon:
+              <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                Customer Showcases Powered by Hostxeon:
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <button
                   type="button"
                   onClick={() => setActiveStory('botanicals')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer flex items-center gap-1.5 ${
                     activeStory === 'botanicals'
-                      ? 'bg-slate-900 text-white shadow-xs'
-                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                      ? 'bg-[#0F172A] text-white shadow-xs'
+                      : 'bg-[#F8FAFC] text-[#475569] hover:bg-slate-100 border border-[#E2E8F0]'
                   }`}
                 >
-                  <Store className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Maya's Botanicals (Store)</span>
+                  <Store className="w-3.5 h-3.5 text-amber-500" />
+                  <span>Maya's Botanicals (E-Commerce)</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setActiveStory('coffee')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer flex items-center gap-1.5 ${
                     activeStory === 'coffee'
-                      ? 'bg-slate-900 text-white shadow-xs'
-                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                      ? 'bg-[#0F172A] text-white shadow-xs'
+                      : 'bg-[#F8FAFC] text-[#475569] hover:bg-slate-100 border border-[#E2E8F0]'
                   }`}
                 >
-                  <ShoppingBag className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Urban Roast Co. (Food & Subscriptions)</span>
+                  <ShoppingBag className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Urban Roast Co. (Subscriptions)</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setActiveStory('agency')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer flex items-center gap-1.5 ${
                     activeStory === 'agency'
-                      ? 'bg-slate-900 text-white shadow-xs'
-                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                      ? 'bg-[#0F172A] text-white shadow-xs'
+                      : 'bg-[#F8FAFC] text-[#475569] hover:bg-slate-100 border border-[#E2E8F0]'
                   }`}
                 >
-                  <Briefcase className="w-3.5 h-3.5 text-blue-400" />
-                  <span>DevPeak Studio (Agency & SaaS)</span>
+                  <Briefcase className="w-3.5 h-3.5 text-blue-500" />
+                  <span>DevPeak Studio (Digital Agency)</span>
                 </button>
               </div>
             </div>
 
           </div>
 
-          {/* =========================================================================
-              RIGHT COLUMN: ENTREPRENEUR STORY SHOWCASE CARD & LIVE METRICS (5 Cols)
-              ========================================================================= */}
+          {/* RIGHT COLUMN: Showcase Card & Live Metrics (5 Cols) */}
           <div className="lg:col-span-5">
-            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-2xl space-y-5 relative">
+            <div className="bg-white rounded-xl p-6 sm:p-7 border border-[#E2E8F0] shadow-md space-y-5">
               
-              {/* Creator Profile Header */}
-              <div className="flex items-center gap-4 pb-4 border-b border-slate-100">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${current.gradient} text-white font-black text-xl flex items-center justify-center shadow-md shrink-0`}>
+              {/* Profile Header */}
+              <div className="flex items-center gap-4 pb-4 border-b border-[#E2E8F0]">
+                <div className="w-12 h-12 rounded-lg bg-[#008744] text-white font-bold text-lg flex items-center justify-center shrink-0">
                   {current.initials}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
-                    <h4 className="font-bold text-slate-900 text-base sm:text-lg truncate">
+                    <h4 className="font-semibold text-[#0F172A] text-base truncate">
                       {current.title}
                     </h4>
-                    <span className="bg-emerald-100 text-[#008a45] text-[10px] font-black px-2 py-0.5 rounded-full uppercase shrink-0">
-                      Live Store
+                    <span className="bg-emerald-50 text-[#008744] border border-emerald-200 text-xs font-semibold px-2 py-0.5 rounded-full uppercase shrink-0">
+                      Active Client
                     </span>
                   </div>
-                  <p className="text-xs text-slate-500 font-medium truncate mt-0.5">
+                  <p className="text-xs text-[#475569] font-normal truncate mt-0.5">
                     {current.category}
                   </p>
-                  <div className="flex items-center gap-1 text-[11px] text-[#008a45] font-mono mt-1 font-semibold">
-                    <Globe className="w-3 h-3" />
+                  <div className="flex items-center gap-1 text-xs text-[#008744] mt-1 font-medium">
+                    <Globe className="w-3.5 h-3.5" />
                     <span>{current.domain}</span>
                   </div>
                 </div>
               </div>
 
-              {/* High-Impact Metric Grid */}
+              {/* Metric Grid */}
               <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="p-3.5 bg-emerald-50/90 rounded-2xl border border-emerald-100">
-                  <div className="text-emerald-700 font-semibold text-[11px] flex items-center justify-between">
-                    <span>Monthly Revenue</span>
-                    <TrendingUp className="w-3.5 h-3.5 text-[#008a45]" />
+                <div className="p-3.5 bg-[#F8FAFC] rounded-lg border border-[#E2E8F0]">
+                  <div className="text-[#475569] font-medium text-xs flex items-center justify-between">
+                    <span>Monthly Volume</span>
+                    <TrendingUp className="w-3.5 h-3.5 text-[#008744]" />
                   </div>
-                  <div className="text-xl sm:text-2xl font-black text-emerald-950 mt-1">
+                  <div className="text-xl sm:text-2xl font-bold text-[#0F172A] mt-1 tabular-nums">
                     {current.revenue}
                   </div>
-                  <div className="text-[10px] text-emerald-700 mt-0.5 font-medium">
+                  <div className="text-xs text-[#475569] mt-0.5">
                     {current.orders}
                   </div>
                 </div>
 
-                <div className="p-3.5 bg-blue-50/90 rounded-2xl border border-blue-100">
-                  <div className="text-blue-700 font-semibold text-[11px] flex items-center justify-between">
-                    <span>Store Uptime</span>
+                <div className="p-3.5 bg-[#F8FAFC] rounded-lg border border-[#E2E8F0]">
+                  <div className="text-[#475569] font-medium text-xs flex items-center justify-between">
+                    <span>Server Uptime</span>
                     <Sparkles className="w-3.5 h-3.5 text-blue-600" />
                   </div>
-                  <div className="text-xl sm:text-2xl font-black text-blue-950 mt-1">
+                  <div className="text-xl sm:text-2xl font-bold text-[#0F172A] mt-1 tabular-nums">
                     {current.uptime}
                   </div>
-                  <div className="text-[10px] text-blue-700 mt-0.5 font-medium flex items-center gap-1">
+                  <div className="text-xs text-[#475569] mt-0.5 flex items-center gap-1">
                     <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
                     <span>{current.rating} Verified Rating</span>
                   </div>
                 </div>
               </div>
 
-              {/* Real-Time Live Order Ticker */}
-              <div className="p-3.5 bg-slate-900 text-white rounded-2xl border border-slate-800 shadow-inner text-xs space-y-1">
-                <div className="flex items-center justify-between text-[10px] text-slate-400 font-mono">
-                  <span className="flex items-center gap-1 text-emerald-400 font-bold">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block" />
-                    LIVE STORE TICKER
+              {/* Verified Order Card */}
+              <div className="p-3.5 bg-[#061913] text-white rounded-lg border border-[#061913] text-xs space-y-1.5">
+                <div className="flex items-center justify-between text-xs text-slate-400">
+                  <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" />
+                    RECENT STORE ACTIVITY
                   </span>
                   <span>{current.recentOrder.time}</span>
                 </div>
-                <div className="font-bold text-white text-xs sm:text-sm truncate">
+                <div className="font-semibold text-white text-sm truncate">
                   {current.recentOrder.item}
                 </div>
-                <div className="flex items-center justify-between text-[11px] text-slate-300 pt-0.5">
+                <div className="flex items-center justify-between text-xs text-slate-300 pt-0.5">
                   <span className="text-slate-400">{current.recentOrder.buyer}</span>
-                  <span className="text-emerald-400 font-black font-mono">{current.recentOrder.price}</span>
+                  <span className="text-emerald-400 font-bold tabular-nums">{current.recentOrder.price}</span>
                 </div>
               </div>
 
               {/* Feature Checklist */}
-              <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 text-xs space-y-2">
+              <div className="p-3 bg-[#F8FAFC] rounded-lg border border-[#E2E8F0] text-xs space-y-2">
                 {current.perks.map((perk, i) => (
-                  <div key={i} className="flex items-center gap-2 text-slate-700 font-medium">
-                    <div className="w-4 h-4 rounded-full bg-emerald-100 text-[#008a45] flex items-center justify-center shrink-0">
+                  <div key={i} className="flex items-center gap-2 text-[#475569]">
+                    <div className="w-4 h-4 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center shrink-0">
                       <Check className="w-2.5 h-2.5 stroke-[3]" />
                     </div>
                     <span>{perk}</span>
@@ -331,9 +321,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <button
                 type="button"
                 onClick={handleScrollToPricing}
-                className="w-full py-3 px-4 bg-slate-900 hover:bg-black text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="w-full py-3 px-4 bg-[#0F172A] hover:bg-slate-800 text-white font-semibold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
               >
-                <span>Launch a Store Like This on Hostxeon</span>
+                <span>Deploy Hosting Infrastructure on Hostxeon</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
 

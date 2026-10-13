@@ -49,25 +49,25 @@ export const FormField: React.FC<FormFieldProps> = ({
   return (
     <div className={`space-y-1.5 ${className}`}>
       {(label || action) && (
-        <div className="flex items-center justify-between text-xs font-semibold text-gray-700">
+        <div className="flex items-center justify-between text-[13px] font-medium text-[#0F172A]">
           {label && (
             <label htmlFor={htmlFor} className="block tracking-wide">
               {label}
               {required && <span className="text-rose-500 ml-1">*</span>}
             </label>
           )}
-          {action && <div className="text-xs">{action}</div>}
+          {action && <div className="text-xs text-[#475569]">{action}</div>}
         </div>
       )}
       {children}
-      {hint && !error && <p className="text-xs text-gray-500">{hint}</p>}
+      {hint && !error && <p className="text-xs text-[#475569]">{hint}</p>}
       {error && <p className="text-xs text-rose-600 font-medium">{error}</p>}
     </div>
   );
 };
 
 // ==========================================
-// STANDARD INPUT (Height: 50px, Radius: 8px)
+// STANDARD INPUT (Height: 46px, Radius: 8px)
 // ==========================================
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -81,14 +81,14 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className = '', error, leftIcon, rightIcon, disabled, id, ...props }, ref) => {
     const errorBorder = error
       ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500 bg-rose-50/20'
-      : 'border-gray-300 focus:border-[#008a45] focus:ring-[#008a45] bg-white';
+      : 'border-[#E2E8F0] focus:border-[#008744] focus:ring-[#008744] bg-white';
 
-    const disabledClass = disabled ? 'bg-gray-100 text-gray-500 cursor-not-allowed' : '';
+    const disabledClass = disabled ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : '';
 
     return (
       <div className="relative flex items-center w-full">
         {leftIcon && (
-          <div className="absolute left-3.5 text-gray-400 pointer-events-none flex items-center justify-center">
+          <div className="absolute left-3.5 text-slate-400 pointer-events-none flex items-center justify-center">
             {leftIcon}
           </div>
         )}
@@ -96,13 +96,13 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={id}
           disabled={disabled}
-          className={`w-full h-[50px] text-sm sm:text-base text-gray-900 placeholder:text-gray-400 rounded-lg border px-4 transition-all duration-150 focus:outline-hidden focus:ring-2 focus:ring-opacity-20 shadow-2xs ${
-            leftIcon ? 'pl-11' : ''
-          } ${rightIcon ? 'pr-11' : ''} ${errorBorder} ${disabledClass} ${className}`}
+          className={`w-full h-11 text-sm text-[#0F172A] placeholder:text-slate-400 rounded-lg border px-3.5 transition-colors focus:outline-hidden focus:ring-2 focus:ring-emerald-500/20 shadow-2xs ${
+            leftIcon ? 'pl-10' : ''
+          } ${rightIcon ? 'pr-10' : ''} ${errorBorder} ${disabledClass} ${className}`}
           {...props}
         />
         {rightIcon && (
-          <div className="absolute right-3.5 text-gray-400 pointer-events-none flex items-center justify-center">
+          <div className="absolute right-3.5 text-slate-400 pointer-events-none flex items-center justify-center">
             {rightIcon}
           </div>
         )}
@@ -126,7 +126,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ className = '', error, children, options, disabled, id, ...props }, ref) => {
     const errorBorder = error
       ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500'
-      : 'border-gray-300 focus:border-[#008a45] focus:ring-[#008a45]';
+      : 'border-[#E2E8F0] focus:border-[#008744] focus:ring-[#008744]';
 
     return (
       <div className="relative w-full">
@@ -134,8 +134,8 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           ref={ref}
           id={id}
           disabled={disabled}
-          className={`w-full h-[50px] appearance-none text-sm sm:text-base text-gray-900 bg-white rounded-lg border px-4 pr-10 transition-all focus:outline-hidden focus:ring-2 focus:ring-opacity-20 shadow-2xs ${errorBorder} ${
-            disabled ? 'bg-gray-100 text-gray-500 cursor-not-allowed' : 'cursor-pointer'
+          className={`w-full h-11 appearance-none text-sm text-[#0F172A] bg-white rounded-lg border px-3.5 pr-10 transition-colors focus:outline-hidden focus:ring-2 focus:ring-emerald-500/20 shadow-2xs ${errorBorder} ${
+            disabled ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'cursor-pointer'
           } ${className}`}
           {...props}
         >
@@ -147,7 +147,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
               ))
             : children}
         </select>
-        <div className="absolute inset-y-0 right-3.5 flex items-center pointer-events-none text-gray-500">
+        <div className="absolute inset-y-0 right-3.5 flex items-center pointer-events-none text-slate-400">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -171,15 +171,15 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className = '', error, disabled, id, ...props }, ref) => {
     const errorBorder = error
       ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500'
-      : 'border-gray-300 focus:border-[#008a45] focus:ring-[#008a45]';
+      : 'border-[#E2E8F0] focus:border-[#008744] focus:ring-[#008744]';
 
     return (
       <textarea
         ref={ref}
         id={id}
         disabled={disabled}
-        className={`w-full min-h-[100px] text-sm sm:text-base text-gray-900 placeholder:text-gray-400 bg-white rounded-lg border p-4 transition-all focus:outline-hidden focus:ring-2 focus:ring-opacity-20 shadow-2xs ${errorBorder} ${
-          disabled ? 'bg-gray-100 text-gray-500 cursor-not-allowed' : ''
+        className={`w-full min-h-[100px] text-sm text-[#0F172A] placeholder:text-slate-400 bg-white rounded-lg border p-3.5 transition-colors focus:outline-hidden focus:ring-2 focus:ring-emerald-500/20 shadow-2xs ${errorBorder} ${
+          disabled ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : ''
         } ${className}`}
         {...props}
       />
@@ -206,13 +206,13 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
           ref={ref}
           type="checkbox"
           id={id}
-          className={`w-5 h-5 mt-0.5 rounded-md border-gray-300 text-[#008a45] focus:ring-[#008a45] focus:ring-offset-0 cursor-pointer ${className}`}
+          className={`w-4 h-4 mt-0.5 rounded border-[#E2E8F0] text-[#008744] focus:ring-[#008744] focus:ring-offset-0 cursor-pointer ${className}`}
           {...props}
         />
         {(label || description) && (
           <div className="text-sm">
-            {label && <span className="font-medium text-gray-900 group-hover:text-black">{label}</span>}
-            {description && <p className="text-xs text-gray-500 mt-0.5">{description}</p>}
+            {label && <span className="font-medium text-[#0F172A]">{label}</span>}
+            {description && <p className="text-xs text-[#475569] mt-0.5">{description}</p>}
           </div>
         )}
       </label>
@@ -235,13 +235,13 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
           ref={ref}
           type="radio"
           id={id}
-          className={`w-5 h-5 mt-0.5 border-gray-300 text-[#008a45] focus:ring-[#008a45] focus:ring-offset-0 cursor-pointer ${className}`}
+          className={`w-4 h-4 mt-0.5 border-[#E2E8F0] text-[#008744] focus:ring-[#008744] focus:ring-offset-0 cursor-pointer ${className}`}
           {...props}
         />
         {(label || description) && (
           <div className="text-sm">
-            {label && <span className="font-medium text-gray-900 group-hover:text-black">{label}</span>}
-            {description && <p className="text-xs text-gray-500 mt-0.5">{description}</p>}
+            {label && <span className="font-medium text-[#0F172A]">{label}</span>}
+            {description && <p className="text-xs text-[#475569] mt-0.5">{description}</p>}
           </div>
         )}
       </label>

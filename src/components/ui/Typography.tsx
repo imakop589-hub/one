@@ -25,7 +25,7 @@ export const PageTitle: React.FC<PageTitleProps> = ({
   return (
     <Component
       id={id}
-      className={`font-['Baloo_2',cursive,sans-serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-950 leading-[1.15] ${alignClass} ${className}`}
+      className={`font-heading text-[32px] md:text-[40px] lg:text-[52px] font-bold tracking-tight text-[#0F172A] leading-[1.15] ${alignClass} ${className}`}
       {...props}
     >
       {children}
@@ -64,7 +64,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       {badge && (
         <div className="mb-3">
           {typeof badge === 'string' ? (
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/70 text-[#008a45] text-xs font-bold tracking-wide">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/70 text-[#008744] text-xs font-semibold tracking-wide">
               {badge}
             </span>
           ) : (
@@ -74,13 +74,13 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       )}
       <Component
         id={id}
-        className={`font-['Baloo_2',cursive,sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight ${className}`}
+        className={`font-heading text-[26px] md:text-[30px] lg:text-[36px] font-bold text-[#0F172A] tracking-tight leading-[1.2] ${className}`}
         {...props}
       >
         {children}
       </Component>
       {subtitle && (
-        <p className="text-sm sm:text-base text-gray-600 mt-2.5 sm:mt-3 leading-relaxed max-w-2xl">
+        <p className="text-sm md:text-base text-[#475569] mt-2.5 sm:mt-3 leading-relaxed max-w-2xl font-normal">
           {subtitle}
         </p>
       )}
@@ -104,12 +104,12 @@ export const Heading: React.FC<HeadingProps> = ({
 }) => {
   const Component = `h${level}` as React.ElementType;
   const levelClasses = {
-    1: 'font-[\'Baloo_2\',cursive,sans-serif] text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.15]',
-    2: 'font-[\'Baloo_2\',cursive,sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight',
-    3: 'font-[\'Baloo_2\',cursive,sans-serif] text-xl sm:text-2xl font-black text-slate-950 tracking-tight',
-    4: 'font-[\'Baloo_2\',cursive,sans-serif] text-lg sm:text-xl font-bold text-slate-950',
-    5: 'font-[\'Baloo_2\',cursive,sans-serif] text-base font-bold text-slate-900',
-    6: 'font-[\'Baloo_2\',cursive,sans-serif] text-sm font-bold text-slate-900 uppercase tracking-wider',
+    1: 'font-heading text-[32px] md:text-[40px] lg:text-[52px] font-bold text-[#0F172A] tracking-tight leading-[1.15]',
+    2: 'font-heading text-[26px] md:text-[30px] lg:text-[36px] font-bold text-[#0F172A] tracking-tight leading-[1.2]',
+    3: 'font-heading text-[18px] md:text-[20px] lg:text-[22px] font-semibold text-[#0F172A] tracking-tight leading-[1.3]',
+    4: 'font-heading text-base md:text-[18px] font-semibold text-[#0F172A] leading-snug',
+    5: 'font-heading text-[15px] md:text-base font-semibold text-[#0F172A]',
+    6: 'font-heading text-xs md:text-[13px] font-semibold text-[#475569] uppercase tracking-wider',
   }[level];
 
   return (
@@ -134,11 +134,11 @@ export const Text: React.FC<TextProps> = ({
   ...props
 }) => {
   const variantClasses = {
-    lead: 'text-lg sm:text-xl text-slate-700 font-normal leading-relaxed',
-    body: 'text-sm sm:text-base text-gray-600 font-normal leading-relaxed',
-    small: 'text-xs sm:text-sm text-gray-500 leading-normal',
-    muted: 'text-xs text-gray-400',
-    caption: 'text-[11px] font-medium text-gray-400 tracking-wide uppercase',
+    lead: 'text-lg sm:text-xl text-[#0F172A] font-normal leading-relaxed',
+    body: 'text-base text-[#475569] font-normal leading-relaxed',
+    small: 'text-[13px] md:text-sm text-[#475569] leading-normal',
+    muted: 'text-xs md:text-[13px] text-slate-500',
+    caption: 'text-xs font-medium text-slate-500 tracking-wide uppercase',
   }[variant];
 
   return (

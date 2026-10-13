@@ -61,7 +61,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onSuccess, onBackToPubli
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Hostxeon Website</span>
         </button>
-        <span className="text-[11px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
+        <span className="text-xs font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
           CMS v2.0
         </span>
       </div>
@@ -70,15 +70,15 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onSuccess, onBackToPubli
       <div className="w-full max-w-md bg-slate-900/90 border border-slate-800 rounded-2xl shadow-2xl p-6 sm:p-8 backdrop-blur-md relative z-10">
         {/* Brand header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#008a45] to-[#041d16] flex items-center justify-center text-white shadow-md relative">
-            <Sparkles className="w-5 h-5 text-[#fed000]" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#008744] to-[#061913] flex items-center justify-center text-white shadow-md relative">
+            <Sparkles className="w-5 h-5 text-[#F59E0B]" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="text-xl font-black text-white tracking-tight">
+              <span className="text-xl font-bold text-white tracking-tight">
                 Host<span className="text-emerald-400">xeon</span>
               </span>
-              <span className="text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.5 rounded uppercase">
+              <span className="text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.5 rounded uppercase">
                 Admin CMS
               </span>
             </div>
@@ -93,7 +93,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onSuccess, onBackToPubli
               <Shield className="w-3.5 h-3.5 shrink-0" />
               <span>Administrator Access Only</span>
             </div>
-            <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded ${
+            <span className={`text-xs font-mono px-1.5 py-0.5 rounded ${
               authMode === 'production_api'
                 ? 'bg-emerald-950 text-emerald-300 border border-emerald-800'
                 : 'bg-amber-950 text-amber-300 border border-amber-800'
@@ -101,7 +101,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onSuccess, onBackToPubli
               {authMode === 'production_api' ? 'Production Server API' : 'Dev Simulator (Local)'}
             </span>
           </div>
-          <p className="text-[11px] text-slate-400 leading-relaxed">
+          <p className="text-xs text-slate-400 leading-relaxed">
             This panel manages public website pages, navigation, media, and site settings. Customer billing, invoices, and service tickets are handled in the separate WHMCS portal.
           </p>
         </div>
@@ -113,7 +113,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onSuccess, onBackToPubli
               <KeyRound className="w-3.5 h-3.5 shrink-0" />
               <span>Development Sandbox Active</span>
             </div>
-            <p className="text-[11px] text-amber-300/80 leading-normal">
+            <p className="text-xs text-amber-300/80 leading-normal">
               {!isConfigured
                 ? 'First-run setup: Enter your desired admin username and password (min 6 chars). They will be encrypted with salted WebCrypto SHA-256 in local storage.'
                 : 'Local prototype mode. Enter your configured admin credentials to access the CMS.'}
@@ -206,7 +206,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onSuccess, onBackToPubli
             <button
               type="button"
               onClick={handleResetDevSandbox}
-              className="inline-flex items-center gap-1.5 text-[11px] text-slate-400 hover:text-amber-400 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-amber-400 transition-colors cursor-pointer"
             >
               <RotateCcw className="w-3 h-3" />
               <span>Reset Local Dev Sandbox Credentials</span>

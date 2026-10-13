@@ -249,7 +249,7 @@ export const DEFAULT_CMS_MENUS: CmsMenuItem[] = [
     isActive: true,
     isExternal: false,
     badge: 'From £0.99',
-    badgeColor: 'bg-emerald-100 text-[#008a45]',
+    badgeColor: 'bg-emerald-100 text-[#008744]',
   },
   {
     id: 'menu-mega-dom-2',

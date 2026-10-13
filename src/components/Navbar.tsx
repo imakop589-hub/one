@@ -373,7 +373,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                                     <span className="flex items-center gap-1.5">
                                       <span>{subItem.title}</span>
                                       {subItem.badge && (
-                                        <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider ${
+                                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider ${
                                           subItem.badgeColor || 'bg-emerald-50 text-[#008744] border border-emerald-200'
                                         }`}>
                                           {subItem.badge}

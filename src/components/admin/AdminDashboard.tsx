@@ -80,7 +80,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       {/* Top Banner / Welcome */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight flex items-center gap-2.5">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-2.5">
             <span>Hostxeon CMS Administration</span>
             <span className="text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full">
               Foundation Active
@@ -108,14 +108,14 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-900/90 border border-slate-800 shadow-md">
         <div className="flex items-start gap-3.5">
           <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
-            <Sparkles className="w-5 h-5 text-[#fed000]" />
+            <Sparkles className="w-5 h-5 text-[#F59E0B]" />
           </div>
           <div className="space-y-1.5">
             <div className="flex flex-wrap items-center gap-2">
               <h2 className="text-sm font-bold text-white">
                 Hostxeon Public Website & CMS Architecture
               </h2>
-              <span className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700 font-mono">
+              <span className="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700 font-mono">
                 WHMCS Separated
               </span>
             </div>
@@ -123,7 +123,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               This CMS controls the public branding, marketing copy, SEO tags, navigation structure, and media assets.
               Customer accounts, subscriptions, credit cards, automated cPanel/KVM provisioning, and ticket desks are intentionally separated for the external WHMCS installation.
             </p>
-            <div className="pt-1 flex flex-wrap items-center gap-3 text-[11px] text-slate-400">
+            <div className="pt-1 flex flex-wrap items-center gap-3 text-xs text-slate-400">
               <span className="flex items-center gap-1 text-emerald-400 font-medium">
                 ✓ Public Website CMS: Ready
               </span>
@@ -149,10 +149,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-white">{pages.length}</span>
+            <span className="text-3xl font-bold text-white">{pages.length}</span>
             <span className="text-xs text-emerald-400 font-semibold">{publishedPagesCount} published</span>
           </div>
-          <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-900">
+          <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-900">
             <span>{draftPagesCount} drafts</span>
             <button
               type="button"
@@ -173,10 +173,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-white">{menus.length}</span>
+            <span className="text-3xl font-bold text-white">{menus.length}</span>
             <span className="text-xs text-slate-400">links configured</span>
           </div>
-          <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-900">
+          <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-900">
             <span>Header, Mega & Footer</span>
             <button
               type="button"
@@ -197,10 +197,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-white">{media.length}</span>
+            <span className="text-3xl font-bold text-white">{media.length}</span>
             <span className="text-xs text-slate-400">images in library</span>
           </div>
-          <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-900">
+          <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-900">
             <span>Max 5MB per upload</span>
             <button
               type="button"
@@ -221,11 +221,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-xl font-black text-white truncate">
+            <span className="text-xl font-bold text-white truncate">
               {whmcs?.baseUrl ? new URL(whmcs.baseUrl).hostname : 'Not Set'}
             </span>
           </div>
-          <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-900">
+          <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-900">
             <span className="text-amber-400 font-medium">Ready for deployment</span>
             <button
               type="button"
@@ -264,8 +264,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     <span className="text-sm font-bold text-slate-200 truncate hover:text-emerald-400 cursor-pointer" onClick={() => onEditPage(page.id)}>
                       {page.title}
                     </span>
-                    <span className="text-[10px] font-mono text-slate-500">/{page.slug}</span>
-                    <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full uppercase ${
+                    <span className="text-xs font-mono text-slate-500">/{page.slug}</span>
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded-full uppercase ${
                       page.status === 'published'
                         ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
                         : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
@@ -384,7 +384,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
               <div className="flex justify-between py-1 border-b border-slate-900">
                 <span className="text-slate-400">CMS Data Store:</span>
-                <span className={`font-mono text-[11px] ${
+                <span className={`font-mono text-xs ${
                   cmsService.getStorageMode() === 'production_api' ? 'text-emerald-400' : 'text-amber-400'
                 }`}>
                   {cmsService.getStorageMode() === 'production_api' ? 'Production REST API' : 'Dev Fallback Store'}
@@ -392,7 +392,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
               <div className="flex justify-between py-1 border-b border-slate-900">
                 <span className="text-slate-400">Admin Auth:</span>
-                <span className={`font-mono text-[11px] ${
+                <span className={`font-mono text-xs ${
                   authService.getAuthMode() === 'production_api' ? 'text-emerald-400' : 'text-amber-400'
                 }`}>
                   {authService.getAuthMode() === 'production_api' ? 'Server Auth API' : 'Dev Session Guard'}
@@ -404,7 +404,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               </div>
             </div>
             {cmsService.getStorageMode() === 'development_fallback' && (
-              <p className="text-[10px] text-slate-500 pt-1 border-t border-slate-900 leading-normal">
+              <p className="text-xs text-slate-500 pt-1 border-t border-slate-900 leading-normal">
                 Running in local development fallback. Connect a server database via <code className="text-slate-400">VITE_CMS_API_URL</code> for production persistence.
               </p>
             )}

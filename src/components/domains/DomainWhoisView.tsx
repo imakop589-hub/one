@@ -169,14 +169,14 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
       <div className="bg-gradient-to-b from-[#03241b] via-[#043324] to-[#03241b] text-white pt-14 pb-20 border-b border-emerald-900/40 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#00b67a_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
 
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="max-w-5xl mx-auto text-center space-y-4 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-[#fed000] text-xs font-black uppercase tracking-wider border border-emerald-500/30">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-[#F59E0B] text-xs font-semibold uppercase tracking-wider border border-emerald-500/30">
               <Search className="w-3.5 h-3.5" />
               <span>LIVE DNS ZONE & RECORD INSPECTOR</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
               Domain DNS & WHOIS Record Lookup
             </h1>
 
@@ -188,7 +188,7 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
             <form onSubmit={handleSubmit} className="pt-4 max-w-2xl mx-auto">
               <div className="bg-white p-2 sm:p-2.5 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col sm:flex-row items-center gap-2 border border-white/20">
                 <div className="flex items-center gap-2.5 w-full px-3 py-1">
-                  <Globe className="w-5 h-5 text-[#008a45] shrink-0" />
+                  <Globe className="w-5 h-5 text-[#008744] shrink-0" />
                   <input
                     type="text"
                     value={query}
@@ -201,7 +201,7 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
                 <button
                   type="submit"
                   disabled={isSearching || !query.trim()}
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-xl sm:rounded-2xl bg-[#fed000] hover:bg-[#ebbe00] text-slate-950 font-black text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 shrink-0 disabled:opacity-50"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-xl sm:rounded-2xl bg-[#F59E0B] hover:bg-[#d97706] text-slate-950 font-semibold text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 shrink-0 disabled:opacity-50"
                 >
                   {isSearching ? (
                     <>
@@ -222,14 +222,14 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
       </div>
 
       {/* 2. Main Content / Results Area */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-8 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-8 relative z-20">
         
         {dnsData ? (
           <div className="space-y-6">
             
             {/* Informational Transparency Badge */}
             <div className="bg-emerald-50/90 border border-emerald-200/80 rounded-2xl px-4 py-3 flex items-center gap-3 text-xs text-emerald-900">
-              <Info className="w-4 h-4 text-[#008a45] shrink-0" />
+              <Info className="w-4 h-4 text-[#008744] shrink-0" />
               <span>
                 <strong>Technical Disclosure:</strong> DNS records are available via live resolution, but registration information could not be retrieved from an RDAP service. Official ICANN registry owner records require an authenticated registrar API integration.
               </span>
@@ -243,16 +243,16 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
             }`}>
               <div className="space-y-2">
                 <div className="flex items-center gap-2.5">
-                  <span className={`px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider ${
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${
                     dnsData.isRegistered 
                       ? 'bg-amber-100 text-amber-900 border border-amber-300' 
-                      : 'bg-[#fed000] text-slate-950 shadow-xs'
+                      : 'bg-[#F59E0B] text-slate-950 shadow-xs'
                   }`}>
                     {dnsData.isRegistered ? 'Registered Domain (Taken)' : 'Domain is Available!'}
                   </span>
                 </div>
 
-                <h2 className={`text-2xl sm:text-3xl font-black ${
+                <h2 className={`text-2xl sm:text-3xl font-semibold ${
                   dnsData.isRegistered ? 'text-slate-950' : 'text-white'
                 }`}>
                   {dnsData.domainName}
@@ -270,7 +270,7 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
               {/* Action Button */}
               <div className="shrink-0 w-full sm:w-auto text-right space-y-2">
                 <div className="flex items-baseline gap-2 sm:justify-end">
-                  <span className={`text-2xl sm:text-3xl font-black ${
+                  <span className={`text-2xl sm:text-3xl font-semibold ${
                     dnsData.isRegistered ? 'text-slate-950' : 'text-white'
                   }`}>
                     £{(dnsData.isRegistered ? dnsData.transferPrice : dnsData.registerPrice).toFixed(2)}
@@ -284,10 +284,10 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
                   <button
                     type="button"
                     onClick={handleAction}
-                    className={`w-full sm:w-auto px-6 py-3.5 rounded-xl font-black text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 ${
+                    className={`w-full sm:w-auto px-6 py-3.5 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 ${
                       isItemAdded
                         ? 'bg-emerald-700 text-white'
-                        : 'bg-[#fed000] hover:bg-[#ebbe00] text-slate-950'
+                        : 'bg-[#F59E0B] hover:bg-[#d97706] text-slate-950'
                     }`}
                   >
                     {isItemAdded ? (
@@ -312,7 +312,7 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
                     <button
                       type="button"
                       onClick={onOpenCart}
-                      className="px-4 py-3 text-xs font-bold text-[#008a45] bg-emerald-50 hover:bg-emerald-100 rounded-xl border border-emerald-200 transition-colors cursor-pointer"
+                      className="px-4 py-3 text-xs font-bold text-[#008744] bg-emerald-50 hover:bg-emerald-100 rounded-xl border border-emerald-200 transition-colors cursor-pointer"
                     >
                       View Basket →
                     </button>
@@ -326,7 +326,7 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
               
               {/* 1. Registration Data Unavailable Notice */}
               <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-4">
-                <div className="flex items-center gap-2 text-xs font-black uppercase text-amber-700 tracking-wider">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase text-amber-700 tracking-wider">
                   <Building className="w-4 h-4" />
                   <span>Domain Registration (RDAP / WHOIS) Information</span>
                 </div>
@@ -344,7 +344,7 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
               {/* 2. Live DNS Records */}
               <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-5">
                 <div className="flex items-center justify-between flex-wrap gap-2">
-                  <div className="flex items-center gap-2 text-xs font-black uppercase text-[#008a45] tracking-wider">
+                  <div className="flex items-center gap-2 text-xs font-semibold uppercase text-[#008744] tracking-wider">
                     <Server className="w-4 h-4" />
                     <span>Live DNS Zone Records</span>
                   </div>
@@ -357,7 +357,7 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {dnsData.nameServers.map((ns, idx) => (
                       <div key={idx} className="p-3.5 bg-gray-50 rounded-xl border border-gray-200 flex items-center gap-3">
-                        <Server className="w-4 h-4 text-[#008a45] shrink-0" />
+                        <Server className="w-4 h-4 text-[#008744] shrink-0" />
                         <div className="font-mono text-xs font-bold text-slate-800 truncate">{ns}</div>
                       </div>
                     ))}
@@ -370,14 +370,14 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
 
                 <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
                   <div className="flex items-center gap-2 text-gray-600">
-                    <Globe className="w-4 h-4 text-[#008a45]" />
+                    <Globe className="w-4 h-4 text-[#008744]" />
                     <span>Resolved IP Address: <strong className="font-mono text-slate-900">{dnsData.ipAddress || 'Not resolved'}</strong></span>
                   </div>
 
                   <button
                     type="button"
                     onClick={onOpenLiveChat}
-                    className="text-[#008a45] font-bold hover:underline cursor-pointer flex items-center gap-1"
+                    className="text-[#008744] font-bold hover:underline cursor-pointer flex items-center gap-1"
                   >
                     <Headphones className="w-3.5 h-3.5" />
                     <span>Need Custom DNS Configuration? Ask Support</span>
@@ -391,10 +391,10 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
         ) : (
           /* Empty / Prompt State */
           <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm text-center space-y-4">
-            <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-[#008a45] mx-auto border border-emerald-200">
+            <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-[#008744] mx-auto border border-emerald-200">
               <Globe className="w-8 h-8" />
             </div>
-            <h3 className="text-xl font-black text-slate-950">Inspect Live DNS Records</h3>
+            <h3 className="text-xl font-bold text-slate-900">Inspect Live DNS Records</h3>
             <p className="text-xs sm:text-sm text-gray-500 max-w-lg mx-auto leading-relaxed">
               Enter any domain name above to retrieve its live nameservers, Anycast IP routing, and registration availability status.
             </p>
@@ -406,17 +406,17 @@ export const DomainWhoisView: React.FC<DomainWhoisViewProps> = ({
       {/* 3. FAQs */}
       <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <div className="text-center mb-10">
-          <h3 className="text-2xl font-black text-slate-950">Frequently Asked Questions</h3>
+          <h3 className="text-2xl font-bold text-slate-900">Frequently Asked Questions</h3>
         </div>
         <div className="space-y-3 max-w-3xl mx-auto">
           {faqs.map((faq, idx) => (
             <div key={idx} className="border border-gray-200 rounded-2xl bg-white overflow-hidden">
               <button
                 onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-[#008a45] cursor-pointer"
+                className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-[#008744] cursor-pointer"
               >
                 <span className="text-sm">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform shrink-0 ${activeFaq === idx ? 'rotate-180 text-[#008a45]' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform shrink-0 ${activeFaq === idx ? 'rotate-180 text-[#008744]' : ''}`} />
               </button>
               {activeFaq === idx && (
                 <div className="px-5 pb-4 text-xs text-gray-600 leading-relaxed border-t border-gray-50 pt-2">

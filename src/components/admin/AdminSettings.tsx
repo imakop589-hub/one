@@ -65,7 +65,7 @@ export const AdminSettings: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
         <div>
-          <h1 className="text-2xl font-black text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <Settings className="w-6 h-6 text-slate-300" />
             <span>Site Settings & Brand Configuration</span>
           </h1>
@@ -196,7 +196,7 @@ export const AdminSettings: React.FC = () => {
       <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 sm:p-6 space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-sm font-bold text-white flex items-center gap-2">
-            <Bell className="w-4 h-4 text-[#fed000]" />
+            <Bell className="w-4 h-4 text-[#F59E0B]" />
             <span>Top Announcement Ribbon</span>
           </h2>
           <label className="flex items-center gap-2 text-xs font-semibold text-slate-300 cursor-pointer">

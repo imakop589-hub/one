@@ -69,16 +69,16 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 opacity-40 pointer-events-none bg-[radial-gradient(#d1fae5_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative">
         
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
-              <Zap className="w-3.5 h-3.5 text-[#008a45]" />
+              <Zap className="w-3.5 h-3.5 text-[#008744]" />
               <span>Full-Stack Web Ecosystem</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-[1.15]">
               Everything you need to <br className="hidden sm:inline" />
               launch, sell, and scale online.
             </h2>
@@ -95,13 +95,13 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
           
           {/* BENTO CARD 1: Wide AI Autonomous Studio (Span 7 cols) */}
           <div 
-            className="lg:col-span-7 bg-gradient-to-br from-[#062c21] to-[#041d16] rounded-3xl p-7 sm:p-9 text-white shadow-xl border border-emerald-900/30 flex flex-col justify-between group hover:shadow-2xl transition-all"
+            className="lg:col-span-7 bg-gradient-to-br from-[#061913] to-[#061913] rounded-3xl p-7 sm:p-9 text-white shadow-xl border border-emerald-900/30 flex flex-col justify-between group hover:shadow-2xl transition-all"
             id="bento-ai-builder"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-[#fed000]" /> Autonomous Aida 2.5
+                  <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" /> Autonomous Aida 2.5
                 </span>
                 <button
                   onClick={onOpenBuilder}
@@ -112,7 +112,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                 </button>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-2 text-white">
+              <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-2 text-white">
                 Conversational Website Generation & Visual Editor
               </h3>
               <p className="text-sm sm:text-base text-emerald-100/80 max-w-xl font-normal leading-relaxed mb-6">
@@ -125,9 +125,9 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
               <div className="flex items-center justify-between pb-3 border-b border-emerald-800/60 mb-3 text-xs">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
-                  <span className="font-mono text-[11px] text-emerald-200">kaysuki-omakase.hostxeon.site</span>
+                  <span className="font-mono text-xs text-emerald-200">kaysuki-omakase.hostxeon.site</span>
                 </div>
-                <span className="bg-emerald-950 text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-md border border-emerald-700/50">
+                <span className="bg-emerald-950 text-emerald-300 text-xs font-bold px-2 py-0.5 rounded-md border border-emerald-700/50">
                   Ready in 45s
                 </span>
               </div>
@@ -140,7 +140,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                     className={`flex items-start gap-2 text-xs ${m.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     {m.sender === 'aida' && (
-                      <div className="w-5 h-5 rounded-full bg-emerald-600 flex items-center justify-center shrink-0 text-[10px] font-bold text-white">
+                      <div className="w-5 h-5 rounded-full bg-emerald-600 flex items-center justify-center shrink-0 text-xs font-bold text-white">
                         A
                       </div>
                     )}
@@ -166,7 +166,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                 />
                 <button
                   type="submit"
-                  className="bg-[#fed000] hover:bg-[#eab308] text-slate-950 font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1 cursor-pointer transition-colors"
+                  className="bg-[#F59E0B] hover:bg-[#eab308] text-slate-950 font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1 cursor-pointer transition-colors"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Update</span>
@@ -190,7 +190,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                 </span>
               </div>
 
-              <h3 className="text-2xl font-black tracking-tight mb-2 text-slate-900">
+              <h3 className="text-2xl font-semibold tracking-tight mb-2 text-slate-900">
                 100/100 Core Web Vitals
               </h3>
               <p className="text-sm text-slate-600 font-normal leading-relaxed mb-6">
@@ -214,7 +214,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                     key={r}
                     type="button"
                     onClick={() => handleRegionClick(r)}
-                    className={`py-1.5 px-1 rounded-lg text-[10px] font-bold font-mono transition-all cursor-pointer ${
+                    className={`py-1.5 px-1 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer ${
                       selectedRegion === r
                         ? 'bg-emerald-500 text-slate-950 shadow-xs'
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
@@ -225,7 +225,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                 ))}
               </div>
 
-              <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-800/80">
                 <span className="flex items-center gap-1 text-emerald-400 font-semibold">
                   <ShieldCheck className="w-3.5 h-3.5" /> Wildcard SSL Included
                 </span>
@@ -251,7 +251,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                 </div>
               </div>
 
-              <h3 className="text-2xl font-black tracking-tight mb-2 text-slate-900">
+              <h3 className="text-2xl font-semibold tracking-tight mb-2 text-slate-900">
                 Find Your Premium Brand Identity
               </h3>
               <p className="text-sm text-slate-600 font-normal leading-relaxed mb-6">
@@ -264,9 +264,9 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
               <div className="flex items-center justify-between bg-slate-800/90 rounded-xl px-3.5 py-2.5 border border-slate-700">
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-purple-400" />
-                  <span className="text-xs font-extrabold tracking-wide">mycompany<span className="text-[#fed000]">.ai</span></span>
+                  <span className="text-xs font-extrabold tracking-wide">mycompany<span className="text-[#F59E0B]">.ai</span></span>
                 </div>
-                <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                <span className="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
                   Available Now
                 </span>
               </div>
@@ -293,7 +293,7 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-2 text-slate-900">
+              <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-2 text-slate-900">
                 Branded Custom Email & Microsoft 365
               </h3>
               <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed mb-6">
@@ -304,37 +304,37 @@ export const MoneyOnlineSection: React.FC<MoneyOnlineSectionProps> = ({
             {/* Email + Calendar Preview Box */}
             <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 grid grid-cols-1 sm:grid-cols-12 gap-3 text-xs">
               <div className="sm:col-span-5 bg-white rounded-xl p-3 border border-slate-200/80 shadow-2xs space-y-2">
-                <div className="flex items-center justify-between text-slate-400 text-[10px] font-bold uppercase">
+                <div className="flex items-center justify-between text-slate-400 text-xs font-bold uppercase">
                   <span>Inbox</span>
                   <span className="bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded">3 New</span>
                 </div>
                 <div className="space-y-1.5">
                   <div className="bg-emerald-50/80 p-2 rounded-lg border border-emerald-100">
-                    <div className="font-bold text-slate-900 text-[11px]">New order received #1084</div>
-                    <div className="text-slate-500 text-[10px]">Stripe checkout confirmed £148.00</div>
+                    <div className="font-bold text-slate-900 text-xs">New order received #1084</div>
+                    <div className="text-slate-500 text-xs">Stripe checkout confirmed £148.00</div>
                   </div>
                   <div className="p-2 rounded-lg hover:bg-slate-50">
-                    <div className="font-bold text-slate-800 text-[11px]">Table booking: Sarah J.</div>
-                    <div className="text-slate-500 text-[10px]">Tomorrow at 7:30 PM (4 guests)</div>
+                    <div className="font-bold text-slate-800 text-xs">Table booking: Sarah J.</div>
+                    <div className="text-slate-500 text-xs">Tomorrow at 7:30 PM (4 guests)</div>
                   </div>
                 </div>
               </div>
 
               <div className="sm:col-span-7 bg-white rounded-xl p-3 border border-slate-200/80 shadow-2xs flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between text-[11px] font-bold text-slate-900 mb-1">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-900 mb-1">
                     <span>Smart Calendar & Office Suite</span>
-                    <span className="text-[10px] text-emerald-600 font-extrabold">1 TB OneDrive</span>
+                    <span className="text-xs text-emerald-600 font-extrabold">1 TB OneDrive</span>
                   </div>
-                  <p className="text-[11px] text-slate-500 leading-snug">
+                  <p className="text-xs text-slate-500 leading-snug">
                     Seamless sync across iOS, Android, macOS, and Windows with zero setup headaches.
                   </p>
                 </div>
                 <div className="flex items-center gap-2 pt-2 border-t border-slate-100 mt-2">
-                  <span className="text-[10px] bg-blue-50 text-blue-700 font-bold px-2 py-0.5 rounded">Word</span>
-                  <span className="text-[10px] bg-green-50 text-green-700 font-bold px-2 py-0.5 rounded">Excel</span>
-                  <span className="text-[10px] bg-purple-50 text-purple-700 font-bold px-2 py-0.5 rounded">Teams</span>
-                  <span className="text-[10px] bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded">Outlook</span>
+                  <span className="text-xs bg-blue-50 text-blue-700 font-bold px-2 py-0.5 rounded">Word</span>
+                  <span className="text-xs bg-green-50 text-green-700 font-bold px-2 py-0.5 rounded">Excel</span>
+                  <span className="text-xs bg-purple-50 text-purple-700 font-bold px-2 py-0.5 rounded">Teams</span>
+                  <span className="text-xs bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded">Outlook</span>
                 </div>
               </div>
             </div>

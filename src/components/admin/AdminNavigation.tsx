@@ -33,7 +33,7 @@ export const AdminNavigation: React.FC = () => {
   const [formLocation, setFormLocation] = useState<CmsMenuItem['menuLocation']>('header');
   const [formOrder, setFormOrder] = useState(1);
   const [formBadge, setFormBadge] = useState('');
-  const [formBadgeColor, setFormBadgeColor] = useState('bg-emerald-100 text-[#008a45]');
+  const [formBadgeColor, setFormBadgeColor] = useState('bg-emerald-100 text-[#008744]');
   const [formIsExternal, setFormIsExternal] = useState(false);
   const [formIsActive, setFormIsActive] = useState(true);
   const [formTargetView, setFormTargetView] = useState('');
@@ -66,7 +66,7 @@ export const AdminNavigation: React.FC = () => {
     setFormLocation((selectedLocation as any) || 'header');
     setFormOrder(menuItems.filter(i => i.menuLocation === selectedLocation).length + 1);
     setFormBadge('');
-    setFormBadgeColor('bg-emerald-100 text-[#008a45]');
+    setFormBadgeColor('bg-emerald-100 text-[#008744]');
     setFormIsExternal(false);
     setFormIsActive(true);
     setFormTargetView('');
@@ -80,7 +80,7 @@ export const AdminNavigation: React.FC = () => {
     setFormLocation(item.menuLocation);
     setFormOrder(item.order);
     setFormBadge(item.badge || '');
-    setFormBadgeColor(item.badgeColor || 'bg-emerald-100 text-[#008a45]');
+    setFormBadgeColor(item.badgeColor || 'bg-emerald-100 text-[#008744]');
     setFormIsExternal(item.isExternal);
     setFormIsActive(item.isActive);
     setFormTargetView(item.targetView || '');
@@ -159,7 +159,7 @@ export const AdminNavigation: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
         <div>
-          <h1 className="text-2xl font-black text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <MenuIcon className="w-6 h-6 text-blue-400" />
             <span>Navigation Menus Management</span>
           </h1>
@@ -225,7 +225,7 @@ export const AdminNavigation: React.FC = () => {
             {currentItems.map((item, idx) => (
               <div key={item.id} className="p-4 flex items-center justify-between gap-4 hover:bg-slate-900/60 transition-colors">
                 <div className="flex items-center gap-3 min-w-0">
-                  <span className="w-6 h-6 rounded-lg bg-slate-900 text-slate-500 font-mono text-[11px] font-bold flex items-center justify-center shrink-0 border border-slate-800">
+                  <span className="w-6 h-6 rounded-lg bg-slate-900 text-slate-500 font-mono text-xs font-bold flex items-center justify-center shrink-0 border border-slate-800">
                     {item.order}
                   </span>
                   <div className="min-w-0">
@@ -234,7 +234,7 @@ export const AdminNavigation: React.FC = () => {
                         {item.label}
                       </span>
                       {item.badge && (
-                        <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        <span className="text-xs font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                           {item.badge}
                         </span>
                       )}
@@ -274,14 +274,14 @@ export const AdminNavigation: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => handleDeleteItem(item.id)}
-                        className="px-2 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded text-[11px] font-bold cursor-pointer"
+                        className="px-2 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded text-xs font-bold cursor-pointer"
                       >
                         Confirm
                       </button>
                       <button
                         type="button"
                         onClick={() => setDeleteConfirmId(null)}
-                        className="p-1 text-slate-400 hover:text-white rounded text-[11px] cursor-pointer"
+                        className="p-1 text-slate-400 hover:text-white rounded text-xs cursor-pointer"
                         title="Cancel"
                       >
                         <X className="w-3.5 h-3.5" />

@@ -77,7 +77,7 @@ export const CmsPageResolver: React.FC<CmsPageResolverProps> = ({
             <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center mx-auto">
               <FileText className="w-6 h-6" />
             </div>
-            <Heading level={2} className="text-2xl font-black text-slate-900">
+            <Heading level={2} className="text-2xl font-bold text-slate-900">
               {page ? 'Page Under Review (Draft)' : 'Page Not Found'}
             </Heading>
             <Text variant="small" className="text-gray-600">
@@ -128,7 +128,7 @@ export const CmsPageResolver: React.FC<CmsPageResolverProps> = ({
             </div>
 
             <div className="flex flex-wrap items-center gap-2 pt-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-0.5 rounded-full">
                 {page.category || 'Information'}
               </span>
               {page.publishedAt && (
@@ -139,7 +139,7 @@ export const CmsPageResolver: React.FC<CmsPageResolverProps> = ({
               )}
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
               {page.title}
             </h1>
 
@@ -154,7 +154,7 @@ export const CmsPageResolver: React.FC<CmsPageResolverProps> = ({
           <div className="prose prose-slate max-w-none text-gray-700 leading-relaxed space-y-4 text-sm sm:text-base">
             <div className="p-6 sm:p-8 bg-slate-50/80 rounded-2xl border border-gray-200/80 shadow-2xs space-y-4">
               <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm">
-                <Sparkles className="w-4 h-4 text-[#008a45]" />
+                <Sparkles className="w-4 h-4 text-[#008744]" />
                 <span>Hostxeon Published Information</span>
               </div>
               <p className="whitespace-pre-line leading-relaxed text-slate-800 font-normal">
@@ -166,7 +166,7 @@ export const CmsPageResolver: React.FC<CmsPageResolverProps> = ({
           {/* Bottom Helpful / CTA Ribbon */}
           <div className="pt-8 border-t border-gray-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-xs text-gray-500">
-              <ShieldCheck className="w-4 h-4 text-[#008a45]" />
+              <ShieldCheck className="w-4 h-4 text-[#008744]" />
               <span>Verified Hostxeon Publication • 30-Day Money-Back Guarantee</span>
             </div>
 

@@ -76,13 +76,13 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-11-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-[#fed000] text-slate-950 font-black flex items-center justify-center text-sm shadow-xs border border-slate-900">
+              <span className="w-8 h-8 rounded-xl bg-[#F59E0B] text-slate-950 font-semibold flex items-center justify-center text-sm shadow-xs border border-slate-900">
                 11
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 11: Neo-Brutalist High-Contrast Tech</span>
-                  <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+                  <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
                     Neo-Brutalism
                   </span>
                 </h3>
@@ -108,12 +108,12 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
               <div className="lg:col-span-7 space-y-6 text-left">
-                <div className="inline-block bg-[#fed000] text-slate-950 border-2 border-slate-900 px-3 py-1 font-black text-xs uppercase tracking-wider shadow-[3px_3px_0px_#000]">
+                <div className="inline-block bg-[#F59E0B] text-slate-950 border-2 border-slate-900 px-3 py-1 font-semibold text-xs uppercase tracking-wider shadow-[3px_3px_0px_#000]">
                   🔥 100% NVMe Hosting • No Boring Servers
                 </div>
 
                 <div className="space-y-3">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
                     Cloud hosting that simply never goes down.
                   </h1>
                   <p className="text-base text-slate-800 font-medium leading-relaxed max-w-xl">
@@ -125,7 +125,7 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-7 py-4 text-base border-2 border-slate-900 shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer flex items-center gap-2"
+                    className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-7 py-4 text-base border-2 border-slate-900 shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer flex items-center gap-2"
                   >
                     <span>Claim $1.99 Plan</span>
                     <ArrowRight className="w-5 h-5" />
@@ -134,7 +134,7 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
                   <button
                     type="button"
                     onClick={() => onNavigate('domains')}
-                    className="bg-white text-slate-950 font-black px-6 py-4 text-base border-2 border-slate-900 shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                    className="bg-white text-slate-950 font-semibold px-6 py-4 text-base border-2 border-slate-900 shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer"
                   >
                     Search $0.99 Domains
                   </button>
@@ -151,29 +151,29 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
               <div className="lg:col-span-5">
                 <div className="bg-white border-3 border-slate-900 p-6 shadow-[8px_8px_0px_#000] space-y-4">
                   <div className="flex items-center justify-between border-b-2 border-slate-900 pb-3">
-                    <span className="font-black text-sm text-slate-950 uppercase">Server Status: ULTRA FAST</span>
-                    <span className="bg-[#4ade80] text-slate-950 font-black text-[10px] px-2 py-0.5 border border-slate-900">
+                    <span className="font-semibold text-sm text-slate-950 uppercase">Server Status: ULTRA FAST</span>
+                    <span className="bg-[#4ade80] text-slate-950 font-semibold text-xs px-2 py-0.5 border border-slate-900">
                       LIVE
                     </span>
                   </div>
 
                   <div className="space-y-2 text-xs font-bold text-slate-900">
-                    <div className="p-2.5 bg-[#fed000]/30 border-2 border-slate-900 flex justify-between">
+                    <div className="p-2.5 bg-[#F59E0B]/30 border-2 border-slate-900 flex justify-between">
                       <span>Uptime Guarantee:</span>
-                      <span className="font-black">99.99%</span>
+                      <span className="font-semibold">99.99%</span>
                     </div>
                     <div className="p-2.5 bg-emerald-100 border-2 border-slate-900 flex justify-between">
                       <span>Storage Type:</span>
-                      <span className="font-black">Gen4 NVMe RAID-10</span>
+                      <span className="font-semibold">Gen4 NVMe RAID-10</span>
                     </div>
                     <div className="p-2.5 bg-purple-100 border-2 border-slate-900 flex justify-between">
                       <span>Support Response:</span>
-                      <span className="font-black">1.8 Minutes</span>
+                      <span className="font-semibold">1.8 Minutes</span>
                     </div>
                   </div>
 
                   <div className="text-center pt-2">
-                    <span className="text-[11px] font-black text-slate-500 uppercase">Trusted by 140,000+ Smart Creators</span>
+                    <span className="text-xs font-semibold text-slate-500 uppercase">Trusted by 140,000+ Smart Creators</span>
                   </div>
                 </div>
               </div>
@@ -190,13 +190,13 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-12-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-blue-700 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-blue-700 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 12
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 12: WordPress Dedicated Speed Engine</span>
-                  <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
                     WP Managed
                   </span>
                 </h3>
@@ -304,7 +304,7 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
                       <CheckCircle2 className="w-4 h-4 text-blue-600" />
                       1-Click Staging Sandbox Ready
                     </div>
-                    <div className="text-[11px] text-blue-700">
+                    <div className="text-xs text-blue-700">
                       Test plugin updates safely on staging.yourdomain.com before publishing.
                     </div>
                   </div>
@@ -323,13 +323,13 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-13-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-emerald-500 text-slate-950 font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-emerald-500 text-slate-950 font-semibold flex items-center justify-center text-sm shadow-xs">
                 13
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 13: Traffic Scale Simulator Hero</span>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                     Interactive Calculator
                   </span>
                 </h3>
@@ -388,7 +388,7 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
                     className="w-full accent-emerald-500 cursor-pointer"
                   />
 
-                  <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                  <div className="flex justify-between text-xs text-slate-500 font-mono">
                     <span>10k / mo</span>
                     <span>500k / mo</span>
                     <span>1.5M / mo</span>
@@ -410,21 +410,21 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
                 <div className="bg-[#0b131a] rounded-3xl p-6 border border-slate-700 shadow-2xl space-y-5">
                   <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                     <div>
-                      <span className="text-[10px] text-emerald-400 uppercase font-bold">Recommended Cloud Setup</span>
+                      <span className="text-xs text-emerald-400 uppercase font-bold">Recommended Cloud Setup</span>
                       <h4 className="text-lg font-bold text-white">{trafficInfo.plan}</h4>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-black text-white">{trafficInfo.price}<span className="text-xs text-slate-400 font-normal">/mo</span></div>
+                      <div className="text-2xl font-bold text-white">{trafficInfo.price}<span className="text-xs text-slate-400 font-normal">/mo</span></div>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">Compute Cores</div>
+                      <div className="text-slate-400 text-xs">Compute Cores</div>
                       <div className="text-sm font-bold text-white mt-1">{trafficInfo.cpu} (Dedicated)</div>
                     </div>
                     <div className="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">RAM Allocation</div>
+                      <div className="text-slate-400 text-xs">RAM Allocation</div>
                       <div className="text-sm font-bold text-white mt-1">{trafficInfo.ram} DDR5 ECC</div>
                     </div>
                   </div>
@@ -454,13 +454,13 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-14-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-teal-400 text-slate-950 font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-teal-400 text-slate-950 font-semibold flex items-center justify-center text-sm shadow-xs">
                 14
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 14: Aurora Glow & Minimalist Dark Glass</span>
-                  <span className="text-[10px] bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full border border-teal-500/30">
+                  <span className="text-xs bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full border border-teal-500/30">
                     Aurora Dark
                   </span>
                 </h3>
@@ -550,13 +550,13 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-15-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-blue-500 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-blue-500 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 15
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 15: Interactive Hardware & VPS Configurator</span>
-                  <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
                     Configurator
                   </span>
                 </h3>
@@ -652,25 +652,25 @@ export const HeroSamplesBatch3: React.FC<BatchProps & { selectedSample: string }
 
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">CPU Cores</div>
+                      <div className="text-slate-400 text-xs">CPU Cores</div>
                       <div className="text-base font-bold text-white mt-1">
                         {vpsPlan === 'entry' ? '2 vCPU Cores' : vpsPlan === 'pro' ? '4 vCPU Cores' : '8 Dedicated Cores'}
                       </div>
                     </div>
                     <div className="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">RAM Capacity</div>
+                      <div className="text-slate-400 text-xs">RAM Capacity</div>
                       <div className="text-base font-bold text-white mt-1">
                         {vpsPlan === 'entry' ? '4 GB DDR5' : vpsPlan === 'pro' ? '8 GB DDR5' : '32 GB ECC DDR5'}
                       </div>
                     </div>
                     <div className="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">NVMe Disk Space</div>
+                      <div className="text-slate-400 text-xs">NVMe Disk Space</div>
                       <div className="text-base font-bold text-white mt-1">
                         {vpsPlan === 'entry' ? '80 GB NVMe' : vpsPlan === 'pro' ? '160 GB NVMe' : '500 GB Gen4 NVMe'}
                       </div>
                     </div>
                     <div className="bg-slate-900 p-3 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">Bandwidth Transfer</div>
+                      <div className="text-slate-400 text-xs">Bandwidth Transfer</div>
                       <div className="text-base font-bold text-emerald-400 mt-1">
                         {vpsPlan === 'entry' ? '4 TB / mo' : vpsPlan === 'pro' ? '10 TB / mo' : 'Unlimited Unmetered'}
                       </div>

@@ -87,13 +87,13 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
         {/* Top Modal Header */}
         <div className="px-6 py-4 border-b border-emerald-900/60 bg-[#071d15] flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#008a45] flex items-center justify-center text-white font-bold">
-              <Sparkles className="w-4 h-4 text-[#fed000]" />
+            <div className="w-8 h-8 rounded-full bg-[#008744] flex items-center justify-center text-white font-bold">
+              <Sparkles className="w-4 h-4 text-[#F59E0B]" />
             </div>
             <div>
               <div className="font-extrabold text-sm text-white flex items-center gap-2">
                 <span>Aida AI Studio</span>
-                <span className="text-[10px] bg-[#008a45] px-2 py-0.5 rounded-full font-semibold">Live Builder</span>
+                <span className="text-xs bg-[#008744] px-2 py-0.5 rounded-full font-semibold">Live Builder</span>
               </div>
               <div className="text-xs text-emerald-200/70 font-mono">
                 {promptData.company}.com • {promptData.career} in {promptData.city}
@@ -106,14 +106,14 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
             <div className="hidden sm:flex bg-emerald-950/80 border border-emerald-800 rounded-lg p-1">
               <button
                 onClick={() => setViewMode('desktop')}
-                className={`p-1.5 rounded-md transition-colors ${viewMode === 'desktop' ? 'bg-[#008a45] text-white' : 'text-emerald-300 hover:text-white'}`}
+                className={`p-1.5 rounded-md transition-colors ${viewMode === 'desktop' ? 'bg-[#008744] text-white' : 'text-emerald-300 hover:text-white'}`}
                 title="Desktop View"
               >
                 <Monitor className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode('mobile')}
-                className={`p-1.5 rounded-md transition-colors ${viewMode === 'mobile' ? 'bg-[#008a45] text-white' : 'text-emerald-300 hover:text-white'}`}
+                className={`p-1.5 rounded-md transition-colors ${viewMode === 'mobile' ? 'bg-[#008744] text-white' : 'text-emerald-300 hover:text-white'}`}
                 title="Mobile View"
               >
                 <Smartphone className="w-4 h-4" />
@@ -136,7 +136,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
             /* Loading Generation Progress State */
             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
               <div className="relative mb-8">
-                <div className="w-20 h-20 rounded-full border-4 border-emerald-800 border-t-[#fed000] animate-spin"></div>
+                <div className="w-20 h-20 rounded-full border-4 border-emerald-800 border-t-[#F59E0B] animate-spin"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Sparkles className="w-8 h-8 text-[#4ade80] animate-pulse" />
                 </div>
@@ -161,11 +161,11 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                     {idx < step ? (
                       <CheckCircle2 className="w-4 h-4 text-[#4ade80] shrink-0" />
                     ) : idx === step ? (
-                      <div className="w-4 h-4 rounded-full border-2 border-[#fed000] border-t-transparent animate-spin shrink-0"></div>
+                      <div className="w-4 h-4 rounded-full border-2 border-[#F59E0B] border-t-transparent animate-spin shrink-0"></div>
                     ) : (
                       <div className="w-4 h-4 rounded-full border border-emerald-800 shrink-0"></div>
                     )}
-                    <span className={idx === step ? 'font-bold text-[#fed000]' : ''}>{s}</span>
+                    <span className={idx === step ? 'font-bold text-[#F59E0B]' : ''}>{s}</span>
                   </div>
                 ))}
               </div>
@@ -177,7 +177,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
               {/* Left Settings Sidebar */}
               <div className="w-full lg:w-72 bg-[#071d15] border-r border-emerald-900/60 p-4 space-y-5 overflow-y-auto shrink-0">
                 <div>
-                  <label className="text-[11px] font-bold text-emerald-300 uppercase tracking-wider block mb-2">
+                  <label className="text-xs font-bold text-emerald-300 uppercase tracking-wider block mb-2">
                     Aida AI Assistant
                   </label>
                   <div className="bg-[#0b2b20] border border-emerald-700/50 rounded-xl p-3 text-xs text-emerald-100">
@@ -186,7 +186,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="text-[11px] font-bold text-emerald-300 uppercase tracking-wider block mb-2">
+                  <label className="text-xs font-bold text-emerald-300 uppercase tracking-wider block mb-2">
                     Visual Aesthetic
                   </label>
                   <div className="grid grid-cols-2 gap-2">
@@ -196,7 +196,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                         onClick={() => setSelectedTheme(t)}
                         className={`text-xs capitalize py-2 px-3 rounded-lg font-semibold border transition-all ${
                           selectedTheme === t 
-                            ? 'bg-[#008a45] border-emerald-400 text-white' 
+                            ? 'bg-[#008744] border-emerald-400 text-white' 
                             : 'bg-emerald-950/60 border-emerald-800 text-emerald-300 hover:bg-emerald-900/60'
                         }`}
                       >
@@ -207,7 +207,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="text-[11px] font-bold text-emerald-300 uppercase tracking-wider block mb-2">
+                  <label className="text-xs font-bold text-emerald-300 uppercase tracking-wider block mb-2">
                     Included Features
                   </label>
                   <ul className="text-xs space-y-1.5 text-emerald-200">
@@ -221,20 +221,20 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                 {/* Publish Button */}
                 <div className="pt-4 border-t border-emerald-900/60">
                   {published ? (
-                    <div className="bg-[#008a45] text-white p-3 rounded-xl text-center text-xs font-bold flex items-center justify-center gap-2">
+                    <div className="bg-[#008744] text-white p-3 rounded-xl text-center text-xs font-bold flex items-center justify-center gap-2">
                       <CheckCircle2 className="w-4 h-4" /> Added to your plan!
                     </div>
                   ) : (
                     <button
                       onClick={handlePublish}
-                      className="w-full bg-[#fed000] hover:bg-[#ebbe00] text-gray-950 font-extrabold py-3 px-4 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer"
+                      className="w-full bg-[#F59E0B] hover:bg-[#d97706] text-gray-950 font-extrabold py-3 px-4 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer"
                       id="aida-modal-publish-btn"
                     >
                       <span>Claim & Publish Website</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   )}
-                  <span className="block text-center text-[10px] text-emerald-400 mt-2">
+                  <span className="block text-center text-xs text-emerald-400 mt-2">
                     14 days free trial • £0.00 today
                   </span>
                 </div>
@@ -253,11 +253,11 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                       <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                      <span className="ml-2 font-mono text-[11px] text-stone-700 font-medium">
+                      <span className="ml-2 font-mono text-xs text-stone-700 font-medium">
                         https://{promptData.company.toLowerCase().replace(/\s+/g, '')}.one
                       </span>
                     </div>
-                    <span className="text-[10px] bg-emerald-100 text-[#008a45] font-bold px-2 py-0.5 rounded-full">
+                    <span className="text-xs bg-emerald-100 text-[#008744] font-bold px-2 py-0.5 rounded-full">
                       SSL Secure
                     </span>
                   </div>
@@ -284,7 +284,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                       ></div>
                       
                       <div className="relative z-10 max-w-xl mx-auto space-y-3">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#fed000] bg-black/40 px-3 py-1 rounded-full">
+                        <span className="text-xs font-bold uppercase tracking-widest text-[#F59E0B] bg-black/40 px-3 py-1 rounded-full">
                           {promptData.city}'s Premier {promptData.career}
                         </span>
                         <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight font-serif text-white">
@@ -294,7 +294,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                           Crafted with passion and excellence in {promptData.city}. Discover our bespoke offerings, book appointments, or shop our signature collections online.
                         </p>
                         <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
-                          <button className="bg-[#fed000] text-gray-950 text-xs font-bold px-4 py-2 rounded-full shadow-md">
+                          <button className="bg-[#F59E0B] text-gray-950 text-xs font-bold px-4 py-2 rounded-full shadow-md">
                             Explore Services
                           </button>
                           <button className="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full">
@@ -313,7 +313,7 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                         <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                          <div className="w-8 h-8 rounded-lg bg-emerald-100 text-[#008a45] flex items-center justify-center mb-2 font-bold">
+                          <div className="w-8 h-8 rounded-lg bg-emerald-100 text-[#008744] flex items-center justify-center mb-2 font-bold">
                             01
                           </div>
                           <h4 className="font-bold text-gray-900 text-sm">Bespoke Experience</h4>
@@ -340,9 +340,9 @@ export const AidaGeneratorModal: React.FC<AidaGeneratorModalProps> = ({
                     <div className="p-6 bg-white border-t border-gray-200 text-xs text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <div>
                         <strong className="text-gray-900">{promptData.company}</strong> — {promptData.city}
-                        <div className="text-[11px] text-gray-400">hello@{promptData.company.toLowerCase().replace(/\s+/g, '')}.com</div>
+                        <div className="text-xs text-gray-400">hello@{promptData.company.toLowerCase().replace(/\s+/g, '')}.com</div>
                       </div>
-                      <div className="text-[10px] text-gray-400">
+                      <div className="text-xs text-gray-400">
                         Powered by Hostxeon Aida AI
                       </div>
                     </div>

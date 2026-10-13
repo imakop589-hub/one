@@ -111,7 +111,7 @@ export const DomainSearchStrip: React.FC<DomainSearchStripProps> = ({
                     <div className="text-xs font-bold text-[#0F172A] whitespace-nowrap leading-tight tabular-nums">
                       {currentSlot1.price} <span className="font-normal text-slate-500">{currentSlot1.period}</span>
                     </div>
-                    <div className="text-[11px] text-[#475569] font-normal whitespace-nowrap truncate leading-tight">
+                    <div className="text-xs text-[#475569] font-normal whitespace-nowrap truncate leading-tight">
                       {currentSlot1.note}
                     </div>
                   </motion.div>
@@ -143,7 +143,7 @@ export const DomainSearchStrip: React.FC<DomainSearchStripProps> = ({
                     <div className="text-xs font-bold text-[#0F172A] whitespace-nowrap leading-tight tabular-nums">
                       {currentSlot2.price} <span className="font-normal text-slate-500">{currentSlot2.period}</span>
                     </div>
-                    <div className="text-[11px] text-[#475569] font-normal whitespace-nowrap truncate leading-tight">
+                    <div className="text-xs text-[#475569] font-normal whitespace-nowrap truncate leading-tight">
                       {currentSlot2.note}
                     </div>
                   </motion.div>

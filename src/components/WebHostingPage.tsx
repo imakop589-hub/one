@@ -244,26 +244,26 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
           <span className="font-semibold text-gray-900">Excellent</span>
           <div className="flex items-center gap-0.5">
             {[...Array(5)].map((_, i) => (
-              <span key={i} className="w-4 h-4 bg-[#00b67a] text-white flex items-center justify-center rounded-[2px] text-[10px]">
+              <span key={i} className="w-4 h-4 bg-[#008744] text-white flex items-center justify-center rounded-[2px] text-xs">
                 ★
               </span>
             ))}
           </div>
           <span className="text-gray-500">
-            Rated <strong className="text-gray-900">5.0 / 5.0</strong> on <strong className="text-gray-900 underline hover:text-[#00b67a]">Trustpilot</strong>
+            Rated <strong className="text-gray-900">5.0 / 5.0</strong> on <strong className="text-gray-900 underline hover:text-[#008744]">Trustpilot</strong>
           </span>
         </a>
       </div>
 
       {/* 1. HERO SECTION (Dark Green Background with Radial Dot Pattern) */}
       <section 
-        className="relative overflow-hidden bg-[#0a291f] text-white py-16 sm:py-24"
+        className="relative overflow-hidden bg-[#061913] text-white py-16 sm:py-24"
         style={{
           backgroundImage: `radial-gradient(rgba(52, 211, 153, 0.12) 1.5px, transparent 1.5px)`,
           backgroundSize: '24px 24px'
         }}
       >
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="max-w-3xl text-left space-y-6">
             
             {/* Category Pill */}
@@ -272,7 +272,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             </div>
 
             {/* Main Headline (Inter font, 600-700 weight) */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl lg:text-[52px] font-bold tracking-tight text-white leading-tight">
               Fast and secure <br />
               <span className="text-white">hosting</span>
             </h1>
@@ -303,7 +303,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
               <button
                 type="button"
                 onClick={scrollToPricing}
-                className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-base transition-all shadow-md cursor-pointer"
+                className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-base transition-all shadow-md cursor-pointer"
                 id="web-hero-see-plans-btn"
               >
                 See plans & pricing
@@ -316,28 +316,28 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
       {/* 2. GUARANTEE STRIP */}
       <div className="bg-[#f4fbf7] border-b border-emerald-100 py-4">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-sm sm:text-base font-semibold text-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-sm sm:text-base font-semibold text-slate-800">
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>99.9% uptime</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>Free domain</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>Free SSL</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>All-in-one platform</span>
           </div>
         </div>
       </div>
 
       {/* 3. PRICING SECTION (Starter & Professional with 30-day guarantee) */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-screen-2xl mx-auto" id="web-pricing-section">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl mx-auto" id="web-pricing-section">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
@@ -345,7 +345,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             <Sparkles className="w-3.5 h-3.5" />
             <span>Web Hosting Packages</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight leading-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight mb-3">
             Find the perfect plan for your <br className="hidden sm:inline" />
             business
           </h2>
@@ -355,7 +355,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
         </div>
 
         {/* Pricing Cards Container */}
-        <div className="relative max-w-screen-2xl mx-auto pt-3">
+        <div className="relative max-w-7xl mx-auto pt-3">
           
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
             
@@ -363,7 +363,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             <div className="bg-white rounded-2xl border border-gray-200 shadow-xs p-5 sm:p-6 flex flex-col justify-between hover:border-gray-300 hover:shadow-md transition-all text-left relative">
               
               {/* Top Badge */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-slate-100 text-slate-700 border border-slate-200 text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-2xs whitespace-nowrap inline-flex items-center justify-center">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-2xs whitespace-nowrap inline-flex items-center justify-center">
                 Starter Plan
               </div>
 
@@ -380,7 +380,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <div className="pt-2 pb-4 border-b border-gray-100">
                   <div className="flex items-center justify-between">
                     <div className="line-through text-xs text-gray-400">£7.99/mo.</div>
-                    <span className="bg-[#fff9db] text-[#b28900] text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap">
+                    <span className="bg-[#fef3c7] text-[#b45309] text-xs font-bold px-2 py-0.5 rounded whitespace-nowrap">
                       You save 75%
                     </span>
                   </div>
@@ -388,7 +388,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                     <span className="text-3xl font-extrabold text-slate-900">£1.99</span>
                     <span className="text-xs font-semibold text-gray-500">/mo.</span>
                   </div>
-                  <div className="h-9 text-[11px] text-gray-500 mt-1 font-medium leading-tight flex flex-col justify-center">
+                  <div className="h-9 text-xs text-gray-500 mt-1 font-medium leading-tight flex flex-col justify-center">
                     <span><strong>1-year subscription</strong></span>
                     <span>Pay £23.88 now, then £95.88 on renewal.</span>
                   </div>
@@ -432,7 +432,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
                 {/* Starter benefits list */}
                 <div className="pt-4">
-                  <div className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
+                  <div className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
                     Starter benefits
                   </div>
                   <ul className="space-y-2 text-xs text-gray-600">
@@ -462,7 +462,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             <div className="bg-[#f7fbf8] rounded-2xl border-2 border-emerald-600 shadow-lg p-5 sm:p-6 flex flex-col justify-between relative hover:shadow-xl transition-all text-left">
               
               {/* Top Most Popular Ribbon */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#008a45] text-white text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs whitespace-nowrap inline-flex items-center justify-center">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#008744] text-white text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs whitespace-nowrap inline-flex items-center justify-center">
                 Most popular
               </div>
 
@@ -479,7 +479,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <div className="pt-2 pb-4 border-b border-emerald-200/60">
                   <div className="flex items-center justify-between">
                     <div className="line-through text-xs text-gray-400">£11.99/mo.</div>
-                    <span className="bg-[#fff9db] text-[#b28900] text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap">
+                    <span className="bg-[#fef3c7] text-[#b45309] text-xs font-bold px-2 py-0.5 rounded whitespace-nowrap">
                       You save 83%
                     </span>
                   </div>
@@ -487,7 +487,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                     <span className="text-3xl font-extrabold text-slate-900">£1.99</span>
                     <span className="text-xs font-semibold text-gray-500">/mo.</span>
                   </div>
-                  <div className="h-9 text-[11px] text-gray-600 mt-1 font-medium leading-tight flex flex-col justify-center">
+                  <div className="h-9 text-xs text-gray-600 mt-1 font-medium leading-tight flex flex-col justify-center">
                     <span><strong>1-year subscription</strong></span>
                     <span>Pay £23.88 now, then £143.88 on renewal.</span>
                   </div>
@@ -498,7 +498,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                   <button
                     type="button"
                     onClick={handleAddPro}
-                    className="w-full bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold py-3 rounded-lg text-sm transition-all shadow-md cursor-pointer text-center"
+                    className="w-full bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold py-3 rounded-lg text-sm transition-all shadow-md cursor-pointer text-center"
                     id="web-plan-pro-btn"
                   >
                     Get started
@@ -531,7 +531,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
                 {/* Professional Benefits */}
                 <div className="pt-4">
-                  <div className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
+                  <div className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
                     Everything in Starter, plus:
                   </div>
                   <ul className="space-y-2 text-xs text-gray-700">
@@ -561,7 +561,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             <div className="bg-white rounded-2xl border border-gray-200 shadow-xs p-5 sm:p-6 flex flex-col justify-between hover:border-emerald-300 hover:shadow-md transition-all text-left relative">
               
               {/* Badge */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#0c382b] text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs whitespace-nowrap inline-flex items-center justify-center">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#0c382b] text-emerald-300 border border-emerald-500/40 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs whitespace-nowrap inline-flex items-center justify-center">
                 Best for E-Commerce
               </div>
 
@@ -578,7 +578,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <div className="pt-2 pb-4 border-b border-gray-100">
                   <div className="flex items-center justify-between">
                     <div className="line-through text-xs text-gray-400">£15.99/mo.</div>
-                    <span className="bg-[#fff9db] text-[#b28900] text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap">
+                    <span className="bg-[#fef3c7] text-[#b45309] text-xs font-bold px-2 py-0.5 rounded whitespace-nowrap">
                       You save 75%
                     </span>
                   </div>
@@ -586,7 +586,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                     <span className="text-3xl font-extrabold text-slate-900">£3.99</span>
                     <span className="text-xs font-semibold text-gray-500">/mo.</span>
                   </div>
-                  <div className="h-9 text-[11px] text-gray-500 mt-1 font-medium leading-tight flex flex-col justify-center">
+                  <div className="h-9 text-xs text-gray-500 mt-1 font-medium leading-tight flex flex-col justify-center">
                     <span><strong>1-year subscription</strong></span>
                     <span>Pay £47.88 now, then £191.88 on renewal.</span>
                   </div>
@@ -630,7 +630,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
                 {/* Business Benefits */}
                 <div className="pt-4">
-                  <div className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
+                  <div className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
                     Everything in Pro, plus:
                   </div>
                   <ul className="space-y-2 text-xs text-gray-600">
@@ -660,7 +660,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             <div className="bg-white rounded-2xl border border-gray-200 shadow-xs p-5 sm:p-6 flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all text-left relative">
               
               {/* Badge */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-slate-900 text-amber-300 border border-amber-400/30 text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs whitespace-nowrap inline-flex items-center justify-center">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-slate-900 text-amber-300 border border-amber-400/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs whitespace-nowrap inline-flex items-center justify-center">
                 Maximum Power
               </div>
 
@@ -677,7 +677,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <div className="pt-2 pb-4 border-b border-gray-100">
                   <div className="flex items-center justify-between">
                     <div className="line-through text-xs text-gray-400">£23.99/mo.</div>
-                    <span className="bg-[#fff9db] text-[#b28900] text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap">
+                    <span className="bg-[#fef3c7] text-[#b45309] text-xs font-bold px-2 py-0.5 rounded whitespace-nowrap">
                       You save 70%
                     </span>
                   </div>
@@ -685,7 +685,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                     <span className="text-3xl font-extrabold text-slate-900">£6.99</span>
                     <span className="text-xs font-semibold text-gray-500">/mo.</span>
                   </div>
-                  <div className="h-9 text-[11px] text-gray-500 mt-1 font-medium leading-tight flex flex-col justify-center">
+                  <div className="h-9 text-xs text-gray-500 mt-1 font-medium leading-tight flex flex-col justify-center">
                     <span><strong>1-year subscription</strong></span>
                     <span>Pay £83.88 now, then £287.88 on renewal.</span>
                   </div>
@@ -729,7 +729,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
                 {/* Guru Benefits */}
                 <div className="pt-4">
-                  <div className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
+                  <div className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2.5 h-4 flex items-center">
                     Everything in Business, plus:
                   </div>
                   <ul className="space-y-2 text-xs text-gray-600">
@@ -857,9 +857,9 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
       </section>
 
       {/* 4. FASTEST ON THE MARKET, BEST IN PRICE (Dark Green Banner) */}
-      <section className="bg-[#051f17] text-white py-14 sm:py-20 border-y border-emerald-950">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-left space-y-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
+      <section className="bg-[#061913] text-white py-14 sm:py-20 border-y border-emerald-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-left space-y-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold tracking-tight text-white leading-tight">
             Fastest on the market, <br />
             best in price
           </h2>
@@ -873,13 +873,13 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
       </section>
 
       {/* 5. BENTO GRID / FEATURE CARDS */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white max-w-screen-2xl mx-auto">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch text-left">
           
           {/* Bento Card 1: Designed to be fast (Large, 8 cols on desktop) */}
-          <div className="lg:col-span-8 bg-[#0a291f] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between overflow-hidden relative shadow-lg border border-emerald-900">
+          <div className="lg:col-span-8 bg-[#061913] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between overflow-hidden relative shadow-lg border border-emerald-900">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-black text-white mb-2">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                 Designed to be fast
               </h3>
               <p className="text-xs sm:text-sm text-emerald-100/80 mb-6 max-w-lg">
@@ -905,13 +905,13 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                   </div>
                   <div>
                     <div className="font-bold text-xs text-white">High Performance</div>
-                    <div className="text-[10px] text-gray-300">Your website has an ideal stability and speed</div>
+                    <div className="text-xs text-gray-300">Your website has an ideal stability and speed</div>
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={scrollToPricing}
-                  className="w-full bg-slate-800 hover:bg-slate-700 text-white text-[11px] font-semibold py-1.5 rounded-md transition-colors cursor-pointer text-center"
+                  className="w-full bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold py-1.5 rounded-md transition-colors cursor-pointer text-center"
                 >
                   Speed up
                 </button>
@@ -920,7 +920,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
           </div>
 
           {/* Bento Card 2: 99.9% uptime (4 cols on desktop) */}
-          <div className="lg:col-span-4 bg-[#0a291f] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900">
+          <div className="lg:col-span-4 bg-[#061913] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900">
             <div>
               <h3 className="text-2xl font-bold text-white mb-3">
                 99.9% uptime
@@ -937,7 +937,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
           </div>
 
           {/* Bento Card 3: Secure by default (4 cols) */}
-          <div className="lg:col-span-4 bg-[#0a291f] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900">
+          <div className="lg:col-span-4 bg-[#061913] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 Secure by default
@@ -952,7 +952,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
           </div>
 
           {/* Bento Card 4: All-in-one (4 cols) */}
-          <div className="lg:col-span-4 bg-[#0a291f] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900">
+          <div className="lg:col-span-4 bg-[#061913] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 All-in-one
@@ -967,7 +967,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
           </div>
 
           {/* Bento Card 5: WordPress in one click (4 cols) */}
-          <div className="lg:col-span-4 bg-[#0a291f] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900 overflow-hidden relative">
+          <div className="lg:col-span-4 bg-[#061913] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg border border-emerald-900 overflow-hidden relative">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 WordPress in one click
@@ -979,9 +979,9 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
             {/* Phone Mockup Preview */}
             <div className="rounded-xl overflow-hidden border border-emerald-700/60 bg-slate-950 p-2 shadow-inner">
-              <div className="text-[10px] text-emerald-400 font-semibold mb-1">Building your website in WordPress...</div>
-              <div className="text-[11px] text-white font-serif">SHUTTERS</div>
-              <div className="text-[9px] text-gray-400">Modern sunglasses boutique online shop</div>
+              <div className="text-xs text-emerald-400 font-semibold mb-1">Building your website in WordPress...</div>
+              <div className="text-xs text-white font-serif">SHUTTERS</div>
+              <div className="text-xs text-gray-400">Modern sunglasses boutique online shop</div>
             </div>
           </div>
 
@@ -990,7 +990,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
       {/* 6. PROFESSIONAL EMAIL – INCLUDED WITH HOSTING */}
       <section className="py-16 sm:py-24 bg-[#fafcfb] border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left: Email & Calendar Mockup */}
@@ -1004,29 +1004,29 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                       <Mail className="w-4 h-4 text-emerald-400" />
                       <span className="font-semibold text-slate-200">Hostxeon Webmail</span>
                     </div>
-                    <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">
+                    <span className="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">
                       AI Assistant Active
                     </span>
                   </div>
 
                   {/* AI Writing prompt box */}
                   <div className="bg-slate-800/80 rounded-xl p-3 border border-slate-700 text-xs">
-                    <div className="flex items-center gap-1.5 text-amber-300 font-bold text-[11px] mb-1">
+                    <div className="flex items-center gap-1.5 text-amber-300 font-bold text-xs mb-1">
                       <Sparkles className="w-3.5 h-3.5" />
                       <span>Writing Assistant</span>
                     </div>
-                    <p className="text-[11px] text-slate-300">
+                    <p className="text-xs text-slate-300">
                       "Confirming your appointment for Monday at 10:00 AM. We look forward to meeting you."
                     </p>
                   </div>
 
                   {/* Mini Calendar */}
-                  <div className="bg-slate-800/50 rounded-xl p-3 text-[11px]">
+                  <div className="bg-slate-800/50 rounded-xl p-3 text-xs">
                     <div className="flex items-center justify-between font-bold text-slate-300 mb-2">
                       <span>May 2026</span>
                       <Calendar className="w-3.5 h-3.5 text-emerald-400" />
                     </div>
-                    <div className="grid grid-cols-7 gap-1 text-center text-[10px] text-slate-400">
+                    <div className="grid grid-cols-7 gap-1 text-center text-xs text-slate-400">
                       <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
                       <span className="text-slate-600">28</span><span className="text-slate-600">29</span><span className="text-slate-600">30</span><span>1</span><span>2</span><span>3</span><span>4</span>
                       <span>5</span><span>6</span><span>7</span><span className="bg-emerald-500 text-white rounded-full font-bold">8</span><span>9</span><span>10</span><span>11</span>
@@ -1039,7 +1039,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
             {/* Right: Copy & Accordion */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Professional email – <br />
                 included with hosting
               </h2>
@@ -1087,10 +1087,10 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
       </section>
 
       {/* 7. SIMPLE YET POWERFUL (Developer & Agency Grid) */}
-      <section className="py-16 sm:py-24 bg-[#0a291f] text-white">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
+      <section className="py-16 sm:py-24 bg-[#061913] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-white tracking-tight mb-3">
             Simple yet powerful
           </h2>
           <p className="text-sm sm:text-base text-emerald-100/90 max-w-2xl mx-auto mb-12">
@@ -1166,12 +1166,12 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
       {/* 8. ADD MORE SECURITY AND PERFORMANCE (Hosting Add-ons & Orbit Illustration) */}
       <section className="py-16 sm:py-24 bg-white border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left: Copy, Button & Add-ons Accordion */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Add more security and <br />
                 performance
               </h2>
@@ -1183,7 +1183,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={scrollToPricing}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-sm sm:text-base transition-all shadow-md cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer"
                   id="web-addons-see-plans-btn"
                 >
                   See plans & pricing
@@ -1256,7 +1256,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
       {/* 9. MOVE TO FASTER AND MORE SECURE HOSTING (Migration Diagram) */}
       <section className="py-16 sm:py-24 bg-[#fafcfb] border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left: Migration Flow Chart */}
@@ -1269,7 +1269,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                     <Server className="w-4 h-4 text-gray-400" />
                     <span>Current Hosting provider</span>
                   </div>
-                  <div className="text-[11px] text-gray-400">Your website is hosted with another provider</div>
+                  <div className="text-xs text-gray-400">Your website is hosted with another provider</div>
                 </div>
 
                 {/* Arrow down */}
@@ -1295,9 +1295,9 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 </div>
 
                 {/* Step 3: Hostxeon migrated */}
-                <div className="bg-[#008a45] rounded-xl p-3.5 text-left text-xs text-white shadow-md">
-                  <div className="font-black text-sm">Hostxeon - Website migrated</div>
-                  <div className="text-[11px] text-emerald-100 mt-0.5">Your website is now hosted by Hostxeon</div>
+                <div className="bg-[#008744] rounded-xl p-3.5 text-left text-xs text-white shadow-md">
+                  <div className="font-semibold text-sm">Hostxeon - Website migrated</div>
+                  <div className="text-xs text-emerald-100 mt-0.5">Your website is now hosted by Hostxeon</div>
                 </div>
 
               </div>
@@ -1305,7 +1305,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
             {/* Right: Copy & Migration Bullets */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Move to faster and <br />
                 more secure hosting
               </h2>
@@ -1332,7 +1332,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={scrollToPricing}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-sm sm:text-base transition-all shadow-md cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer"
                   id="web-migration-choose-plan-btn"
                 >
                   Choose your plan
@@ -1345,13 +1345,13 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
       </section>
 
       {/* 10. LOOKING FOR SOMETHING DIFFERENT? (Managed WordPress Callout) */}
-      <section className="py-16 sm:py-24 bg-[#0a291f] text-white">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      <section className="py-16 sm:py-24 bg-[#061913] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left: Copy & Button */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-white tracking-tight leading-tight">
                 Looking for <br />
                 something <br />
                 different?
@@ -1383,7 +1383,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={onGoToWordPress}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-sm sm:text-base transition-all shadow-md cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer"
                   id="web-explore-managed-wp-btn"
                 >
                   Explore Managed WP
@@ -1394,25 +1394,25 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
             {/* Right: Plumber Co Mockup with Performance Gauges */}
             <div className="lg:col-span-6">
               <div className="bg-white text-slate-900 rounded-3xl p-5 shadow-2xl border border-gray-200 text-left overflow-hidden">
-                <div className="text-[11px] text-gray-500 font-mono mb-2">thegreenplumber.co.uk</div>
+                <div className="text-xs text-gray-500 font-mono mb-2">thegreenplumber.co.uk</div>
                 
                 {/* Score Pills */}
                 <div className="grid grid-cols-4 gap-2 mb-4 text-center">
                   <div className="bg-emerald-50 rounded-xl p-2 border border-emerald-200">
                     <div className="text-emerald-700 font-bold text-sm">97%</div>
-                    <div className="text-[9px] text-gray-600">Performance</div>
+                    <div className="text-xs text-gray-600">Performance</div>
                   </div>
                   <div className="bg-emerald-50 rounded-xl p-2 border border-emerald-200">
                     <div className="text-emerald-700 font-bold text-sm">76%</div>
-                    <div className="text-[9px] text-gray-600">Accessibility</div>
+                    <div className="text-xs text-gray-600">Accessibility</div>
                   </div>
                   <div className="bg-emerald-50 rounded-xl p-2 border border-emerald-200">
                     <div className="text-emerald-700 font-bold text-sm">91%</div>
-                    <div className="text-[9px] text-gray-600">Best practices</div>
+                    <div className="text-xs text-gray-600">Best practices</div>
                   </div>
                   <div className="bg-emerald-50 rounded-xl p-2 border border-emerald-200">
                     <div className="text-emerald-700 font-bold text-sm">86%</div>
-                    <div className="text-[9px] text-gray-600">SEO</div>
+                    <div className="text-xs text-gray-600">SEO</div>
                   </div>
                 </div>
 
@@ -1427,8 +1427,8 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
       </section>
 
       {/* 11. READY TO BUILD WITH AI? (AIDA AI Website Builder Callout) */}
-      <section className="py-16 sm:py-24 bg-[#051f17] text-white border-t border-emerald-950">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      <section className="py-16 sm:py-24 bg-[#061913] text-white border-t border-emerald-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left: Pottery Essentials Mobile Mockup */}
@@ -1440,9 +1440,9 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                     ✓
                   </div>
                   <div className="font-bold text-sm">Your payment was a success</div>
-                  <div className="text-[11px] text-gray-500">Total paid: £39.00</div>
+                  <div className="text-xs text-gray-500">Total paid: £39.00</div>
                   <div className="pt-2">
-                    <div className="w-full bg-[#008a45] text-white text-[10px] font-bold py-1.5 rounded text-center">
+                    <div className="w-full bg-[#008744] text-white text-xs font-bold py-1.5 rounded text-center">
                       Order processed
                     </div>
                   </div>
@@ -1452,7 +1452,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
             {/* Right: Copy, Bullets & Button */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-white tracking-tight leading-tight">
                 Ready to build with <br />
                 AI?
               </h2>
@@ -1487,7 +1487,7 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={onOpenBuilder}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-sm sm:text-base transition-all shadow-md cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer"
                   id="web-explore-aida-btn"
                 >
                   Explore AIDA AI Website Builder
@@ -1500,9 +1500,9 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
       </section>
 
       {/* 12. CUSTOMER REVIEWS (Our customers like us) */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white border-t border-gray-100 max-w-screen-2xl mx-auto text-left">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white border-t border-gray-100 max-w-7xl mx-auto text-left">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight">
             Our customers like us
           </h2>
         </div>
@@ -1511,11 +1511,11 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
           {customerReviews.map((rev, idx) => (
             <div key={idx} className="bg-white rounded-2xl p-5 border border-gray-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow text-xs">
               <div>
-                <div className="flex items-center justify-between text-gray-400 text-[10px] mb-2">
+                <div className="flex items-center justify-between text-gray-400 text-xs mb-2">
                   <span>{rev.date}</span>
                   <div className="flex gap-0.5">
                     {[...Array(rev.stars)].map((_, i) => (
-                      <span key={i} className="w-3.5 h-3.5 bg-[#00b67a] text-white flex items-center justify-center rounded-[2px] text-[8px]">
+                      <span key={i} className="w-3.5 h-3.5 bg-[#008744] text-white flex items-center justify-center rounded-[2px] text-xs">
                         ★
                       </span>
                     ))}
@@ -1535,9 +1535,9 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
 
       {/* 13. NEED HELP? WE ARE HERE FOR YOU! (4 Support Cards) */}
       <section className="py-16 sm:py-20 bg-[#fafcfb] border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
           
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight mb-12">
             Need help? We are here for you!
           </h2>
 
@@ -1625,15 +1625,15 @@ export const WebHostingPage: React.FC<WebHostingPageProps> = ({
       </section>
 
       {/* 14. FREQUENTLY ASKED QUESTIONS (Complete 16 FAQs from Image) */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white border-t border-gray-100 max-w-screen-2xl mx-auto text-left">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white border-t border-gray-100 max-w-7xl mx-auto text-left">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight">
             Frequently asked questions
           </h2>
           <button
             type="button"
             onClick={scrollToPricing}
-            className="bg-[#fed000] hover:bg-[#eabf00] text-slate-950 font-bold px-5 py-2.5 rounded-md text-xs sm:text-sm transition-all shadow-xs cursor-pointer self-start sm:self-auto"
+            className="bg-[#F59E0B] hover:bg-[#d97706] text-slate-950 font-bold px-5 py-2.5 rounded-md text-xs sm:text-sm transition-all shadow-xs cursor-pointer self-start sm:self-auto"
           >
             See plans & pricing
           </button>

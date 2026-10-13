@@ -147,7 +147,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
     <div className="bg-[#fcfdfd] text-[#111827] min-h-screen pb-24">
       {/* 1. Header Search Bar & Navigation Banner */}
       <section className="bg-gradient-to-b from-[#021812] via-[#04281e] to-[#031d16] text-white pt-8 pb-12 border-b border-emerald-900/50 shadow-md">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4">
           
           {/* Breadcrumbs & Back Button */}
           <div className="flex items-center justify-between flex-wrap gap-2 text-xs">
@@ -171,7 +171,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
           <div className="max-w-4xl pt-2">
             <form onSubmit={handleRefineSubmit} className="relative flex items-center shadow-2xl rounded-2xl sm:rounded-3xl bg-white p-1.5 sm:p-2 border border-emerald-900/40 focus-within:ring-4 focus-within:ring-emerald-500/20 transition-all">
               <div className="pl-3 sm:pl-4 pr-2 text-gray-400 shrink-0">
-                <Search className="w-5 h-5 text-[#008a45]" />
+                <Search className="w-5 h-5 text-[#008744]" />
               </div>
               <input
                 type="text"
@@ -183,7 +183,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
               <button
                 type="submit"
                 disabled={isSearching}
-                className="bg-[#fed000] hover:bg-[#ebbe00] active:scale-95 text-slate-950 px-5 sm:px-8 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm transition-all shadow-md shrink-0 cursor-pointer flex items-center gap-2"
+                className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-95 text-slate-950 px-5 sm:px-8 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-semibold text-xs sm:text-sm transition-all shadow-md shrink-0 cursor-pointer flex items-center gap-2"
               >
                 {isSearching ? (
                   <>
@@ -210,7 +210,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
       </section>
 
       {/* 2. Main Search Results Container */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-6 relative z-20 space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-6 relative z-20 space-y-8">
         
         {/* ========================================================================= */}
         {/* EXACT MATCH HERO CARD                                                     */}
@@ -226,17 +226,17 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
           <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-gray-100">
             <div className="flex items-center gap-2">
               {isSearching ? (
-                <span className="bg-slate-800 text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+                <span className="bg-slate-800 text-white text-xs font-semibold px-3.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
                   <div className="w-3 h-3 rounded-full border-2 border-white border-t-transparent animate-spin" />
                   <span>VERIFYING REGISTRY STATUS...</span>
                 </span>
               ) : exactAvailable ? (
-                <span className="bg-[#008a45] text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
+                <span className="bg-[#008744] text-white text-xs font-semibold px-3.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
                   <span>EXACT MATCH AVAILABLE!</span>
                 </span>
               ) : (
-                <span className="bg-amber-600 text-white text-[11px] font-black px-3.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+                <span className="bg-amber-600 text-white text-xs font-semibold px-3.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
                   <X className="w-3.5 h-3.5 stroke-[3]" />
                   <span>ALREADY REGISTERED / TAKEN</span>
                 </span>
@@ -248,7 +248,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
             </div>
 
             <div className="flex items-center gap-1.5 text-xs text-emerald-800 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/70">
-              <Lock className="w-3.5 h-3.5 text-[#008a45]" />
+              <Lock className="w-3.5 h-3.5 text-[#008744]" />
               <span>Free Lifetime WHOIS Privacy Shield Included</span>
             </div>
           </div>
@@ -256,14 +256,14 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
           {/* Main Card Content */}
           <div className="py-6 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="space-y-3 max-w-3xl">
-              <div className="text-2xl sm:text-4xl font-black text-slate-950 flex flex-wrap items-baseline gap-3">
+              <div className="text-2xl sm:text-4xl font-bold text-slate-900 flex flex-wrap items-baseline gap-3">
                 <span className="break-all">{exactDomainFullName}</span>
                 {exactAvailable ? (
-                  <span className="text-xs font-black text-[#008a45] bg-emerald-100 px-3 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-[#008744] bg-emerald-100 px-3 py-1 rounded-full">
                     {exactTldData.discountPct}% OFF FIRST YEAR
                   </span>
                 ) : (
-                  <span className="text-xs font-black text-amber-800 bg-amber-100 px-3 py-1 rounded-full flex items-center gap-1">
+                  <span className="text-xs font-semibold text-amber-800 bg-amber-100 px-3 py-1 rounded-full flex items-center gap-1">
                     <AlertTriangle className="w-3 h-3" />
                     <span>Unavailable for New Registration</span>
                   </span>
@@ -283,19 +283,19 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
               {/* Perks Checklist */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-gray-700 pt-2">
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#008a45] shrink-0 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#008744] shrink-0 stroke-[2.5]" />
                   <span>Free Lifetime WHOIS Privacy (Save £9.99/yr)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#008a45] shrink-0 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#008744] shrink-0 stroke-[2.5]" />
                   <span>Anycast Global DNS with DDoS Defense</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#008a45] shrink-0 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#008744] shrink-0 stroke-[2.5]" />
                   <span>DNSSEC Cryptographic Theft Protection</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#008a45] shrink-0 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#008744] shrink-0 stroke-[2.5]" />
                   <span>1-Click Email & Website DNS Setup</span>
                 </div>
               </div>
@@ -308,10 +308,10 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                   <div className="sm:text-right mb-4">
                     <div className="flex items-baseline gap-2 sm:justify-end">
                       <span className="text-xs text-gray-400 line-through">£{exactTldData.regularPrice.toFixed(2)}</span>
-                      <span className="text-3xl sm:text-4xl font-black text-slate-950">£{exactTldData.price.toFixed(2)}</span>
+                      <span className="text-3xl sm:text-4xl font-bold text-slate-900">£{exactTldData.price.toFixed(2)}</span>
                       <span className="text-xs text-gray-500 font-bold">/ 1st yr</span>
                     </div>
-                    <span className="text-[11px] text-gray-400 block mt-0.5">
+                    <span className="text-xs text-gray-400 block mt-0.5">
                       Renews at transparent £{exactTldData.regularPrice.toFixed(2)}/yr • Cancel anytime
                     </span>
                   </div>
@@ -320,10 +320,10 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                     <button
                       type="button"
                       onClick={() => handleAddDomain(exactDomainFullName, exactTldData.price, exactTldData.regularPrice)}
-                      className={`w-full py-3.5 px-6 rounded-xl font-black text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 active:scale-95 ${
+                      className={`w-full py-3.5 px-6 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 active:scale-95 ${
                         addedDomains[exactDomainFullName]
                           ? 'bg-emerald-700 text-white'
-                          : 'bg-[#008a45] hover:bg-[#007338] text-white hover:shadow-lg'
+                          : 'bg-[#008744] hover:bg-[#006E37] text-white hover:shadow-lg'
                       }`}
                     >
                       {addedDomains[exactDomainFullName] ? (
@@ -343,7 +343,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                       <button
                         type="button"
                         onClick={onOpenCart}
-                        className="w-full py-2 text-center text-xs font-bold text-[#008a45] hover:underline cursor-pointer flex items-center justify-center gap-1"
+                        className="w-full py-2 text-center text-xs font-bold text-[#008744] hover:underline cursor-pointer flex items-center justify-center gap-1"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
                         <span>View in Basket & Checkout</span>
@@ -359,13 +359,13 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                       <span>Registered Domain • Eligible for Transfer</span>
                     </div>
                     <div className="flex items-baseline gap-2 sm:justify-end">
-                      <span className="text-3xl sm:text-4xl font-black text-slate-950">£{exactTldData.transferPrice.toFixed(2)}</span>
+                      <span className="text-3xl sm:text-4xl font-bold text-slate-900">£{exactTldData.transferPrice.toFixed(2)}</span>
                       <span className="text-xs text-gray-500 font-bold">/ transfer</span>
                     </div>
-                    <span className="text-[11px] text-emerald-700 font-bold block mt-0.5">
+                    <span className="text-xs text-emerald-700 font-bold block mt-0.5">
                       ✓ Includes +1 Year Extension • 0 Downtime • Free Privacy
                     </span>
-                    <span className="text-[10px] text-gray-400 block mt-0.5">
+                    <span className="text-xs text-gray-400 block mt-0.5">
                       Standard renewal £{exactTldData.regularPrice.toFixed(2)}/yr
                     </span>
                   </div>
@@ -374,10 +374,10 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                     <button
                       type="button"
                       onClick={() => handleAddTransfer(exactDomainFullName, exactTldData.transferPrice)}
-                      className={`w-full py-3.5 px-5 rounded-xl font-black text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 active:scale-95 ${
+                      className={`w-full py-3.5 px-5 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 active:scale-95 ${
                         addedDomains[`transfer-${exactDomainFullName}`]
                           ? 'bg-emerald-700 text-white'
-                          : 'bg-[#fed000] hover:bg-[#ebbe00] text-slate-950 hover:shadow-lg'
+                          : 'bg-[#F59E0B] hover:bg-[#d97706] text-slate-950 hover:shadow-lg'
                       }`}
                     >
                       {addedDomains[`transfer-${exactDomainFullName}`] ? (
@@ -397,7 +397,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                       <button
                         type="button"
                         onClick={onOpenCart}
-                        className="w-full py-1.5 text-center text-xs font-bold text-[#008a45] hover:underline cursor-pointer flex items-center justify-center gap-1"
+                        className="w-full py-1.5 text-center text-xs font-bold text-[#008744] hover:underline cursor-pointer flex items-center justify-center gap-1"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
                         <span>View in Basket & Checkout</span>
@@ -418,7 +418,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                       onClick={onOpenLiveChat}
                       className="w-full py-2 px-3 text-center text-xs font-semibold text-gray-500 hover:text-gray-800 transition-all cursor-pointer flex items-center justify-center gap-1"
                     >
-                      <Headphones className="w-3.5 h-3.5 text-[#008a45]" />
+                      <Headphones className="w-3.5 h-3.5 text-[#008744]" />
                       <span>Want to acquire from owner? Ask Support</span>
                     </button>
                   </div>
@@ -433,11 +433,11 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
         {/* ========================================================================= */}
         <div className="bg-gradient-to-r from-[#031d16] via-[#052e22] to-[#031d16] text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-6 border border-emerald-900/50">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-black uppercase text-[#fed000] tracking-wider">
-              <Sparkles className="w-4 h-4 text-[#fed000]" />
+            <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase text-[#F59E0B] tracking-wider">
+              <Sparkles className="w-4 h-4 text-[#F59E0B]" />
               <span>{exactAvailable === false ? 'RECOMMENDED BRAND DEFENSE PACKAGE' : 'RECOMMENDED BRAND PROTECTION PACKAGE'}</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-black">
+            <h3 className="text-xl sm:text-2xl font-semibold">
               {exactAvailable === false 
                 ? `Secure Available Alternate Extensions for "${cleanBase}"`
                 : `Protect "${cleanBase}" Across Top Extensions`
@@ -462,11 +462,11 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
           <div className="flex flex-col sm:items-end shrink-0 bg-white/5 p-5 rounded-2xl border border-white/10 w-full lg:w-auto">
             <div className="text-right mb-3">
               <div className="text-xs text-gray-300 line-through">£{bundleTotalPrice.toFixed(2)}</div>
-              <div className="text-2xl sm:text-3xl font-black text-white">
+              <div className="text-2xl sm:text-3xl font-bold text-white">
                 £{discountedBundlePrice.toFixed(2)}
                 <span className="text-xs text-emerald-300 font-normal"> /1st yr</span>
               </div>
-              <span className="text-[10px] text-emerald-300 font-bold block mt-0.5">
+              <span className="text-xs text-emerald-300 font-bold block mt-0.5">
                 Includes {bundleFullNames.length} domains + Free Lifetime WHOIS Privacy
               </span>
             </div>
@@ -474,10 +474,10 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
             <button
               type="button"
               onClick={handleAddBundle}
-              className={`w-full sm:w-auto px-6 py-3 rounded-xl font-black text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 active:scale-95 ${
+              className={`w-full sm:w-auto px-6 py-3 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 active:scale-95 ${
                 isBundleAdded
                   ? 'bg-emerald-600 text-white'
-                  : 'bg-[#fed000] hover:bg-[#ebbe00] text-slate-950'
+                  : 'bg-[#F59E0B] hover:bg-[#d97706] text-slate-950'
               }`}
             >
               {isBundleAdded ? (
@@ -501,7 +501,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h3 className="text-xl sm:text-2xl font-black text-slate-900">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                 Recommended Alternative Extensions for "{cleanBase}"
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-0.5 font-medium">
@@ -516,9 +516,9 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                   key={cat}
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer shrink-0 ${
+                  className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                     selectedCategory === cat
-                      ? 'bg-[#008a45] text-white shadow-xs'
+                      ? 'bg-[#008744] text-white shadow-xs'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                   }`}
                 >
@@ -540,17 +540,17 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                   className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-emerald-50/30 transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center font-black text-[#008a45] text-xs shrink-0">
+                    <div className="w-11 h-11 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center font-semibold text-[#008744] text-xs shrink-0">
                       {item.tld}
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-black text-slate-900 text-base sm:text-lg">{fullAltName}</span>
-                        <span className="bg-emerald-100 text-[#008a45] text-[10px] font-black px-2.5 py-0.5 rounded-full">
+                        <span className="font-bold text-slate-900 text-base sm:text-lg">{fullAltName}</span>
+                        <span className="bg-emerald-100 text-[#008744] text-xs font-semibold px-2.5 py-0.5 rounded-full">
                           Available
                         </span>
                         {item.badge && (
-                          <span className="bg-gray-100 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded-full hidden sm:inline">
+                          <span className="bg-gray-100 text-gray-700 text-xs font-bold px-2 py-0.5 rounded-full hidden sm:inline">
                             {item.badge}
                           </span>
                         )}
@@ -567,10 +567,10 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                     <div className="sm:text-right">
                       <div className="flex items-baseline gap-1.5 sm:justify-end">
                         <span className="text-xs text-gray-400 line-through">£{item.regularPrice.toFixed(2)}</span>
-                        <span className="text-xl sm:text-2xl font-black text-slate-950">£{item.price.toFixed(2)}</span>
+                        <span className="text-xl sm:text-2xl font-bold text-slate-900">£{item.price.toFixed(2)}</span>
                         <span className="text-xs text-gray-500 font-medium">/1st yr</span>
                       </div>
-                      <span className="text-[10px] text-gray-400 block">
+                      <span className="text-xs text-gray-400 block">
                         Renews at £{item.regularPrice.toFixed(2)}/yr
                       </span>
                     </div>
@@ -578,10 +578,10 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
                     <button
                       type="button"
                       onClick={() => handleAddDomain(fullAltName, item.price, item.regularPrice)}
-                      className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all shadow-xs cursor-pointer flex items-center gap-1.5 shrink-0 active:scale-95 ${
+                      className={`px-5 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-xs cursor-pointer flex items-center gap-1.5 shrink-0 active:scale-95 ${
                         isAdded
                           ? 'bg-emerald-700 text-white'
-                          : 'bg-[#fed000] hover:bg-[#ebbe00] text-slate-950'
+                          : 'bg-[#F59E0B] hover:bg-[#d97706] text-slate-950'
                       }`}
                     >
                       {isAdded ? (
@@ -608,7 +608,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
         {/* ========================================================================= */}
         <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-emerald-950">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-[#008a45] text-white flex items-center justify-center shrink-0 shadow-2xs">
+            <div className="w-10 h-10 rounded-2xl bg-[#008744] text-white flex items-center justify-center shrink-0 shadow-2xs">
               <Headphones className="w-5 h-5" />
             </div>
             <div>
@@ -619,7 +619,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
           <button
             type="button"
             onClick={onOpenLiveChat}
-            className="px-5 py-2.5 rounded-xl bg-[#008a45] hover:bg-[#007338] text-white font-black transition-all shadow-xs cursor-pointer shrink-0"
+            className="px-5 py-2.5 rounded-xl bg-[#008744] hover:bg-[#006E37] text-white font-semibold transition-all shadow-xs cursor-pointer shrink-0"
           >
             Chat with Domain Expert
           </button>
@@ -640,7 +640,7 @@ export const DomainResultsView: React.FC<DomainResultsViewProps> = ({
           <button
             type="button"
             onClick={onOpenCart}
-            className="px-4 py-2 rounded-xl bg-[#fed000] hover:bg-[#ebbe00] text-slate-950 font-black text-xs transition-all cursor-pointer flex items-center gap-1.5"
+            className="px-4 py-2 rounded-xl bg-[#F59E0B] hover:bg-[#d97706] text-slate-950 font-semibold text-xs transition-all cursor-pointer flex items-center gap-1.5"
           >
             <ShoppingBag className="w-3.5 h-3.5" />
             <span>View Basket & Checkout</span>

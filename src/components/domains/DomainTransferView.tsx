@@ -104,16 +104,16 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
   return (
     <div className="bg-[#fcfdfd] text-[#111827]">
       {/* 1. Transfer Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#031913] via-[#05271d] to-[#041d16] text-white pt-14 pb-20">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 text-center">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#061913] via-[#061913] to-[#061913] text-white pt-14 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 text-center">
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-bold mb-6">
-            <RefreshCw className="w-3.5 h-3.5 text-[#fed000]" />
+            <RefreshCw className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>Zero Downtime Migration • 1 Additional Year Renewal Included</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white max-w-3xl mx-auto leading-tight">
-            Transfer Your Existing Domain to <span className="text-[#fed000]">Hostxeon</span>
+          <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-white max-w-3xl mx-auto leading-tight">
+            Transfer Your Existing Domain to <span className="text-[#F59E0B]">Hostxeon</span>
           </h1>
           <p className="mt-4 text-base sm:text-lg text-emerald-100/80 max-w-2xl mx-auto font-medium">
             Save on high annual renewals, get free lifetime WHOIS privacy, and manage everything in one unified dashboard.
@@ -124,15 +124,15 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
             <button
               type="button"
               onClick={onSwitchToRegister}
-              className="px-5 py-2 rounded-xl font-black text-xs sm:text-sm text-emerald-100 hover:text-white transition-all cursor-pointer"
+              className="px-5 py-2 rounded-lg font-semibold text-xs sm:text-sm text-emerald-100 hover:text-white transition-all cursor-pointer"
             >
               Search & Register New
             </button>
             <button
               type="button"
-              className="px-5 py-2 rounded-xl font-black text-xs sm:text-sm bg-white text-slate-950 shadow-md cursor-default flex items-center gap-2"
+              className="px-5 py-2 rounded-lg font-semibold text-xs sm:text-sm bg-white text-slate-950 shadow-md cursor-default flex items-center gap-2"
             >
-              <RefreshCw className="w-3.5 h-3.5 text-[#008a45]" />
+              <RefreshCw className="w-3.5 h-3.5 text-[#008744]" />
               <span>Transfer Domain</span>
             </button>
           </div>
@@ -141,7 +141,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
           <div className="max-w-3xl mx-auto mt-2">
             <form onSubmit={handleTransferCheck} className="relative flex items-center shadow-2xl rounded-2xl bg-white p-2">
               <div className="pl-3 pr-2 text-gray-400">
-                <Globe className="w-6 h-6 text-[#008a45]" />
+                <Globe className="w-6 h-6 text-[#008744]" />
               </div>
               <input
                 type="text"
@@ -153,7 +153,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
               <button
                 type="submit"
                 disabled={isChecking}
-                className="bg-[#fed000] hover:bg-[#ebbe00] text-slate-950 px-6 sm:px-8 py-3.5 rounded-xl font-black text-sm sm:text-base transition-all shadow-md shrink-0 cursor-pointer flex items-center gap-2"
+                className="bg-[#F59E0B] hover:bg-[#d97706] text-slate-950 px-6 sm:px-8 py-3.5 rounded-lg font-semibold text-sm sm:text-base transition-all shadow-md shrink-0 cursor-pointer flex items-center gap-2"
               >
                 {isChecking ? (
                   <>
@@ -174,7 +174,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
       </section>
 
       {/* 2. Main Transfer Container */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-8 relative z-20 pb-20 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-8 relative z-20 pb-20 space-y-12">
         
         {/* Real-Time Transfer Card (When Domain is Checked) */}
         {checkedDomain && (
@@ -182,10 +182,10 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100">
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-900">
-                    Transfer: <span className="text-[#008a45]">{checkedDomain}</span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+                    Transfer: <span className="text-[#008744]">{checkedDomain}</span>
                   </h3>
-                  <span className="bg-emerald-100 text-[#008a45] text-[11px] font-black px-2.5 py-0.5 rounded-full">
+                  <span className="bg-emerald-100 text-[#008744] text-xs font-semibold px-2.5 py-0.5 rounded-full">
                     READY FOR TRANSFER
                   </span>
                 </div>
@@ -195,11 +195,11 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
               </div>
 
               <div className="text-right">
-                <div className="text-2xl sm:text-3xl font-black text-slate-900">
+                <div className="text-2xl sm:text-3xl font-bold text-slate-900">
                   £{currentDetails.transferPrice.toFixed(2)}
                 </div>
-                <div className="text-[11px] text-gray-500 font-medium">Includes 1-Year Extension + WHOIS Privacy</div>
-                <span className="text-[10px] text-gray-400 block mt-0.5">Renews at standard £{currentDetails.regularPrice.toFixed(2)}/yr</span>
+                <div className="text-xs text-gray-500 font-medium">Includes 1-Year Extension + WHOIS Privacy</div>
+                <span className="text-xs text-gray-400 block mt-0.5">Renews at standard £{currentDetails.regularPrice.toFixed(2)}/yr</span>
               </div>
             </div>
 
@@ -216,7 +216,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
                   placeholder="e.g. 8xK#99_qP2"
                   className="w-full py-2.5 px-3 bg-white border border-gray-300 rounded-xl text-xs font-mono"
                 />
-                <span className="text-[10px] text-gray-400 block">
+                <span className="text-xs text-gray-400 block">
                   Obtain this code from your current registrar's control panel (GoDaddy, Namecheap, etc.).
                 </span>
               </div>
@@ -225,10 +225,10 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
                 <button
                   type="button"
                   onClick={handleAddTransferToCart}
-                  className={`w-full py-3.5 px-4 rounded-xl font-black text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-1.5 ${
+                  className={`w-full py-3.5 px-4 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-1.5 ${
                     isTransferAdded
                       ? 'bg-emerald-700 text-white'
-                      : 'bg-[#fed000] hover:bg-[#ebbe00] text-slate-950'
+                      : 'bg-[#F59E0B] hover:bg-[#d97706] text-slate-950'
                   }`}
                 >
                   {isTransferAdded ? (
@@ -248,7 +248,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
                   <button
                     type="button"
                     onClick={onOpenCart}
-                    className="w-full text-center text-xs font-bold text-[#008a45] hover:underline cursor-pointer flex items-center justify-center gap-1"
+                    className="w-full text-center text-xs font-bold text-[#008744] hover:underline cursor-pointer flex items-center justify-center gap-1"
                   >
                     <span>Proceed to Basket & Checkout →</span>
                   </button>
@@ -262,7 +262,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
         <div className="bg-white rounded-3xl shadow-sm border border-gray-200 p-6 sm:p-8 space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
-              <h3 className="text-xl font-black text-slate-900">
+              <h3 className="text-xl font-bold text-slate-900">
                 Transparent Domain Transfer Pricing
               </h3>
               <p className="text-xs text-gray-500 mt-0.5">
@@ -270,7 +270,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
               </p>
             </div>
             <div className="flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 shrink-0">
-              <Zap className="w-3.5 h-3.5 text-[#008a45]" />
+              <Zap className="w-3.5 h-3.5 text-[#008744]" />
               <span>0 Downtime Guarantee</span>
             </div>
           </div>
@@ -278,7 +278,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="border-b border-gray-200 bg-gray-50/70 text-gray-500 font-bold uppercase tracking-wider text-[11px]">
+                <tr className="border-b border-gray-200 bg-gray-50/70 text-gray-500 font-bold uppercase tracking-wider text-xs">
                   <th className="py-3 px-4">Extension (TLD)</th>
                   <th className="py-3 px-4">Transfer Price</th>
                   <th className="py-3 px-4">Included Extension</th>
@@ -289,11 +289,11 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
               <tbody className="divide-y divide-gray-100 font-medium text-gray-700">
                 {EXTENSIONS_CATALOG.slice(0, 10).map((item) => (
                   <tr key={item.tld} className="hover:bg-emerald-50/30 transition-colors">
-                    <td className="py-3 px-4 font-black text-slate-900 text-sm">
+                    <td className="py-3 px-4 font-bold text-slate-900 text-sm">
                       <span className="bg-gray-100 px-2.5 py-1 rounded-lg text-slate-800 font-mono text-xs">{item.tld}</span>
                     </td>
                     <td className="py-3 px-4">
-                      <span className="font-black text-slate-950 text-sm">£{item.transferPrice.toFixed(2)}</span>
+                      <span className="font-bold text-slate-900 text-sm">£{item.transferPrice.toFixed(2)}</span>
                     </td>
                     <td className="py-3 px-4 text-emerald-700 font-bold">
                       ✓ +1 Year Added
@@ -314,17 +314,17 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
         {/* 4-Step Visual Process */}
         <div className="bg-white rounded-3xl shadow-sm border border-gray-200 p-6 sm:p-8">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="text-xs font-black uppercase tracking-wider text-[#008a45] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#008744] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
               SMOOTH MIGRATION
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">
               Transfer in 4 Simple Steps
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-5 rounded-2xl bg-[#fafdfb] border border-emerald-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-[#008a45] text-white flex items-center justify-center font-black text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#008744] text-white flex items-center justify-center font-semibold text-xs">
                 1
               </div>
               <h4 className="font-bold text-sm text-slate-900">Enter Domain Name</h4>
@@ -334,7 +334,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
             </div>
 
             <div className="p-5 rounded-2xl bg-[#fafdfb] border border-emerald-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-[#008a45] text-white flex items-center justify-center font-black text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#008744] text-white flex items-center justify-center font-semibold text-xs">
                 2
               </div>
               <h4 className="font-bold text-sm text-slate-900">Unlock at Current Registrar</h4>
@@ -344,7 +344,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
             </div>
 
             <div className="p-5 rounded-2xl bg-[#fafdfb] border border-emerald-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-[#008a45] text-white flex items-center justify-center font-black text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#008744] text-white flex items-center justify-center font-semibold text-xs">
                 3
               </div>
               <h4 className="font-bold text-sm text-slate-900">Confirm & Authorize</h4>
@@ -354,7 +354,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
             </div>
 
             <div className="p-5 rounded-2xl bg-[#fafdfb] border border-emerald-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-[#008a45] text-white flex items-center justify-center font-black text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#008744] text-white flex items-center justify-center font-semibold text-xs">
                 4
               </div>
               <h4 className="font-bold text-sm text-slate-900">Zero Downtime Finalization</h4>
@@ -368,7 +368,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
         {/* Step-by-Step Registrar Unlock Guides */}
         <div className="bg-white rounded-3xl shadow-sm border border-gray-200 p-6 sm:p-8 space-y-6">
           <div>
-            <h3 className="text-xl font-black text-slate-900">
+            <h3 className="text-xl font-bold text-slate-900">
               How to Unlock & Get EPP Auth Code from Common Registrars
             </h3>
             <p className="text-xs text-gray-500 mt-1">
@@ -389,7 +389,7 @@ export const DomainTransferView: React.FC<DomainTransferViewProps> = ({
                 onClick={() => setActiveGuideTab(tab.id as any)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   activeGuideTab === tab.id
-                    ? 'bg-[#008a45] text-white'
+                    ? 'bg-[#008744] text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >

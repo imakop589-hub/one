@@ -129,7 +129,7 @@ export const AdminFaqs: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
         <div>
-          <h1 className="text-2xl font-black text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <HelpCircle className="w-6 h-6 text-emerald-400" />
             <span>FAQs Content Manager</span>
           </h1>
@@ -193,7 +193,7 @@ export const AdminFaqs: React.FC = () => {
                       <span className="text-xs font-bold text-white">
                         {faq.question}
                       </span>
-                      <span className="text-[9px] uppercase font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
+                      <span className="text-xs uppercase font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
                         {faq.category.replace('_', ' ')}
                       </span>
                     </div>
@@ -228,14 +228,14 @@ export const AdminFaqs: React.FC = () => {
                         <button
                           type="button"
                           onClick={() => handleDelete(faq.id)}
-                          className="px-2 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded text-[11px] font-bold cursor-pointer"
+                          className="px-2 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded text-xs font-bold cursor-pointer"
                         >
                           Confirm
                         </button>
                         <button
                           type="button"
                           onClick={() => setDeleteConfirmId(null)}
-                          className="p-1 text-slate-400 hover:text-white rounded text-[11px] cursor-pointer"
+                          className="p-1 text-slate-400 hover:text-white rounded text-xs cursor-pointer"
                           title="Cancel"
                         >
                           <X className="w-3.5 h-3.5" />

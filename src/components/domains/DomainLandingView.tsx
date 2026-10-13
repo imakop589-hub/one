@@ -103,20 +103,20 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
         
         {/* Subtle Ambient Background Lighting */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/10 blur-[140px] pointer-events-none rounded-full" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#008a45]/20 blur-[130px] pointer-events-none rounded-full" />
-        <div className="absolute inset-0 bg-[radial-gradient(#008a45_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#008744]/20 blur-[130px] pointer-events-none rounded-full" />
+        <div className="absolute inset-0 bg-[radial-gradient(#008744_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 text-center">
           
           {/* Trust Badge Top Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-bold mb-6 shadow-xs backdrop-blur-md">
-            <Globe className="w-3.5 h-3.5 text-[#fed000]" />
+            <Globe className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>ICANN Accredited Registrar • Free Lifetime Privacy Shield</span>
-            <span className="bg-[#fed000] text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full">FROM £0.99/YR</span>
+            <span className="bg-[#F59E0B] text-slate-950 text-xs font-semibold px-2 py-0.5 rounded-full">FROM £0.99/YR</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-[1.12]">
-            Find the Perfect <span className="text-[#fed000]">Domain Name</span> for Your Brand
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white max-w-4xl mx-auto leading-[1.12]">
+            Find the Perfect <span className="text-[#F59E0B]">Domain Name</span> for Your Brand
           </h1>
           <p className="mt-4 text-base sm:text-lg text-emerald-100/85 max-w-2xl mx-auto font-medium leading-relaxed">
             Search hundreds of global & country extensions with instant DNS propagation, free lifetime WHOIS privacy, and zero hidden price hikes.
@@ -126,15 +126,15 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
           <div className="inline-flex p-1 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 mt-8 mb-4 shadow-lg">
             <button
               type="button"
-              className="px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm bg-white text-slate-950 shadow-md cursor-default flex items-center gap-2"
+              className="px-5 py-2.5 rounded-lg font-semibold text-xs sm:text-sm bg-white text-slate-950 shadow-md cursor-default flex items-center gap-2"
             >
-              <Search className="w-4 h-4 text-[#008a45]" />
+              <Search className="w-4 h-4 text-[#008744]" />
               <span>Register New Domain</span>
             </button>
             <button
               type="button"
               onClick={onSwitchToTransfer}
-              className="px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm text-emerald-100 hover:text-white transition-all cursor-pointer flex items-center gap-2"
+              className="px-5 py-2.5 rounded-lg font-semibold text-xs sm:text-sm text-emerald-100 hover:text-white transition-all cursor-pointer flex items-center gap-2"
             >
               <RefreshCw className="w-4 h-4" />
               <span>Transfer Existing Domain</span>
@@ -147,7 +147,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
               onSubmit={handleFormSubmit} 
               className="relative flex items-center shadow-2xl rounded-2xl sm:rounded-3xl bg-white p-1.5 sm:p-2 border-2 border-emerald-900/40 focus-within:border-emerald-400 focus-within:ring-4 focus-within:ring-emerald-500/20 transition-all group"
             >
-              <div className="pl-3 sm:pl-4 pr-2 text-gray-400 group-focus-within:text-[#008a45] transition-colors shrink-0">
+              <div className="pl-3 sm:pl-4 pr-2 text-gray-400 group-focus-within:text-[#008744] transition-colors shrink-0">
                 <Search className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <input
@@ -161,7 +161,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
               />
               <button
                 type="submit"
-                className="bg-[#fed000] hover:bg-[#ebbe00] active:scale-[0.98] text-slate-950 px-6 sm:px-9 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl font-black text-sm sm:text-base transition-all shadow-md shrink-0 cursor-pointer flex items-center gap-2 hover:shadow-lg"
+                className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-[0.98] text-slate-950 px-6 sm:px-9 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base transition-all shadow-md shrink-0 cursor-pointer flex items-center gap-2 hover:shadow-lg"
                 id="domain-landing-search-button"
               >
                 <span>Search Domain</span>
@@ -172,7 +172,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
             {/* Trending Quick-Select TLD Chips */}
             <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-2.5 mt-5 text-xs font-semibold text-emerald-100">
               <span className="text-emerald-300 font-bold flex items-center gap-1">
-                <Flame className="w-3.5 h-3.5 text-[#fed000]" /> Trending:
+                <Flame className="w-3.5 h-3.5 text-[#F59E0B]" /> Trending:
               </span>
               {[
                 { ext: '.com', price: '£6.99' },
@@ -190,7 +190,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
                   className="bg-white/10 hover:bg-white/20 active:scale-95 px-3.5 py-1.5 rounded-xl border border-white/15 transition-all text-white flex items-center gap-1.5 cursor-pointer shadow-2xs"
                 >
                   <span className="font-extrabold">{chip.ext}</span>
-                  <span className="text-[#fed000] font-black">{chip.price}</span>
+                  <span className="text-[#F59E0B] font-semibold">{chip.price}</span>
                 </button>
               ))}
             </div>
@@ -198,19 +198,19 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
             {/* Trust Highlights Strip */}
             <div className="flex items-center justify-center flex-wrap gap-4 sm:gap-8 mt-8 text-xs font-bold text-emerald-100/90 pt-4 border-t border-white/10">
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#fed000]" />
+                <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
                 <span>Free Lifetime WHOIS Privacy</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#fed000]" />
+                <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
                 <span>Anycast Global DNS (100% SLA)</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#fed000]" />
+                <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
                 <span>DNSSEC Cryptographic Shield</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#fed000]" />
+                <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
                 <span>Transparent Renewal Rates</span>
               </span>
             </div>
@@ -220,21 +220,21 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
       </section>
 
       {/* 2. Popular TLD Highlights Grid (Elevated Bento) */}
-      <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-10 relative z-20 mb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-10 relative z-20 mb-16">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
           {EXTENSIONS_CATALOG.slice(0, 6).map((item) => (
             <div
               key={item.tld}
               onClick={() => handleChipClick(item.tld)}
-              className="bg-white rounded-2xl p-5 shadow-xl border border-gray-200/80 hover:border-[#008a45] hover:shadow-2xl transition-all cursor-pointer flex flex-col justify-between group hover:-translate-y-0.5"
+              className="bg-white rounded-2xl p-5 shadow-xl border border-gray-200/80 hover:border-[#008744] hover:shadow-2xl transition-all cursor-pointer flex flex-col justify-between group hover:-translate-y-0.5"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xl sm:text-2xl font-black text-slate-900 group-hover:text-[#008a45] transition-colors">
+                  <span className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-[#008744] transition-colors">
                     {item.tld}
                   </span>
                   {item.badge && (
-                    <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-emerald-100 text-[#008a45]">
+                    <span className="text-xs font-semibold uppercase px-2 py-0.5 rounded-full bg-emerald-100 text-[#008744]">
                       {item.badge}
                     </span>
                   )}
@@ -242,12 +242,12 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
                 <div className="text-xs text-gray-400 mt-1 line-through font-semibold">
                   £{item.regularPrice.toFixed(2)}/yr
                 </div>
-                <div className="text-xl font-black text-slate-950 mt-0.5">
+                <div className="text-xl font-bold text-slate-900 mt-0.5">
                   £{item.price.toFixed(2)}
                   <span className="text-xs text-gray-500 font-normal"> /1st yr</span>
                 </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-[#008a45] font-black">
+              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-[#008744] font-semibold">
                 <span>Check availability</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -257,12 +257,12 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
       </section>
 
       {/* 3. Comprehensive TLD Pricing & Directory */}
-      <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-10" id="domain-directory">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-10" id="domain-directory">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-black uppercase tracking-wider text-[#008a45] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#008744] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
             TRANSPARENT DIRECTORY
           </span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 mt-3 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mt-3 tracking-tight">
             Explore All Domain Extensions & Transparent Rates
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 mt-2 font-medium">
@@ -278,9 +278,9 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer shrink-0 ${
+                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                   selectedCategory === cat
-                    ? 'bg-[#008a45] text-white shadow-xs'
+                    ? 'bg-[#008744] text-white shadow-xs'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -296,7 +296,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
               value={directoryFilter}
               onChange={(e) => setDirectoryFilter(e.target.value)}
               placeholder="Search extension (e.g. .com, .ai, .store)..."
-              className="w-full pl-10 pr-3 py-2.5 bg-gray-50 rounded-xl text-xs sm:text-sm border border-gray-200 focus:outline-hidden focus:border-[#008a45] font-semibold"
+              className="w-full pl-10 pr-3 py-2.5 bg-gray-50 rounded-xl text-xs sm:text-sm border border-gray-200 focus:outline-hidden focus:border-[#008744] font-semibold"
             />
           </div>
         </div>
@@ -305,7 +305,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
         <div className="bg-white rounded-2xl sm:rounded-3xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-50 text-gray-700 font-black border-b border-gray-200 text-xs">
+              <thead className="bg-slate-50 text-gray-700 font-semibold border-b border-gray-200 text-xs">
                 <tr>
                   <th className="p-4 sm:p-5">Extension</th>
                   <th className="p-4 sm:p-5">Category</th>
@@ -321,9 +321,9 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
                   <tr key={item.tld} className="hover:bg-emerald-50/40 transition-colors">
                     <td className="p-4 sm:p-5">
                       <div className="flex items-center gap-2">
-                        <span className="font-black text-slate-900 text-base">{item.tld}</span>
+                        <span className="font-bold text-slate-900 text-base">{item.tld}</span>
                         {item.badge && (
-                          <span className="bg-emerald-100 text-[#008a45] text-[10px] font-bold px-2 py-0.5 rounded-full">
+                          <span className="bg-emerald-100 text-[#008744] text-xs font-bold px-2 py-0.5 rounded-full">
                             {item.badge}
                           </span>
                         )}
@@ -334,7 +334,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
                     </td>
                     <td className="p-4 sm:p-5">
                       <div className="flex items-baseline gap-1.5">
-                        <span className="font-black text-slate-900 text-base">£{item.price.toFixed(2)}</span>
+                        <span className="font-bold text-slate-900 text-base">£{item.price.toFixed(2)}</span>
                         <span className="text-gray-400 line-through text-xs font-medium">£{item.regularPrice.toFixed(2)}</span>
                       </div>
                     </td>
@@ -356,7 +356,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
                           handleChipClick(item.tld);
                           window.scrollTo({ top: 120, behavior: 'smooth' });
                         }}
-                        className="px-4 py-2 rounded-xl bg-[#fed000] hover:bg-[#ebbe00] active:scale-95 text-slate-950 font-black text-xs transition-all cursor-pointer shadow-xs inline-flex items-center gap-1.5"
+                        className="px-4 py-2 rounded-xl bg-[#F59E0B] hover:bg-[#d97706] active:scale-95 text-slate-950 font-semibold text-xs transition-all cursor-pointer shadow-xs inline-flex items-center gap-1.5"
                       >
                         <span>Select</span>
                         <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -372,12 +372,12 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
 
       {/* 4. Why Choose Hostxeon Feature Bento Grid */}
       <section className="bg-slate-50 py-16 sm:py-20 border-y border-gray-200/80">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-black uppercase tracking-wider text-[#008a45] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#008744] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
               VALUE GUARANTEED
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-3 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 tracking-tight">
               Included 100% Free with Every Domain
             </h2>
             <p className="text-xs sm:text-sm text-gray-500 mt-2 font-medium">
@@ -387,60 +387,60 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/90 shadow-2xs space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-black text-slate-900 text-base">Free Lifetime WHOIS Privacy</h3>
+              <h3 className="font-bold text-slate-900 text-base">Free Lifetime WHOIS Privacy</h3>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 We hide your personal phone number, home address, and personal email from public ICANN registry records to eliminate spam and identity theft.
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/90 shadow-2xs space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="font-black text-slate-900 text-base">Anycast Global Cloud DNS</h3>
+              <h3 className="font-bold text-slate-900 text-base">Anycast Global Cloud DNS</h3>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Ultra-fast worldwide DNS resolution routed through our global edge points of presence with 100% SLA uptime and DDoS protection.
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/90 shadow-2xs space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Lock className="w-6 h-6" />
               </div>
-              <h3 className="font-black text-slate-900 text-base">DNSSEC & Anti-Theft Lock</h3>
+              <h3 className="font-bold text-slate-900 text-base">DNSSEC & Anti-Theft Lock</h3>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Cryptographic DNSSEC signatures protect your visitors from DNS spoofing, while registrar locks stop unauthorized domain transfers.
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/90 shadow-2xs space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Globe className="w-6 h-6" />
               </div>
-              <h3 className="font-black text-slate-900 text-base">Free URL & Email Forwarding</h3>
+              <h3 className="font-bold text-slate-900 text-base">Free URL & Email Forwarding</h3>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Easily redirect your domain name to an existing site or forward inbound emails to your personal inbox with zero server config.
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/90 shadow-2xs space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Server className="w-6 h-6" />
               </div>
-              <h3 className="font-black text-slate-900 text-base">Advanced DNS Zone Editor</h3>
+              <h3 className="font-bold text-slate-900 text-base">Advanced DNS Zone Editor</h3>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Full visual management of A, AAAA, CNAME, MX, TXT, and SRV records with instant propagation directly inside your control panel.
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/90 shadow-2xs space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Headphones className="w-6 h-6" />
               </div>
-              <h3 className="font-black text-slate-900 text-base">24/7 ICANN Certified Support</h3>
+              <h3 className="font-bold text-slate-900 text-base">24/7 ICANN Certified Support</h3>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Our certified domain engineering specialists are available 24/7/365 via live chat to help you with DNS setup and domain questions.
               </p>
@@ -450,41 +450,41 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
       </section>
 
       {/* 5. 3-Step Guide */}
-      <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm">
           <div className="text-center max-w-xl mx-auto mb-10">
-            <span className="text-xs font-black uppercase tracking-wider text-[#008a45]">QUICK ONBOARDING</span>
-            <h3 className="text-xl sm:text-3xl font-black text-slate-900 mt-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#008744]">QUICK ONBOARDING</span>
+            <h3 className="text-xl sm:text-3xl font-bold text-slate-900 mt-1">
               How to Register a Domain in 3 Easy Steps
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
             <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-gray-100 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#008a45] text-white flex items-center justify-center font-black text-base shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center font-semibold text-base shadow-xs">
                 1
               </div>
-              <h4 className="font-black text-slate-900 text-base sm:text-lg">Search Your Domain</h4>
+              <h4 className="font-bold text-slate-900 text-base sm:text-lg">Search Your Domain</h4>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Enter your desired brand or project name in our search box above to check real-time registry availability across 100+ TLDs.
               </p>
             </div>
 
             <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-gray-100 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#008a45] text-white flex items-center justify-center font-black text-base shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center font-semibold text-base shadow-xs">
                 2
               </div>
-              <h4 className="font-black text-slate-900 text-base sm:text-lg">Choose Extensions & Add-ons</h4>
+              <h4 className="font-bold text-slate-900 text-base sm:text-lg">Choose Extensions & Add-ons</h4>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Select your primary extension and protect your brand with key secondary extensions. Free WHOIS privacy is auto-enabled.
               </p>
             </div>
 
             <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-gray-100 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#008a45] text-white flex items-center justify-center font-black text-base shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center font-semibold text-base shadow-xs">
                 3
               </div>
-              <h4 className="font-black text-slate-900 text-base sm:text-lg">Checkout & Instant Launch</h4>
+              <h4 className="font-bold text-slate-900 text-base sm:text-lg">Checkout & Instant Launch</h4>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">
                 Complete checkout securely. Your domain goes live immediately on Anycast DNS ready for web hosting, WordPress, or custom email.
               </p>
@@ -494,13 +494,13 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
       </section>
 
       {/* 6. Domain Transfer Banner */}
-      <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pb-16">
         <div className="bg-gradient-to-r from-[#031d16] via-[#052e22] to-[#031d16] text-white p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
-            <span className="text-xs font-black uppercase text-[#fed000] tracking-wider">
+            <span className="text-xs font-semibold uppercase text-[#F59E0B] tracking-wider">
               ALREADY OWN A DOMAIN?
             </span>
-            <h3 className="text-xl sm:text-3xl font-black">
+            <h3 className="text-xl sm:text-3xl font-semibold">
               Transfer Your Domain to Hostxeon with 0 Downtime
             </h3>
             <p className="text-xs sm:text-base text-emerald-100/80 max-w-xl">
@@ -510,7 +510,7 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
           <button
             type="button"
             onClick={onSwitchToTransfer}
-            className="px-7 py-3.5 rounded-xl bg-[#fed000] hover:bg-[#ebbe00] active:scale-95 text-slate-950 font-black text-sm transition-all cursor-pointer shrink-0 shadow-md flex items-center gap-2 hover:shadow-lg"
+            className="px-7 py-3.5 rounded-xl bg-[#F59E0B] hover:bg-[#d97706] active:scale-95 text-slate-950 font-semibold text-sm transition-all cursor-pointer shrink-0 shadow-md flex items-center gap-2 hover:shadow-lg"
           >
             <RefreshCw className="w-4 h-4" />
             <span>Transfer Domain Now</span>
@@ -519,12 +519,12 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
       </section>
 
       {/* 7. Domain FAQ Accordion */}
-      <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pb-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pb-20">
         <div className="text-center mb-10">
-          <span className="text-xs font-black uppercase tracking-wider text-[#008a45] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#008744] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
             GOT QUESTIONS?
           </span>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">
             Frequently Asked Questions About Domains
           </h2>
         </div>
@@ -535,10 +535,10 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
               <button
                 type="button"
                 onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                className="w-full flex items-center justify-between gap-4 text-left font-extrabold text-sm sm:text-base text-slate-900 hover:text-[#008a45] transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between gap-4 text-left font-extrabold text-sm sm:text-base text-slate-900 hover:text-[#008744] transition-colors cursor-pointer"
               >
                 <span>{faq.q}</span>
-                <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-200 ${activeFaq === idx ? 'rotate-180 text-[#008a45]' : 'text-gray-400'}`} />
+                <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-200 ${activeFaq === idx ? 'rotate-180 text-[#008744]' : 'text-gray-400'}`} />
               </button>
               {activeFaq === idx && (
                 <p className="mt-3 text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
@@ -552,13 +552,13 @@ export const DomainLandingView: React.FC<DomainLandingViewProps> = ({
         {/* Live Chat Migration Strip */}
         <div className="mt-10 p-5 bg-emerald-50 rounded-2xl border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-emerald-950">
           <div className="flex items-center gap-3">
-            <Headphones className="w-5 h-5 text-[#008a45] shrink-0" />
+            <Headphones className="w-5 h-5 text-[#008744] shrink-0" />
             <span className="font-bold">Need advice on choosing the best domain name or extension for your business?</span>
           </div>
           <button
             type="button"
             onClick={onOpenLiveChat}
-            className="bg-[#008a45] hover:bg-[#007338] text-white font-black px-5 py-2.5 rounded-xl transition-all shadow-xs cursor-pointer shrink-0"
+            className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-5 py-2.5 rounded-xl transition-all shadow-xs cursor-pointer shrink-0"
           >
             Chat with Domain Expert
           </button>

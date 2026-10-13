@@ -124,7 +124,7 @@ export const AdminMedia: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
         <div>
-          <h1 className="text-2xl font-black text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <ImageIcon className="w-6 h-6 text-purple-400" />
             <span>Media Library</span>
           </h1>
@@ -217,10 +217,10 @@ export const AdminMedia: React.FC = () => {
                   <h3 className="text-xs font-bold text-white truncate" title={item.title}>
                     {item.title}
                   </h3>
-                  <p className="text-[10px] font-mono text-slate-500 truncate mt-0.5">
+                  <p className="text-xs font-mono text-slate-500 truncate mt-0.5">
                     {item.filename}
                   </p>
-                  <p className="text-[10px] text-slate-400 mt-1">
+                  <p className="text-xs text-slate-400 mt-1">
                     {(item.fileSize / 1024).toFixed(1)} KB • {item.mimeType.split('/')[1]?.toUpperCase()}
                   </p>
                 </div>
@@ -230,7 +230,7 @@ export const AdminMedia: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => handleCopyUrl(item)}
-                    className="inline-flex items-center gap-1 text-slate-300 hover:text-purple-400 text-[11px] font-semibold cursor-pointer"
+                    className="inline-flex items-center gap-1 text-slate-300 hover:text-purple-400 text-xs font-semibold cursor-pointer"
                     title="Copy URL"
                   >
                     {copiedId === item.id ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
@@ -242,14 +242,14 @@ export const AdminMedia: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => handleDelete(item.id)}
-                        className="px-2 py-0.5 bg-rose-600 hover:bg-rose-500 text-white rounded text-[10px] font-bold cursor-pointer"
+                        className="px-2 py-0.5 bg-rose-600 hover:bg-rose-500 text-white rounded text-xs font-bold cursor-pointer"
                       >
                         Confirm
                       </button>
                       <button
                         type="button"
                         onClick={() => setDeleteConfirmId(null)}
-                        className="p-0.5 text-slate-400 hover:text-white rounded text-[10px] cursor-pointer"
+                        className="p-0.5 text-slate-400 hover:text-white rounded text-xs cursor-pointer"
                         title="Cancel"
                       >
                         <X className="w-3 h-3" />

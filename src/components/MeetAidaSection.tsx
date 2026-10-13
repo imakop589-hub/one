@@ -84,16 +84,16 @@ export const MeetAidaSection: React.FC<MeetAidaSectionProps> = ({
   const current = industryData[activeIndustry];
 
   return (
-    <section className="bg-gradient-to-b from-[#062c21] via-[#08382b] to-[#041d16] text-white py-24 relative overflow-hidden" id="aida">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative">
+    <section className="bg-gradient-to-b from-[#061913] via-[#061913] to-[#061913] text-white py-24 relative overflow-hidden" id="aida">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-500/30 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#fed000]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>Autonomous Web Engine</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-white tracking-tight leading-tight mb-4">
             Meet Aida: Your 24/7 AI <br />
             Architect & Business Partner
           </h2>
@@ -122,13 +122,13 @@ export const MeetAidaSection: React.FC<MeetAidaSectionProps> = ({
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                        activeStep === idx ? 'bg-[#fed000] text-slate-950' : 'bg-emerald-800 text-emerald-300'
+                        activeStep === idx ? 'bg-[#F59E0B] text-slate-950' : 'bg-emerald-800 text-emerald-300'
                       }`}>
                         {idx + 1}
                       </div>
                       <span className="font-extrabold text-sm sm:text-base text-white">{step.title}</span>
                     </div>
-                    {activeStep === idx && <Sparkles className="w-4 h-4 text-[#fed000]" />}
+                    {activeStep === idx && <Sparkles className="w-4 h-4 text-[#F59E0B]" />}
                   </div>
                   <p className="text-xs sm:text-sm text-emerald-200/80 mt-1.5 pl-9 leading-relaxed">
                     {step.desc}
@@ -141,7 +141,7 @@ export const MeetAidaSection: React.FC<MeetAidaSectionProps> = ({
             <div className="flex flex-wrap items-center gap-4 pt-3">
               <button
                 onClick={onStartBuilding}
-                className="bg-[#fed000] hover:bg-[#eab308] active:scale-98 text-slate-950 font-black px-7 py-3.5 rounded-2xl text-sm sm:text-base flex items-center gap-2 shadow-xl cursor-pointer transition-all"
+                className="bg-[#F59E0B] hover:bg-[#eab308] active:scale-98 text-slate-950 font-semibold px-7 py-3.5 rounded-2xl text-sm sm:text-base flex items-center gap-2 shadow-xl cursor-pointer transition-all"
                 id="aida-try-now-btn"
               >
                 <span>Build with Aida Free</span>
@@ -192,21 +192,21 @@ export const MeetAidaSection: React.FC<MeetAidaSectionProps> = ({
                 
                 {/* Mini Top Bar */}
                 <div className="px-4 py-2 bg-white border-b border-stone-200 flex items-center justify-between text-xs">
-                  <span className="font-black tracking-wider uppercase font-serif text-xs">{current.brand}</span>
-                  <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.2 rounded">
+                  <span className="font-semibold tracking-wider uppercase font-serif text-xs">{current.brand}</span>
+                  <span className="text-xs bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.2 rounded">
                     Live Preview
                   </span>
                 </div>
 
                 {/* Body Content */}
                 <div className="p-4 text-center">
-                  <span className="text-[9px] uppercase tracking-widest text-stone-500 font-bold block mb-1">
+                  <span className="text-xs uppercase tracking-widest text-stone-500 font-bold block mb-1">
                     {current.tagline}
                   </span>
-                  <h4 className="text-lg font-serif font-black text-stone-900 tracking-tight leading-snug">
+                  <h4 className="text-lg font-serif font-semibold text-stone-900 tracking-tight leading-snug">
                     {current.headline}
                   </h4>
-                  <p className="text-[11px] text-stone-600 mt-1 max-w-[240px] mx-auto leading-relaxed">
+                  <p className="text-xs text-stone-600 mt-1 max-w-[240px] mx-auto leading-relaxed">
                     {current.desc}
                   </p>
 
@@ -227,11 +227,11 @@ export const MeetAidaSection: React.FC<MeetAidaSectionProps> = ({
                 {/* AI Assistant Live Inspector Bubble */}
                 <div className="p-3 bg-white border-t border-stone-200">
                   <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-2.5 text-xs">
-                    <div className="flex items-center gap-1 text-[11px] font-bold text-[#008a45]">
-                      <Sparkles className="w-3.5 h-3.5 text-[#008a45]" />
+                    <div className="flex items-center gap-1 text-xs font-bold text-[#008744]">
+                      <Sparkles className="w-3.5 h-3.5 text-[#008744]" />
                       <span>Aida Intelligence Insight</span>
                     </div>
-                    <p className="text-[11px] text-stone-700 mt-1 leading-snug">
+                    <p className="text-xs text-stone-700 mt-1 leading-snug">
                       "{current.aidaNote}"
                     </p>
                   </div>

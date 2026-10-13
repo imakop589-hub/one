@@ -22,16 +22,16 @@ export const PossibilitiesSection: React.FC<PossibilitiesSectionProps> = ({
 
   return (
     <section className="bg-[#f8faf9] py-24 border-b border-gray-200" id="possibilities">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         
         {/* Header with Title and Action Buttons */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-[#008a45]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#008744]" />
               <span>Real Founder Showcase</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
               Crafted in minutes with <br className="hidden sm:inline" />
               Aida AI Web Intelligence.
             </h2>
@@ -45,7 +45,7 @@ export const PossibilitiesSection: React.FC<PossibilitiesSectionProps> = ({
             <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={onStartTrial}
-                className="bg-[#008a45] hover:bg-[#007339] text-white font-extrabold px-6 py-3 rounded-xl text-sm shadow-md transition-all cursor-pointer flex items-center gap-2"
+                className="bg-[#008744] hover:bg-[#007339] text-white font-extrabold px-6 py-3 rounded-xl text-sm shadow-md transition-all cursor-pointer flex items-center gap-2"
                 id="possibilities-start-trial-btn"
               >
                 <span>Remix a Template Free</span>
@@ -91,18 +91,18 @@ export const PossibilitiesSection: React.FC<PossibilitiesSectionProps> = ({
                 />
                 
                 {/* Category Tag */}
-                <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/20">
+                <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-xs font-extrabold px-3 py-1 rounded-full border border-white/20">
                   {site.category}
                 </div>
 
                 {/* Performance Pill */}
-                <div className="absolute top-3 right-3 bg-emerald-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-md shadow-md">
+                <div className="absolute top-3 right-3 bg-emerald-500 text-slate-950 text-xs font-semibold px-2 py-0.5 rounded-md shadow-md">
                   100 Speed
                 </div>
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                  <span className="bg-[#fed000] text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                  <span className="bg-[#F59E0B] text-slate-950 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
                     <Sparkles className="w-3.5 h-3.5" />
                     Customize with Aida AI
                   </span>
@@ -112,7 +112,7 @@ export const PossibilitiesSection: React.FC<PossibilitiesSectionProps> = ({
               {/* Card Meta Content */}
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-black text-base text-slate-900 group-hover:text-[#008a45] transition-colors">
+                  <h3 className="font-semibold text-base text-slate-900 group-hover:text-[#008744] transition-colors">
                     {site.title}
                   </h3>
                   <p className="text-xs text-slate-500 mt-1 leading-normal">{site.tagline}</p>
@@ -121,7 +121,7 @@ export const PossibilitiesSection: React.FC<PossibilitiesSectionProps> = ({
                 {/* Feature Tags */}
                 <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-gray-100">
                   {site.features.map((feat) => (
-                    <span key={feat} className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md font-bold">
+                    <span key={feat} className="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md font-bold">
                       {feat}
                     </span>
                   ))}

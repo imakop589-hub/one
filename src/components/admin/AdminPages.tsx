@@ -95,7 +95,7 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
       {/* Header and Add Button */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
         <div>
-          <h1 className="text-2xl font-black text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <FileText className="w-6 h-6 text-emerald-400" />
             <span>Pages Content Management</span>
           </h1>
@@ -183,7 +183,7 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-slate-300">
-              <thead className="bg-slate-900/90 text-slate-400 uppercase tracking-wider text-[10px] border-b border-slate-800">
+              <thead className="bg-slate-900/90 text-slate-400 uppercase tracking-wider text-xs border-b border-slate-800">
                 <tr>
                   <th className="py-3.5 px-4 font-bold">Page Title & Slug</th>
                   <th className="py-3.5 px-4 font-bold">Category</th>
@@ -201,14 +201,14 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
                       <div className="font-bold text-white hover:text-emerald-400 cursor-pointer" onClick={() => onEditPage(page.id)}>
                         {page.title}
                       </div>
-                      <div className="text-[11px] font-mono text-slate-500">
+                      <div className="text-xs font-mono text-slate-500">
                         /{page.slug}
                       </div>
                     </td>
 
                     {/* Category */}
                     <td className="py-3.5 px-4">
-                      <span className="text-[10px] uppercase font-bold text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
+                      <span className="text-xs uppercase font-bold text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
                         {page.category || 'general'}
                       </span>
                     </td>
@@ -218,7 +218,7 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
                       <button
                         type="button"
                         onClick={() => handleToggleStatus(page)}
-                        className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold cursor-pointer transition-all ${
+                        className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold cursor-pointer transition-all ${
                           page.status === 'published'
                             ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20'
                             : 'bg-amber-500/10 text-amber-400 border border-amber-500/30 hover:bg-amber-500/20'
@@ -236,7 +236,7 @@ export const AdminPages: React.FC<AdminPagesProps> = ({
                     </td>
 
                     {/* Updated date */}
-                    <td className="py-3.5 px-4 hidden lg:table-cell text-slate-500 text-[11px]">
+                    <td className="py-3.5 px-4 hidden lg:table-cell text-slate-500 text-xs">
                       {new Date(page.updatedAt).toLocaleDateString()}
                     </td>
 

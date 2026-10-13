@@ -69,7 +69,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
   // Sample 28 State (Brand Logo Preview)
   const [brandName, setBrandName] = useState('Apex Digital');
-  const [brandColor, setBrandColor] = useState('#008a45');
+  const [brandColor, setBrandColor] = useState('#008744');
 
   const handleS17Generate = (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,13 +97,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-16-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-[#008a45] text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-[#008744] text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 16
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 16: GoDaddy Classic Mega Domain Search</span>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                     GoDaddy Iconic
                   </span>
                 </h3>
@@ -126,12 +126,12 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
           <div className="relative bg-gradient-to-b from-slate-50 via-white to-emerald-50/30 py-16 lg:py-24 px-4 sm:px-8 border-b border-slate-200">
             <div className="max-w-5xl mx-auto text-center space-y-8">
               
-              <div className="inline-flex items-center gap-2 bg-[#fed000] text-slate-950 px-4 py-1.5 rounded-full font-black text-xs uppercase tracking-wider shadow-xs">
+              <div className="inline-flex items-center gap-2 bg-[#F59E0B] text-slate-950 px-4 py-1.5 rounded-full font-semibold text-xs uppercase tracking-wider shadow-xs">
                 <span>🔥 GoDaddy Mega Promo • .COM Only $4.99 1st Year</span>
               </div>
 
               <div className="space-y-4 max-w-3xl mx-auto">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.1]">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.1]">
                   It all starts with the perfect domain name.
                 </h1>
                 <p className="text-lg text-slate-600 font-medium leading-relaxed">
@@ -171,7 +171,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                       if (onSearchDomain) onSearchDomain(s16Query || 'mybrand' + s16Tld);
                       else onNavigate('domains');
                     }}
-                    className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-8 py-3.5 rounded-xl sm:rounded-full text-base transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 w-full sm:w-auto"
+                    className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-8 py-3.5 rounded-xl sm:rounded-full text-base transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 w-full sm:w-auto"
                   >
                     <span>Search</span>
                     <ArrowRight className="w-5 h-5" />
@@ -183,26 +183,26 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
               <div className="flex flex-wrap items-center justify-center gap-3 text-xs pt-2">
                 <span className="font-bold text-slate-500 uppercase">Popular Extensions:</span>
                 <span className="bg-white border border-slate-300 px-3 py-1 rounded-full font-bold text-slate-900 shadow-xs">
-                  .COM <span className="text-[#008a45]">$4.99</span>
+                  .COM <span className="text-[#008744]">$4.99</span>
                 </span>
                 <span className="bg-white border border-slate-300 px-3 py-1 rounded-full font-bold text-slate-900 shadow-xs">
-                  .STORE <span className="text-[#008a45]">$0.99</span>
+                  .STORE <span className="text-[#008744]">$0.99</span>
                 </span>
                 <span className="bg-white border border-slate-300 px-3 py-1 rounded-full font-bold text-slate-900 shadow-xs">
-                  .ONLINE <span className="text-[#008a45]">$0.99</span>
+                  .ONLINE <span className="text-[#008744]">$0.99</span>
                 </span>
                 <span className="bg-white border border-slate-300 px-3 py-1 rounded-full font-bold text-slate-900 shadow-xs">
-                  .AI <span className="text-[#008a45]">$69.99</span>
+                  .AI <span className="text-[#008744]">$69.99</span>
                 </span>
                 <span className="bg-white border border-slate-300 px-3 py-1 rounded-full font-bold text-slate-900 shadow-xs">
-                  .PK <span className="text-[#008a45]">$8.99</span>
+                  .PK <span className="text-[#008744]">$8.99</span>
                 </span>
               </div>
 
               {/* Trust Badges */}
               <div className="flex flex-wrap items-center justify-center gap-8 pt-4 text-xs font-bold text-slate-600">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#008a45]" />
+                  <ShieldCheck className="w-4 h-4 text-[#008744]" />
                   <span>Free Privacy Protection Forever</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -227,13 +227,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-17-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-purple-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-purple-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 17
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 17: GoDaddy Airo™ AI Business Launchpad</span>
-                  <span className="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">
+                  <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">
                     GoDaddy Airo™
                   </span>
                 </h3>
@@ -263,7 +263,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-[1.12]">
                     Bring your idea online in seconds with GoDaddy AI.
                   </h1>
                   <p className="text-base text-slate-300 font-medium leading-relaxed max-w-xl">
@@ -314,7 +314,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                       <Sparkles className="w-3.5 h-3.5 text-purple-400" />
                       GoDaddy Airo™ Live Pack
                     </span>
-                    <span className="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-mono text-[10px]">
+                    <span className="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-mono text-xs">
                       READY IN 28s
                     </span>
                   </div>
@@ -322,7 +322,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <div className="space-y-3">
                     <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
                       <div>
-                        <div className="text-slate-400 text-[10px]">AI Suggested Domain</div>
+                        <div className="text-slate-400 text-xs">AI Suggested Domain</div>
                         <div className="font-bold text-white font-mono mt-0.5">{s17Result || 'lahorecoffeeroasters.com'}</div>
                       </div>
                       <span className="text-emerald-400 font-bold">$4.99/yr</span>
@@ -330,7 +330,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
                     <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
                       <div>
-                        <div className="text-slate-400 text-[10px]">Auto-Generated Storefront</div>
+                        <div className="text-slate-400 text-xs">Auto-Generated Storefront</div>
                         <div className="font-bold text-white mt-0.5">3-Page Responsive Website</div>
                       </div>
                       <span className="text-purple-400 font-bold">Included</span>
@@ -338,7 +338,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
                     <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
                       <div>
-                        <div className="text-slate-400 text-[10px]">Professional Email</div>
+                        <div className="text-slate-400 text-xs">Professional Email</div>
                         <div className="font-bold text-white font-mono mt-0.5">hello@{s17Result || 'lahorecoffee.com'}</div>
                       </div>
                       <span className="text-purple-400 font-bold">Free Trial</span>
@@ -348,7 +348,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="w-full bg-[#008a45] hover:bg-[#007038] text-white font-black py-3 rounded-xl text-xs transition-all cursor-pointer flex items-center justify-center gap-2 shadow-md"
+                    className="w-full bg-[#008744] hover:bg-[#006E37] text-white font-semibold py-3 rounded-xl text-xs transition-all cursor-pointer flex items-center justify-center gap-2 shadow-md"
                   >
                     <span>Claim Your AI Business Kit ($1.99/mo)</span>
                     <ArrowRight className="w-4 h-4" />
@@ -368,13 +368,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-18-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-semibold flex items-center justify-center text-sm shadow-xs">
                 18
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 18: GoDaddy $1.99 All-In-One Starter Bundle</span>
-                  <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+                  <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
                     High Conversion
                   </span>
                 </h3>
@@ -398,12 +398,12 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
               <div className="lg:col-span-7 space-y-6 text-left">
-                <div className="inline-flex items-center gap-2 bg-[#fed000] text-slate-950 px-3.5 py-1 rounded-full text-xs font-black uppercase">
+                <div className="inline-flex items-center gap-2 bg-[#F59E0B] text-slate-950 px-3.5 py-1 rounded-full text-xs font-semibold uppercase">
                   <span>⚡ GoDaddy Starter Pack • Save 75%</span>
                 </div>
 
                 <div className="space-y-3">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Everything you need to get online for just $1.99/mo.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -413,19 +413,19 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-slate-800">
                   <div className="flex items-center gap-2 p-2 bg-slate-50 rounded-xl border border-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#008a45]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#008744]" />
                     <span>Free .COM Domain Included</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-slate-50 rounded-xl border border-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#008a45]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#008744]" />
                     <span>Professional Business Email</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-slate-50 rounded-xl border border-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#008a45]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#008744]" />
                     <span>Free Wildcard SSL Security</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-slate-50 rounded-xl border border-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#008a45]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#008744]" />
                     <span>30-Day Money-Back Guarantee</span>
                   </div>
                 </div>
@@ -434,7 +434,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg shadow-emerald-700/20 flex items-center gap-2"
+                    className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg shadow-emerald-700/20 flex items-center gap-2"
                   >
                     <span>Get Started for $1.99/mo</span>
                     <ArrowRight className="w-5 h-5" />
@@ -453,14 +453,14 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
               {/* Bundle Pricing Card */}
               <div className="lg:col-span-5">
                 <div className="bg-slate-950 text-white rounded-3xl p-7 border border-slate-800 shadow-2xl space-y-5 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 bg-[#fed000] text-slate-950 font-black text-[10px] px-4 py-1 rounded-bl-xl uppercase tracking-wider">
+                  <div className="absolute top-0 right-0 bg-[#F59E0B] text-slate-950 font-semibold text-xs px-4 py-1 rounded-bl-xl uppercase tracking-wider">
                     BEST SELLER
                   </div>
 
                   <div>
                     <div className="text-xs text-slate-400 font-bold uppercase tracking-wider">Web Hosting Starter Bundle</div>
                     <div className="flex items-baseline gap-2 mt-2">
-                      <span className="text-4xl sm:text-5xl font-black text-white">$1.99</span>
+                      <span className="text-4xl sm:text-5xl font-bold text-white">$1.99</span>
                       <span className="text-slate-400 text-sm font-normal">/month</span>
                       <span className="line-through text-slate-500 text-sm">$8.99/mo</span>
                     </div>
@@ -485,7 +485,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                     </div>
                   </div>
 
-                  <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-[11px] text-slate-400 text-center">
+                  <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-400 text-center">
                     🔒 Risk-free 30-day money-back guarantee. No questions asked.
                   </div>
                 </div>
@@ -503,13 +503,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-19-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-teal-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 19
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 19: GoDaddy Entrepreneur & Small Business Story</span>
-                  <span className="text-[10px] bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full border border-teal-500/30">
+                  <span className="text-xs bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full border border-teal-500/30">
                     Real Creators
                   </span>
                 </h3>
@@ -539,7 +539,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Build your dream. Sell everywhere. Grow your business.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -551,7 +551,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md flex items-center gap-2"
+                    className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md flex items-center gap-2"
                   >
                     <span>Start Your Store Free</span>
                     <ArrowRight className="w-5 h-5" />
@@ -571,7 +571,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
               <div className="lg:col-span-5">
                 <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-2xl space-y-4 relative">
                   <div className="flex items-center gap-4 pb-4 border-b border-slate-100">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-rose-500 text-white font-black text-xl flex items-center justify-center shadow-md">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-rose-500 text-white font-semibold text-xl flex items-center justify-center shadow-md">
                       MB
                     </div>
                     <div>
@@ -583,21 +583,21 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="p-3 bg-emerald-50 rounded-2xl border border-emerald-100">
                       <div className="text-emerald-700 font-medium">Monthly Revenue</div>
-                      <div className="text-lg font-black text-emerald-900 mt-0.5">$24,850</div>
+                      <div className="text-lg font-semibold text-emerald-900 mt-0.5">$24,850</div>
                     </div>
                     <div className="p-3 bg-blue-50 rounded-2xl border border-blue-100">
                       <div className="text-blue-700 font-medium">Store Uptime</div>
-                      <div className="text-lg font-black text-blue-900 mt-0.5">99.99%</div>
+                      <div className="text-lg font-semibold text-blue-900 mt-0.5">99.99%</div>
                     </div>
                   </div>
 
                   <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 text-xs space-y-1.5">
                     <div className="flex items-center gap-2 text-slate-700 font-semibold">
-                      <Check className="w-4 h-4 text-[#008a45]" />
+                      <Check className="w-4 h-4 text-[#008744]" />
                       <span>Accepts Credit Cards & Apple Pay</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-700 font-semibold">
-                      <Check className="w-4 h-4 text-[#008a45]" />
+                      <Check className="w-4 h-4 text-[#008744]" />
                       <span>Automated Shipping & Tax Tracking</span>
                     </div>
                   </div>
@@ -616,13 +616,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-20-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-[#fed000] text-slate-950 font-black flex items-center justify-center text-sm shadow-xs border border-slate-900">
+              <span className="w-8 h-8 rounded-xl bg-[#F59E0B] text-slate-950 font-semibold flex items-center justify-center text-sm shadow-xs border border-slate-900">
                 20
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 20: GoDaddy Mega Promo & Countdown Sale</span>
-                  <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+                  <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
                     Mega Promo
                   </span>
                 </h3>
@@ -647,13 +647,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
             <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
               
-              <div className="inline-flex items-center gap-3 bg-[#fed000] text-slate-950 px-5 py-2 rounded-full font-black text-xs uppercase tracking-wider shadow-lg">
+              <div className="inline-flex items-center gap-3 bg-[#F59E0B] text-slate-950 px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider shadow-lg">
                 <Timer className="w-4 h-4 text-slate-950" />
                 <span>LIMITED TIME FLASH SALE • CODE: FLASH75 APPLIED</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
-                Launch your website for only <span className="text-[#fed000]">$1.49/mo</span>.
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
+                Launch your website for only <span className="text-[#F59E0B]">$1.49/mo</span>.
               </h1>
 
               <p className="text-lg text-slate-300 max-w-2xl mx-auto font-medium">
@@ -663,18 +663,18 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
               {/* Countdown Clock Display */}
               <div className="flex items-center justify-center gap-3 pt-2">
                 <div className="bg-slate-900 border border-slate-800 p-3 rounded-2xl w-20 text-center">
-                  <div className="text-2xl font-black text-[#fed000]">08</div>
-                  <div className="text-[10px] text-slate-400 uppercase">Hours</div>
+                  <div className="text-2xl font-semibold text-[#F59E0B]">08</div>
+                  <div className="text-xs text-slate-400 uppercase">Hours</div>
                 </div>
-                <span className="text-2xl font-black text-slate-600">:</span>
+                <span className="text-2xl font-semibold text-slate-600">:</span>
                 <div className="bg-slate-900 border border-slate-800 p-3 rounded-2xl w-20 text-center">
-                  <div className="text-2xl font-black text-[#fed000]">42</div>
-                  <div className="text-[10px] text-slate-400 uppercase">Mins</div>
+                  <div className="text-2xl font-semibold text-[#F59E0B]">42</div>
+                  <div className="text-xs text-slate-400 uppercase">Mins</div>
                 </div>
-                <span className="text-2xl font-black text-slate-600">:</span>
+                <span className="text-2xl font-semibold text-slate-600">:</span>
                 <div className="bg-slate-900 border border-slate-800 p-3 rounded-2xl w-20 text-center">
-                  <div className="text-2xl font-black text-[#fed000]">19</div>
-                  <div className="text-[10px] text-slate-400 uppercase">Secs</div>
+                  <div className="text-2xl font-semibold text-[#F59E0B]">19</div>
+                  <div className="text-xs text-slate-400 uppercase">Secs</div>
                 </div>
               </div>
 
@@ -682,7 +682,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 <button
                   type="button"
                   onClick={onOpenPricing}
-                  className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-10 py-4 rounded-full text-base transition-all cursor-pointer shadow-xl flex items-center gap-2 hover:scale-105"
+                  className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-10 py-4 rounded-full text-base transition-all cursor-pointer shadow-xl flex items-center gap-2 hover:scale-105"
                 >
                   <span>Claim 75% Discount Now</span>
                   <ArrowRight className="w-5 h-5" />
@@ -705,13 +705,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-21-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-blue-700 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-blue-700 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 21
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 21: GoDaddy Managed WordPress Pro</span>
-                  <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
                     WordPress
                   </span>
                 </h3>
@@ -741,7 +741,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Managed WordPress that takes care of everything for you.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -753,7 +753,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={() => onNavigate('wordpress')}
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md flex items-center gap-2"
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md flex items-center gap-2"
                   >
                     <span>Start WordPress ($2.49/mo)</span>
                     <ArrowRight className="w-5 h-5" />
@@ -774,17 +774,17 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-2xl space-y-3">
                   <div className="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
                     <span className="font-bold text-slate-900">WordPress Health & Security</span>
-                    <span className="text-[#008a45] font-bold">100% Fully Managed</span>
+                    <span className="text-[#008744] font-bold">100% Fully Managed</span>
                   </div>
 
                   <div className="space-y-2 text-xs">
                     <div className="flex items-center justify-between p-2.5 bg-slate-50 rounded-xl">
                       <span className="font-medium text-slate-700">Auto WordPress Core Updates</span>
-                      <span className="text-[#008a45] font-bold">Active</span>
+                      <span className="text-[#008744] font-bold">Active</span>
                     </div>
                     <div className="flex items-center justify-between p-2.5 bg-slate-50 rounded-xl">
                       <span className="font-medium text-slate-700">Daily Cloud Backups (90 Days)</span>
-                      <span className="text-[#008a45] font-bold">1-Click Restore</span>
+                      <span className="text-[#008744] font-bold">1-Click Restore</span>
                     </div>
                     <div className="flex items-center justify-between p-2.5 bg-slate-50 rounded-xl">
                       <span className="font-medium text-slate-700">1-Click Staging Environment</span>
@@ -792,7 +792,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                     </div>
                     <div className="flex items-center justify-between p-2.5 bg-slate-50 rounded-xl">
                       <span className="font-medium text-slate-700">LiteSpeed Object Caching</span>
-                      <span className="text-[#008a45] font-bold">3.2x Boost</span>
+                      <span className="text-[#008744] font-bold">3.2x Boost</span>
                     </div>
                   </div>
                 </div>
@@ -810,13 +810,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-22-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-emerald-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 22
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 22: GoDaddy Commerce & Point of Sale (POS)</span>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                     E-Commerce POS
                   </span>
                 </h3>
@@ -846,7 +846,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Sell anywhere: in person, online, and on social media.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -858,7 +858,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2 max-w-lg">
                   <div className="flex justify-between text-xs font-bold text-slate-700">
                     <span>Monthly Sales Volume:</span>
-                    <span className="text-[#008a45] font-mono text-sm">${monthlySales.toLocaleString()}</span>
+                    <span className="text-[#008744] font-mono text-sm">${monthlySales.toLocaleString()}</span>
                   </div>
                   <input
                     type="range"
@@ -867,11 +867,11 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                     step={1000}
                     value={monthlySales}
                     onChange={(e) => setMonthlySales(Number(e.target.value))}
-                    className="w-full accent-[#008a45] cursor-pointer"
+                    className="w-full accent-[#008744] cursor-pointer"
                   />
-                  <div className="flex justify-between text-[11px] text-slate-500 font-medium">
+                  <div className="flex justify-between text-xs text-slate-500 font-medium">
                     <span>Hostxeon Fee: 2.3%</span>
-                    <span className="text-[#008a45] font-bold">You Keep: ${(monthlySales * 0.977).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                    <span className="text-[#008744] font-bold">You Keep: ${(monthlySales * 0.977).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
                   </div>
                 </div>
 
@@ -879,7 +879,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md"
+                    className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md"
                   >
                     Start Selling with GoDaddy POS
                   </button>
@@ -891,24 +891,24 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 <div className="bg-slate-900 text-white rounded-3xl p-6 border border-slate-800 shadow-2xl space-y-4">
                   <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
                     <span className="font-bold text-slate-300">Live POS Terminal</span>
-                    <span className="text-emerald-400 font-mono text-[10px] uppercase">Synced Everywhere</span>
+                    <span className="text-emerald-400 font-mono text-xs uppercase">Synced Everywhere</span>
                   </div>
 
                   <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-2">
                     <div className="text-xs text-slate-400">Recent Customer Transaction</div>
-                    <div className="text-2xl font-black text-white">$142.50</div>
-                    <div className="text-[11px] text-emerald-400 flex items-center gap-1">
+                    <div className="text-2xl font-bold text-white">$142.50</div>
+                    <div className="text-xs text-emerald-400 flex items-center gap-1">
                       <Check className="w-3.5 h-3.5" /> Tap to Pay on iPhone Approved
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="p-2.5 bg-slate-950 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">Online Store</div>
+                      <div className="text-slate-400 text-xs">Online Store</div>
                       <div className="font-bold text-white mt-0.5">84 Orders Today</div>
                     </div>
                     <div className="p-2.5 bg-slate-950 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">Retail Counter</div>
+                      <div className="text-slate-400 text-xs">Retail Counter</div>
                       <div className="font-bold text-white mt-0.5">38 Walk-in Taps</div>
                     </div>
                   </div>
@@ -927,13 +927,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-23-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-blue-500 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-blue-500 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 23
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 23: GoDaddy Professional Business Email</span>
-                  <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
                     Business Email
                   </span>
                 </h3>
@@ -963,7 +963,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Customers are 9x more likely to choose a business with branded email.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -975,7 +975,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={() => onNavigate('domains')}
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md"
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md"
                   >
                     Get Business Email ($1.99/mo)
                   </button>
@@ -995,9 +995,9 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <div className="p-3 bg-blue-50/70 rounded-xl border border-blue-100 text-xs space-y-1">
                     <div className="font-bold text-slate-900 flex justify-between">
                       <span>Enterprise Contract Signed</span>
-                      <span className="text-[10px] text-slate-500">10:42 AM</span>
+                      <span className="text-xs text-slate-500">10:42 AM</span>
                     </div>
-                    <p className="text-slate-600 text-[11px]">
+                    <p className="text-slate-600 text-xs">
                       "Hi Sarah, we just confirmed the $15,000 project proposal sent from your company email."
                     </p>
                   </div>
@@ -1021,13 +1021,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-24-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-emerald-700 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-emerald-700 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 24
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 24: GoDaddy Web Security & Trust Seal</span>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                     Security
                   </span>
                 </h3>
@@ -1057,7 +1057,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.12]">
                     Protect your site and keep your visitors safe.
                   </h1>
                   <p className="text-base text-slate-300 leading-relaxed max-w-xl">
@@ -1069,7 +1069,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg shadow-emerald-700/20"
+                    className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg shadow-emerald-700/20"
                   >
                     Secure Your Site ($4.99/mo)
                   </button>
@@ -1084,7 +1084,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                       <ShieldCheck className="w-4 h-4 text-emerald-400" />
                       GoDaddy Verified Trust Seal
                     </span>
-                    <span className="bg-emerald-500/20 text-emerald-300 text-[10px] px-2 py-0.5 rounded-full font-mono">
+                    <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2 py-0.5 rounded-full font-mono">
                       CLEAN & SAFE
                     </span>
                   </div>
@@ -1118,13 +1118,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-25-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-amber-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-amber-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 25
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 25: GoDaddy Domain Broker & Appraisal Engine</span>
-                  <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+                  <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
                     Appraisal
                   </span>
                 </h3>
@@ -1154,7 +1154,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Find out what your domain name is worth.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -1173,7 +1173,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   />
                   <button
                     type="submit"
-                    className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-black px-6 py-3.5 rounded-xl text-sm transition-all cursor-pointer shadow-md"
+                    className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-6 py-3.5 rounded-xl text-sm transition-all cursor-pointer shadow-md"
                   >
                     Value Domain
                   </button>
@@ -1190,8 +1190,8 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
                   <div className="p-4 bg-amber-50/60 rounded-2xl border border-amber-100 text-center space-y-1">
                     <div className="text-xs text-amber-800 font-mono font-bold">{appraiseDomain}</div>
-                    <div className="text-3xl sm:text-4xl font-black text-slate-900">{appraisalValue}</div>
-                    <div className="text-[11px] text-slate-500">Comparable sales average in this category</div>
+                    <div className="text-3xl sm:text-4xl font-bold text-slate-900">{appraisalValue}</div>
+                    <div className="text-xs text-slate-500">Comparable sales average in this category</div>
                   </div>
 
                   <button
@@ -1216,13 +1216,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-26-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-[#008a45] text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-[#008744] text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 26
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 26: GoDaddy 24/7 Human Phone & Live Chat</span>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                     Human Support
                   </span>
                 </h3>
@@ -1246,13 +1246,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
               <div className="lg:col-span-7 space-y-6 text-left">
-                <div className="inline-flex items-center gap-2 bg-[#008a45]/20 text-emerald-400 border border-[#008a45]/30 px-3.5 py-1 rounded-full text-xs font-bold">
+                <div className="inline-flex items-center gap-2 bg-[#008744]/20 text-emerald-400 border border-[#008744]/30 px-3.5 py-1 rounded-full text-xs font-bold">
                   <Headphones className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Award-Winning GoDaddy Guides By Your Side</span>
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.12]">
                     We're here for you with real humans 24/7.
                   </h1>
                   <p className="text-base text-slate-300 leading-relaxed max-w-xl">
@@ -1263,7 +1263,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 <div className="flex flex-wrap items-center gap-4 pt-2">
                   <a
                     href="tel:+18005550199"
-                    className="bg-[#008a45] hover:bg-[#007038] text-white font-black px-7 py-4 rounded-xl text-sm transition-all cursor-pointer shadow-lg flex items-center gap-2"
+                    className="bg-[#008744] hover:bg-[#006E37] text-white font-semibold px-7 py-4 rounded-xl text-sm transition-all cursor-pointer shadow-lg flex items-center gap-2"
                   >
                     <PhoneCall className="w-4 h-4" />
                     <span>Call a Guide: +1 (800) 555-0199</span>
@@ -1293,8 +1293,8 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
                   <div className="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
                     <div className="text-xs text-slate-400">Average Phone Wait Time</div>
-                    <div className="text-3xl font-black text-emerald-400">1 min 42 sec</div>
-                    <div className="text-[11px] text-slate-400">100% in-house hosting & domain experts</div>
+                    <div className="text-3xl font-semibold text-emerald-400">1 min 42 sec</div>
+                    <div className="text-xs text-slate-400">100% in-house hosting & domain experts</div>
                   </div>
 
                   <div className="flex items-center justify-between text-xs text-slate-400">
@@ -1316,13 +1316,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-27-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-indigo-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-indigo-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 27
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 27: GoDaddy Digital Marketing & SEO</span>
-                  <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/30">
+                  <span className="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/30">
                     Marketing Suite
                   </span>
                 </h3>
@@ -1352,7 +1352,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Get found on Google and turn visitors into buyers.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -1364,7 +1364,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md"
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-md"
                   >
                     Boost Your Traffic ($3.99/mo)
                   </button>
@@ -1383,17 +1383,17 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                     <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 flex justify-between items-center">
                       <div>
                         <div className="font-bold text-slate-900">Google SEO Health Score</div>
-                        <div className="text-[10px] text-slate-500">Keywords on Page 1: 14</div>
+                        <div className="text-xs text-slate-500">Keywords on Page 1: 14</div>
                       </div>
-                      <span className="text-lg font-black text-emerald-600">96/100</span>
+                      <span className="text-lg font-semibold text-emerald-600">96/100</span>
                     </div>
 
                     <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 flex justify-between items-center">
                       <div>
                         <div className="font-bold text-slate-900">Email Campaign Open Rate</div>
-                        <div className="text-[10px] text-slate-500">Industry avg: 18%</div>
+                        <div className="text-xs text-slate-500">Industry avg: 18%</div>
                       </div>
-                      <span className="text-lg font-black text-indigo-600">38.4%</span>
+                      <span className="text-lg font-semibold text-indigo-600">38.4%</span>
                     </div>
                   </div>
                 </div>
@@ -1411,13 +1411,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-28-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-pink-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-pink-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 28
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 28: GoDaddy Free AI Logo & Brand Kit</span>
-                  <span className="text-[10px] bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded-full border border-pink-500/30">
+                  <span className="text-xs bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded-full border border-pink-500/30">
                     Logo Maker
                   </span>
                 </h3>
@@ -1447,7 +1447,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12]">
                     Design a professional brand logo in 60 seconds.
                   </h1>
                   <p className="text-base text-slate-600 leading-relaxed max-w-xl">
@@ -1467,7 +1467,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="bg-pink-600 hover:bg-pink-700 text-white font-black px-6 py-3 rounded-xl text-sm transition-all cursor-pointer shadow-md"
+                    className="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all cursor-pointer shadow-md"
                   >
                     Make My Logo
                   </button>
@@ -1477,16 +1477,16 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
               {/* Logo Preview Card */}
               <div className="lg:col-span-5">
                 <div className="bg-slate-950 text-white rounded-3xl p-6 border border-slate-800 shadow-2xl space-y-4 text-center">
-                  <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-tr from-pink-500 to-indigo-600 flex items-center justify-center text-3xl font-black shadow-lg">
+                  <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-tr from-pink-500 to-indigo-600 flex items-center justify-center text-3xl font-semibold shadow-lg">
                     {brandName.charAt(0) || 'A'}
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-black tracking-tight text-white">{brandName || 'Your Brand'}</h4>
+                    <h4 className="text-xl font-semibold tracking-tight text-white">{brandName || 'Your Brand'}</h4>
                     <p className="text-xs text-slate-400 mt-0.5">High-Resolution Vector SVG Ready</p>
                   </div>
 
-                  <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-[11px] text-slate-300 flex items-center justify-center gap-4">
+                  <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-300 flex items-center justify-center gap-4">
                     <span>✓ Free Download</span>
                     <span>✓ Commercial License</span>
                     <span>✓ Social Media Icons</span>
@@ -1506,13 +1506,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-29-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-slate-800 text-white font-black flex items-center justify-center text-sm shadow-xs border border-slate-700">
+              <span className="w-8 h-8 rounded-xl bg-slate-800 text-white font-semibold flex items-center justify-center text-sm shadow-xs border border-slate-700">
                 29
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 29: GoDaddy Pro & Reseller Agency Hub</span>
-                  <span className="text-[10px] bg-slate-500/20 text-slate-300 px-2 py-0.5 rounded-full border border-slate-500/30">
+                  <span className="text-xs bg-slate-500/20 text-slate-300 px-2 py-0.5 rounded-full border border-slate-500/30">
                     GoDaddy Pro
                   </span>
                 </h3>
@@ -1542,7 +1542,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.12]">
                     Manage all your client websites from one single dashboard.
                   </h1>
                   <p className="text-base text-slate-300 leading-relaxed max-w-xl">
@@ -1554,7 +1554,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={() => onNavigate('reseller')}
-                    className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg"
+                    className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg"
                   >
                     Join GoDaddy Pro Free
                   </button>
@@ -1573,7 +1573,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                     <div className="p-2.5 bg-slate-900 rounded-xl border border-slate-800 flex justify-between items-center">
                       <div>
                         <div className="font-bold text-white">ApexLawFirm.com</div>
-                        <div className="text-[10px] text-slate-400">All plugins updated</div>
+                        <div className="text-xs text-slate-400">All plugins updated</div>
                       </div>
                       <span className="text-emerald-400 font-bold">99.99%</span>
                     </div>
@@ -1581,7 +1581,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                     <div className="p-2.5 bg-slate-900 rounded-xl border border-slate-800 flex justify-between items-center">
                       <div>
                         <div className="font-bold text-white">BoutiqueBakery.pk</div>
-                        <div className="text-[10px] text-slate-400">Automated backup verified</div>
+                        <div className="text-xs text-slate-400">Automated backup verified</div>
                       </div>
                       <span className="text-emerald-400 font-bold">99.98%</span>
                     </div>
@@ -1601,13 +1601,13 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
         <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-30-wrapper">
           <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+              <span className="w-8 h-8 rounded-xl bg-blue-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                 30
               </span>
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <span>Sample 30: GoDaddy High-Performance NVMe Cloud VPS</span>
-                  <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
                     Cloud VPS
                   </span>
                 </h3>
@@ -1637,7 +1637,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                 </div>
 
                 <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12]">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.12]">
                     High-power cloud VPS with dedicated resources.
                   </h1>
                   <p className="text-base text-slate-300 leading-relaxed max-w-xl">
@@ -1649,7 +1649,7 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
                   <button
                     type="button"
                     onClick={() => onNavigate('vps')}
-                    className="bg-blue-600 hover:bg-blue-500 text-white font-black px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg shadow-blue-600/20"
+                    className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl text-base transition-all cursor-pointer shadow-lg shadow-blue-600/20"
                   >
                     Configure Cloud VPS ($4.99/mo)
                   </button>
@@ -1666,19 +1666,19 @@ export const GoDaddyHeroBatch: React.FC<GoDaddyBatchProps> = ({
 
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">CPU Cores</div>
+                      <div className="text-slate-400 text-xs">CPU Cores</div>
                       <div className="text-base font-bold text-white mt-1">2 vCPU Dedicated</div>
                     </div>
                     <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">RAM Memory</div>
+                      <div className="text-slate-400 text-xs">RAM Memory</div>
                       <div className="text-base font-bold text-white mt-1">4 GB DDR5</div>
                     </div>
                     <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">NVMe Storage</div>
+                      <div className="text-slate-400 text-xs">NVMe Storage</div>
                       <div className="text-base font-bold text-white mt-1">80 GB SSD</div>
                     </div>
                     <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                      <div className="text-slate-400 text-[10px]">OS Choice</div>
+                      <div className="text-slate-400 text-xs">OS Choice</div>
                       <div className="text-base font-bold text-white mt-1">Ubuntu / Alma</div>
                     </div>
                   </div>

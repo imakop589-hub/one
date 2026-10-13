@@ -107,7 +107,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ policyType, onClose }) =
         {/* Header */}
         <div className="p-6 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-emerald-500/20 text-[#fed000] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-500/20 text-[#F59E0B] flex items-center justify-center">
               <Icon className="w-5 h-5" />
             </div>
             <div>
@@ -129,7 +129,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ policyType, onClose }) =
           {active.sections.map((sec, idx) => (
             <div key={idx} className="space-y-1.5 pb-4 border-b border-gray-100 last:border-b-0">
               <h4 className="font-bold text-slate-900 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#008a45] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>{sec.heading}</span>
               </h4>
               <p className="text-xs text-gray-600 pl-6 leading-relaxed">{sec.text}</p>

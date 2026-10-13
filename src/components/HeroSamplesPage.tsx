@@ -123,10 +123,10 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
             <div>
               <div className="flex items-center gap-2">
-                <span className="bg-[#fed000] text-slate-950 text-xs font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                <span className="bg-[#F59E0B] text-slate-950 text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                   30 Hero Showcase
                 </span>
-                <span className="bg-emerald-100 text-[#008a45] text-xs font-bold px-2 py-0.5 rounded-full uppercase">
+                <span className="bg-emerald-100 text-[#008744] text-xs font-bold px-2 py-0.5 rounded-full uppercase">
                   +15 GoDaddy Inspired
                 </span>
                 <h1 className="text-base sm:text-lg font-bold text-slate-900">
@@ -161,9 +161,9 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                     setFilterTab('godaddy');
                     setSelectedSample('all');
                   }}
-                  className={`px-3 py-1 rounded-lg text-xs font-black transition-all cursor-pointer flex items-center gap-1 ${
+                  className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                     filterTab === 'godaddy'
-                      ? 'bg-[#008a45] text-white shadow-xs'
+                      ? 'bg-[#008744] text-white shadow-xs'
                       : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
@@ -200,7 +200,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
             <button
               type="button"
               onClick={() => setSelectedSample('all')}
-              className={`px-3 py-1.5 rounded-lg font-black shrink-0 transition-all cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg font-semibold shrink-0 transition-all cursor-pointer ${
                 selectedSample === 'all'
                   ? 'bg-slate-900 text-white shadow-xs'
                   : 'bg-slate-200 hover:bg-slate-300 text-slate-800'
@@ -216,7 +216,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                 className={`px-2.5 py-1.5 rounded-lg font-bold shrink-0 transition-all cursor-pointer flex items-center gap-1.5 ${
                   selectedSample === hero.id
                     ? hero.group === 'godaddy'
-                      ? 'bg-[#008a45] text-white shadow-xs'
+                      ? 'bg-[#008744] text-white shadow-xs'
                       : 'bg-blue-600 text-white shadow-xs'
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                 }`}
@@ -239,13 +239,13 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
           <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-1-wrapper">
             <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-xl bg-[#008a45] text-white font-black flex items-center justify-center text-sm shadow-xs">
+                <span className="w-8 h-8 rounded-xl bg-[#008744] text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                   01
                 </span>
                 <div>
                   <h3 className="font-bold text-base text-white flex items-center gap-2">
                     <span>Sample 1: Modern Interactive Command Center</span>
-                    <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                       50/50 Split
                     </span>
                   </h3>
@@ -284,13 +284,13 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
           <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-2-wrapper">
             <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+                <span className="w-8 h-8 rounded-xl bg-blue-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                   02
                 </span>
                 <div>
                   <h3 className="font-bold text-base text-white flex items-center gap-2">
                     <span>Sample 2: Clean Minimalist & Instant Domain Search</span>
-                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
                       High Conversion
                     </span>
                   </h3>
@@ -320,9 +320,9 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                 <div className="lg:col-span-7 space-y-6 text-left">
                   {/* Rating Tag */}
                   <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3.5 py-1.5 shadow-2xs text-xs font-semibold text-slate-700">
-                    <div className="flex items-center text-[#fed000]">
+                    <div className="flex items-center text-[#F59E0B]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 fill-[#fed000]" />
+                        <Star key={i} className="w-3.5 h-3.5 fill-[#F59E0B]" />
                       ))}
                     </div>
                     <span>4.9 / 5 Rating</span>
@@ -365,7 +365,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                       </div>
                       <button
                         type="submit"
-                        className="bg-[#008a45] hover:bg-[#007038] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 shrink-0"
+                        className="bg-[#008744] hover:bg-[#006E37] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 shrink-0"
                       >
                         <span>Search Domain</span>
                         <ArrowRight className="w-4 h-4" />
@@ -373,7 +373,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                     </form>
                     
                     {/* Fast TLD Badges */}
-                    <div className="flex flex-wrap items-center gap-2 pt-2 px-2 text-[11px] text-slate-500 font-medium border-t border-slate-100 mt-2">
+                    <div className="flex flex-wrap items-center gap-2 pt-2 px-2 text-xs text-slate-500 font-medium border-t border-slate-100 mt-2">
                       <span>Popular:</span>
                       <span className="font-bold text-slate-900 bg-slate-100 px-2 py-0.5 rounded">.com $4.99/yr</span>
                       <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">.store $1.99</span>
@@ -384,15 +384,15 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                   {/* Value Props Bullet List */}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-slate-700 font-medium">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#008a45] shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0" />
                       <span>Free .COM Domain</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#008a45] shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0" />
                       <span>Free SSL & DNSSEC</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#008a45] shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0" />
                       <span>30-Day Money Back</span>
                     </div>
                   </div>
@@ -409,7 +409,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                       </div>
                       <div>
                         <div className="text-xs font-bold text-slate-900">New Order: $148.00</div>
-                        <div className="text-[10px] text-slate-500">Stripe payment received</div>
+                        <div className="text-xs text-slate-500">Stripe payment received</div>
                       </div>
                     </div>
 
@@ -422,7 +422,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                           <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
                           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                         </div>
-                        <div className="flex-1 bg-white rounded-md px-2 py-0.5 text-[10px] font-mono text-slate-500 truncate text-center">
+                        <div className="flex-1 bg-white rounded-md px-2 py-0.5 text-xs font-mono text-slate-500 truncate text-center">
                           https://lumina-coffee.com
                         </div>
                       </div>
@@ -431,30 +431,30 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                       <div className="p-5 space-y-4 bg-gradient-to-b from-amber-50/30 to-white">
                         <div className="flex items-center justify-between">
                           <span className="font-extrabold text-sm text-slate-900">Lumina Artisan Roasters</span>
-                          <span className="text-[10px] font-bold bg-[#fed000] text-slate-950 px-2 py-0.5 rounded-full">
+                          <span className="text-xs font-bold bg-[#F59E0B] text-slate-950 px-2 py-0.5 rounded-full">
                             Cart (2)
                           </span>
                         </div>
 
                         <div className="h-28 bg-slate-900 text-white rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden">
                           <div className="space-y-1 relative z-10">
-                            <span className="text-[9px] bg-white/20 px-1.5 py-0.5 rounded text-white font-semibold">Specialty Roast</span>
+                            <span className="text-xs bg-white/20 px-1.5 py-0.5 rounded text-white font-semibold">Specialty Roast</span>
                             <div className="text-sm font-bold">Single-Origin Ethiopian Yirgacheffe</div>
                           </div>
                           <div className="flex items-center justify-between text-xs font-bold relative z-10">
                             <span>$18.50 / bag</span>
-                            <span className="bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded">Fast Shipping</span>
+                            <span className="bg-emerald-500 text-white text-xs px-2 py-0.5 rounded">Fast Shipping</span>
                           </div>
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 text-center text-xs">
                           <div className="bg-slate-50 border border-slate-100 p-2 rounded-xl">
                             <div className="text-emerald-600 font-extrabold">0.4s</div>
-                            <div className="text-[10px] text-slate-500">Page Speed</div>
+                            <div className="text-xs text-slate-500">Page Speed</div>
                           </div>
                           <div className="bg-slate-50 border border-slate-100 p-2 rounded-xl">
                             <div className="text-slate-900 font-extrabold">100%</div>
-                            <div className="text-[10px] text-slate-500">Uptime SLA</div>
+                            <div className="text-xs text-slate-500">Uptime SLA</div>
                           </div>
                         </div>
                       </div>
@@ -467,7 +467,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                       </div>
                       <div>
                         <div className="text-xs font-bold text-slate-900">Domain Connected</div>
-                        <div className="text-[10px] text-emerald-600 font-medium">SSL Certificate Active</div>
+                        <div className="text-xs text-emerald-600 font-medium">SSL Certificate Active</div>
                       </div>
                     </div>
 
@@ -486,13 +486,13 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
           <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-3-wrapper">
             <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-xl bg-emerald-500 text-slate-950 font-black flex items-center justify-center text-sm shadow-xs">
+                <span className="w-8 h-8 rounded-xl bg-emerald-500 text-slate-950 font-semibold flex items-center justify-center text-sm shadow-xs">
                   03
                 </span>
                 <div>
                   <h3 className="font-bold text-base text-white flex items-center gap-2">
                     <span>Sample 3: Developer & Cloud Infrastructure</span>
-                    <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
                       Obsidian Dark
                     </span>
                   </h3>
@@ -544,19 +544,19 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
                     <div className="bg-slate-900/90 border border-slate-800 p-2.5 rounded-xl">
                       <div className="text-emerald-400 font-mono font-bold text-sm">99.99%</div>
-                      <div className="text-[10px] text-slate-400">Guaranteed SLA</div>
+                      <div className="text-xs text-slate-400">Guaranteed SLA</div>
                     </div>
                     <div className="bg-slate-900/90 border border-slate-800 p-2.5 rounded-xl">
                       <div className="text-white font-mono font-bold text-sm">18ms</div>
-                      <div className="text-[10px] text-slate-400">Edge Latency</div>
+                      <div className="text-xs text-slate-400">Edge Latency</div>
                     </div>
                     <div className="bg-slate-900/90 border border-slate-800 p-2.5 rounded-xl">
                       <div className="text-emerald-400 font-mono font-bold text-sm">7,200 MB/s</div>
-                      <div className="text-[10px] text-slate-400">Read I/O</div>
+                      <div className="text-xs text-slate-400">Read I/O</div>
                     </div>
                     <div className="bg-slate-900/90 border border-slate-800 p-2.5 rounded-xl">
                       <div className="text-white font-mono font-bold text-sm">280+</div>
-                      <div className="text-[10px] text-slate-400">CDN Pops</div>
+                      <div className="text-xs text-slate-400">CDN Pops</div>
                     </div>
                   </div>
 
@@ -589,15 +589,15 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                         <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                         <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                        <span className="text-[11px] text-slate-300 ml-2">bash - hostxeon-cli</span>
+                        <span className="text-xs text-slate-300 ml-2">bash - hostxeon-cli</span>
                       </div>
-                      <span className="text-[10px] text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
+                      <span className="text-xs text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
                         SSH Connected
                       </span>
                     </div>
 
                     {/* Terminal Body */}
-                    <div className="p-4 sm:p-5 space-y-2 text-slate-300 text-[11px] leading-relaxed">
+                    <div className="p-4 sm:p-5 space-y-2 text-slate-300 text-xs leading-relaxed">
                       <div className="text-slate-400 flex items-center gap-2">
                         <span className="text-emerald-400 font-bold">$</span>
                         <span>hostxeon cluster provision --region eu-central-1</span>
@@ -611,15 +611,15 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                         <span className="text-white font-bold">Node Telemetry:</span>
                         <div className="grid grid-cols-3 gap-2 mt-2 font-sans text-xs">
                           <div className="bg-slate-900 p-2 rounded-lg border border-slate-800">
-                            <div className="text-[10px] text-slate-500">Frankfurt (FRA-01)</div>
+                            <div className="text-xs text-slate-500">Frankfurt (FRA-01)</div>
                             <div className="font-bold text-emerald-400">12ms • 100% SLA</div>
                           </div>
                           <div className="bg-slate-900 p-2 rounded-lg border border-slate-800">
-                            <div className="text-[10px] text-slate-500">London (LON-02)</div>
+                            <div className="text-xs text-slate-500">London (LON-02)</div>
                             <div className="font-bold text-emerald-400">16ms • 100% SLA</div>
                           </div>
                           <div className="bg-slate-900 p-2 rounded-lg border border-slate-800">
-                            <div className="text-[10px] text-slate-500">New York (NYC-01)</div>
+                            <div className="text-xs text-slate-500">New York (NYC-01)</div>
                             <div className="font-bold text-emerald-400">22ms • 100% SLA</div>
                           </div>
                         </div>
@@ -644,13 +644,13 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
           <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-4-wrapper">
             <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-xl bg-purple-600 text-white font-black flex items-center justify-center text-sm shadow-xs">
+                <span className="w-8 h-8 rounded-xl bg-purple-600 text-white font-semibold flex items-center justify-center text-sm shadow-xs">
                   04
                 </span>
                 <div>
                   <h3 className="font-bold text-base text-white flex items-center gap-2">
                     <span>Sample 4: Centered All-In-One SaaS Showcase</span>
-                    <span className="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">
                       Linear / Apple Style
                     </span>
                   </h3>
@@ -677,7 +677,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
               <div className="max-w-4xl mx-auto text-center space-y-7">
                 
                 {/* Announcement pill */}
-                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/90 text-[#008a45] rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider shadow-2xs">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/90 text-[#008744] rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider shadow-2xs">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Spring 2026 Release • AI Builder 2.5 & Gen4 Cloud Active</span>
                 </div>
@@ -697,7 +697,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                   <button
                     type="button"
                     onClick={onOpenPricing}
-                    className="w-full sm:w-auto bg-[#008a45] hover:bg-[#007038] text-white font-extrabold px-8 py-4 rounded-xl text-base transition-all shadow-lg hover:shadow-xl cursor-pointer flex items-center justify-center gap-2.5 group"
+                    className="w-full sm:w-auto bg-[#008744] hover:bg-[#006E37] text-white font-extrabold px-8 py-4 rounded-xl text-base transition-all shadow-lg hover:shadow-xl cursor-pointer flex items-center justify-center gap-2.5 group"
                   >
                     <span>Start Free for 14 Days</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -715,10 +715,10 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                 {/* Social Proof Row */}
                 <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs text-slate-500 font-medium">
                   <span className="flex items-center gap-1.5 text-slate-800 font-bold">
-                    <Check className="w-4 h-4 text-[#008a45]" /> Free Domain Included
+                    <Check className="w-4 h-4 text-[#008744]" /> Free Domain Included
                   </span>
                   <span className="flex items-center gap-1.5 text-slate-800 font-bold">
-                    <Check className="w-4 h-4 text-[#008a45]" /> 99.99% Uptime SLA
+                    <Check className="w-4 h-4 text-[#008744]" /> 99.99% Uptime SLA
                   </span>
                   <span className="flex items-center gap-1.5 text-slate-800 font-bold">
                     <Check className="w-4 h-4 text-[#008744]" /> 30-Day Money-Back Guarantee
@@ -735,7 +735,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                         <span className="w-3 h-3 rounded-full bg-emerald-500" />
                         <span className="font-bold ml-2">Hostxeon Global Command Center</span>
                       </div>
-                      <span className="text-emerald-400 font-mono text-[11px] bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
+                      <span className="text-emerald-400 font-mono text-xs bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
                         All Systems Operational
                       </span>
                     </div>
@@ -773,13 +773,13 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
           <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden" id="sample-5-wrapper">
             <div className="bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-black flex items-center justify-center text-sm shadow-xs">
+                <span className="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-semibold flex items-center justify-center text-sm shadow-xs">
                   05
                 </span>
                 <div>
                   <h3 className="font-bold text-base text-white flex items-center gap-2">
                     <span>Sample 5: Domain-First Business Launchpad</span>
-                    <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+                    <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
                       Action Driven
                     </span>
                   </h3>
@@ -825,7 +825,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                   <div className="bg-slate-50 p-3 sm:p-4 rounded-3xl border border-slate-200 shadow-sm space-y-3">
                     <div className="flex flex-col sm:flex-row items-stretch gap-2">
                       <div className="flex-1 flex items-center bg-white rounded-xl border border-slate-300 px-3 py-1 shadow-2xs">
-                        <Globe className="w-5 h-5 text-[#008a45] shrink-0 mr-2" />
+                        <Globe className="w-5 h-5 text-[#008744] shrink-0 mr-2" />
                         <input
                           type="text"
                           value={sample5Domain}
@@ -842,7 +842,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                           if (onSearchDomain) onSearchDomain(`${sample5Domain}${sample5Tld}`);
                           else onNavigate('domains');
                         }}
-                        className="bg-[#008a45] hover:bg-[#007038] text-white font-extrabold px-6 py-3 rounded-xl text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 shrink-0 shadow-sm"
+                        className="bg-[#008744] hover:bg-[#006E37] text-white font-extrabold px-6 py-3 rounded-xl text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 shrink-0 shadow-sm"
                       >
                         <span>Check Availability</span>
                         <ArrowRight className="w-4 h-4" />
@@ -858,7 +858,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                           onClick={() => setSample5Tld(tld)}
                           className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
                             sample5Tld === tld 
-                              ? 'bg-[#008a45] text-white shadow-2xs' 
+                              ? 'bg-[#008744] text-white shadow-2xs' 
                               : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-100'
                           }`}
                         >
@@ -871,15 +871,15 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                   {/* 3 Step Timeline */}
                   <div className="grid grid-cols-3 gap-3 pt-2 text-xs text-slate-600">
                     <div className="flex items-center gap-2 font-bold text-slate-900">
-                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-[#008a45] flex items-center justify-center text-[10px]">1</span>
+                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center text-xs">1</span>
                       <span>Claim Domain</span>
                     </div>
                     <div className="flex items-center gap-2 font-bold text-slate-900">
-                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-[#008a45] flex items-center justify-center text-[10px]">2</span>
+                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center text-xs">2</span>
                       <span>Pick Hosting</span>
                     </div>
                     <div className="flex items-center gap-2 font-bold text-slate-900">
-                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-[#008a45] flex items-center justify-center text-[10px]">3</span>
+                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center text-xs">3</span>
                       <span>Publish Site</span>
                     </div>
                   </div>
@@ -891,12 +891,12 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                     
                     <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                       <div>
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-400">All-In-One Starter Pack</span>
+                        <span className="text-xs uppercase font-bold tracking-wider text-emerald-400">All-In-One Starter Pack</span>
                         <h3 className="text-lg font-bold text-white">Business Launch Bundle</h3>
                       </div>
                       <div className="text-right">
                         <span className="text-xs line-through text-slate-400">$12.99</span>
-                        <div className="text-xl font-extrabold text-[#fed000]">$1.99<span className="text-xs text-slate-300 font-normal">/mo</span></div>
+                        <div className="text-xl font-extrabold text-[#F59E0B]">$1.99<span className="text-xs text-slate-300 font-normal">/mo</span></div>
                       </div>
                     </div>
 
@@ -938,7 +938,7 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
                     <button
                       type="button"
                       onClick={onOpenPricing}
-                      className="w-full bg-[#008a45] hover:bg-[#007038] text-white font-extrabold py-3.5 rounded-xl text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 shadow-lg"
+                      className="w-full bg-[#008744] hover:bg-[#006E37] text-white font-extrabold py-3.5 rounded-xl text-sm transition-colors cursor-pointer flex items-center justify-center gap-2 shadow-lg"
                     >
                       <span>Get Started with This Bundle</span>
                       <ArrowRight className="w-4 h-4" />
@@ -998,9 +998,9 @@ export const HeroSamplesPage: React.FC<HeroSamplesPageProps> = ({
 
       {/* Floating Bottom Notification bar for easy feedback */}
       <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white px-5 py-3 rounded-full shadow-2xl border border-slate-700 backdrop-blur-md flex items-center gap-3 text-xs sm:text-sm font-medium">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#fed000] animate-ping shrink-0" />
+        <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] animate-ping shrink-0" />
         <span className="text-slate-300">
-          In 30 designs (Sample 1 - 30) me se jo pasand aye, uska number batayein (e.g. <strong className="text-[#fed000]">"Sample 16 (GoDaddy Search)"</strong> ya <strong className="text-emerald-400">"Sample 18 (Bundle)"</strong>)!
+          In 30 designs (Sample 1 - 30) me se jo pasand aye, uska number batayein (e.g. <strong className="text-[#F59E0B]">"Sample 16 (GoDaddy Search)"</strong> ya <strong className="text-emerald-400">"Sample 18 (Bundle)"</strong>)!
         </span>
       </div>
 

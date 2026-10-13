@@ -104,7 +104,7 @@ export const DomainsPage: React.FC<DomainsPageProps> = ({
     <div className="min-h-screen bg-[#fcfdfd]" id="domains-page-root">
       {/* GoDaddy Style Quick Domain Sub-Nav Pill Bar */}
       <div className="bg-[#03241b] border-b border-emerald-900/40 py-2.5 sticky top-16 z-30 shadow-xs">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between gap-4 overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between gap-4 overflow-x-auto">
           <div className="flex items-center gap-2">
             {[
               { id: 'register', label: 'Domain Search & Register' },
@@ -121,9 +121,9 @@ export const DomainsPage: React.FC<DomainsPageProps> = ({
                   }
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className={`px-4 py-2 rounded-full text-xs font-black transition-all cursor-pointer shrink-0 ${
+                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                   activeTab === tab.id
-                    ? 'bg-[#fed000] text-slate-950 shadow-sm'
+                    ? 'bg-[#F59E0B] text-slate-950 shadow-sm'
                     : 'text-emerald-100/80 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -134,11 +134,11 @@ export const DomainsPage: React.FC<DomainsPageProps> = ({
 
           <div className="hidden md:flex items-center gap-4 text-xs text-emerald-300 font-bold shrink-0">
             <span className="flex items-center gap-1.5">
-              <span className="text-[#fed000]">✓</span> Free Lifetime WHOIS Privacy
+              <span className="text-[#F59E0B]">✓</span> Free Lifetime WHOIS Privacy
             </span>
             <span className="text-emerald-700">•</span>
             <span className="flex items-center gap-1.5">
-              <span className="text-[#fed000]">✓</span> 0 Downtime Transfers
+              <span className="text-[#F59E0B]">✓</span> 0 Downtime Transfers
             </span>
           </div>
         </div>

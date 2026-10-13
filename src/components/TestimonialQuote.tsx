@@ -26,7 +26,7 @@ export const TestimonialQuote: React.FC<TestimonialQuoteProps> = ({ onStartTrial
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <button
                 onClick={onStartTrial}
-                className="bg-[#fed000] hover:bg-[#ebbe00] active:scale-[0.98] text-gray-950 font-bold px-6 py-3 rounded-full text-sm sm:text-base flex items-center gap-2 shadow-sm transition-all cursor-pointer"
+                className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-[0.98] text-gray-950 font-bold px-6 py-3 rounded-full text-sm sm:text-base flex items-center gap-2 shadow-sm transition-all cursor-pointer"
                 id="testimonial-start-trial-btn"
               >
                 <span>Start free trial</span>
@@ -43,7 +43,7 @@ export const TestimonialQuote: React.FC<TestimonialQuoteProps> = ({ onStartTrial
 
           {/* Right Column: Prominent Quote Card */}
           <div className="lg:col-span-7 bg-[#fbfcfb] border border-emerald-900/10 rounded-3xl p-8 sm:p-12 shadow-sm relative">
-            <Quote className="w-12 h-12 text-[#008a45]/20 absolute top-6 right-6" />
+            <Quote className="w-12 h-12 text-[#008744]/20 absolute top-6 right-6" />
 
             <blockquote className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#111827] tracking-tight leading-snug mb-8">
               “For us, who aren't tech experts or coders, the best part is that we don't have to worry about the technical stuff.”
@@ -51,7 +51,7 @@ export const TestimonialQuote: React.FC<TestimonialQuoteProps> = ({ onStartTrial
 
             {/* Author Profile */}
             <div className="flex items-center gap-4 pt-4 border-t border-gray-200/60">
-              <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#008a45] shrink-0 bg-stone-200 shadow-sm">
+              <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#008744] shrink-0 bg-stone-200 shadow-sm">
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop"
                   alt="Johan Ekman"

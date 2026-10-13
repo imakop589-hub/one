@@ -62,7 +62,7 @@ export const AdminWhmcs: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
         <div>
-          <h1 className="text-2xl font-black text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <ExternalLink className="w-6 h-6 text-amber-400" />
             <span>WHMCS Link Bridge Configuration</span>
           </h1>
@@ -98,7 +98,7 @@ export const AdminWhmcs: React.FC = () => {
         <p className="text-xs text-slate-300 leading-relaxed">
           Hostxeon is strictly structured with a decoupled billing architecture. Customers, credit cards, invoices, automated cPanel/Plesk accounts, KVM virtualization control, and support tickets reside exclusively in your dedicated WHMCS installation (e.g., <code className="text-amber-300 font-mono">billing.hostxeon.com</code>).
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-[11px] text-slate-400">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs text-slate-400">
           <div className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800">
             <strong className="text-white block mb-0.5">Hostxeon CMS (This Repo):</strong>
             Marketing pages, domain search UI, SEO, branding, FAQs, and static pricing copy.

@@ -189,7 +189,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
               <Heading level={1} className="text-2xl sm:text-3xl">
                 Secure Order Checkout
               </Heading>
-              <span className="text-xs font-bold bg-[#e6f4ea] text-[#008a45] px-3 py-1 rounded-full border border-emerald-200">
+              <span className="text-xs font-bold bg-[#e6f4ea] text-[#008744] px-3 py-1 rounded-full border border-emerald-200">
                 30-Day Money-Back Guarantee
               </span>
             </div>
@@ -201,13 +201,13 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
               onClick={() => step > 1 && setStep(1)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
                 step === 1 
-                  ? 'bg-[#008a45] text-white shadow-xs' 
+                  ? 'bg-[#008744] text-white shadow-xs' 
                   : step > 1 
                   ? 'text-emerald-700 hover:bg-emerald-50 cursor-pointer' 
                   : 'text-gray-400'
               }`}
             >
-              <span className="w-4 h-4 rounded-full border border-current flex items-center justify-center text-[10px]">1</span>
+              <span className="w-4 h-4 rounded-full border border-current flex items-center justify-center text-xs">1</span>
               <span>Basket</span>
             </button>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -216,13 +216,13 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
               onClick={() => step > 2 && setStep(2)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
                 step === 2 
-                  ? 'bg-[#008a45] text-white shadow-xs' 
+                  ? 'bg-[#008744] text-white shadow-xs' 
                   : step > 2 
                   ? 'text-emerald-700 hover:bg-emerald-50 cursor-pointer' 
                   : 'text-gray-400'
               }`}
             >
-              <span className="w-4 h-4 rounded-full border border-current flex items-center justify-center text-[10px]">2</span>
+              <span className="w-4 h-4 rounded-full border border-current flex items-center justify-center text-xs">2</span>
               <span>Details</span>
             </button>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -231,13 +231,13 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
               onClick={() => step > 3 && setStep(3)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
                 step === 3 
-                  ? 'bg-[#008a45] text-white shadow-xs' 
+                  ? 'bg-[#008744] text-white shadow-xs' 
                   : step > 3 
                   ? 'text-emerald-700 hover:bg-emerald-50 cursor-pointer' 
                   : 'text-gray-400'
               }`}
             >
-              <span className="w-4 h-4 rounded-full border border-current flex items-center justify-center text-[10px]">3</span>
+              <span className="w-4 h-4 rounded-full border border-current flex items-center justify-center text-xs">3</span>
               <span>Payment</span>
             </button>
           </div>
@@ -295,17 +295,17 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                         className="p-5 rounded-2xl bg-[#fafdfb] border border-emerald-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs hover:border-emerald-300 transition-colors"
                       >
                         <div className="flex items-start gap-3.5">
-                          <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008a45] flex items-center justify-center shrink-0 font-black">
+                          <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008744] flex items-center justify-center shrink-0 font-semibold">
                             <Zap className="w-5 h-5" />
                           </div>
                           <div>
                             <h4 className="font-bold text-sm sm:text-base text-slate-900">{item.title}</h4>
                             <p className="text-xs text-gray-500">{item.subtitle || 'Tier-3 European Cloud NVMe + Free SSL'}</p>
                             <div className="mt-2 flex flex-wrap items-center gap-2">
-                              <span className="text-[11px] bg-emerald-50 text-emerald-800 font-bold px-2.5 py-0.5 rounded-md border border-emerald-200/60">
+                              <span className="text-xs bg-emerald-50 text-emerald-800 font-bold px-2.5 py-0.5 rounded-md border border-emerald-200/60">
                                 {billingCycle === '2yr' ? '2-Year Contract (Best Value)' : billingCycle === 'monthly' ? 'Monthly Flexible' : '1-Year Contract (Save 75%)'}
                               </span>
-                              <span className="text-[11px] text-gray-400">• Free Setup</span>
+                              <span className="text-xs text-gray-400">• Free Setup</span>
                               <span className="text-xs text-emerald-700 font-medium">• 30-day refund guarantee</span>
                             </div>
                           </div>
@@ -345,16 +345,16 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                         onClick={() => setBillingCycle('1yr')}
                         className={`p-4 rounded-xl border text-left transition-all cursor-pointer ${
                           billingCycle === '1yr' 
-                            ? 'border-emerald-600 bg-white ring-2 ring-[#008a45]/20 shadow-xs' 
+                            ? 'border-emerald-600 bg-white ring-2 ring-[#008744]/20 shadow-xs' 
                             : 'border-gray-200 bg-white hover:border-gray-300'
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-sm font-bold text-slate-900">1 Year (Annual)</span>
-                          <span className="text-[10px] bg-[#fed000] text-slate-950 font-black px-2 py-0.5 rounded-full">POPULAR</span>
+                          <span className="text-xs bg-[#F59E0B] text-slate-950 font-semibold px-2 py-0.5 rounded-full">POPULAR</span>
                         </div>
                         <p className="text-xs text-emerald-800 font-bold">Save up to 75% upfront</p>
-                        <p className="text-[11px] text-gray-400 mt-1">Recommended for blogs & business</p>
+                        <p className="text-xs text-gray-400 mt-1">Recommended for blogs & business</p>
                       </button>
 
                       <button
@@ -362,16 +362,16 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                         onClick={() => setBillingCycle('2yr')}
                         className={`p-4 rounded-xl border text-left transition-all cursor-pointer ${
                           billingCycle === '2yr' 
-                            ? 'border-emerald-600 bg-white ring-2 ring-[#008a45]/20 shadow-xs' 
+                            ? 'border-emerald-600 bg-white ring-2 ring-[#008744]/20 shadow-xs' 
                             : 'border-gray-200 bg-white hover:border-gray-300'
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-sm font-bold text-slate-900">2 Years (Best Value)</span>
-                          <span className="text-[10px] bg-emerald-100 text-emerald-800 font-black px-2 py-0.5 rounded-full">EXTRA 10%</span>
+                          <span className="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full">EXTRA 10%</span>
                         </div>
                         <p className="text-xs text-emerald-800 font-bold">Lock in lowest rate for 24 mo.</p>
-                        <p className="text-[11px] text-gray-400 mt-1">Protection against price increases</p>
+                        <p className="text-xs text-gray-400 mt-1">Protection against price increases</p>
                       </button>
 
                       <button
@@ -379,16 +379,16 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                         onClick={() => setBillingCycle('monthly')}
                         className={`p-4 rounded-xl border text-left transition-all cursor-pointer ${
                           billingCycle === 'monthly' 
-                            ? 'border-emerald-600 bg-white ring-2 ring-[#008a45]/20 shadow-xs' 
+                            ? 'border-emerald-600 bg-white ring-2 ring-[#008744]/20 shadow-xs' 
                             : 'border-gray-200 bg-white hover:border-gray-300'
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-sm font-bold text-slate-900">Monthly Flexible</span>
-                          <span className="text-[10px] text-gray-400 font-semibold">Cancel anytime</span>
+                          <span className="text-xs text-gray-400 font-semibold">Cancel anytime</span>
                         </div>
                         <p className="text-xs text-gray-600 font-bold">Pay per month</p>
-                        <p className="text-[11px] text-gray-400 mt-1">No long-term commitment</p>
+                        <p className="text-xs text-gray-400 mt-1">No long-term commitment</p>
                       </button>
                     </div>
                   </div>
@@ -420,13 +420,13 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                             onClick={() => setSelectedAddons(prev => ({ ...prev, [addon.id]: !prev[addon.id] }))}
                             className={`p-4 rounded-xl border transition-all cursor-pointer flex items-center justify-between gap-4 ${
                               isSelected 
-                                ? 'border-[#008a45] bg-[#f7fbf8] shadow-2xs ring-1 ring-[#008a45]/30' 
+                                ? 'border-[#008744] bg-[#f7fbf8] shadow-2xs ring-1 ring-[#008744]/30' 
                                 : 'border-gray-200 bg-white hover:border-gray-300'
                             }`}
                           >
                             <div className="flex items-start gap-3.5">
                               <div className={`w-5 h-5 rounded-md mt-0.5 flex items-center justify-center transition-colors ${
-                                isSelected ? 'bg-[#008a45] text-white' : 'border border-gray-300 bg-white'
+                                isSelected ? 'bg-[#008744] text-white' : 'border border-gray-300 bg-white'
                               }`}>
                                 {isSelected && <Check className="w-3.5 h-3.5 stroke-[3]" />}
                               </div>
@@ -434,7 +434,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                                 <div className="flex items-center gap-2">
                                   <span className="font-bold text-xs sm:text-sm text-slate-900">{addon.title}</span>
                                   {addon.badge && (
-                                    <span className="text-[9px] bg-emerald-100 text-emerald-800 font-black px-2 py-0.5 rounded-full">
+                                    <span className="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full">
                                       {addon.badge}
                                     </span>
                                   )}
@@ -445,7 +445,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
 
                             <div className="text-right shrink-0">
                               <span className="font-extrabold text-sm text-slate-900">£{addon.price.toFixed(2)}</span>
-                              <span className="text-[11px] text-gray-500 font-medium">/mo.</span>
+                              <span className="text-xs text-gray-500 font-medium">/mo.</span>
                             </div>
                           </div>
                         );
@@ -757,11 +757,11 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     onClick={() => setPaymentMethod('card')}
                     className={`p-4 rounded-xl border text-center transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
                       paymentMethod === 'card' 
-                        ? 'border-[#008a45] bg-[#f7fbf8] ring-2 ring-[#008a45]/20 shadow-xs' 
+                        ? 'border-[#008744] bg-[#f7fbf8] ring-2 ring-[#008744]/20 shadow-xs' 
                         : 'border-gray-200 bg-white hover:border-gray-300'
                     }`}
                   >
-                    <CreditCard className="w-6 h-6 text-[#008a45]" />
+                    <CreditCard className="w-6 h-6 text-[#008744]" />
                     <span className="text-xs font-bold text-slate-900">Credit / Debit Card</span>
                   </button>
 
@@ -770,11 +770,11 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     onClick={() => setPaymentMethod('paypal')}
                     className={`p-4 rounded-xl border text-center transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
                       paymentMethod === 'paypal' 
-                        ? 'border-[#008a45] bg-[#f7fbf8] ring-2 ring-[#008a45]/20 shadow-xs' 
+                        ? 'border-[#008744] bg-[#f7fbf8] ring-2 ring-[#008744]/20 shadow-xs' 
                         : 'border-gray-200 bg-white hover:border-gray-300'
                     }`}
                   >
-                    <span className="text-base font-black text-[#003087]">PayPal</span>
+                    <span className="text-base font-semibold text-[#003087]">PayPal</span>
                     <span className="text-xs font-bold text-slate-900">1-Click Checkout</span>
                   </button>
 
@@ -783,11 +783,11 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     onClick={() => setPaymentMethod('klarna')}
                     className={`p-4 rounded-xl border text-center transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
                       paymentMethod === 'klarna' 
-                        ? 'border-[#008a45] bg-[#f7fbf8] ring-2 ring-[#008a45]/20 shadow-xs' 
+                        ? 'border-[#008744] bg-[#f7fbf8] ring-2 ring-[#008744]/20 shadow-xs' 
                         : 'border-gray-200 bg-white hover:border-gray-300'
                     }`}
                   >
-                    <span className="text-xs font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded">Klarna.</span>
+                    <span className="text-xs font-semibold bg-pink-100 text-pink-700 px-2 py-0.5 rounded">Klarna.</span>
                     <span className="text-xs font-bold text-slate-900">Pay in 30 Days</span>
                   </button>
 
@@ -796,7 +796,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     onClick={() => setPaymentMethod('direct_debit')}
                     className={`p-4 rounded-xl border text-center transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
                       paymentMethod === 'direct_debit' 
-                        ? 'border-[#008a45] bg-[#f7fbf8] ring-2 ring-[#008a45]/20 shadow-xs' 
+                        ? 'border-[#008744] bg-[#f7fbf8] ring-2 ring-[#008744]/20 shadow-xs' 
                         : 'border-gray-200 bg-white hover:border-gray-300'
                     }`}
                   >
@@ -818,8 +818,8 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                         placeholder="4532 •••• •••• 8901"
                         rightIcon={
                           <div className="flex items-center gap-1">
-                            <span className="text-[10px] font-black bg-blue-900 text-white px-1.5 py-0.5 rounded">VISA</span>
-                            <span className="text-[10px] font-black bg-red-600 text-white px-1.5 py-0.5 rounded">MC</span>
+                            <span className="text-xs font-semibold bg-blue-900 text-white px-1.5 py-0.5 rounded">VISA</span>
+                            <span className="text-xs font-semibold bg-red-600 text-white px-1.5 py-0.5 rounded">MC</span>
                           </div>
                         }
                       />
@@ -868,7 +868,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     <p className="text-xs text-blue-950 font-medium">
                       You will be directed to PayPal to complete your purchase securely. You will return to Hostxeon immediately afterward.
                     </p>
-                    <div className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-[#ffc439] text-[#003087] font-black text-sm shadow-xs">
+                    <div className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-[#ffc439] text-[#003087] font-semibold text-sm shadow-xs">
                       <span>Continue to PayPal</span>
                     </div>
                   </div>
@@ -954,19 +954,19 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
             {/* ================= STEP 4: ORDER CONFIRMATION / SUCCESS ================= */}
             {step === 4 && (
               <div className="text-center py-8 space-y-6 animate-in fade-in duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-emerald-100 text-[#008a45] flex items-center justify-center mx-auto shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center mx-auto shadow-md">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
 
                 <div>
-                  <span className="text-xs font-black uppercase tracking-widest text-[#008a45] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-[#008744] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                     Demo Order Completed
                   </span>
                   <Heading level={2} className="text-3xl sm:text-4xl mt-3">
                     Demo Order Confirmed
                   </Heading>
                   <p className="text-xs sm:text-sm text-gray-600 mt-2 max-w-md mx-auto">
-                    Your simulated demo order <strong className="text-slate-900 font-black">#{orderNumber}</strong> has been successfully placed. (Frontend simulation: no live payment gateway charge or actual server provisioning occurred).
+                    Your simulated demo order <strong className="text-slate-900 font-semibold">#{orderNumber}</strong> has been successfully placed. (Frontend simulation: no live payment gateway charge or actual server provisioning occurred).
                   </p>
                 </div>
 
@@ -974,24 +974,24 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 <div className="max-w-lg mx-auto p-5 rounded-xl bg-[#fafdfb] border border-emerald-200 text-left space-y-3 text-xs">
                   <div className="flex items-center justify-between text-emerald-800 font-bold">
                     <span className="flex items-center gap-2.5">
-                      <Check className="w-4 h-4 text-[#008a45]" />
+                      <Check className="w-4 h-4 text-[#008744]" />
                       <span>Simulated NVMe Cloud Server Setup</span>
                     </span>
-                    <span className="text-[10px] bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Simulated</span>
+                    <span className="text-xs bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Simulated</span>
                   </div>
                   <div className="flex items-center justify-between text-emerald-800 font-bold">
                     <span className="flex items-center gap-2.5">
-                      <Check className="w-4 h-4 text-[#008a45]" />
+                      <Check className="w-4 h-4 text-[#008744]" />
                       <span>Simulated SSL Certificate Generation</span>
                     </span>
-                    <span className="text-[10px] bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Simulated</span>
+                    <span className="text-xs bg-emerald-100 px-2.5 py-0.5 rounded-full text-emerald-800">Simulated</span>
                   </div>
                   <div className="flex items-center justify-between text-slate-700 font-semibold">
                     <span className="flex items-center gap-2.5">
-                      <Check className="w-4 h-4 text-[#008a45]" />
+                      <Check className="w-4 h-4 text-[#008744]" />
                       <span>Simulated Control Panel credentials notice for {formData.email || 'your email'}</span>
                     </span>
-                    <span className="text-[10px] bg-gray-200 px-2.5 py-0.5 rounded-full text-slate-700">Simulated</span>
+                    <span className="text-xs bg-gray-200 px-2.5 py-0.5 rounded-full text-slate-700">Simulated</span>
                   </div>
                 </div>
 
@@ -999,7 +999,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 <div className="max-w-lg mx-auto p-5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-left space-y-2">
                   <div className="flex justify-between font-bold text-slate-900">
                     <span>Total Paid Today (incl. 20% VAT):</span>
-                    <span className="text-[#008a45] font-black text-sm">£{total.toFixed(2)}</span>
+                    <span className="text-[#008744] font-semibold text-sm">£{total.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-gray-500">
                     <span>Payment Method:</span>
@@ -1056,7 +1056,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 <div key={item.id} className="flex items-center justify-between gap-3">
                   <div className="min-w-0">
                     <p className="text-slate-800 font-semibold truncate">{item.title}</p>
-                    <span className="text-[10px] text-gray-400">{billingCycle === 'monthly' ? 'Monthly renewal' : 'Annual prepaid'}</span>
+                    <span className="text-xs text-gray-400">{billingCycle === 'monthly' ? 'Monthly renewal' : 'Annual prepaid'}</span>
                   </div>
                   <span className="font-bold text-slate-900 shrink-0">
                     £{(item.price * cycleFactor).toFixed(2)}
@@ -1072,7 +1072,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 const cost = addon.price * (billingCycle === 'monthly' ? 1 : 12);
                 return (
                   <div key={id} className="flex items-center justify-between gap-3 text-emerald-800">
-                    <span className="truncate text-[11px]">+ {addon.title}</span>
+                    <span className="truncate text-xs">+ {addon.title}</span>
                     <span className="font-bold shrink-0">£{cost.toFixed(2)}</span>
                   </div>
                 );
@@ -1087,7 +1087,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                   value={promoCode}
                   onChange={e => setPromoCode(e.target.value)}
                   placeholder="Coupon (e.g. HXSAVE)"
-                  className="flex-1 h-[42px] bg-gray-50 border border-gray-200 rounded-lg px-3 text-xs text-slate-900 uppercase focus:outline-hidden focus:ring-2 focus:ring-[#008a45]"
+                  className="flex-1 h-[42px] bg-gray-50 border border-gray-200 rounded-lg px-3 text-xs text-slate-900 uppercase focus:outline-hidden focus:ring-2 focus:ring-[#008744]"
                 />
                 <Button
                   type="submit"
@@ -1098,7 +1098,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 </Button>
               </div>
               {promoMessage && (
-                <div className={`text-[10px] mt-1.5 font-bold ${discountPercent > 0 ? 'text-[#008a45]' : 'text-rose-500'}`}>
+                <div className={`text-xs mt-1.5 font-bold ${discountPercent > 0 ? 'text-[#008744]' : 'text-rose-500'}`}>
                   {promoMessage}
                 </div>
               )}
@@ -1112,7 +1112,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
               </div>
 
               {discountPercent > 0 && (
-                <div className="flex justify-between text-[#008a45] font-bold">
+                <div className="flex justify-between text-[#008744] font-bold">
                   <span>Special Discount ({discountPercent}%)</span>
                   <span>-£{discountAmount.toFixed(2)}</span>
                 </div>
@@ -1123,16 +1123,16 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 <span className="font-semibold text-slate-900">£{vat.toFixed(2)}</span>
               </div>
 
-              <div className="flex justify-between text-lg font-black text-slate-950 pt-3 border-t border-gray-200">
+              <div className="flex justify-between text-lg font-bold text-slate-900 pt-3 border-t border-gray-200">
                 <span>Total Due Today</span>
-                <span className="text-[#008a45]">£{total.toFixed(2)}</span>
+                <span className="text-[#008744]">£{total.toFixed(2)}</span>
               </div>
             </div>
 
             {/* Transparency Note */}
-            <div className="p-3.5 bg-[#f6faf7] rounded-xl border border-emerald-200/80 text-[11px] text-gray-600 space-y-1">
+            <div className="p-3.5 bg-[#f6faf7] rounded-xl border border-emerald-200/80 text-xs text-gray-600 space-y-1">
               <div className="font-bold text-slate-900 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#008a45]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#008744]" />
                 <span>Renewal Price Transparency</span>
               </div>
               <p className="leading-relaxed">
@@ -1147,11 +1147,11 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                 <span>30-Day Money-Back Guarantee</span>
               </div>
               <div className="flex items-center gap-2">
-                <Lock className="w-4 h-4 text-[#008a45] shrink-0" />
+                <Lock className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>256-bit SSL Protected Checkout</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-[#008a45] shrink-0" />
+                <Check className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>Zero Hidden Fees or Setup Surcharges</span>
               </div>
             </div>

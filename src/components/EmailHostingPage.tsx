@@ -291,60 +291,60 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
   return (
     <div className="bg-[#fcfdfd] text-[#111827] min-h-screen">
       {/* 1. Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#041d16] via-[#062c21] to-[#041d16] text-white pt-14 pb-20">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/10 blur-[130px] pointer-events-none rounded-full" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#008a45]/15 blur-[120px] pointer-events-none rounded-full" />
+      <section className="relative overflow-hidden bg-[#061913] text-white pt-14 pb-20">
+        
+        
 
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-bold mb-6">
-            <Mail className="w-3.5 h-3.5 text-[#fed000]" />
+            <Mail className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>Ad-Free Professional Mail with 99.9% Inbox Deliverability</span>
-            <span className="bg-[#fed000] text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full">FROM £0.99/MO</span>
+            <span className="bg-[#F59E0B] text-slate-950 text-xs font-semibold px-2 py-0.5 rounded-full">FROM £0.99/MO</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-[1.12]">
-            Build Instant Credibility with <span className="text-[#fed000]">Professional Business Email</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-[52px] font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+            Build Instant Credibility with <span className="text-[#F59E0B]">Professional Business Email</span>
           </h1>
           <p className="mt-4 text-base sm:text-lg text-emerald-100/80 max-w-2xl mx-auto font-medium">
-            Match your email address to your domain name (<span className="text-[#fed000] font-bold">you@yourcompany.com</span>). Complete with multi-layer spam protection, calendar sync, and mobile apps.
+            Match your email address to your domain name (<span className="text-[#F59E0B] font-bold">you@yourcompany.com</span>). Complete with multi-layer spam protection, calendar sync, and mobile apps.
           </p>
 
           {/* Category Switcher Tabs */}
           <div className="inline-flex p-1.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 mt-8 mb-2 shadow-lg flex-wrap justify-center gap-1">
             <button
               onClick={() => setActiveCategory('webmail')}
-              className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
+              className={`px-5 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
                 activeCategory === 'webmail' 
                   ? 'bg-white text-slate-950 shadow-md' 
                   : 'text-emerald-100 hover:text-white'
               }`}
             >
-              <Mail className="w-4 h-4 text-[#008a45]" />
+              <Mail className="w-4 h-4 text-[#008744]" />
               <span>Custom Domain Webmail</span>
             </button>
 
             <button
               onClick={() => setActiveCategory('m365')}
-              className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
+              className={`px-5 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
                 activeCategory === 'm365' 
                   ? 'bg-white text-slate-950 shadow-md' 
                   : 'text-emerald-100 hover:text-white'
               }`}
             >
-              <Layers className="w-4 h-4 text-[#008a45]" />
+              <Layers className="w-4 h-4 text-[#008744]" />
               <span>Microsoft 365 & Office</span>
             </button>
 
             <button
               onClick={() => setActiveCategory('security')}
-              className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
+              className={`px-5 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
                 activeCategory === 'security' 
                   ? 'bg-white text-slate-950 shadow-md' 
                   : 'text-emerald-100 hover:text-white'
               }`}
             >
-              <ShieldCheck className="w-4 h-4 text-[#008a45]" />
+              <ShieldCheck className="w-4 h-4 text-[#008744]" />
               <span>Anti-Spam & Encryption</span>
             </button>
           </div>
@@ -353,15 +353,15 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
           <div className="max-w-2xl mx-auto mt-8 rounded-2xl bg-white text-slate-900 shadow-2xl border border-white/20 p-5 text-left text-xs sm:text-sm">
             <div className="flex items-center justify-between pb-3 border-b border-gray-100">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-[#008a45] text-white flex items-center justify-center font-black">
+                <div className="w-8 h-8 rounded-lg bg-[#008744] text-white flex items-center justify-center font-semibold">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="font-black text-slate-900">alex@quantumtech.co.uk</div>
-                  <div className="text-[10px] text-emerald-600 font-bold">● Connected (IMAP SSL / TLS 1.3)</div>
+                  <div className="font-semibold text-slate-900">alex@quantumtech.co.uk</div>
+                  <div className="text-xs text-emerald-600 font-bold">● Connected (IMAP SSL / TLS 1.3)</div>
                 </div>
               </div>
-              <span className="text-[10px] font-bold bg-emerald-100 text-[#008a45] px-2.5 py-1 rounded-full">
+              <span className="text-xs font-bold bg-emerald-100 text-[#008744] px-2.5 py-1 rounded-full">
                 0 Spam Detected
               </span>
             </div>
@@ -369,13 +369,13 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
             <div className="space-y-2 mt-3">
               <div className="p-2.5 rounded-xl bg-emerald-50/70 border border-emerald-100 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-2 h-2 rounded-full bg-[#008a45]" />
+                  <div className="w-2 h-2 rounded-full bg-[#008744]" />
                   <div>
                     <span className="font-bold text-slate-900">Sarah Jenkins (Enterprise Partner)</span>
-                    <p className="text-[11px] text-gray-500 truncate max-w-xs">Contract signed for Q3 European Expansion...</p>
+                    <p className="text-xs text-gray-500 truncate max-w-xs">Contract signed for Q3 European Expansion...</p>
                   </div>
                 </div>
-                <span className="text-[10px] text-gray-400 font-semibold">10:42 AM</span>
+                <span className="text-xs text-gray-400 font-semibold">10:42 AM</span>
               </div>
 
               <div className="p-2.5 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-between">
@@ -383,10 +383,10 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
                   <div className="w-2 h-2 rounded-full bg-gray-300" />
                   <div>
                     <span className="font-semibold text-slate-700">Stripe Billing Notifications</span>
-                    <p className="text-[11px] text-gray-500 truncate max-w-xs">Payout of £4,890.00 is on the way to your account...</p>
+                    <p className="text-xs text-gray-500 truncate max-w-xs">Payout of £4,890.00 is on the way to your account...</p>
                   </div>
                 </div>
-                <span className="text-[10px] text-gray-400 font-semibold">09:15 AM</span>
+                <span className="text-xs text-gray-400 font-semibold">09:15 AM</span>
               </div>
             </div>
           </div>
@@ -395,11 +395,11 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
       </section>
 
       {/* 2. Interactive Pricing Plans */}
-      <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-6 relative z-20 mb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 -mt-6 relative z-20 mb-16">
         {/* Toggle */}
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 sm:p-6 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-xl sm:text-[22px] font-semibold text-slate-900">
               {activeCategory === 'webmail' && 'Custom Domain Webmail Plans'}
               {activeCategory === 'm365' && 'Microsoft 365 & Exchange Business Plans'}
               {activeCategory === 'security' && 'SpamTitan & Email Security Gateway Plans'}
@@ -411,7 +411,7 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
             <button
               onClick={() => setBillingCycle('annual')}
               className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                billingCycle === 'annual' ? 'bg-[#008a45] text-white shadow-xs' : 'text-gray-700'
+                billingCycle === 'annual' ? 'bg-[#008744] text-white shadow-xs' : 'text-gray-700'
               }`}
             >
               Annual Billing (Save 35%)
@@ -438,43 +438,43 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
                 key={plan.id}
                 className={`bg-white rounded-3xl p-6 sm:p-8 transition-all flex flex-col justify-between relative ${
                   plan.popular
-                    ? 'border-2 border-[#008a45] shadow-xl ring-4 ring-emerald-50'
+                    ? 'border-2 border-[#008744] shadow-xl ring-4 ring-emerald-50'
                     : 'border border-gray-200 shadow-sm hover:shadow-md'
                 }`}
               >
                 {plan.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#008a45] text-white text-[11px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#008744] text-white text-xs font-semibold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
                     {plan.badge}
                   </div>
                 )}
 
                 <div>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-bold text-slate-900">{plan.name}</h3>
+                    <h3 className="text-xl sm:text-[22px] font-semibold text-slate-900">{plan.name}</h3>
                   </div>
                   <p className="text-xs text-gray-500 mt-1 min-h-[32px]">{plan.tagline}</p>
 
                   <div className="mt-4 p-3 rounded-2xl bg-emerald-50/60 border border-emerald-100/80 flex items-center gap-2">
-                    <Inbox className="w-4 h-4 text-[#008a45]" />
+                    <Inbox className="w-4 h-4 text-[#008744]" />
                     <span className="text-xs font-extrabold text-emerald-900">{plan.storage}</span>
                   </div>
 
                   <div className="mt-5 pb-5 border-b border-gray-100">
                     <div className="flex items-baseline gap-2">
                       <span className="text-xs text-gray-400 line-through">£{plan.originalPrice.toFixed(2)}</span>
-                      <span className="text-3xl sm:text-4xl font-black text-slate-900">£{price.toFixed(2)}</span>
+                      <span className="text-3xl sm:text-4xl font-bold tabular-nums text-slate-900">£{price.toFixed(2)}</span>
                       <span className="text-xs text-gray-500 font-medium">/ user / mo</span>
                     </div>
-                    <span className="text-[11px] text-emerald-700 font-bold block mt-1">
+                    <span className="text-xs text-emerald-700 font-bold block mt-1">
                       {billingCycle === 'annual' ? 'Billed annually • Save 35%' : 'Billed monthly • Cancel anytime'}
                     </span>
                   </div>
 
                   <div className="mt-6 space-y-2.5">
-                    <div className="text-[11px] font-black text-gray-400 uppercase tracking-wider">Features included:</div>
+                    <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Features included:</div>
                     {plan.features.map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2.5 text-xs text-gray-700">
-                        <Check className="w-4 h-4 text-[#008a45] shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[#008744] shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -484,12 +484,12 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
                 <div className="mt-8 pt-4 border-t border-gray-100">
                   <button
                     onClick={() => handleSelectPlan(plan)}
-                    className={`w-full py-3.5 rounded-xl font-black text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 ${
+                    className={`w-full py-3.5 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 ${
                       isAdded
                         ? 'bg-emerald-700 text-white'
                         : plan.popular
-                        ? 'bg-[#008a45] hover:bg-[#007338] text-white hover:shadow-lg'
-                        : 'bg-[#fed000] hover:bg-[#ebbe00] text-slate-950'
+                        ? 'bg-[#008744] hover:bg-[#006E37] text-white hover:shadow-lg'
+                        : 'bg-[#F59E0B] hover:bg-[#d97706] text-slate-950'
                     }`}
                   >
                     {isAdded ? (
@@ -513,12 +513,12 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
 
       {/* 3. Features Breakdown */}
       <section className="bg-slate-50 py-16 border-y border-gray-200/80">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-black uppercase tracking-wider text-[#008a45] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#008744] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
               BUILT FOR MODERN TEAMS
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight mt-3">
               Why Professionals Choose Hostxeon Business Email
             </h2>
             <p className="text-xs sm:text-sm text-gray-500 mt-2">
@@ -528,7 +528,7 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Smartphone className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-slate-900 text-sm">Sync on All Devices</h3>
@@ -538,7 +538,7 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-slate-900 text-sm">AI Spam & Phishing Shield</h3>
@@ -548,7 +548,7 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Calendar className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-slate-900 text-sm">Shared Calendar & Contacts</h3>
@@ -558,7 +558,7 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008a45] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-[#008744] flex items-center justify-center">
                 <Lock className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-slate-900 text-sm">100% Privacy & Zero Ads</h3>
@@ -571,12 +571,12 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
       </section>
 
       {/* 4. Frequently Asked Questions */}
-      <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
         <div className="text-center mb-8">
-          <span className="text-xs font-black uppercase tracking-wider text-[#008a45] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#008744] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
             COMMON INQUIRIES
           </span>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight mt-2">
             Frequently Asked Questions About Business Email
           </h2>
         </div>
@@ -586,10 +586,10 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
             <div key={idx} className="py-4">
               <button
                 onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                className="w-full flex items-center justify-between gap-4 text-left font-bold text-sm text-slate-900 hover:text-[#008a45] transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between gap-4 text-left font-bold text-sm text-slate-900 hover:text-[#008744] transition-colors cursor-pointer"
               >
                 <span>{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 shrink-0 transition-transform ${activeFaq === idx ? 'rotate-180 text-[#008a45]' : 'text-gray-400'}`} />
+                <ChevronDown className={`w-4 h-4 shrink-0 transition-transform ${activeFaq === idx ? 'rotate-180 text-[#008744]' : 'text-gray-400'}`} />
               </button>
               {activeFaq === idx && (
                 <p className="mt-2 text-xs text-gray-600 leading-relaxed animate-in fade-in duration-200">
@@ -603,12 +603,12 @@ export const EmailHostingPage: React.FC<EmailHostingPageProps> = ({
         {/* Live chat helper strip */}
         <div className="mt-8 p-4 bg-emerald-50 rounded-2xl border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-emerald-900">
           <div className="flex items-center gap-2">
-            <Headphones className="w-4 h-4 text-[#008a45] shrink-0" />
+            <Headphones className="w-4 h-4 text-[#008744] shrink-0" />
             <span className="font-semibold">Have existing emails at Google Workspace or cPanel to migrate?</span>
           </div>
           <button
             onClick={onOpenLiveChat}
-            className="bg-[#008a45] hover:bg-[#007338] text-white font-bold px-4 py-2 rounded-xl transition-all shadow-xs cursor-pointer shrink-0"
+            className="bg-[#008744] hover:bg-[#006E37] text-white font-bold px-4 py-2 rounded-lg transition-all shadow-xs cursor-pointer shrink-0"
           >
             Chat with Migration Expert
           </button>

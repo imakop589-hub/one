@@ -149,7 +149,7 @@ export const AdminPageEditor: React.FC<AdminPageEditorProps> = ({
             <ArrowLeft className="w-4 h-4" />
           </button>
           <div>
-            <h1 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+            <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
               {pageId ? `Edit Page: ${title || 'Untitled'}` : 'Create New Page'}
             </h1>
             <p className="text-xs text-slate-400 mt-0.5">
@@ -352,7 +352,7 @@ export const AdminPageEditor: React.FC<AdminPageEditorProps> = ({
                 placeholder="High-Speed NVMe Web Hosting from £1.99 | Hostxeon"
                 className="w-full px-3.5 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-slate-100 focus:outline-hidden focus:border-emerald-500"
               />
-              <span className="text-[10px] text-slate-500 mt-1 block">
+              <span className="text-xs text-slate-500 mt-1 block">
                 Recommended length: 50-60 characters ({seoTitle.length} chars)
               </span>
             </div>
@@ -369,7 +369,7 @@ export const AdminPageEditor: React.FC<AdminPageEditorProps> = ({
                 placeholder="Brief summary of the page for search engine result snippets..."
                 className="w-full px-3.5 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-slate-100 focus:outline-hidden focus:border-emerald-500"
               />
-              <span className="text-[10px] text-slate-500 mt-1 block">
+              <span className="text-xs text-slate-500 mt-1 block">
                 Recommended length: 140-160 characters ({metaDescription.length} chars)
               </span>
             </div>

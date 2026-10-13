@@ -8,10 +8,10 @@ export const ReviewsSection: React.FC = () => {
 
   return (
     <section className="bg-[#fcfdfd] py-20 border-y border-gray-200/80" id="reviews">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#008a45] uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#008744] uppercase tracking-wider mb-2">
             <ShieldCheck className="w-4 h-4 text-[#00b67a]" />
             <span>Verified Trustpilot Reviews</span>
           </div>
@@ -46,7 +46,7 @@ export const ReviewsSection: React.FC = () => {
                       <Star key={i} className="w-3 h-3 fill-current" />
                     ))}
                   </div>
-                  <span className="text-[11px] text-gray-400 font-mono">{review.date}</span>
+                  <span className="text-xs text-gray-400 font-mono">{review.date}</span>
                 </div>
 
                 {/* Author Name */}
@@ -61,7 +61,7 @@ export const ReviewsSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-[10px] text-gray-400">
+              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
                 <span>Verified Buyer</span>
                 <span className="font-bold text-gray-500">{review.country}</span>
               </div>
@@ -84,7 +84,7 @@ export const ReviewsSection: React.FC = () => {
                       <Star key={i} className="w-3 h-3 fill-current" />
                     ))}
                   </div>
-                  <span className="text-[11px] text-gray-400 font-mono">{review.date}</span>
+                  <span className="text-xs text-gray-400 font-mono">{review.date}</span>
                 </div>
 
                 {/* Author Name */}
@@ -99,7 +99,7 @@ export const ReviewsSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-[10px] text-gray-400">
+              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
                 <span>Verified Buyer</span>
                 <span className="font-bold text-gray-500">{review.country}</span>
               </div>

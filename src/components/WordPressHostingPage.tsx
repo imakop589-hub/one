@@ -154,26 +154,26 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
           <span className="font-semibold text-gray-900">Excellent</span>
           <div className="flex items-center gap-0.5">
             {[...Array(5)].map((_, i) => (
-              <span key={i} className="w-4 h-4 bg-[#00b67a] text-white flex items-center justify-center rounded-[2px] text-[10px]">
+              <span key={i} className="w-4 h-4 bg-[#008744] text-white flex items-center justify-center rounded-[2px] text-xs">
                 ★
               </span>
             ))}
           </div>
           <span className="text-gray-500">
-            Rated <strong className="text-gray-900">5.0 / 5.0</strong> on <strong className="text-gray-900 underline hover:text-[#00b67a]">Trustpilot</strong>
+            Rated <strong className="text-gray-900">5.0 / 5.0</strong> on <strong className="text-gray-900 underline hover:text-[#008744]">Trustpilot</strong>
           </span>
         </a>
       </div>
 
       {/* 1. HERO SECTION (Dark Green Background with Floral Mockup & Badges) */}
       <section 
-        className="relative overflow-hidden bg-[#0a291f] text-white py-14 sm:py-20 lg:py-24"
+        className="relative overflow-hidden bg-[#061913] text-white py-14 sm:py-20 lg:py-24"
         style={{
           backgroundImage: `radial-gradient(rgba(52, 211, 153, 0.12) 1.5px, transparent 1.5px)`,
           backgroundSize: '24px 24px'
         }}
       >
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Column: Heading & Key Points */}
@@ -185,7 +185,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.12]">
+              <h1 className="text-3xl sm:text-4xl lg:text-[52px] font-bold tracking-tight text-white leading-tight">
                 All you need for a <br />
                 <span className="text-white">WordPress site</span>
               </h1>
@@ -211,7 +211,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={scrollToPricing}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-base sm:text-lg transition-all shadow-md cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-base sm:text-lg transition-all shadow-md cursor-pointer"
                   id="wp-hero-see-plans-btn"
                 >
                   See plans and pricing
@@ -233,7 +233,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                     <div className="w-2.5 h-2.5 rounded-full bg-white/40" />
                     <div className="w-2.5 h-2.5 rounded-full bg-white/40" />
                   </div>
-                  <div className="text-[11px] text-emerald-200/80 font-mono">
+                  <div className="text-xs text-emerald-200/80 font-mono">
                     yardsandflowers.com
                   </div>
                   <div className="w-6" />
@@ -270,8 +270,8 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                   </div>
 
                   {/* AI Badge inside preview */}
-                  <div className="absolute bottom-6 right-6 bg-[#008a45] text-white text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1 shadow-lg">
-                    <Sparkles className="w-3.5 h-3.5 text-[#fed000]" />
+                  <div className="absolute bottom-6 right-6 bg-[#008744] text-white text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1 shadow-lg">
+                    <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
                     <span>AI +</span>
                   </div>
                 </div>
@@ -279,12 +279,12 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
               </div>
 
               {/* Floating Badge 1: Plugins (Top-Right Green) */}
-              <div className="absolute -top-3 right-6 sm:right-10 bg-[#008a45] text-white font-bold text-sm sm:text-base px-5 py-2.5 rounded-xl shadow-xl z-20 transform rotate-1">
+              <div className="absolute -top-3 right-6 sm:right-10 bg-[#008744] text-white font-bold text-sm sm:text-base px-5 py-2.5 rounded-xl shadow-xl z-20 transform rotate-1">
                 Plugins
               </div>
 
               {/* Floating Badge 2: Themes (Middle-Right Yellow) */}
-              <div className="absolute top-12 -right-3 sm:right-2 bg-[#fed000] text-slate-950 font-bold text-sm sm:text-base px-6 py-2.5 rounded-xl shadow-xl z-20 transform -rotate-2">
+              <div className="absolute top-12 -right-3 sm:right-2 bg-[#F59E0B] text-slate-950 font-bold text-sm sm:text-base px-6 py-2.5 rounded-xl shadow-xl z-20 transform -rotate-2">
                 Themes
               </div>
 
@@ -301,36 +301,36 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 2. GUARANTEE STRIP (Green Checkmarks) */}
       <div className="bg-[#f4fbf7] border-b border-emerald-100 py-4">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-sm sm:text-base font-semibold text-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-sm sm:text-base font-semibold text-slate-800">
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>99.9% uptime</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>Free domain</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>Free SSL certificate</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-[#008a45] stroke-[3]" />
+            <Check className="w-4 h-4 text-[#008744] stroke-[3]" />
             <span>Email included</span>
           </div>
         </div>
       </div>
 
       {/* 3. PRICING SECTION (Starter vs. Professional) */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-screen-2xl mx-auto" id="wp-pricing-section">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl mx-auto" id="wp-pricing-section">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/70 text-[#008a45] text-xs font-bold tracking-wide mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/70 text-[#008744] text-xs font-bold tracking-wide mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Managed WordPress</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight mb-4">
             Choose the WordPress hosting plan <br className="hidden sm:inline" />
             that works for you
           </h2>
@@ -357,7 +357,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
               <div className="pt-2 pb-4 border-b border-gray-100">
                 <div className="flex items-center justify-between">
                   <div className="line-through text-xs text-gray-400">£13.98/mo.</div>
-                  <span className="bg-[#fff9db] text-[#b28900] text-[11px] font-bold px-2 py-0.5 rounded">
+                  <span className="bg-[#fef3c7] text-[#b45309] text-xs font-bold px-2 py-0.5 rounded">
                     You save 74%
                   </span>
                 </div>
@@ -365,7 +365,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                   <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">£3.68</span>
                   <span className="text-sm font-semibold text-gray-500">/mo.</span>
                 </div>
-                <p className="text-[11px] text-gray-500 mt-1 font-medium">
+                <p className="text-xs text-gray-500 mt-1 font-medium">
                   <strong>1-year subscription</strong> <br />
                   Pay £44.16 now, then £167.76 on renewal.
                 </p>
@@ -463,7 +463,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
           <div className="bg-[#f7fbf8] rounded-2xl border-2 border-emerald-600 shadow-lg p-6 sm:p-8 flex flex-col justify-between relative hover:shadow-xl transition-all text-left">
             
             {/* Top Most Popular Ribbon */}
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#008a45] text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#008744] text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
               Most popular
             </div>
 
@@ -480,7 +480,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
               <div className="pt-2 pb-4 border-b border-emerald-200/60">
                 <div className="flex items-center justify-between">
                   <div className="line-through text-xs text-gray-400">£17.98/mo.</div>
-                  <span className="bg-[#fff9db] text-[#b28900] text-[11px] font-bold px-2 py-0.5 rounded">
+                  <span className="bg-[#fef3c7] text-[#b45309] text-xs font-bold px-2 py-0.5 rounded">
                     You save 80%
                   </span>
                 </div>
@@ -488,7 +488,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                   <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">£3.68</span>
                   <span className="text-sm font-semibold text-gray-500">/mo.</span>
                 </div>
-                <p className="text-[11px] text-gray-600 mt-1 font-medium">
+                <p className="text-xs text-gray-600 mt-1 font-medium">
                   <strong>1-year subscription</strong> <br />
                   Pay £44.16 now, then £215.76 on renewal.
                 </p>
@@ -499,7 +499,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={handleAddPro}
-                  className="w-full bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer text-center"
+                  className="w-full bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer text-center"
                   id="wp-plan-pro-btn"
                 >
                   Get started
@@ -624,7 +624,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 4. BUILT FOR ANYONE RUNNING A WORDPRESS SITE (Audience Tabs) */}
       <section className="py-16 sm:py-20 bg-white border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 tracking-tight leading-tight mb-6">
@@ -674,7 +674,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
           </div>
 
           {/* Dynamic Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center max-w-screen-2xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center max-w-7xl mx-auto">
             
             {/* Left Column: Copy */}
             <div className="lg:col-span-6 text-left space-y-4">
@@ -764,7 +764,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 5. GET YOUR WEBSITE UP AND RUNNING (Speed 100 Graphic) */}
       <section className="py-16 sm:py-20 bg-[#fafcfb] border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Column: Speed Graphic in Browser */}
@@ -801,7 +801,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
             {/* Right Column: Copy & Bullet Points */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Get your website up <br />
                 and running
               </h2>
@@ -828,7 +828,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={scrollToPricing}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-sm sm:text-base transition-all shadow-md cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer"
                   id="wp-speed-get-started-btn"
                 >
                   Get started
@@ -842,12 +842,12 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 6. UPDATE STRESS-FREE (Accordion & WordPress Dashboard Graphic) */}
       <section className="py-16 sm:py-20 bg-white border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Column: Accordion */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Update stress-free
               </h2>
               <p className="text-sm sm:text-base text-gray-600">
@@ -907,16 +907,16 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                   {/* Header */}
                   <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
                     <div className="flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-white text-slate-900 flex items-center justify-center font-bold text-[10px]">
+                      <div className="w-5 h-5 rounded-full bg-white text-slate-900 flex items-center justify-center font-bold text-xs">
                         W
                       </div>
                       <span className="font-semibold text-slate-200">Updates</span>
                     </div>
-                    <span className="text-[10px] text-emerald-400 font-mono">Auto-update: ON</span>
+                    <span className="text-xs text-emerald-400 font-mono">Auto-update: ON</span>
                   </div>
 
                   {/* Updates list mockup */}
-                  <div className="space-y-2 py-3 text-[11px] text-slate-300">
+                  <div className="space-y-2 py-3 text-xs text-slate-300">
                     <div className="flex items-center justify-between p-1.5 rounded bg-slate-800/60">
                       <span>WordPress 6.7</span>
                       <span className="text-emerald-400">Verified ✓</span>
@@ -934,10 +934,10 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                   {/* Floating Modal Card overlay: Update complete */}
                   <div className="bg-white text-slate-900 rounded-xl p-4 shadow-xl border border-gray-100 mt-2">
                     <div className="flex items-center gap-2 mb-2">
-                      <CheckCircle2 className="w-5 h-5 text-[#008a45]" />
+                      <CheckCircle2 className="w-5 h-5 text-[#008744]" />
                       <span className="font-bold text-sm">Update complete</span>
                     </div>
-                    <div className="space-y-1 text-[11px] text-gray-600">
+                    <div className="space-y-1 text-xs text-gray-600">
                       <div className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-emerald-600" />
                         <span>Backup created</span>
@@ -969,7 +969,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 7. SECURITY FULLY HANDLED FOR YOU */}
       <section className="py-16 sm:py-20 bg-[#fafcfb] border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Column: Security Badges Container */}
@@ -1014,7 +1014,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
             {/* Right Column: Copy, Button & Accordion */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Security fully handled <br />
                 for you
               </h2>
@@ -1026,7 +1026,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={scrollToPricing}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-sm sm:text-base transition-all shadow-md cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer"
                   id="wp-security-see-plans-btn"
                 >
                   See plans and pricing
@@ -1074,12 +1074,12 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 8. GROW YOUR SITE WHENEVER YOU'RE READY (WP Marketplace) */}
       <section className="py-16 sm:py-20 bg-white border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Column: Copy & Marketplace list */}
             <div className="lg:col-span-6 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Grow your site <br />
                 whenever you're ready
               </h2>
@@ -1128,7 +1128,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                     </div>
                     <span className="font-bold text-sm">Managed Hosting for WordPress</span>
                   </div>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 border border-emerald-500/30">
+                  <span className="text-xs bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 border border-emerald-500/30">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     All systems operational
                   </span>
@@ -1139,22 +1139,22 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                   <div className="bg-slate-900/90 border border-slate-800 p-3 rounded-xl">
                     <RefreshCw className="w-4 h-4 text-emerald-400 mb-1.5" />
                     <div className="font-bold text-xs text-white">Automatic updates</div>
-                    <div className="text-[10px] text-gray-400 mt-0.5">Core & plugins protected</div>
+                    <div className="text-xs text-gray-400 mt-0.5">Core & plugins protected</div>
                   </div>
                   <div className="bg-slate-900/90 border border-slate-800 p-3 rounded-xl">
-                    <CheckCircle2 className="w-4 h-4 text-[#fed000] mb-1.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#F59E0B] mb-1.5" />
                     <div className="font-bold text-xs text-white">Daily backups</div>
-                    <div className="text-[10px] text-emerald-400 mt-0.5">Active</div>
+                    <div className="text-xs text-emerald-400 mt-0.5">Active</div>
                   </div>
                   <div className="bg-slate-900/90 border border-slate-800 p-3 rounded-xl">
-                    <Zap className="w-4 h-4 text-[#fed000] mb-1.5" />
+                    <Zap className="w-4 h-4 text-[#F59E0B] mb-1.5" />
                     <div className="font-bold text-xs text-white">NVMe SSD</div>
-                    <div className="text-[10px] text-gray-400 mt-0.5">High performance</div>
+                    <div className="text-xs text-gray-400 mt-0.5">High performance</div>
                   </div>
                   <div className="bg-slate-900/90 border border-slate-800 p-3 rounded-xl">
                     <ShieldCheck className="w-4 h-4 text-emerald-400 mb-1.5" />
                     <div className="font-bold text-xs text-white">EU servers</div>
-                    <div className="text-[10px] text-gray-400 mt-0.5">GDPR-native</div>
+                    <div className="text-xs text-gray-400 mt-0.5">GDPR-native</div>
                   </div>
                 </div>
 
@@ -1166,17 +1166,17 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
       </section>
 
       {/* 9. MOVING YOUR SITE TO US IS EASY (Dark Forest Green 3-Column Banner) */}
-      <section className="bg-[#051f17] text-white py-14 sm:py-18 border-y border-emerald-950">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
+      <section className="bg-[#061913] text-white py-14 sm:py-18 border-y border-emerald-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold tracking-tight text-white mb-2">
             Moving your site to us is easy
           </h2>
           <p className="text-sm sm:text-base text-emerald-200/90 mb-12">
             Get faster and more secure hosting today.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-screen-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-7xl mx-auto">
             
             {/* Column 1 */}
             <div className="space-y-2">
@@ -1215,11 +1215,11 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 10. CUSTOMER STORY: Bokföringskompaniet */}
       <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8 text-left">
             <div className="lg:col-span-5">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 The story of <br />
                 Bokföringskompaniet
               </h2>
@@ -1232,7 +1232,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={scrollToPricing}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-6 py-3 rounded-md text-xs sm:text-sm transition-all shadow-sm cursor-pointer"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-6 py-3 rounded-md text-xs sm:text-sm transition-all shadow-sm cursor-pointer"
                 >
                   See plans and pricing
                 </button>
@@ -1263,7 +1263,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
             {/* Play Button */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/90 group-hover:bg-white text-slate-950 flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all">
-                <Play className="w-7 h-7 sm:w-8 sm:h-8 text-[#008a45] fill-[#008a45] ml-1" />
+                <Play className="w-7 h-7 sm:w-8 sm:h-8 text-[#008744] fill-[#008744] ml-1" />
               </div>
             </div>
 
@@ -1278,7 +1278,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 11. HAVE QUESTIONS? GET IN TOUCH (Support Callout) */}
       <section className="py-14 sm:py-18 bg-[#fafcfb] border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             {/* Left: Specialist Photo with Chat Bubble */}
@@ -1301,7 +1301,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
             {/* Right: Heading, Text & Button */}
             <div className="lg:col-span-7 text-left space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Have questions? Get in <br />
                 touch.
               </h2>
@@ -1312,7 +1312,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                 <button
                   type="button"
                   onClick={onOpenLiveChat}
-                  className="bg-[#fed000] hover:bg-[#eabf00] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-md text-sm sm:text-base transition-all shadow-md cursor-pointer inline-flex items-center gap-2"
+                  className="bg-[#F59E0B] hover:bg-[#d97706] active:scale-98 text-slate-950 font-bold px-7 py-3.5 rounded-lg text-sm sm:text-base transition-all shadow-md cursor-pointer inline-flex items-center gap-2"
                   id="wp-start-chat-experts-btn"
                 >
                   <MessageSquare className="w-4 h-4" />
@@ -1327,11 +1327,11 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 12. NOT SURE WORDPRESS IS RIGHT FOR YOU? (2 Alternative Options) */}
       <section className="py-16 sm:py-24 bg-white border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 text-left">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight leading-tight">
                 Not sure <br />
                 WordPress is right <br />
                 for you?
@@ -1406,7 +1406,7 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4 text-center">
                   <div className="text-white">
                     <div className="text-xl sm:text-2xl font-serif">Stories from <br />Elsewhere</div>
-                    <div className="text-[10px] text-amber-300 mt-1 uppercase tracking-wider font-bold">Built with AI Builder</div>
+                    <div className="text-xs text-amber-300 mt-1 uppercase tracking-wider font-bold">Built with AI Builder</div>
                   </div>
                 </div>
               </div>
@@ -1419,9 +1419,9 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
 
       {/* 13. NEED HELP? WE ARE HERE FOR YOU (4 Support Cards) */}
       <section className="py-16 sm:py-20 bg-[#fafcfb] border-t border-gray-100">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
           
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight mb-12">
             Need help? We are here for you!
           </h2>
 
@@ -1509,8 +1509,8 @@ export const WordPressHostingPage: React.FC<WordPressHostingPageProps> = ({
       </section>
 
       {/* 14. FREQUENTLY ASKED QUESTIONS (Complete 11 FAQs from Image) */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white border-t border-gray-100 max-w-screen-2xl mx-auto text-left">
-        <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight mb-8">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white border-t border-gray-100 max-w-7xl mx-auto text-left">
+        <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-slate-900 tracking-tight mb-8">
           Frequently asked questions
         </h2>
 

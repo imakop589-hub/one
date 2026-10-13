@@ -75,13 +75,13 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({
       {!isOpen && (
         <button
           onClick={onToggle}
-          className="bg-[#008a45] hover:bg-[#062c21] text-white p-4 rounded-full shadow-2xl flex items-center gap-2.5 transition-all duration-300 hover:scale-105 cursor-pointer border-2 border-white/40"
+          className="bg-[#008744] hover:bg-[#061913] text-white p-4 rounded-full shadow-2xl flex items-center gap-2.5 transition-all duration-300 hover:scale-105 cursor-pointer border-2 border-white/40"
           id="floating-chat-trigger"
           title="Chat with 24/7 Support"
         >
           <div className="relative">
             <MessageSquare className="w-6 h-6" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#fed000] rounded-full ring-2 ring-[#008a45] animate-pulse"></span>
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#F59E0B] rounded-full ring-2 ring-[#008744] animate-pulse"></span>
           </div>
           <span className="text-xs font-bold hidden sm:inline">24/7 Chat Support</span>
         </button>
@@ -93,19 +93,19 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({
           isCartOpen ? 'origin-bottom-left' : 'origin-bottom-right'
         }`}>
           {/* Header */}
-          <div className="bg-[#062c21] text-white p-4 flex items-center justify-between">
+          <div className="bg-[#061913] text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div className="w-9 h-9 rounded-full bg-emerald-700 flex items-center justify-center font-bold text-sm text-white">
                   D
                 </div>
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#4ade80] rounded-full ring-2 ring-[#062c21]"></span>
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#4ade80] rounded-full ring-2 ring-[#061913]"></span>
               </div>
               <div>
                 <div className="font-bold text-sm flex items-center gap-1.5">
                   <span>Denn • 24/7 Support</span>
                 </div>
-                <div className="text-[10px] text-emerald-200/80">Typically replies in seconds</div>
+                <div className="text-xs text-emerald-200/80">Typically replies in seconds</div>
               </div>
             </div>
 
@@ -128,13 +128,13 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({
                 <div
                   className={`max-w-[85%] p-3 rounded-2xl ${
                     m.sender === 'user'
-                      ? 'bg-[#008a45] text-white rounded-br-xs'
+                      ? 'bg-[#008744] text-white rounded-br-xs'
                       : 'bg-white text-gray-800 border border-gray-200/80 shadow-2xs rounded-bl-xs'
                   }`}
                 >
                   <p className="leading-relaxed">{m.text}</p>
                 </div>
-                <span className="text-[9px] text-gray-400 mt-1 px-1">{m.time}</span>
+                <span className="text-xs text-gray-400 mt-1 px-1">{m.time}</span>
               </div>
             ))}
           </div>
@@ -146,11 +146,11 @@ export const LiveChatWidget: React.FC<LiveChatWidgetProps> = ({
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask anything about hosting or checkout..."
-              className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-hidden focus:ring-2 focus:ring-[#008a45]"
+              className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-hidden focus:ring-2 focus:ring-[#008744]"
             />
             <button
               type="submit"
-              className="bg-[#fed000] hover:bg-[#ebbe00] text-gray-950 p-2 rounded-xl transition-colors shrink-0 cursor-pointer"
+              className="bg-[#F59E0B] hover:bg-[#d97706] text-gray-950 p-2 rounded-xl transition-colors shrink-0 cursor-pointer"
             >
               <Send className="w-4 h-4" />
             </button>
